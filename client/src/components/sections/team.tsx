@@ -3,28 +3,28 @@ import { User } from "lucide-react";
 
 export default function Team() {
   return (
-    <section id="team" className="py-16 lg:py-24 bg-muted/20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
+    <section id="team" className="py-20 lg:py-32 section-gradient-1">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="max-w-5xl mx-auto text-center mb-20">
+          <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground">
             Meet Our Team
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="premium-text-lg text-muted-foreground">
             45+ years of combined experience in growth strategy, automation, and sales excellence
           </p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
           {/* Liam - Founder */}
-          <Card className="p-8 card-3d bg-gradient-to-br from-card to-primary/5" data-testid="card-team-liam">
+          <Card className="p-10 premium-card" data-testid="card-team-liam">
             <CardContent className="p-0">
               <div className="text-center mb-6">
-                <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <User className="w-12 h-12 text-primary" />
+                <div className="w-28 h-28 bg-primary/20 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                  <User className="w-14 h-14 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground" data-testid="text-liam-name">
+                <h3 className="premium-text-xl text-foreground mb-3" data-testid="text-liam-name">
                   Liam - Founder
                 </h3>
-                <p className="text-lg text-primary font-semibold" data-testid="text-liam-title">
+                <p className="premium-text-lg text-primary font-semibold" data-testid="text-liam-title">
                   20 Years Marketing Growth Strategist & Automation Expert
                 </p>
               </div>
@@ -35,16 +35,16 @@ export default function Team() {
           </Card>
 
           {/* Alan - Advisor */}
-          <Card className="p-8 card-3d bg-gradient-to-br from-card to-secondary/5" data-testid="card-team-alan">
+          <Card className="p-10 premium-card" data-testid="card-team-alan">
             <CardContent className="p-0">
               <div className="text-center mb-6">
-                <div className="w-24 h-24 bg-secondary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <User className="w-12 h-12 text-secondary" />
+                <div className="w-28 h-28 bg-secondary/20 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                  <User className="w-14 h-14 text-secondary" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground" data-testid="text-alan-name">
+                <h3 className="premium-text-xl text-foreground mb-3" data-testid="text-alan-name">
                   Alan - Advisor & Strategic Business Partnerships
                 </h3>
-                <p className="text-lg text-secondary font-semibold" data-testid="text-alan-title">
+                <p className="premium-text-lg text-secondary font-semibold" data-testid="text-alan-title">
                   25 Years Sales Experience in Blue-Chip Organizations
                 </p>
               </div>

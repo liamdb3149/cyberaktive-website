@@ -24,7 +24,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-transparent backdrop-blur-sm premium-hero">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
@@ -42,7 +42,7 @@ export default function Header() {
               Property Management
             </Link>
             <Button 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold" 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold header-button" 
               onClick={handleBookAudit}
               data-testid="button-book-audit-header"
             >

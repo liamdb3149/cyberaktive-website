@@ -9,7 +9,7 @@ export default function Footer() {
               <p className="text-muted-foreground mb-2">AI Workflow Automations for Property Management</p>
               <a 
                 href="mailto:team@cyberaktive.com" 
-                className="text-primary hover:text-primary/80 transition-colors"
+                className="text-primary hover:text-primary/80 transition-colors relative z-10 font-semibold"
                 data-testid="link-email-footer"
               >
                 team@cyberaktive.com
@@ -17,7 +17,7 @@ export default function Footer() {
             </div>
             <div className="text-center md:text-right">
               <p className="text-sm text-muted-foreground">
-                &copy; 2024 Cyberaktive. All rights reserved.
+                &copy; 2025 Cyberaktive. All rights reserved.
               </p>
             </div>
           </div>

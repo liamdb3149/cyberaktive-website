@@ -208,6 +208,20 @@
     pointer-events: none;
   }
 
+  .email-readable-overlay::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, 
+      transparent 0%, 
+      hsla(220, 30%, 15%, 0.2) 50%, 
+      hsla(220, 30%, 15%, 0.4) 100%);
+    pointer-events: none;
+  }
+
   .section-gradient-1 {
     background: linear-gradient(135deg, 
       hsl(220 50% 98%) 0%, 
@@ -236,6 +250,16 @@
   .premium-button:hover {
     box-shadow: 0px 12px 35px rgba(59, 130, 246, 0.25);
     transform: translateY(-2px);
+  }
+
+  .header-button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0px);
+  }
+
+  .header-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
   }
 
   .premium-text-lg {
