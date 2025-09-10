@@ -21,14 +21,14 @@ export default function PropertyManagement() {
           <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
             <div className="max-w-6xl mx-auto text-center">
               <h1 className="premium-text-4xl md:text-6xl lg:text-7xl mb-8">
-                <span className="text-foreground block mb-2">Property Management</span>
-                <span className="gradient-text block mb-2">AI Automation</span>
-                <span className="text-foreground block">That Actually Works</span>
+                <span className="text-white drop-shadow-lg block mb-2">Property Management</span>
+                <span className="text-white drop-shadow-lg block mb-2 font-black">AI Automation</span>
+                <span className="text-white drop-shadow-lg block">That Actually Works</span>
               </h1>
-              <p className="premium-text-xl lg:text-2xl text-muted-foreground mb-4 max-w-4xl mx-auto">
+              <p className="premium-text-xl lg:text-2xl text-white/90 drop-shadow-md mb-4 max-w-4xl mx-auto font-medium">
                 Handle 50% more properties with your existing team while boosting margins to 15-25%
               </p>
-              <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
+              <p className="text-lg text-white/80 drop-shadow-md mb-12 max-w-3xl mx-auto">
                 Stop losing sleep over staff turnover and endless admin work—our AI does it all
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">

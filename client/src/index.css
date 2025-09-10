@@ -137,12 +137,10 @@
   }
 
   .hero-gradient {
-    background: linear-gradient(135deg, 
-      hsl(220 60% 97%) 0%, 
-      hsl(240 50% 95%) 25%, 
-      hsl(270 55% 93%) 50%, 
-      hsl(300 50% 95%) 75%, 
-      hsl(330 60% 97%) 100%);
+    background-image: url('./assets/sky-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
   }
@@ -151,21 +149,33 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: 
-      radial-gradient(circle at 20% 20%, hsl(220 80% 55% / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, hsl(330 70% 65% / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, hsl(270 75% 60% / 0.06) 0%, transparent 50%);
+    background: linear-gradient(135deg, 
+      hsla(220, 80%, 55%, 0.2) 0%, 
+      hsla(270, 75%, 60%, 0.3) 30%, 
+      hsla(330, 70%, 65%, 0.2) 60%, 
+      hsla(220, 80%, 55%, 0.1) 100%);
+    pointer-events: none;
+  }
+
+  .hero-gradient::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to bottom, 
+      transparent 0%, 
+      hsla(220, 50%, 95%, 0.4) 50%, 
+      hsl(220, 50%, 95%) 100%);
     pointer-events: none;
   }
 
   .premium-hero {
-    background: linear-gradient(135deg, 
-      hsl(220 60% 97%) 0%, 
-      hsl(240 50% 95%) 20%, 
-      hsl(270 55% 93%) 40%, 
-      hsl(300 50% 95%) 60%, 
-      hsl(320 55% 96%) 80%, 
-      hsl(330 60% 97%) 100%);
+    background-image: url('./assets/sky-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
   }
@@ -174,13 +184,27 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: 
-      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%233b82f6;stop-opacity:0.05'/><stop offset='50%' style='stop-color:%238b5cf6;stop-opacity:0.03'/><stop offset='100%' style='stop-color:%23ec4899;stop-opacity:0.05'/></linearGradient></defs><path d='M0,800 L0,400 Q300,300 600,350 T1200,300 L1200,800 Z' fill='url(%23grad1)'/><path d='M0,800 L0,500 Q400,400 800,450 T1200,400 L1200,800 Z' fill='url(%23grad1)' opacity='0.5'/></svg>"),
-      radial-gradient(circle at 25% 25%, hsl(220 80% 55% / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, hsl(330 70% 65% / 0.05) 0%, transparent 50%);
-    background-size: cover, 800px 800px, 600px 600px;
-    background-position: center bottom, center, center;
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, 
+      hsla(220, 80%, 55%, 0.4) 0%, 
+      hsla(270, 75%, 60%, 0.5) 30%, 
+      hsla(330, 70%, 65%, 0.4) 60%, 
+      hsla(220, 80%, 55%, 0.25) 100%);
+    backdrop-filter: blur(0.5px);
+    pointer-events: none;
+  }
+
+  .premium-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, 
+      transparent 0%, 
+      hsla(220, 50%, 95%, 0.3) 40%, 
+      hsla(220, 50%, 95%, 0.8) 80%, 
+      hsl(220, 50%, 95%) 100%);
     pointer-events: none;
   }
 

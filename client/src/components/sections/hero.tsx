@@ -14,14 +14,14 @@ export default function Hero() {
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="premium-text-4xl md:text-6xl lg:text-7xl mb-8">
-            <span className="text-foreground block mb-2">Take On</span>
-            <span className="gradient-text block mb-2">50% More Clients</span>
-            <span className="text-foreground block">With Your Current Staff</span>
+            <span className="text-white drop-shadow-lg block mb-2">Take On</span>
+            <span className="text-white drop-shadow-lg block mb-2 font-black">50% More Clients</span>
+            <span className="text-white drop-shadow-lg block">With Your Current Staff</span>
           </h1>
-          <p className="premium-text-xl lg:text-2xl text-muted-foreground mb-4 max-w-4xl mx-auto">
+          <p className="premium-text-xl lg:text-2xl text-white/90 drop-shadow-md mb-4 max-w-4xl mx-auto font-medium">
             Increase profit margins from single to double digits while solving staff retention forever
           </p>
-          <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
+          <p className="text-lg text-white/80 drop-shadow-md mb-12 max-w-3xl mx-auto">
             AI automation that eliminates 16+ hours of weekly admin work—no more hiring headaches, no more burnout
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -43,8 +43,8 @@ export default function Hero() {
               See Our Automation Solutions
             </Button>
           </div>
-          <div className="flex items-center justify-center text-muted-foreground text-lg">
-            <CheckCircle className="w-6 h-6 mr-3 text-accent" />
+          <div className="flex items-center justify-center text-white/80 text-lg drop-shadow-md">
+            <CheckCircle className="w-6 h-6 mr-3 text-white/90 drop-shadow-md" />
             <span data-testid="text-trust-indicator" className="font-medium">Trusted by 100+ property management firms across the US</span>
           </div>
         </div>
