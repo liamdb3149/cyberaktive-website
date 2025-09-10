@@ -36,19 +36,19 @@ export default function Solution() {
   ];
 
   return (
-    <section id="solution" className="py-16 lg:py-24 bg-primary/10">
+    <section id="solution" className="py-20 lg:py-32 section-gradient-2">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
+          <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground">
             Imagine running your property management business where...
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="premium-text-lg text-muted-foreground">
             The better future that's possible with intelligent automation
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {solutions.map((solution, index) => (
-            <Card key={index} className="card-3d-sm bg-gradient-to-br from-card to-primary/10" data-testid={`card-solution-${index}`}>
+            <Card key={index} className="premium-card-sm" data-testid={`card-solution-${index}`}>
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
                   <solution.icon className="w-6 h-6 text-primary" />

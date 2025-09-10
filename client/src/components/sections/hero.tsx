@@ -10,21 +10,24 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="pt-20 lg:pt-32 pb-16 lg:pb-24 hero-gradient futuristic-mountains min-h-screen flex items-center">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            <span className="text-foreground">Stop Losing Money to</span>
-            <span className="gradient-text block">Manual Property Management Tasks</span>
-            <span className="text-foreground">That Never End</span>
+    <section id="hero" className="pt-32 lg:pt-40 pb-20 lg:pb-32 premium-hero min-h-screen flex items-center">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="premium-text-4xl md:text-6xl lg:text-7xl mb-8">
+            <span className="text-foreground block mb-2">Take On</span>
+            <span className="gradient-text block mb-2">50% More Clients</span>
+            <span className="text-foreground block">With Your Current Staff</span>
           </h1>
-          <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Take on 50% more clients with your current staff while increasing profit margins from single to double digits—without the hiring headaches
+          <p className="premium-text-xl lg:text-2xl text-muted-foreground mb-4 max-w-4xl mx-auto">
+            Increase profit margins from single to double digits while solving staff retention forever
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
+            AI automation that eliminates 16+ hours of weekly admin work—no more hiring headaches, no more burnout
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <Button 
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg card-3d-sm px-8 py-4"
+              className="premium-button text-white font-semibold text-lg px-10 py-5 rounded-2xl"
               onClick={() => scrollToSection('calendar')}
               data-testid="button-get-audit"
             >
@@ -33,16 +36,16 @@ export default function Hero() {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-lg card-3d-sm px-8 py-4"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-lg px-10 py-5 rounded-2xl premium-card-sm"
               onClick={() => scrollToSection('automations')}
               data-testid="button-see-solutions"
             >
-              See Property Management Solutions
+              See Our Automation Solutions
             </Button>
           </div>
-          <div className="flex items-center justify-center text-muted-foreground">
-            <CheckCircle className="w-5 h-5 mr-2 text-accent" />
-            <span data-testid="text-trust-indicator">Trusted by 100+ property management firms</span>
+          <div className="flex items-center justify-center text-muted-foreground text-lg">
+            <CheckCircle className="w-6 h-6 mr-3 text-accent" />
+            <span data-testid="text-trust-indicator" className="font-medium">Trusted by 100+ property management firms across the US</span>
           </div>
         </div>
       </div>

@@ -36,19 +36,19 @@ export default function Problem() {
   ];
 
   return (
-    <section id="problem" className="py-16 lg:py-24 bg-destructive/10">
+    <section id="problem" className="py-20 lg:py-32 section-gradient-1">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
+          <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground">
             If you're running a property management company, you know these problems all too well...
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="premium-text-lg text-muted-foreground">
             The daily struggles that are crushing your margins and limiting your growth
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {problems.map((problem, index) => (
-            <Card key={index} className="card-3d-sm bg-gradient-to-br from-card to-destructive/5" data-testid={`card-problem-${index}`}>
+            <Card key={index} className="premium-card-sm" data-testid={`card-problem-${index}`}>
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-destructive/20 rounded-lg flex items-center justify-center mb-4">
                   <problem.icon className="w-6 h-6 text-destructive" />

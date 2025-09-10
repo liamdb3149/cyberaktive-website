@@ -20,25 +20,25 @@ export default function Automations() {
   ];
 
   return (
-    <section id="automations" className="py-16 lg:py-24 bg-background">
+    <section id="automations" className="py-20 lg:py-32 section-gradient-3">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
+          <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground">
             Our Workflow Automation Categories
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="premium-text-lg text-muted-foreground">
             Comprehensive solutions that transform every aspect of your property management operations
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Revenue-Generating Automations */}
-          <Card className="p-8 card-3d bg-gradient-to-br from-card to-accent/5" data-testid="card-revenue-automations">
+          <Card className="p-10 premium-card" data-testid="card-revenue-automations">
             <CardContent className="p-0">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mr-4">
                   <DollarSign className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="text-2xl font-bold text-accent" data-testid="text-revenue-title">
+                <h3 className="premium-text-xl text-accent" data-testid="text-revenue-title">
                   Revenue-Generating Automations
                 </h3>
               </div>
@@ -54,13 +54,13 @@ export default function Automations() {
           </Card>
 
           {/* Operations Efficiency Automations */}
-          <Card className="p-8 card-3d bg-gradient-to-br from-card to-secondary/5" data-testid="card-operations-automations">
+          <Card className="p-10 premium-card" data-testid="card-operations-automations">
             <CardContent className="p-0">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mr-4">
                   <Settings className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-2xl font-bold text-secondary" data-testid="text-operations-title">
+                <h3 className="premium-text-xl text-secondary" data-testid="text-operations-title">
                   Operations Efficiency Automations
                 </h3>
               </div>

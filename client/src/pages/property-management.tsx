@@ -17,20 +17,24 @@ export default function PropertyManagement() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="pt-20 lg:pt-32 pb-16 lg:pb-24 hero-gradient futuristic-mountains min-h-screen flex items-center">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-                Property Management
-                <span className="gradient-text block">AI Automation Solutions</span>
+        <section className="pt-32 lg:pt-40 pb-20 lg:pb-32 premium-hero min-h-screen flex items-center">
+          <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+            <div className="max-w-6xl mx-auto text-center">
+              <h1 className="premium-text-4xl md:text-6xl lg:text-7xl mb-8">
+                <span className="text-foreground block mb-2">Property Management</span>
+                <span className="gradient-text block mb-2">AI Automation</span>
+                <span className="text-foreground block">That Actually Works</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-                Comprehensive workflow automations designed specifically for property management firms to eliminate manual tasks and maximize profitability
+              <p className="premium-text-xl lg:text-2xl text-muted-foreground mb-4 max-w-4xl mx-auto">
+                Handle 50% more properties with your existing team while boosting margins to 15-25%
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+              <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
+                Stop losing sleep over staff turnover and endless admin work—our AI does it all
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
                 <Button 
                   size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold card-3d-sm px-8 py-4"
+                  className="premium-button text-white font-semibold text-lg px-10 py-5 rounded-2xl"
                   onClick={() => scrollToSection('calendar')}
                   data-testid="button-get-audit"
                 >
@@ -39,11 +43,11 @@ export default function PropertyManagement() {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground card-3d-sm px-8 py-4"
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-lg px-10 py-5 rounded-2xl premium-card-sm"
                   onClick={() => scrollToSection('solutions')}
                   data-testid="button-see-solutions"
                 >
-                  See Our Solutions
+                  See Our Automation Bundles
                 </Button>
               </div>
             </div>
@@ -51,74 +55,74 @@ export default function PropertyManagement() {
         </section>
 
         {/* Automation Bundles */}
-        <section id="solutions" className="py-16 lg:py-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+        <section id="solutions" className="py-20 lg:py-32 section-gradient-1">
+          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+            <div className="max-w-5xl mx-auto text-center mb-20">
+              <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground">
                 Two Powerful AI Automation Bundles
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="premium-text-lg text-muted-foreground">
                 Choose the bundle that matches your needs or combine both for maximum impact
               </p>
             </div>
-            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
               {/* Revenue Rocket Bundle */}
-              <Card className="p-8 card-3d bg-gradient-to-br from-card to-accent/5">
+              <Card className="p-12 premium-card">
                 <CardContent className="p-0">
-                  <div className="text-center mb-8">
-                    <div className="w-16 h-16 bg-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <TrendingUp className="w-8 h-8 text-accent" />
+                  <div className="text-center mb-10">
+                    <div className="w-20 h-20 bg-accent/20 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                      <TrendingUp className="w-10 h-10 text-accent" />
                     </div>
-                    <h3 className="text-3xl font-bold mb-2 gradient-text">Revenue Rocket Bundle</h3>
-                    <p className="text-lg text-accent font-semibold">Marketing, Sales & Leads AI Automation</p>
+                    <h3 className="premium-text-xl mb-3 gradient-text">Revenue Rocket Bundle</h3>
+                    <p className="premium-text-lg text-accent font-semibold">Marketing, Sales & Leads AI Automation</p>
                   </div>
-                  <ul className="space-y-4">
+                  <ul className="space-y-5">
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="font-medium">The Speed to Lead System</span>
+                      <CheckCircle className="w-6 h-6 text-accent mr-4 mt-0.5 flex-shrink-0" />
+                      <span className="text-lg font-medium">The Speed to Lead System</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                      <span>AI Social Media Content Generation, scheduling and publishing</span>
+                      <CheckCircle className="w-6 h-6 text-accent mr-4 mt-0.5 flex-shrink-0" />
+                      <span className="text-lg">AI Social Media Content Generation, scheduling and publishing</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                      <span>AI Cold Email Prospecting</span>
+                      <CheckCircle className="w-6 h-6 text-accent mr-4 mt-0.5 flex-shrink-0" />
+                      <span className="text-lg">AI Cold Email Prospecting</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Personalized follow-up and nurture systems</span>
+                      <CheckCircle className="w-6 h-6 text-accent mr-4 mt-0.5 flex-shrink-0" />
+                      <span className="text-lg">Personalized follow-up and nurture systems</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
 
               {/* OpFlow AI Suite */}
-              <Card className="p-8 card-3d bg-gradient-to-br from-card to-primary/5">
+              <Card className="p-12 premium-card">
                 <CardContent className="p-0">
-                  <div className="text-center mb-8">
-                    <div className="w-16 h-16 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <DollarSign className="w-8 h-8 text-primary" />
+                  <div className="text-center mb-10">
+                    <div className="w-20 h-20 bg-primary/20 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+                      <DollarSign className="w-10 h-10 text-primary" />
                     </div>
-                    <h3 className="text-3xl font-bold mb-2 gradient-text">OpFlow AI Suite</h3>
-                    <p className="text-lg text-primary font-semibold">Business Operations Efficiency Automation</p>
+                    <h3 className="premium-text-xl mb-3 gradient-text">OpFlow AI Suite</h3>
+                    <p className="premium-text-lg text-primary font-semibold">Business Operations Efficiency Automation</p>
                   </div>
-                  <ul className="space-y-4">
+                  <ul className="space-y-5">
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>The Social Media DM & Website Bot / AI Customer Service Agent</span>
+                      <CheckCircle className="w-6 h-6 text-primary mr-4 mt-0.5 flex-shrink-0" />
+                      <span className="text-lg">The Social Media DM & Website Bot / AI Customer Service Agent</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="font-medium">The AI Receptionist</span>
+                      <CheckCircle className="w-6 h-6 text-primary mr-4 mt-0.5 flex-shrink-0" />
+                      <span className="text-lg font-medium">The AI Receptionist</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>AI Outbound Calling: Rent collection follow-ups</span>
+                      <CheckCircle className="w-6 h-6 text-primary mr-4 mt-0.5 flex-shrink-0" />
+                      <span className="text-lg">AI Outbound Calling: Rent collection follow-ups</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Lease renewal negotiations & prospective tenant calls</span>
+                      <CheckCircle className="w-6 h-6 text-primary mr-4 mt-0.5 flex-shrink-0" />
+                      <span className="text-lg">Lease renewal negotiations & prospective tenant calls</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -128,43 +132,43 @@ export default function PropertyManagement() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-16 lg:py-24 bg-muted/20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+        <section className="py-20 lg:py-32 section-gradient-2">
+          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+            <div className="max-w-5xl mx-auto text-center mb-20">
+              <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground">
                 Transform Your Property Management Business
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="premium-text-lg text-muted-foreground">
                 Real benefits that property management firms achieve with our automation solutions
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              <Card className="p-6 text-center card-3d-sm bg-gradient-to-br from-card to-primary/10">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
+              <Card className="p-8 text-center premium-card-sm">
                 <CardContent className="p-0">
-                  <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">40%</div>
-                  <div className="text-lg font-semibold mb-2">Time Savings</div>
-                  <div className="text-muted-foreground text-sm">Reduce administrative workload by 16+ hours per week</div>
+                  <div className="text-5xl lg:text-6xl font-bold gradient-text mb-4">40%</div>
+                  <div className="premium-text-lg font-semibold mb-3">Time Savings</div>
+                  <div className="text-muted-foreground">Reduce administrative workload by 16+ hours per week</div>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center card-3d-sm bg-gradient-to-br from-card to-secondary/10">
+              <Card className="p-8 text-center premium-card-sm">
                 <CardContent className="p-0">
-                  <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">50%</div>
-                  <div className="text-lg font-semibold mb-2">More Clients</div>
-                  <div className="text-muted-foreground text-sm">Handle more properties with your current team</div>
+                  <div className="text-5xl lg:text-6xl font-bold gradient-text mb-4">50%</div>
+                  <div className="premium-text-lg font-semibold mb-3">More Clients</div>
+                  <div className="text-muted-foreground">Handle more properties with your current team</div>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center card-3d-sm bg-gradient-to-br from-card to-accent/10">
+              <Card className="p-8 text-center premium-card-sm">
                 <CardContent className="p-0">
-                  <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">5-15%</div>
-                  <div className="text-lg font-semibold mb-2">Margin Increase</div>
-                  <div className="text-muted-foreground text-sm">Boost profit margins significantly</div>
+                  <div className="text-5xl lg:text-6xl font-bold gradient-text mb-4">15-25%</div>
+                  <div className="premium-text-lg font-semibold mb-3">Margin Increase</div>
+                  <div className="text-muted-foreground">Boost profit margins to industry-leading levels</div>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center card-3d-sm bg-gradient-to-br from-card to-primary/10">
+              <Card className="p-8 text-center premium-card-sm">
                 <CardContent className="p-0">
-                  <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">24/7</div>
-                  <div className="text-lg font-semibold mb-2">Operations</div>
-                  <div className="text-muted-foreground text-sm">Never miss opportunities again</div>
+                  <div className="text-5xl lg:text-6xl font-bold gradient-text mb-4">24/7</div>
+                  <div className="premium-text-lg font-semibold mb-3">Operations</div>
+                  <div className="text-muted-foreground">Never miss opportunities again</div>
                 </CardContent>
               </Card>
             </div>
@@ -172,19 +176,19 @@ export default function PropertyManagement() {
         </section>
 
         {/* CTA Section */}
-        <section id="calendar" className="py-16 lg:py-24 hero-gradient">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+        <section id="calendar" className="py-20 lg:py-32 premium-hero">
+          <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground">
                 Ready to Automate Your Property Management?
               </h2>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="premium-text-lg text-muted-foreground mb-12">
                 Book your free workflow audit and discover exactly where you're losing time and money
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
                 <Button 
                   size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold card-3d-sm px-8 py-4"
+                  className="premium-button text-white font-semibold text-lg px-10 py-5 rounded-2xl"
                   data-testid="button-book-audit"
                 >
                   Book Your Free Audit Now
@@ -197,18 +201,18 @@ export default function PropertyManagement() {
                   team@cyberaktive.com
                 </a>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center text-muted-foreground text-sm">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center text-muted-foreground">
                 <span className="flex items-center">
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                  No obligation
+                  <CheckCircle className="w-5 h-5 mr-3" />
+                  <span className="font-medium">No obligation</span>
                 </span>
                 <span className="flex items-center">
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                  30-minute consultation
+                  <CheckCircle className="w-5 h-5 mr-3" />
+                  <span className="font-medium">30-minute consultation</span>
                 </span>
                 <span className="flex items-center">
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                  Immediate insights
+                  <CheckCircle className="w-5 h-5 mr-3" />
+                  <span className="font-medium">Immediate insights</span>
                 </span>
               </div>
             </div>
