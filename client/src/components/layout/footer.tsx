@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
-              <div className="text-2xl font-bold gradient-text mb-2">Cyberactive TVI</div>
+              <div className="text-2xl font-bold gradient-text mb-2">Cyberaktive</div>
               <p className="text-muted-foreground mb-2">AI Workflow Automations for Property Management</p>
               <a 
                 href="mailto:team@cyberaktive.com" 
@@ -17,7 +17,7 @@ export default function Footer() {
             </div>
             <div className="text-center md:text-right">
               <p className="text-sm text-muted-foreground">
-                &copy; 2024 Cyberactive TVI. All rights reserved.
+                &copy; 2024 Cyberaktive. All rights reserved.
               </p>
             </div>
           </div>

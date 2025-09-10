@@ -1,8 +1,8 @@
-# Cyberactive TVI - Property Management AI Workflow Automations
+# Cyberaktive - Property Management AI Workflow Automations
 
 ## Overview
 
-Cyberactive TVI is a landing page and marketing website designed to promote AI workflow automation services specifically for property management companies. The application targets the $134.2B property management market by offering custom AI solutions that help firms handle 50% more clients with existing staff while increasing profit margins from single to double digits. The site focuses on conversion optimization with strategic messaging around eliminating manual tasks, reducing operational costs, and providing 24/7 automated systems.
+Cyberaktive is a landing page and marketing website designed to promote AI workflow automation services specifically for property management companies. The application targets the $134.2B property management market by offering custom AI solutions that help firms handle 50% more clients with existing staff while increasing profit margins from single to double digits. The site focuses on conversion optimization with strategic messaging around eliminating manual tasks, reducing operational costs, and providing 24/7 automated systems.
 
 ## User Preferences
 
