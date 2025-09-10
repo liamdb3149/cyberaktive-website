@@ -3,20 +3,17 @@ import { DollarSign, Settings, CheckCircle } from "lucide-react";
 
 export default function Automations() {
   const revenueAutomations = [
-    "AI lead qualification and hot-lead routing",
-    "Automated proposal generation for faster deal closure",
-    "24/7 SMS/WhatsApp & website booking system",
-    "Social media DM bot for instant responses",
-    "AI receptionist to capture every phone opportunity"
+    "Speed to Lead System",
+    "AI social media content generation, scheduling and publishing",
+    "AI cold email prospecting",
+    "Personalized follow-up and nurture systems"
   ];
 
   const operationsAutomations = [
-    "Automated tenant screening and onboarding workflows",
-    "24/7 maintenance request routing and tracking",
-    "Rent collection and delinquency management systems",
-    "Lease renewal automation with personalized outreach",
-    "Vendor coordination and payment processing",
-    "Compliance monitoring and documentation"
+    "Social media DM & website bot / AI customer service agent",
+    "AI receptionist",
+    "AI outbound calling: rent collection follow-ups",
+    "Lease renewal negotiations & prospective tenant calls"
   ];
 
   return (

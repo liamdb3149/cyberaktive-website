@@ -79,15 +79,15 @@ export default function PropertyManagement() {
                   <ul className="space-y-5">
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-accent mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg font-medium">The Speed to Lead System</span>
+                      <span className="text-lg font-medium">Speed to Lead System</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-accent mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">AI Social Media Content Generation, scheduling and publishing</span>
+                      <span className="text-lg">AI social media content generation, scheduling and publishing</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-accent mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">AI Cold Email Prospecting</span>
+                      <span className="text-lg">AI cold email prospecting</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-accent mr-4 mt-0.5 flex-shrink-0" />
@@ -110,15 +110,15 @@ export default function PropertyManagement() {
                   <ul className="space-y-5">
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-primary mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">The Social Media DM & Website Bot / AI Customer Service Agent</span>
+                      <span className="text-lg">Social media DM & website bot / AI customer service agent</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-primary mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg font-medium">The AI Receptionist</span>
+                      <span className="text-lg font-medium">AI receptionist</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-primary mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">AI Outbound Calling: Rent collection follow-ups</span>
+                      <span className="text-lg">AI outbound calling: rent collection follow-ups</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-primary mr-4 mt-0.5 flex-shrink-0" />
