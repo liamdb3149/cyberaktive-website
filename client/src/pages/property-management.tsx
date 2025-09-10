@@ -13,7 +13,7 @@ export default function PropertyManagement() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground antialiased">
+    <div className="min-h-screen premium-hero text-foreground antialiased">
       <Header />
       <main>
         {/* Hero Section */}
