@@ -15,14 +15,17 @@ export default function Hero() {
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="premium-text-4xl md:text-6xl lg:text-7xl mb-8">
             <span className="text-white drop-shadow-lg block mb-2">Take On</span>
-            <span className="text-white drop-shadow-lg block mb-2 font-black">50% More Clients</span>
-            <span className="text-white drop-shadow-lg block">With Your Current Staff</span>
+            <span className="text-white drop-shadow-lg block mb-2 font-black">50% More Doors</span>
+            <span className="text-white drop-shadow-lg block">With Your Existing Team</span>
           </h1>
           <p className="premium-text-xl lg:text-2xl text-white/90 drop-shadow-md mb-4 max-w-4xl mx-auto font-medium">
-            Increase profit margins from single to double digits while solving staff retention forever
+            Leverage AI workflow automations to increase profit margins from single to double digits.
+          </p>
+          <p className="text-lg text-white/80 drop-shadow-md mb-4 max-w-3xl mx-auto">
+            Solve hiring headaches and retention stresses forever.
           </p>
           <p className="text-lg text-white/80 drop-shadow-md mb-12 max-w-3xl mx-auto">
-            AI automation that eliminates 16+ hours of weekly admin work—no more hiring headaches, no more burnout
+            On average, each automation saves 16-80 hours per week after 2.5 months.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <Button 

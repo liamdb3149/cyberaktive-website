@@ -14,7 +14,7 @@ export default function Results() {
     { value: "40%", label: "Time Savings", description: "Administrative time saved (16+ hours per week)", color: "primary" },
     { value: "50%", label: "Faster Response", description: "Reduction in maintenance response time", color: "accent" },
     { value: "5-15%", label: "Margin Increase", description: "Percentage point increase in profit margins", color: "primary" },
-    { value: "50%", label: "Client Growth", description: "More clients handled with same staff size", color: "accent" },
+    { value: "50%", label: "More Doors", description: "More doors handled with existing team", color: "accent" },
     { value: "85%", label: "Better Decisions", description: "Report improved decision-making capabilities", color: "primary" },
     { value: "24/7", label: "Always On", description: "Never miss another opportunity or inquiry", color: "accent" }
   ];

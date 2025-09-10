@@ -26,10 +26,13 @@ export default function PropertyManagement() {
                 <span className="text-white drop-shadow-lg block">That Actually Works</span>
               </h1>
               <p className="premium-text-xl lg:text-2xl text-white/90 drop-shadow-md mb-4 max-w-4xl mx-auto font-medium">
-                Handle 50% more properties with your existing team while boosting margins to 15-25%
+                Handle 50% more doors with your existing team while boosting margins to 15-25%
+              </p>
+              <p className="text-lg text-white/80 drop-shadow-md mb-4 max-w-3xl mx-auto">
+                Stop losing sleep over staff turnover and endless admin work—our AI does it all.
               </p>
               <p className="text-lg text-white/80 drop-shadow-md mb-12 max-w-3xl mx-auto">
-                Stop losing sleep over staff turnover and endless admin work—our AI does it all
+                On average, each automation saves 16-80 hours per week after 2.5 months.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
                 <Button 
@@ -154,7 +157,7 @@ export default function PropertyManagement() {
                 <CardContent className="p-0">
                   <div className="text-5xl lg:text-6xl font-bold gradient-text mb-4">50%</div>
                   <div className="premium-text-lg font-semibold mb-3">More Clients</div>
-                  <div className="text-muted-foreground">Handle more properties with your current team</div>
+                  <div className="text-muted-foreground">Handle more doors with your existing team</div>
                 </CardContent>
               </Card>
               <Card className="p-8 text-center premium-card-sm">

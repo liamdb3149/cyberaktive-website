@@ -262,6 +262,28 @@
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
   }
 
+  .header-with-sky {
+    background-image: url('./assets/sky-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+
+  .header-with-sky::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+      hsla(220, 80%, 55%, 0.1) 0%, 
+      hsla(270, 75%, 60%, 0.15) 30%, 
+      hsla(330, 70%, 65%, 0.1) 60%, 
+      hsla(220, 80%, 55%, 0.05) 100%);
+    pointer-events: none;
+  }
+
   .premium-text-lg {
     font-size: 1.5rem;
     line-height: 1.4;
