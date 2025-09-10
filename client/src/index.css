@@ -193,6 +193,65 @@
     pointer-events: none;
   }
 
+  .homepage-hero {
+    background-image: url('./assets/mountain-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .homepage-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+      hsla(220, 80%, 55%, 0.4) 0%, 
+      hsla(270, 75%, 60%, 0.5) 30%, 
+      hsla(330, 70%, 65%, 0.4) 60%, 
+      hsla(220, 80%, 55%, 0.25) 100%);
+    backdrop-filter: blur(0.5px);
+    pointer-events: none;
+  }
+
+  .homepage-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, 
+      transparent 0%, 
+      hsla(220, 50%, 95%, 0.3) 40%, 
+      hsla(220, 50%, 95%, 0.8) 80%, 
+      hsl(220, 50%, 95%) 100%);
+    pointer-events: none;
+  }
+
+  .header-with-mountain {
+    background-image: url('./assets/mountain-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+
+  .header-with-mountain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+      hsla(220, 80%, 55%, 0.1) 0%, 
+      hsla(270, 75%, 60%, 0.15) 30%, 
+      hsla(330, 70%, 65%, 0.1) 60%, 
+      hsla(220, 80%, 55%, 0.05) 100%);
+    pointer-events: none;
+  }
+
   .premium-hero::after {
     content: '';
     position: absolute;

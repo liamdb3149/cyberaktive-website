@@ -10,7 +10,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="pt-32 lg:pt-40 pb-20 lg:pb-32 premium-hero min-h-screen flex items-center">
+    <section id="hero" className="pt-32 lg:pt-40 pb-20 lg:pb-32 homepage-hero min-h-screen flex items-center">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="premium-text-4xl md:text-6xl lg:text-7xl mb-8">

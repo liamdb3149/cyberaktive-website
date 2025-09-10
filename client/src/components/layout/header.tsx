@@ -23,8 +23,10 @@ export default function Header() {
     }
   };
 
+  const headerClass = location === '/' ? 'header-with-mountain' : 'header-with-sky';
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/30 header-with-sky">
+    <header className={`sticky top-0 z-50 w-full border-b border-border/30 ${headerClass}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
