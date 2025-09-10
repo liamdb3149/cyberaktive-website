@@ -20,7 +20,7 @@ export default function Results() {
   ];
 
   return (
-    <section id="results" className="py-16 lg:py-24 bg-muted/50">
+    <section id="results" className="py-16 lg:py-24 bg-muted/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
@@ -32,9 +32,9 @@ export default function Results() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {results.map((result, index) => (
-            <Card key={index} className={`text-center p-8 shadow-lg bg-${result.color}/5 border-${result.color}/20`} data-testid={`card-result-${index}`}>
+            <Card key={index} className={`text-center p-8 card-3d-sm bg-gradient-to-br from-card to-${result.color}/10`} data-testid={`card-result-${index}`}>
               <CardContent className="p-0">
-                <div className={`text-4xl lg:text-5xl font-bold text-${result.color} mb-2`} data-testid={`text-result-value-${index}`}>
+                <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2" data-testid={`text-result-value-${index}`}>
                   {result.value}
                 </div>
                 <div className="text-lg font-semibold text-foreground mb-2" data-testid={`text-result-label-${index}`}>

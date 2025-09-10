@@ -10,12 +10,12 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="pt-20 lg:pt-32 pb-16 lg:pb-24 bg-gradient-to-br from-background to-muted">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="hero" className="pt-20 lg:pt-32 pb-16 lg:pb-24 hero-gradient futuristic-mountains min-h-screen flex items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             <span className="text-foreground">Stop Losing Money to</span>
-            <span className="text-primary block">Manual Property Management Tasks</span>
+            <span className="gradient-text block">Manual Property Management Tasks</span>
             <span className="text-foreground">That Never End</span>
           </h1>
           <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -24,7 +24,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button 
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg shadow-lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg card-3d-sm px-8 py-4"
               onClick={() => scrollToSection('calendar')}
               data-testid="button-get-audit"
             >
@@ -33,7 +33,7 @@ export default function Hero() {
             <Button 
               size="lg" 
               variant="outline"
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-lg border-secondary"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-lg card-3d-sm px-8 py-4"
               onClick={() => scrollToSection('automations')}
               data-testid="button-see-solutions"
             >

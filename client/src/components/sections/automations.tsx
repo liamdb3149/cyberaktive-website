@@ -32,10 +32,10 @@ export default function Automations() {
         </div>
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Revenue-Generating Automations */}
-          <Card className="p-8 shadow-lg" data-testid="card-revenue-automations">
+          <Card className="p-8 card-3d bg-gradient-to-br from-card to-accent/5" data-testid="card-revenue-automations">
             <CardContent className="p-0">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mr-4">
                   <DollarSign className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="text-2xl font-bold text-accent" data-testid="text-revenue-title">
@@ -54,10 +54,10 @@ export default function Automations() {
           </Card>
 
           {/* Operations Efficiency Automations */}
-          <Card className="p-8 shadow-lg" data-testid="card-operations-automations">
+          <Card className="p-8 card-3d bg-gradient-to-br from-card to-secondary/5" data-testid="card-operations-automations">
             <CardContent className="p-0">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mr-4">
                   <Settings className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-2xl font-bold text-secondary" data-testid="text-operations-title">

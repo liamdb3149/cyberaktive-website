@@ -88,7 +88,7 @@ export default function Process() {
           <div className="mt-12 text-center">
             <Button 
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold card-3d-sm px-8 py-4"
               onClick={() => scrollToSection('calendar')}
               data-testid="button-start-process"
             >

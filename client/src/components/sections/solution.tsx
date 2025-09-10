@@ -36,7 +36,7 @@ export default function Solution() {
   ];
 
   return (
-    <section id="solution" className="py-16 lg:py-24 bg-primary/5">
+    <section id="solution" className="py-16 lg:py-24 bg-primary/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
@@ -48,9 +48,9 @@ export default function Solution() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {solutions.map((solution, index) => (
-            <Card key={index} className="border border-border shadow-sm" data-testid={`card-solution-${index}`}>
+            <Card key={index} className="card-3d-sm bg-gradient-to-br from-card to-primary/10" data-testid={`card-solution-${index}`}>
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
                   <solution.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg mb-3" data-testid={`text-solution-title-${index}`}>

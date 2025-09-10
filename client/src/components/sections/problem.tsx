@@ -36,7 +36,7 @@ export default function Problem() {
   ];
 
   return (
-    <section id="problem" className="py-16 lg:py-24 bg-destructive/5">
+    <section id="problem" className="py-16 lg:py-24 bg-destructive/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
@@ -48,9 +48,9 @@ export default function Problem() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {problems.map((problem, index) => (
-            <Card key={index} className="border border-border shadow-sm" data-testid={`card-problem-${index}`}>
+            <Card key={index} className="card-3d-sm bg-gradient-to-br from-card to-destructive/5" data-testid={`card-problem-${index}`}>
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-destructive/10 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-destructive/20 rounded-lg flex items-center justify-center mb-4">
                   <problem.icon className="w-6 h-6 text-destructive" />
                 </div>
                 <h3 className="font-semibold text-lg mb-3" data-testid={`text-problem-title-${index}`}>

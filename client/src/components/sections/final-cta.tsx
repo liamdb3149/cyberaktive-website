@@ -10,7 +10,7 @@ export default function FinalCTA() {
   };
 
   return (
-    <section id="final-cta" className="py-16 lg:py-24 bg-gradient-to-br from-primary to-secondary">
+    <section id="final-cta" className="py-16 lg:py-24 hero-gradient">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-primary-foreground">
@@ -22,7 +22,7 @@ export default function FinalCTA() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Button 
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold card-3d-sm px-8 py-4"
               onClick={() => scrollToSection('calendar')}
               data-testid="button-book-final-audit"
             >
@@ -30,13 +30,13 @@ export default function FinalCTA() {
             </Button>
             <a 
               href="mailto:team@cyberaktive.com" 
-              className="text-primary-foreground hover:text-primary-foreground/80 font-semibold text-lg transition-colors"
+              className="text-primary hover:text-primary/80 font-semibold text-lg transition-colors"
               data-testid="link-email-final"
             >
               team@cyberaktive.com
             </a>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center text-primary-foreground/80 text-sm">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center text-muted-foreground text-sm">
             <span className="flex items-center" data-testid="text-no-obligation">
               <CheckCircle className="w-4 h-4 mr-2" />
               No obligation

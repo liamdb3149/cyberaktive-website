@@ -3,7 +3,7 @@ import { User } from "lucide-react";
 
 export default function Team() {
   return (
-    <section id="team" className="py-16 lg:py-24 bg-muted/30">
+    <section id="team" className="py-16 lg:py-24 bg-muted/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
@@ -15,7 +15,7 @@ export default function Team() {
         </div>
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Liam - Founder */}
-          <Card className="p-8 shadow-lg" data-testid="card-team-liam">
+          <Card className="p-8 card-3d bg-gradient-to-br from-card to-primary/5" data-testid="card-team-liam">
             <CardContent className="p-0">
               <div className="text-center mb-6">
                 <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -35,7 +35,7 @@ export default function Team() {
           </Card>
 
           {/* Alan - Advisor */}
-          <Card className="p-8 shadow-lg" data-testid="card-team-alan">
+          <Card className="p-8 card-3d bg-gradient-to-br from-card to-secondary/5" data-testid="card-team-alan">
             <CardContent className="p-0">
               <div className="text-center mb-6">
                 <div className="w-24 h-24 bg-secondary/10 rounded-full mx-auto mb-4 flex items-center justify-center">

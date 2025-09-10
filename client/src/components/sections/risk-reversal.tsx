@@ -30,7 +30,7 @@ export default function RiskReversal() {
   ];
 
   return (
-    <section id="risk-reversal" className="py-16 lg:py-24 bg-accent/5">
+    <section id="risk-reversal" className="py-16 lg:py-24 bg-accent/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-foreground">
@@ -38,7 +38,7 @@ export default function RiskReversal() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {guarantees.map((guarantee, index) => (
-              <Card key={index} className="p-6 text-center shadow-sm" data-testid={`card-guarantee-${index}`}>
+              <Card key={index} className="p-6 text-center card-3d-sm bg-gradient-to-br from-card to-accent/5" data-testid={`card-guarantee-${index}`}>
                 <CardContent className="p-0">
                   <div className={`w-12 h-12 bg-${guarantee.color}/10 rounded-lg flex items-center justify-center mx-auto mb-4`}>
                     <guarantee.icon className={`w-6 h-6 text-${guarantee.color}`} />

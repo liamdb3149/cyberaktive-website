@@ -17,12 +17,12 @@ export default function PropertyManagement() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="pt-20 lg:pt-32 pb-16 lg:pb-24 bg-gradient-to-br from-background to-muted">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 lg:pt-32 pb-16 lg:pb-24 hero-gradient futuristic-mountains min-h-screen flex items-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
                 Property Management
-                <span className="text-primary block">AI Automation Solutions</span>
+                <span className="gradient-text block">AI Automation Solutions</span>
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
                 Comprehensive workflow automations designed specifically for property management firms to eliminate manual tasks and maximize profitability
@@ -30,7 +30,7 @@ export default function PropertyManagement() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <Button 
                   size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold card-3d-sm px-8 py-4"
                   onClick={() => scrollToSection('calendar')}
                   data-testid="button-get-audit"
                 >
@@ -39,6 +39,7 @@ export default function PropertyManagement() {
                 <Button 
                   size="lg" 
                   variant="outline"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground card-3d-sm px-8 py-4"
                   onClick={() => scrollToSection('solutions')}
                   data-testid="button-see-solutions"
                 >
@@ -49,133 +50,75 @@ export default function PropertyManagement() {
           </div>
         </section>
 
-        {/* Solutions Overview */}
+        {/* Automation Bundles */}
         <section id="solutions" className="py-16 lg:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-                Comprehensive Property Management Automation
+                Two Powerful AI Automation Bundles
               </h2>
               <p className="text-xl text-muted-foreground">
-                Transform every aspect of your property management operations with intelligent automation
+                Choose the bundle that matches your needs or combine both for maximum impact
               </p>
             </div>
             <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-              {/* Tenant Management */}
-              <Card className="p-8">
+              {/* Revenue Rocket Bundle */}
+              <Card className="p-8 card-3d bg-gradient-to-br from-card to-accent/5">
                 <CardContent className="p-0">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                      <Users className="w-6 h-6 text-primary" />
+                  <div className="text-center mb-8">
+                    <div className="w-16 h-16 bg-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <TrendingUp className="w-8 h-8 text-accent" />
                     </div>
-                    <h3 className="text-2xl font-bold">Tenant Management</h3>
+                    <h3 className="text-3xl font-bold mb-2 gradient-text">Revenue Rocket Bundle</h3>
+                    <p className="text-lg text-accent font-semibold">Marketing, Sales & Leads AI Automation</p>
                   </div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Automated tenant screening and application processing</span>
+                      <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="font-medium">The Speed to Lead System</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>24/7 tenant inquiry handling and response system</span>
+                      <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                      <span>AI Social Media Content Generation, scheduling and publishing</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Automated lease renewal notifications and processing</span>
+                      <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                      <span>AI Cold Email Prospecting</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Smart move-in/move-out coordination</span>
+                      <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Personalized follow-up and nurture systems</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
 
-              {/* Maintenance Management */}
-              <Card className="p-8">
+              {/* OpFlow AI Suite */}
+              <Card className="p-8 card-3d bg-gradient-to-br from-card to-primary/5">
                 <CardContent className="p-0">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
-                      <Clock className="w-6 h-6 text-secondary" />
+                  <div className="text-center mb-8">
+                    <div className="w-16 h-16 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <DollarSign className="w-8 h-8 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-bold">Maintenance Management</h3>
+                    <h3 className="text-3xl font-bold mb-2 gradient-text">OpFlow AI Suite</h3>
+                    <p className="text-lg text-primary font-semibold">Business Operations Efficiency Automation</p>
                   </div>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-secondary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Instant maintenance request routing and prioritization</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-secondary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Automated vendor coordination and scheduling</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-secondary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Real-time maintenance tracking and updates</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-secondary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Preventive maintenance scheduling and alerts</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Financial Management */}
-              <Card className="p-8">
-                <CardContent className="p-0">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
-                      <DollarSign className="w-6 h-6 text-accent" />
-                    </div>
-                    <h3 className="text-2xl font-bold">Financial Management</h3>
-                  </div>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Automated rent collection and payment processing</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Intelligent delinquency management workflows</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Automated financial reporting and owner statements</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Expense tracking and budget management</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Lead Generation */}
-              <Card className="p-8">
-                <CardContent className="p-0">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                      <TrendingUp className="w-6 h-6 text-primary" />
-                    </div>
-                    <h3 className="text-2xl font-bold">Lead Generation & Sales</h3>
-                  </div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>AI-powered lead qualification and scoring</span>
+                      <span>The Social Media DM & Website Bot / AI Customer Service Agent</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Automated proposal generation and follow-up</span>
+                      <span className="font-medium">The AI Receptionist</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Multi-channel lead capture and nurturing</span>
+                      <span>AI Outbound Calling: Rent collection follow-ups</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                      <span>CRM integration and contact management</span>
+                      <span>Lease renewal negotiations & prospective tenant calls</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -185,7 +128,7 @@ export default function PropertyManagement() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-16 lg:py-24 bg-muted/50">
+        <section className="py-16 lg:py-24 bg-muted/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -196,57 +139,65 @@ export default function PropertyManagement() {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">40%</div>
-                <div className="text-lg font-semibold mb-2">Time Savings</div>
-                <div className="text-muted-foreground text-sm">Reduce administrative workload by 16+ hours per week</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-secondary mb-2">50%</div>
-                <div className="text-lg font-semibold mb-2">More Clients</div>
-                <div className="text-muted-foreground text-sm">Handle more properties with your current team</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-accent mb-2">5-15%</div>
-                <div className="text-lg font-semibold mb-2">Margin Increase</div>
-                <div className="text-muted-foreground text-sm">Boost profit margins significantly</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">24/7</div>
-                <div className="text-lg font-semibold mb-2">Operations</div>
-                <div className="text-muted-foreground text-sm">Never miss opportunities again</div>
-              </div>
+              <Card className="p-6 text-center card-3d-sm bg-gradient-to-br from-card to-primary/10">
+                <CardContent className="p-0">
+                  <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">40%</div>
+                  <div className="text-lg font-semibold mb-2">Time Savings</div>
+                  <div className="text-muted-foreground text-sm">Reduce administrative workload by 16+ hours per week</div>
+                </CardContent>
+              </Card>
+              <Card className="p-6 text-center card-3d-sm bg-gradient-to-br from-card to-secondary/10">
+                <CardContent className="p-0">
+                  <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">50%</div>
+                  <div className="text-lg font-semibold mb-2">More Clients</div>
+                  <div className="text-muted-foreground text-sm">Handle more properties with your current team</div>
+                </CardContent>
+              </Card>
+              <Card className="p-6 text-center card-3d-sm bg-gradient-to-br from-card to-accent/10">
+                <CardContent className="p-0">
+                  <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">5-15%</div>
+                  <div className="text-lg font-semibold mb-2">Margin Increase</div>
+                  <div className="text-muted-foreground text-sm">Boost profit margins significantly</div>
+                </CardContent>
+              </Card>
+              <Card className="p-6 text-center card-3d-sm bg-gradient-to-br from-card to-primary/10">
+                <CardContent className="p-0">
+                  <div className="text-4xl lg:text-5xl font-bold gradient-text mb-2">24/7</div>
+                  <div className="text-lg font-semibold mb-2">Operations</div>
+                  <div className="text-muted-foreground text-sm">Never miss opportunities again</div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section id="calendar" className="py-16 lg:py-24 bg-gradient-to-br from-primary to-secondary">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="calendar" className="py-16 lg:py-24 hero-gradient">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-primary-foreground">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6">
                 Ready to Automate Your Property Management?
               </h2>
-              <p className="text-xl text-primary-foreground/90 mb-8">
+              <p className="text-xl text-muted-foreground mb-8">
                 Book your free workflow audit and discover exactly where you're losing time and money
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Button 
                   size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold card-3d-sm px-8 py-4"
                   data-testid="button-book-audit"
                 >
                   Book Your Free Audit Now
                 </Button>
                 <a 
                   href="mailto:team@cyberaktive.com" 
-                  className="text-primary-foreground hover:text-primary-foreground/80 font-semibold text-lg transition-colors"
+                  className="text-primary hover:text-primary/80 font-semibold text-lg transition-colors"
                   data-testid="link-email"
                 >
                   team@cyberaktive.com
                 </a>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center text-primary-foreground/80 text-sm">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center text-muted-foreground text-sm">
                 <span className="flex items-center">
                   <CheckCircle className="w-4 h-4 mr-2" />
                   No obligation
