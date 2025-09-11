@@ -10,6 +10,12 @@ export default function Process() {
     }
   };
 
+  const colorClasses: Record<string, string> = {
+    primary: "bg-primary",
+    secondary: "bg-secondary", 
+    accent: "bg-accent"
+  };
+
   const steps = [
     {
       number: 1,
@@ -54,7 +60,7 @@ export default function Process() {
   ];
 
   return (
-    <section id="process" className="py-16 lg:py-24 bg-background">
+    <section id="process" className="py-16 lg:py-24 bg-white shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
@@ -68,10 +74,8 @@ export default function Process() {
           <div className="grid md:grid-cols-5 gap-8">
             {steps.map((step, index) => (
               <div key={index} className="text-center" data-testid={`step-${index}`}>
-                <div className={`w-16 h-16 bg-${step.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <span className="text-2xl font-bold text-primary-foreground" data-testid={`step-number-${index}`}>
-                    {step.number}
-                  </span>
+                <div className={`w-16 h-16 ${colorClasses[step.color]} rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg`}>
+                  <step.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2" data-testid={`step-title-${index}`}>
                   {step.title}

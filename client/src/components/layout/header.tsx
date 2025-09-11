@@ -38,7 +38,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
               href="/property-management" 
-              className="text-foreground/80 hover:text-foreground transition-colors font-medium"
+              className="text-white hover:text-white/90 transition-colors font-medium drop-shadow-md"
               data-testid="link-property-management"
             >
               Property Management
@@ -70,7 +70,7 @@ export default function Header() {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link 
                 href="/property-management"
-                className="block px-3 py-2 text-foreground/80 hover:text-foreground transition-colors font-medium"
+                className="block px-3 py-2 text-white hover:text-white/90 transition-colors font-medium drop-shadow-md"
                 onClick={() => setIsMobileMenuOpen(false)}
                 data-testid="link-property-management-mobile"
               >
