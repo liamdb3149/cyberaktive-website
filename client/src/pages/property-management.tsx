@@ -50,90 +50,13 @@ export default function PropertyManagement() {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-lg px-10 py-5 rounded-2xl premium-card-sm"
-                  onClick={() => scrollToSection('solutions')}
+                  className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-10 py-5 rounded-2xl drop-shadow-md"
+                  onClick={() => setIsCalendarOpen(true)}
                   data-testid="button-see-solutions"
                 >
-                  See Our Automation Bundles
+                  Schedule Your Free Consultation
                 </Button>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Automation Bundles */}
-        <section id="solutions" className="py-20 lg:py-32 section-gradient-1">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="max-w-5xl mx-auto text-center mb-20">
-              <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground">
-                Two Powerful AI Automation Bundles
-              </h2>
-              <p className="premium-text-lg text-muted-foreground">
-                Choose the bundle that matches your needs or combine both for maximum impact
-              </p>
-            </div>
-            <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
-              {/* Revenue Rocket Bundle */}
-              <Card className="p-12 premium-card">
-                <CardContent className="p-0">
-                  <div className="text-center mb-10">
-                    <div className="w-20 h-20 bg-accent/20 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                      <TrendingUp className="w-10 h-10 text-accent" />
-                    </div>
-                    <h3 className="premium-text-xl mb-3 gradient-text">Revenue Rocket Bundle</h3>
-                    <p className="premium-text-lg text-accent font-semibold">Marketing, Sales & Leads AI Automation</p>
-                  </div>
-                  <ul className="space-y-5">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-accent mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg font-medium">Speed to Lead System</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-accent mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">AI social media content generation, scheduling and publishing</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-accent mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">AI cold email prospecting</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-accent mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">Personalized follow-up and nurture systems</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* OpFlow AI Suite */}
-              <Card className="p-12 premium-card">
-                <CardContent className="p-0">
-                  <div className="text-center mb-10">
-                    <div className="w-20 h-20 bg-primary/20 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                      <DollarSign className="w-10 h-10 text-primary" />
-                    </div>
-                    <h3 className="premium-text-xl mb-3 gradient-text">OpFlow AI Suite</h3>
-                    <p className="premium-text-lg text-primary font-semibold">Business Operations Efficiency Automation</p>
-                  </div>
-                  <ul className="space-y-5">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-primary mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">Social media DM & website bot / AI customer service agent</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-primary mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg font-medium">AI receptionist</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-primary mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">AI outbound calling: rent collection follow-ups</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-primary mr-4 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">Lease renewal negotiations & prospective tenant calls</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
