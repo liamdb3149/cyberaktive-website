@@ -18,11 +18,12 @@ export default function Calendar() {
           <div className="mb-12">
             <iframe 
               src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk" 
-              style={{ width: '100%', border: 'none', overflow: 'hidden', height: '600px' }} 
-              scrolling="no" 
+              style={{ width: '100%', border: 'none', overflow: 'hidden', height: '800px', minHeight: '800px' }} 
+              scrolling="auto" 
               id="msgsndr-calendar"
               title="Book Your Free Workflow Audit"
               data-testid="calendar-booking-widget"
+              allow="payment; geolocation"
             />
             <script src="https://link.msgsndr.com/js/embed.js" type="text/javascript"></script>
           </div>

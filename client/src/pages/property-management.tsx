@@ -458,7 +458,7 @@ export default function PropertyManagement() {
                       Book Your Free Audit Now
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-4xl w-full h-[600px] p-0 border-none bg-transparent shadow-none">
+                  <DialogContent className="max-w-4xl w-full h-[850px] p-0 border-none bg-transparent shadow-none">
                     <div className="relative bg-white rounded-lg overflow-hidden h-full">
                       <div className="flex justify-between items-center p-4 border-b">
                         <DialogTitle className="text-xl font-semibold">Book Your Free Workflow Audit</DialogTitle>
@@ -474,10 +474,11 @@ export default function PropertyManagement() {
                       <div className="h-full">
                         <iframe 
                           src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk" 
-                          style={{ width: '100%', border: 'none', overflow: 'hidden', height: 'calc(100% - 60px)' }} 
-                          scrolling="no" 
-                          id="msgsndr-calendar"
+                          style={{ width: '100%', border: 'none', overflow: 'auto', height: 'calc(100% - 60px)', minHeight: '780px' }} 
+                          scrolling="auto" 
+                          id="msgsndr-calendar-modal"
                           title="Book Free Workflow Audit"
+                          allow="payment; geolocation"
                         />
                         <script src="https://link.msgsndr.com/js/embed.js" type="text/javascript"></script>
                       </div>
