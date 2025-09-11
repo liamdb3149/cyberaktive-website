@@ -48,7 +48,7 @@ export default function Hero() {
           </div>
           <div className="flex items-center justify-center text-white/80 text-lg drop-shadow-md">
             <CheckCircle className="w-6 h-6 mr-3 text-white/90 drop-shadow-md" />
-            <span data-testid="text-trust-indicator" className="font-medium">Trusted by 100+ property management firms across the US</span>
+            <span data-testid="text-trust-indicator" className="font-medium">Automating property management firms throughout the U.S., Canada, the U.K., Europe, Australia, Singapore, Hong Kong, and New Zealand.</span>
           </div>
         </div>
       </div>
