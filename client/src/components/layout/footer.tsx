@@ -6,7 +6,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
               <div className="text-2xl font-bold gradient-text mb-2">Cyberaktive</div>
-              <p className="text-muted-foreground mb-2">AI Workflow Automations for Property Management</p>
+              <p className="text-muted-foreground mb-2">AI Workflow and Process Automation for Property Management firms throughout the U.S., Canada, the U.K., Europe, Australia, Singapore, Hong Kong, and New Zealand.</p>
               <a 
                 href="mailto:team@cyberaktive.com" 
                 className="text-primary hover:text-primary/80 transition-colors relative z-10 font-semibold"
