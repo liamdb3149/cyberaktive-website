@@ -1,3 +1,5 @@
+import fullLogo from "@/assets/cyberaktive-full-logo.jpg";
+
 export default function Footer() {
   return (
     <footer className="bg-card border-t border-border py-12">
@@ -5,7 +7,13 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
-              <div className="text-2xl font-bold gradient-text mb-2">Cyberaktive</div>
+              <div className="flex items-center justify-center md:justify-start mb-4">
+                <img 
+                  src={fullLogo} 
+                  alt="Cyberaktive - AI Workflow Automation" 
+                  className="h-16 w-auto"
+                />
+              </div>
               <p className="text-muted-foreground mb-2">AI Workflow and Process Automation for Property Management firms throughout the U.S., Canada, the U.K., Europe, Australia, Singapore, Hong Kong, and New Zealand.</p>
               <a 
                 href="mailto:team@cyberaktive.com" 

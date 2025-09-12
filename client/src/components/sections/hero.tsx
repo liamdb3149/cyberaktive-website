@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
+import iconLogo from "@/assets/cyberaktive-icon.jpg";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -13,6 +14,13 @@ export default function Hero() {
     <section id="hero" className="pt-32 lg:pt-40 pb-20 lg:pb-32 homepage-hero min-h-screen flex items-center">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
+          <div className="flex justify-center mb-8">
+            <img 
+              src={iconLogo} 
+              alt="Cyberaktive" 
+              className="w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-2xl border-2 border-white/20"
+            />
+          </div>
           <h1 className="premium-text-4xl md:text-6xl lg:text-7xl mb-8">
             <span className="text-white drop-shadow-lg block mb-2">Take On</span>
             <span className="text-white drop-shadow-lg block mb-2 font-black">50% More Doors</span>

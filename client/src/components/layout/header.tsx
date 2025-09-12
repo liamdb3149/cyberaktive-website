@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "wouter";
+import iconLogo from "@/assets/cyberaktive-icon.jpg";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,7 +30,12 @@ export default function Header() {
     <header className={`sticky top-0 z-50 w-full border-b border-border/30 ${headerClass}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex items-center space-x-4">
+            <img 
+              src={iconLogo} 
+              alt="Cyberaktive" 
+              className="w-10 h-10 rounded-lg shadow-md"
+            />
             <Link href="/" className="text-2xl font-bold gradient-text" data-testid="link-logo">
               Cyberaktive
             </Link>
@@ -38,10 +44,11 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
               href="/property-management" 
-              className="text-white hover:text-white/90 transition-colors font-medium drop-shadow-md"
+              className="group flex items-center px-4 py-2 rounded-lg text-white hover:text-white transition-all duration-300 font-medium drop-shadow-md hover:bg-white/10 hover:backdrop-blur-sm border border-transparent hover:border-white/20"
               data-testid="link-property-management"
             >
-              Property Management
+              <span>Property Management</span>
+              <ChevronRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <Button 
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold header-button" 
@@ -70,11 +77,12 @@ export default function Header() {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link 
                 href="/property-management"
-                className="block px-3 py-2 text-white hover:text-white/90 transition-colors font-medium drop-shadow-md"
+                className="group flex items-center px-4 py-3 rounded-lg text-white hover:text-white transition-all duration-300 font-medium drop-shadow-md hover:bg-white/10 border border-transparent hover:border-white/20"
                 onClick={() => setIsMobileMenuOpen(false)}
                 data-testid="link-property-management-mobile"
               >
-                Property Management
+                <span>Property Management</span>
+                <ChevronRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Button 
                 className="w-full justify-start bg-accent hover:bg-accent/90 text-accent-foreground font-semibold mt-2" 
