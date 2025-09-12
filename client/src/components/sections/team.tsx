@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { User } from "lucide-react";
+import liamPhoto from "@assets/1_1757653847958.png";
+import alanPhoto from "@assets/2_1757653847958.png";
 
 export default function Team() {
   return (
@@ -18,8 +19,13 @@ export default function Team() {
           <Card className="p-10 premium-card" data-testid="card-team-liam">
             <CardContent className="p-0">
               <div className="text-center mb-6">
-                <div className="w-28 h-28 bg-primary/20 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                  <User className="w-14 h-14 text-primary" />
+                <div className="relative w-28 h-28 rounded-2xl mx-auto mb-6 overflow-hidden">
+                  <img 
+                    src={liamPhoto} 
+                    alt="Liam - Founder" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 mix-blend-multiply"></div>
                 </div>
                 <h3 className="premium-text-xl text-foreground mb-3" data-testid="text-liam-name">
                   Liam - Founder
@@ -38,8 +44,13 @@ export default function Team() {
           <Card className="p-10 premium-card" data-testid="card-team-alan">
             <CardContent className="p-0">
               <div className="text-center mb-6">
-                <div className="w-28 h-28 bg-secondary/20 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                  <User className="w-14 h-14 text-secondary" />
+                <div className="relative w-28 h-28 rounded-2xl mx-auto mb-6 overflow-hidden">
+                  <img 
+                    src={alanPhoto} 
+                    alt="Alan - Advisor" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-accent/30 mix-blend-multiply"></div>
                 </div>
                 <h3 className="premium-text-xl text-foreground mb-3" data-testid="text-alan-name">
                   Alan - Advisor & Strategic Business Partnerships

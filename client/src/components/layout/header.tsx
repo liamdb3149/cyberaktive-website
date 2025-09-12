@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import iconLogo from "@/assets/cyberaktive-icon.jpg";
+import CalendarModal from "@/components/calendar-modal";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,13 +17,7 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   };
 
-  const handleBookAudit = () => {
-    if (location === '/') {
-      scrollToSection('calendar');
-    } else {
-      window.location.href = '/#calendar';
-    }
-  };
+  // Remove the old handleBookAudit function since we're using the modal now
 
   const headerClass = location === '/' ? 'header-with-mountain' : 'header-with-sky';
 
@@ -52,13 +47,14 @@ export default function Header() {
               <span>Property Management</span>
               <ChevronRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
-            <Button 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold header-button" 
-              onClick={handleBookAudit}
-              data-testid="button-book-audit-header"
-            >
-              Book Free Audit
-            </Button>
+            <CalendarModal>
+              <Button 
+                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold header-button" 
+                data-testid="button-book-audit-header"
+              >
+                Book Free Audit
+              </Button>
+            </CalendarModal>
           </nav>
           
           {/* Mobile menu button */}
@@ -86,13 +82,14 @@ export default function Header() {
                 <span>Property Management</span>
                 <ChevronRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
-              <Button 
-                className="w-full justify-start bg-accent hover:bg-accent/90 text-accent-foreground font-semibold mt-2" 
-                onClick={handleBookAudit}
-                data-testid="button-book-audit-mobile"
-              >
-                Book Free Audit
-              </Button>
+              <CalendarModal>
+                <Button 
+                  className="w-full justify-start bg-accent hover:bg-accent/90 text-accent-foreground font-semibold mt-2" 
+                  data-testid="button-book-audit-mobile"
+                >
+                  Book Free Audit
+                </Button>
+              </CalendarModal>
             </div>
           </div>
         )}

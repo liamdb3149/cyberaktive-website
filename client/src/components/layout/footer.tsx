@@ -1,8 +1,38 @@
 import fullLogo from "@/assets/cyberaktive-full-logo.jpg";
 import { Home, Building } from "lucide-react";
-import { Link } from "wouter";
+import { useLocation } from "wouter";
 
 export default function Footer() {
+  const [location, navigate] = useLocation();
+
+  const handleHomeClick = () => {
+    if (location === '/') {
+      // Already on home page, scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Navigate to home page
+      navigate('/');
+      // Small delay to ensure page loads, then scroll to top
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
+  const handlePropertyClick = () => {
+    if (location === '/property-management') {
+      // Already on property management page, scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Navigate to property management page
+      navigate('/property-management');
+      // Small delay to ensure page loads, then scroll to top
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
   return (
     <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,14 +58,24 @@ export default function Footer() {
             <div className="text-center md:text-right md:w-1/2">
               <h3 className="text-lg font-semibold mb-4 text-foreground">Quick Links</h3>
               <div className="space-y-3 mb-6">
-                <Link href="/" className="flex items-center justify-center md:justify-end text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-home">
+                <button 
+                  type="button"
+                  onClick={handleHomeClick}
+                  className="flex items-center justify-center md:justify-end text-muted-foreground hover:text-primary transition-colors cursor-pointer" 
+                  data-testid="link-footer-home"
+                >
                   <Home className="w-4 h-4 mr-2" />
                   <span>Home</span>
-                </Link>
-                <Link href="/property-management" className="flex items-center justify-center md:justify-end text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-property">
+                </button>
+                <button 
+                  type="button"
+                  onClick={handlePropertyClick}
+                  className="flex items-center justify-center md:justify-end text-muted-foreground hover:text-primary transition-colors cursor-pointer" 
+                  data-testid="link-footer-property"
+                >
                   <Building className="w-4 h-4 mr-2" />
                   <span>Property Management</span>
-                </Link>
+                </button>
               </div>
               <p className="text-sm text-muted-foreground">
                 &copy; 2025 Cyberaktive. All rights reserved.
