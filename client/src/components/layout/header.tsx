@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import iconLogo from "@/assets/cyberaktive-icon.jpg";
+import iconLogo from "@assets/Cyberaktive Logos t_1757653334662.png";
 import CalendarModal from "@/components/calendar-modal";
 
 export default function Header() {

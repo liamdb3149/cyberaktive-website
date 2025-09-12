@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
-import iconLogo from "@/assets/cyberaktive-icon.jpg";
+import iconLogo from "@assets/Cyberaktive Logos t_1757653334662.png";
+import CalendarModal from "@/components/calendar-modal";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -36,14 +37,15 @@ export default function Hero() {
             On average, each automation saves 16-80 hours per week after 2.5 months.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <Button 
-              size="lg" 
-              className="premium-button text-white font-semibold text-lg px-10 py-5 rounded-2xl"
-              onClick={() => scrollToSection('calendar')}
-              data-testid="button-get-audit"
-            >
-              Get Your Free Workflow Audit
-            </Button>
+            <CalendarModal>
+              <Button 
+                size="lg" 
+                className="premium-button text-white font-semibold text-lg px-10 py-5 rounded-2xl"
+                data-testid="button-get-audit"
+              >
+                Get Your Free Workflow Audit
+              </Button>
+            </CalendarModal>
             <Button 
               size="lg" 
               variant="outline"

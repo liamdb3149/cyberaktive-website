@@ -57,11 +57,11 @@ export default function Footer() {
             </div>
             <div className="text-center md:text-right md:w-1/2">
               <h3 className="text-lg font-semibold mb-4 text-foreground">Quick Links</h3>
-              <div className="space-y-3 mb-6">
+              <div className="space-y-3 mb-6 flex flex-col items-center md:items-end">
                 <button 
                   type="button"
                   onClick={handleHomeClick}
-                  className="flex items-center justify-center md:justify-end text-muted-foreground hover:text-primary transition-colors cursor-pointer" 
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors cursor-pointer" 
                   data-testid="link-footer-home"
                 >
                   <Home className="w-4 h-4 mr-2" />
@@ -70,7 +70,7 @@ export default function Footer() {
                 <button 
                   type="button"
                   onClick={handlePropertyClick}
-                  className="flex items-center justify-center md:justify-end text-muted-foreground hover:text-primary transition-colors cursor-pointer" 
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors cursor-pointer" 
                   data-testid="link-footer-property"
                 >
                   <Building className="w-4 h-4 mr-2" />

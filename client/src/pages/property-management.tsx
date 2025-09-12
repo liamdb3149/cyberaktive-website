@@ -2,14 +2,11 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { CheckCircle, ArrowRight, Clock, Users, DollarSign, TrendingUp, X } from "lucide-react";
-import { useState } from "react";
-import iconLogo from "@/assets/cyberaktive-icon.jpg";
+import { CheckCircle, ArrowRight, Clock, Users, DollarSign, TrendingUp } from "lucide-react";
+import iconLogo from "@assets/Cyberaktive Logos t_1757653334662.png";
+import CalendarModal from "@/components/calendar-modal";
 
 export default function PropertyManagement() {
-  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
-  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -47,23 +44,25 @@ export default function PropertyManagement() {
                 On average, each automation saves 16-80 hours per week after 2.5 months.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-                <Button 
-                  size="lg" 
-                  className="premium-button text-white font-semibold text-lg px-10 py-5 rounded-2xl"
-                  onClick={() => setIsCalendarOpen(true)}
-                  data-testid="button-get-audit"
-                >
-                  Get Your Free Workflow Audit
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-10 py-5 rounded-2xl drop-shadow-md"
-                  onClick={() => setIsCalendarOpen(true)}
-                  data-testid="button-see-solutions"
-                >
-                  Schedule Your Free Consultation
-                </Button>
+                <CalendarModal>
+                  <Button 
+                    size="lg" 
+                    className="premium-button text-white font-semibold text-lg px-10 py-5 rounded-2xl"
+                    data-testid="button-get-audit"
+                  >
+                    Get Your Free Workflow Audit
+                  </Button>
+                </CalendarModal>
+                <CalendarModal>
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-10 py-5 rounded-2xl drop-shadow-md"
+                    data-testid="button-see-solutions"
+                  >
+                    Schedule Your Free Consultation
+                  </Button>
+                </CalendarModal>
               </div>
             </div>
           </div>
@@ -456,43 +455,15 @@ export default function PropertyManagement() {
                 Book your free workflow audit and discover exactly where you're losing time and money
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-                <Dialog open={isCalendarOpen} onOpenChange={setIsCalendarOpen}>
-                  <DialogTrigger asChild>
-                    <Button 
-                      size="lg" 
-                      className="premium-button text-white font-semibold text-lg px-10 py-5 rounded-2xl"
-                      data-testid="button-book-audit"
-                    >
-                      Book Your Free Audit Now
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-4xl w-full h-[850px] p-0 border-none bg-transparent shadow-none">
-                    <div className="relative bg-white rounded-lg overflow-hidden h-full">
-                      <div className="flex justify-between items-center p-4 border-b">
-                        <DialogTitle className="text-xl font-semibold">Book Your Free Workflow Audit</DialogTitle>
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          onClick={() => setIsCalendarOpen(false)}
-                          className="h-8 w-8 p-0"
-                        >
-                          <X className="h-4 w-4" />
-                        </Button>
-                      </div>
-                      <div className="h-full">
-                        <iframe 
-                          src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk" 
-                          style={{ width: '100%', border: 'none', overflow: 'auto', height: 'calc(100% - 60px)', minHeight: '780px' }} 
-                          scrolling="auto" 
-                          id="msgsndr-calendar-modal"
-                          title="Book Free Workflow Audit"
-                          allow="payment; geolocation"
-                        />
-                        <script src="https://link.msgsndr.com/js/embed.js" type="text/javascript"></script>
-                      </div>
-                    </div>
-                  </DialogContent>
-                </Dialog>
+                <CalendarModal>
+                  <Button 
+                    size="lg" 
+                    className="premium-button text-white font-semibold text-lg px-10 py-5 rounded-2xl"
+                    data-testid="button-book-audit"
+                  >
+                    Book Your Free Audit Now
+                  </Button>
+                </CalendarModal>
                 <a 
                   href="mailto:team@cyberaktive.com" 
                   className="text-white hover:text-white/80 font-semibold text-lg transition-colors drop-shadow-md"
