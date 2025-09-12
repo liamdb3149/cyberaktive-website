@@ -31,11 +31,13 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center space-x-4">
-            <img 
-              src={iconLogo} 
-              alt="Cyberaktive" 
-              className="w-10 h-10 rounded-lg shadow-md"
-            />
+            <Link href="/" data-testid="link-logo-icon">
+              <img 
+                src={iconLogo} 
+                alt="Cyberaktive" 
+                className="w-10 h-10"
+              />
+            </Link>
             <Link href="/" className="text-2xl font-bold gradient-text" data-testid="link-logo">
               Cyberaktive
             </Link>

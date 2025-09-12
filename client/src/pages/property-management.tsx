@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { CheckCircle, ArrowRight, Clock, Users, DollarSign, TrendingUp, X } from "lucide-react";
 import { useState } from "react";
+import iconLogo from "@/assets/cyberaktive-icon.jpg";
 
 export default function PropertyManagement() {
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
@@ -21,9 +22,16 @@ export default function PropertyManagement() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="pt-32 lg:pt-40 pb-20 lg:pb-32 premium-hero min-h-screen flex items-center">
+        <section className="pt-20 lg:pt-24 pb-20 lg:pb-32 premium-hero min-h-screen flex items-center">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
             <div className="max-w-6xl mx-auto text-center">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={iconLogo} 
+                  alt="Cyberaktive" 
+                  className="w-16 h-16 md:w-20 md:h-20"
+                />
+              </div>
               <h1 className="premium-text-4xl md:text-6xl lg:text-7xl mb-8">
                 <span className="text-white drop-shadow-lg block mb-2">Property Management</span>
                 <span className="text-white drop-shadow-lg block mb-2 font-black">AI Automation</span>
@@ -82,7 +90,7 @@ export default function PropertyManagement() {
                     <span className="text-sm font-semibold text-accent uppercase tracking-wider">Revenue Growth</span>
                   </div>
                   <h3 className="text-3xl lg:text-4xl font-bold mb-4 gradient-text">Revenue-Generating Automations</h3>
-                  <p className="text-xl text-muted-foreground">Systems that directly increase your bottom line and grow your portfolio</p>
+                  <p className="text-xl text-muted-foreground">Intelligent AI systems that directly increase your bottom line, grow your portfolio and save the business BIG in the process.</p>
                 </div>
                 
                 <div className="grid lg:grid-cols-2 gap-12">
@@ -248,7 +256,7 @@ export default function PropertyManagement() {
                     <span className="text-sm font-semibold text-primary uppercase tracking-wider">Cost Efficiency</span>
                   </div>
                   <h3 className="text-3xl lg:text-4xl font-bold mb-4 gradient-text">Operations Efficiency Automations</h3>
-                  <p className="text-xl text-muted-foreground">Systems that streamline operations and reduce your team's workload</p>
+                  <p className="text-xl text-muted-foreground">Intelligent AI systems that streamline operations, reduce your team's workload & reduce related expenses up to 80%</p>
                 </div>
                 
                 <div className="grid lg:grid-cols-2 gap-12">

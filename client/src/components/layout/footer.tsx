@@ -1,12 +1,14 @@
 import fullLogo from "@/assets/cyberaktive-full-logo.jpg";
+import { Home, Building } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Footer() {
   return (
     <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-center md:text-left mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-between items-start">
+            <div className="text-center md:text-left mb-8 md:mb-0 md:w-1/2">
               <div className="flex items-center justify-center md:justify-start mb-4">
                 <img 
                   src={fullLogo} 
@@ -23,7 +25,18 @@ export default function Footer() {
                 team@cyberaktive.com
               </a>
             </div>
-            <div className="text-center md:text-right">
+            <div className="text-center md:text-right md:w-1/2">
+              <h3 className="text-lg font-semibold mb-4 text-foreground">Quick Links</h3>
+              <div className="space-y-3 mb-6">
+                <Link href="/" className="flex items-center justify-center md:justify-end text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-home">
+                  <Home className="w-4 h-4 mr-2" />
+                  <span>Home</span>
+                </Link>
+                <Link href="/property-management" className="flex items-center justify-center md:justify-end text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-property">
+                  <Building className="w-4 h-4 mr-2" />
+                  <span>Property Management</span>
+                </Link>
+              </div>
               <p className="text-sm text-muted-foreground">
                 &copy; 2025 Cyberaktive. All rights reserved.
               </p>

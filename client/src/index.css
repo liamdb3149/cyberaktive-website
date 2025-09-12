@@ -172,7 +172,7 @@
   }
 
   .premium-hero {
-    background-image: url('./assets/apartment-buildings.png');
+    background-image: url('./assets/apartment-buildings-optimized.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -194,7 +194,7 @@
   }
 
   .homepage-hero {
-    background-image: url('./assets/mountain-background.png');
+    background-image: url('./assets/mountain-background-optimized.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -231,7 +231,7 @@
   }
 
   .header-with-mountain {
-    background-image: url('./assets/mountain-background.png');
+    background-image: url('./assets/mountain-background-optimized.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -319,7 +319,7 @@
   }
 
   .header-with-sky {
-    background-image: url('./assets/sky-background.png');
+    background-image: url('./assets/sky-background-optimized.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

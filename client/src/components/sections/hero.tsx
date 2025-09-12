@@ -11,14 +11,14 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="pt-32 lg:pt-40 pb-20 lg:pb-32 homepage-hero min-h-screen flex items-center">
+    <section id="hero" className="pt-20 lg:pt-24 pb-20 lg:pb-32 homepage-hero min-h-screen flex items-center">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-6">
             <img 
               src={iconLogo} 
               alt="Cyberaktive" 
-              className="w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-2xl border-2 border-white/20"
+              className="w-16 h-16 md:w-20 md:h-20"
             />
           </div>
           <h1 className="premium-text-4xl md:text-6xl lg:text-7xl mb-8">
@@ -55,7 +55,6 @@ export default function Hero() {
             </Button>
           </div>
           <div className="flex items-center justify-center text-white/80 text-lg drop-shadow-md">
-            <CheckCircle className="w-6 h-6 mr-3 text-white/90 drop-shadow-md" />
             <span data-testid="text-trust-indicator" className="font-medium">Automating property management firms throughout the U.S., Canada, the U.K., Europe, Australia, Singapore, Hong Kong, and New Zealand.</span>
           </div>
         </div>
