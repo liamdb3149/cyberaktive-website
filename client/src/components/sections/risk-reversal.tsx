@@ -5,14 +5,14 @@ export default function RiskReversal() {
   const guarantees = [
     {
       icon: Clock,
-      title: "3-Month Trial",
-      description: "Highly discounted rate to prove value",
+      title: "Short 3-Month Contract",
+      description: "Prove results before full investment",
       color: "accent"
     },
     {
       icon: TrendingUp,
       title: "Prove ROI First",
-      description: "See results before full $5K investment",
+      description: "See results before full investment",
       color: "primary"
     },
     {

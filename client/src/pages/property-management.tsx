@@ -1,7 +1,7 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import PropertyHero from "@/components/sections/property-hero-new";
-import PropertyAutomations from "@/components/sections/property-automations-new";
+import PropertyHero from "@/components/sections/property-hero-original";
+import PropertyAutomations from "@/components/sections/property-automations-fixed";
 
 export default function PropertyManagement() {
   return (
