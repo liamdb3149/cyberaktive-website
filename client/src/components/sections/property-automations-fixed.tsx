@@ -205,23 +205,8 @@ export default function PropertyAutomations() {
           </div>
         </div>
 
-        {/* Section Divider */}
-        <RevealOnScroll delay={1000}>
-          <div className="relative py-16 mb-24">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full h-px bg-gradient-to-r from-transparent via-muted-foreground/30 to-transparent"></div>
-            </div>
-            <div className="relative flex justify-center">
-              <GlassCard className="px-8 py-4 bg-gradient-to-r from-primary/20 to-accent/20">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary/60 rounded-full animate-pulse"></div>
-                  <div className="w-3 h-3 bg-accent/60 rounded-full animate-pulse delay-75"></div>
-                  <div className="w-3 h-3 bg-primary/40 rounded-full animate-pulse delay-150"></div>
-                </div>
-              </GlassCard>
-            </div>
-          </div>
-        </RevealOnScroll>
+        {/* Section Spacing */}
+        <div className="py-16 mb-24"></div>
 
         {/* Operations Efficiency Automations */}
         <div>

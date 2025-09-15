@@ -1,0 +1,145 @@
+import { Button } from "@/components/ui/button";
+import { Clock, Wrench, CheckCircle, Rocket, BarChart, ArrowRight } from "lucide-react";
+import { Section, GlassCard, FloatingOrb, RevealOnScroll, GeometricBlob } from "@/components/ui/visual";
+
+export default function Process() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const steps = [
+    {
+      number: 1,
+      title: "Free Workflow Audit",
+      description: "We identify your biggest time drains and inefficiencies",
+      duration: "30 minutes",
+      icon: Clock,
+      color: "primary"
+    },
+    {
+      number: 2,
+      title: "Custom Build",
+      description: "AI workflows designed for your specific tech stack",
+      duration: "2-4 weeks",
+      icon: Wrench,
+      color: "secondary"
+    },
+    {
+      number: 3,
+      title: "QA Testing",
+      description: "Rigorous testing before going live",
+      duration: "3-5 days",
+      icon: CheckCircle,
+      color: "accent"
+    },
+    {
+      number: 4,
+      title: "Deployment",
+      description: "Seamless integration with your existing systems",
+      duration: "1-2 days",
+      icon: Rocket,
+      color: "primary"
+    },
+    {
+      number: 5,
+      title: "Ongoing Monitoring",
+      description: "Continuous optimization as systems evolve",
+      duration: "Ongoing",
+      icon: BarChart,
+      color: "secondary"
+    }
+  ];
+
+  return (
+    <Section 
+      id="process" 
+      className="section-mesh relative bg-gradient-to-br from-indigo-50/40 via-cyan-50/30 to-purple-50/40"
+    >
+      {/* Floating Elements */}
+      <FloatingOrb size="large" style={{ top: "20%", right: "8%" }} />
+      <FloatingOrb size="medium" style={{ bottom: "15%", left: "12%" }} />
+      <GeometricBlob style={{ top: "50%", left: "5%", width: "160px", height: "160px" }} />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <RevealOnScroll>
+          <div className="max-w-4xl mx-auto text-center mb-20">
+            <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
+              Our Process (The Path)
+            </h2>
+            <p className="premium-text-lg text-muted-foreground max-w-3xl mx-auto">
+              A proven 5-phase approach that ensures seamless integration and maximum ROI
+            </p>
+          </div>
+        </RevealOnScroll>
+        
+        <div className="max-w-7xl mx-auto">
+          {/* Process Steps */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
+            {steps.map((step, index) => (
+              <RevealOnScroll key={index} delay={200 + index * 100}>
+                <GlassCard 
+                  className="text-center group hover:scale-105 transition-all duration-300 h-full"
+                  data-testid={`step-${index}`}
+                >
+                  {/* Step Number Badge */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-sm font-black shadow-lg">
+                    {step.number}
+                  </div>
+                  
+                  <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/30 transition-colors">
+                    <step.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  
+                  <h3 className="font-bold text-lg mb-3 text-foreground" data-testid={`step-title-${index}`}>
+                    {step.title}
+                  </h3>
+                  
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`step-description-${index}`}>
+                    {step.description}
+                  </p>
+                  
+                  <div className="inline-block px-3 py-1 bg-accent/10 rounded-full text-xs font-semibold text-accent" data-testid={`step-duration-${index}`}>
+                    {step.duration}
+                  </div>
+                  
+                  {/* Connection Arrow - Hide on last item */}
+                  {index < steps.length - 1 && (
+                    <div className="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-20">
+                      <ArrowRight className="w-6 h-6 text-primary/40" />
+                    </div>
+                  )}
+                </GlassCard>
+              </RevealOnScroll>
+            ))}
+          </div>
+          
+          {/* Enhanced CTA Section */}
+          <RevealOnScroll delay={800}>
+            <GlassCard className="text-center bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10">
+              <div className="max-w-3xl mx-auto">
+                <h3 className="premium-text-xl text-foreground mb-6 font-bold">
+                  Ready to Start Your Transformation?
+                </h3>
+                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+                  Take the first step towards doubling your profit margins and reclaiming your time
+                </p>
+                <Button 
+                  size="lg" 
+                  className="premium-button text-white font-semibold px-12 py-6 rounded-2xl group"
+                  onClick={() => scrollToSection('calendar')}
+                  data-testid="button-start-process"
+                >
+                  <Clock className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
+                  Start Your Free Audit Today
+                </Button>
+              </div>
+            </GlassCard>
+          </RevealOnScroll>
+        </div>
+      </div>
+    </Section>
+  );
+}

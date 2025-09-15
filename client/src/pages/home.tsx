@@ -3,13 +3,13 @@ import Footer from "@/components/layout/footer";
 import Hero from "@/components/sections/hero";
 import Problem from "@/components/sections/problem-fixed";
 import Solution from "@/components/sections/solution-fixed";
-import Automations from "@/components/sections/automations-fixed";
-import Results from "@/components/sections/results-new";
-import Process from "@/components/sections/process";
+import Automations from "@/components/sections/automations-functional";
+import Results from "@/components/sections/results-fixed";
+import Process from "@/components/sections/process-elevated";
 import Team from "@/components/sections/team";
-import RiskReversal from "@/components/sections/risk-reversal";
+import RiskReversal from "@/components/sections/risk-reversal-elevated";
 import Calendar from "@/components/sections/calendar";
-import FinalCTA from "@/components/sections/final-cta";
+import FinalCTA from "@/components/sections/final-cta-elevated";
 
 export default function Home() {
   return (
