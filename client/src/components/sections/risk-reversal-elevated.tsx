@@ -82,7 +82,7 @@ export default function RiskReversal() {
               <p className="premium-text-lg text-foreground mb-2 font-semibold">
                 Zero Risk, Maximum Reward
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-white">
                 Join the property management companies already transforming their operations with AI automation
               </p>
             </div>
