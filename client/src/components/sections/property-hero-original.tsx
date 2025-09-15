@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { FloatingOrb, RevealOnScroll, GeometricBlob } from "@/components/ui/visual";
 import iconLogo from "@assets/Cyberaktive Logos t_1757653334662.png";
+import apartmentBuildings from "@/assets/apartment-buildings-optimized.jpg";
 import CalendarModal from "@/components/calendar-modal";
 
 export default function PropertyHero() {
@@ -8,7 +9,7 @@ export default function PropertyHero() {
     <section 
       className="pt-20 lg:pt-24 pb-20 lg:pb-32 min-h-screen flex items-center relative overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/src/assets/apartment-buildings-optimized.jpg')`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('${apartmentBuildings}')`
       }}
     >
       {/* Floating Elements */}
