@@ -4,27 +4,21 @@ import { Section, GlassCard, FloatingOrb, RevealOnScroll, GeometricBlob } from "
 export default function RiskReversal() {
   const guarantees = [
     {
-      icon: Clock,
-      title: "Short 3-Month Contract",
-      description: "Prove results before full investment",
-      color: "accent"
-    },
-    {
-      icon: TrendingUp,
-      title: "Prove ROI First",
-      description: "See results before full investment",
+      icon: CheckCircle,
+      title: "Practical recommendations, not just theory",
+      description: "Solutions based on real-world implementation, not abstract concepts",
       color: "primary"
     },
     {
       icon: Users,
-      title: "Limited Capacity",
-      description: "Only 10 new clients per quarter",
+      title: "You stay in control at every step",
+      description: "Clear decision points with full transparency on costs and outcomes",
       color: "secondary"
     },
     {
-      icon: CheckCircle,
-      title: "Free Audit",
-      description: "Limited-time value offer",
+      icon: TrendingUp,
+      title: "If we don't find a fit, we'll tell you",
+      description: "Honest assessment—we won't recommend AI if it doesn't make business sense",
       color: "accent"
     }
   ];
@@ -43,15 +37,15 @@ export default function RiskReversal() {
         <RevealOnScroll>
           <div className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
-              Risk-Free Trial with Proven Results
+              Proven Approach, No Guesswork
             </h2>
             <p className="premium-text-lg text-muted-foreground max-w-2xl mx-auto">
-              We're so confident in our results, we've made it impossible for you to lose
+              A transparent, practical partnership focused on real business value
             </p>
           </div>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {guarantees.map((guarantee, index) => (
             <RevealOnScroll key={index} delay={200 + index * 100}>
               <GlassCard 
@@ -80,10 +74,10 @@ export default function RiskReversal() {
           <div className="text-center mt-16">
             <div className="inline-block bg-primary/5 rounded-2xl px-8 py-6 backdrop-blur-sm border border-primary/10">
               <p className="premium-text-lg text-foreground mb-2 font-semibold">
-                Zero Risk, Maximum Reward
+                ROI-Focused Partnership
               </p>
-              <p className="text-white">
-                Join the property management companies already transforming their operations with AI automation
+              <p className="text-muted-foreground">
+                We only succeed when you see measurable business value from our recommendations
               </p>
             </div>
           </div>
