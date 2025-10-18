@@ -28,6 +28,12 @@ export default function Problem() {
       impact: "Profit Pressure"
     },
     {
+      icon: Moon,
+      title: "Working late to keep up with routine tasks",
+      description: "Nights and weekends spent on work that could be automated or streamlined.",
+      impact: "Work-Life Balance"
+    },
+    {
       icon: Wrench,
       title: "Unsure if new tools or vendors will actually improve things",
       description: "Uncertainty about whether technology investments will deliver real ROI.",
