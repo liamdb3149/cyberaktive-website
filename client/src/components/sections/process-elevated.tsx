@@ -13,43 +13,35 @@ export default function Process() {
   const steps = [
     {
       number: 1,
-      title: "Free Workflow Audit",
-      description: "We identify your biggest time drains and inefficiencies",
-      duration: "30 minutes",
+      title: "Book a short call and share your key pain points",
+      description: "Quick discovery call to understand your firm's specific challenges",
+      duration: "15 minutes",
       icon: Clock,
       color: "primary"
     },
     {
       number: 2,
-      title: "Custom Build",
-      description: "AI workflows designed for your specific tech stack",
-      duration: "2-4 weeks",
-      icon: Wrench,
+      title: "We review your main workflows and talk to your team",
+      description: "Deep dive into how work actually gets done to identify opportunities",
+      duration: "1-2 weeks",
+      icon: Users,
       color: "secondary"
     },
     {
       number: 3,
-      title: "QA Testing",
-      description: "Rigorous testing before going live",
-      duration: "3-5 days",
-      icon: CheckCircle,
+      title: "We outline where AI makes sense and show projected impact",
+      description: "Clear recommendations with financial impact and ROI projections",
+      duration: "1 week",
+      icon: BarChart,
       color: "accent"
     },
     {
       number: 4,
-      title: "Deployment",
-      description: "Seamless integration with your existing systems",
-      duration: "1-2 days",
-      icon: Rocket,
+      title: "You get a plain-English plan with ROI and a clear 'go/no-go' decision point",
+      description: "Transparent roadmap with costs, timeline, and expected outcomes",
+      duration: "Decision time",
+      icon: CheckCircle,
       color: "primary"
-    },
-    {
-      number: 5,
-      title: "Ongoing Monitoring",
-      description: "Continuous optimization as systems evolve",
-      duration: "Ongoing",
-      icon: BarChart,
-      color: "secondary"
     }
   ];
 
@@ -67,17 +59,17 @@ export default function Process() {
         <RevealOnScroll>
           <div className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
-              Our Process (The Path)
+              Simple Steps, Straightforward Outcomes
             </h2>
             <p className="premium-text-lg text-muted-foreground max-w-3xl mx-auto">
-              A proven 5-phase approach that ensures seamless integration and maximum ROI
+              A clear, practical path from discovery to implementation
             </p>
           </div>
         </RevealOnScroll>
         
         <div className="max-w-7xl mx-auto">
           {/* Process Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {steps.map((step, index) => (
               <RevealOnScroll key={index} delay={200 + index * 100}>
                 <GlassCard 
@@ -121,10 +113,10 @@ export default function Process() {
             <GlassCard className="text-center bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10">
               <div className="max-w-3xl mx-auto">
                 <h3 className="premium-text-xl text-foreground mb-6 font-bold">
-                  Ready to Start Your Transformation?
+                  Ready to Get Started?
                 </h3>
                 <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Take the first step towards doubling your profit margins and reclaiming your time
+                  Book a quick call to see if AI can deliver real value for your law firm
                 </p>
                 <Button 
                   size="lg" 
@@ -133,7 +125,7 @@ export default function Process() {
                   data-testid="button-start-process"
                 >
                   <Clock className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
-                  Start Your Free Audit Today
+                  Book Your Discovery Call
                 </Button>
               </div>
             </GlassCard>
