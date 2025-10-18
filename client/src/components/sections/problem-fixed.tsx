@@ -4,40 +4,34 @@ import { Section, GlassCard, FloatingOrb, RevealOnScroll, GeometricBlob } from "
 export default function Problem() {
   const problems = [
     {
-      icon: Phone,
-      title: "24/7 Tenant Calls & Emergencies",
-      description: "Limited staff coverage means missed calls, frustrated tenants, and lost revenue opportunities after hours.",
-      impact: "Revenue Loss"
-    },
-    {
       icon: FileText,
-      title: "Manual Administrative Tasks", 
-      description: "40+ hours per week consumed by repetitive paperwork, data entry, and administrative overhead.",
+      title: "Too much repeat admin and manual work", 
+      description: "Repetitive administrative tasks consume valuable time that could be spent on billable legal work.",
       impact: "Time Drain"
     },
     {
+      icon: TrendingDown,
+      title: "Intake, billing, or compliance feel slow",
+      description: "Inefficient processes create bottlenecks in client onboarding, invoicing, and regulatory compliance.",
+      impact: "Process Inefficiency"
+    },
+    {
       icon: Users,
-      title: "Staff Turnover Disruption",
-      description: "Constant training new employees disrupts operations and damages client relationships.",
-      impact: "Operational Chaos"
+      title: "Attorneys tied up doing checks, not billables",
+      description: "Lawyers spending time on administrative verification instead of high-value legal work.",
+      impact: "Revenue Impact"
     },
     {
       icon: TrendingDown,
-      title: "Rising Payroll Costs",
-      description: "60-70% of expenses go to payroll, squeezing already thin margins down to single digits.",
-      impact: "Profit Squeeze"
+      title: "Partners expect better margins and speed",
+      description: "Pressure to improve profitability and operational efficiency without clear solutions.",
+      impact: "Profit Pressure"
     },
     {
       icon: Wrench,
-      title: "Maintenance Coordination Inefficiencies",
-      description: "Poor coordination frustrates tenants, delays repairs, and damages property owner relationships.",
-      impact: "Client Dissatisfaction"
-    },
-    {
-      icon: Moon,
-      title: "Missing After-Hours Inquiries",
-      description: "Every missed inquiry is lost revenue while competitors capture leads 24/7.",
-      impact: "Competitive Disadvantage"
+      title: "Unsure if new tools or vendors will actually improve things",
+      description: "Uncertainty about whether technology investments will deliver real ROI.",
+      impact: "Decision Paralysis"
     }
   ];
 
@@ -52,10 +46,10 @@ export default function Problem() {
         <RevealOnScroll>
           <div className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
-              If you're running a property management company, you know these problems all too well...
+              What Slows Down Most Law Firms?
             </h2>
             <p className="premium-text-lg text-muted-foreground max-w-2xl mx-auto">
-              The daily struggles that are crushing your margins and limiting your growth
+              Common challenges that prevent you from scaling efficiently
             </p>
           </div>
         </RevealOnScroll>
@@ -69,16 +63,16 @@ export default function Problem() {
                 <div className="space-y-8">
                   <div className="text-6xl font-black text-destructive/30">01</div>
                   <h3 className="premium-text-xl text-foreground">
-                    The Property Management Nightmare
+                    The Law Firm Challenge
                   </h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    You started your property management business to build wealth and freedom. 
-                    Instead, you're trapped in a cycle of endless administrative tasks, 
-                    emergency calls at 2 AM, and watching your margins shrink while your stress grows.
+                    You built your law firm to provide exceptional legal services and grow profitably. 
+                    Instead, you're caught in a cycle of manual administrative tasks, 
+                    inefficient processes, and uncertainty about which technology investments will actually deliver results.
                   </p>
                   <div className="flex items-center space-x-4 text-destructive font-semibold">
                     <TrendingDown className="w-6 h-6" />
-                    <span>Single-Digit Margins</span>
+                    <span>Growth Barriers</span>
                   </div>
                 </div>
               </GlassCard>
@@ -118,7 +112,7 @@ export default function Problem() {
                 Sound familiar?
               </p>
               <p className="text-muted-foreground">
-                These aren't just inconveniences – they're business killers that prevent you from scaling beyond 50-100 doors.
+                These aren't just inconveniences – they're barriers that prevent your firm from scaling efficiently and profitably.
               </p>
             </div>
           </div>
