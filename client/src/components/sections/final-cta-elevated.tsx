@@ -12,8 +12,8 @@ export default function FinalCTA() {
 
   const benefits = [
     { icon: CheckCircle, text: "No obligation" },
-    { icon: Calendar, text: "30-minute consultation" },
-    { icon: Sparkles, text: "Immediate insights" }
+    { icon: Calendar, text: "15-minute consultation" },
+    { icon: Sparkles, text: "Clear next steps" }
   ];
 
   return (
@@ -33,10 +33,10 @@ export default function FinalCTA() {
               {/* Hero Content */}
               <div>
                 <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
-                  Ready to Transform Your Property Management Business?
+                  AI That Moves the Needle
                 </h2>
                 <p className="premium-text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-                  Join the property management firms already saving 40% of their time and doubling their profit margins
+                  You didn't get into law to waste hours on admin. Let's figure out where AI can help—and where it can't. Book a quick call and we'll show you what's realistic, what's profitable, and what to skip.
                 </p>
               </div>
 
@@ -49,7 +49,7 @@ export default function FinalCTA() {
                   data-testid="button-book-final-audit"
                 >
                   <Calendar className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
-                  Book Your Free Audit Now
+                  Book Your Call Now
                 </Button>
                 
                 <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-2xl border border-white/20">
