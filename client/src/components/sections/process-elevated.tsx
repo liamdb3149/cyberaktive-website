@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Clock, Wrench, CheckCircle, Rocket, BarChart, ArrowRight } from "lucide-react";
+import { Clock, Wrench, CheckCircle, Rocket, BarChart, ArrowRight, Users } from "lucide-react";
 import { Section, GlassCard, FloatingOrb, RevealOnScroll, GeometricBlob } from "@/components/ui/visual";
 
 export default function Process() {
