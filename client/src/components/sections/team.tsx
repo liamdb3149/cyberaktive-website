@@ -19,10 +19,10 @@ export default function Team() {
         <RevealOnScroll>
           <div className="max-w-5xl mx-auto text-center mb-20">
             <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
-              Meet Our Team
+              Meet Your Legal AI Partners
             </h2>
             <p className="premium-text-lg text-muted-foreground max-w-3xl mx-auto">
-              45+ years of combined experience in growth strategy, automation, and sales excellence
+              We're specialists in law firm operations and AI, focused on helping teams like yours make real business improvements. Our aim: only recommend what works for you—not pushy sales, just clear advice and partnership.
             </p>
           </div>
         </RevealOnScroll>
@@ -46,12 +46,12 @@ export default function Team() {
                 </h3>
                 <div className="inline-block px-6 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">
                   <p className="text-sm font-semibold text-primary" data-testid="text-liam-title">
-                    20 Years Marketing Growth Strategist & Automation Expert
+                    AI & Automation Specialist for Professional Services
                   </p>
                 </div>
               </div>
               <p className="text-muted-foreground leading-relaxed" data-testid="text-liam-bio">
-                Led marketing acquisition & scaled two businesses to 9-figure valuations. For the past 12 months, has been building AI workflow automations that eliminate manual tasks and drive consistent growth. Previously held senior roles at high-profile startups & Tier 1 global agencies (Saatchi & Saatchi, Ogilvy & Mather). Has driven more than $10M ARR for clients across SaaS, Cyber Security, Web Applications, and Local Businesses through strategic automation implementations.
+                Specializes in identifying genuine AI opportunities in professional services firms. Focuses on measurable ROI and practical implementation rather than buzzwords. Works directly with legal teams to understand workflows and recommend automation only where it delivers real business value.
               </p>
               
               {/* Premium accent line */}
@@ -77,12 +77,12 @@ export default function Team() {
                 </h3>
                 <div className="inline-block px-6 py-2 bg-secondary/10 rounded-full border border-secondary/20 mb-6">
                   <p className="text-sm font-semibold text-secondary" data-testid="text-alan-title">
-                    25 Years Sales Experience in Blue-Chip Organizations
+                    Strategic Business Partnerships & Operations
                   </p>
                 </div>
               </div>
               <p className="text-muted-foreground leading-relaxed" data-testid="text-alan-bio">
-                Led large sales teams at multi-national firms and continues to provide sales coaching to multinational companies. For the past 12 months, has been instrumental in developing and refining AI workflow automations that transform sales processes and operational efficiency. His extensive experience ensures our automation solutions integrate seamlessly with existing business structures while driving measurable revenue growth.
+                Brings extensive experience helping professional services firms improve operational efficiency. Ensures AI implementations align with business objectives and integrate smoothly with existing processes. Committed to transparent communication and realistic expectations about what AI can and cannot deliver.
               </p>
               
               {/* Premium accent line */}
