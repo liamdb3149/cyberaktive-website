@@ -1,6 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { z } from "zod";
+import path from "path";
 
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -11,6 +12,20 @@ const contactFormSchema = z.object({
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve robots.txt
+  app.get("/robots.txt", (_req, res) => {
+    const robotsPath = path.resolve(process.cwd(), "public", "robots.txt");
+    res.type("text/plain");
+    res.sendFile(robotsPath);
+  });
+
+  // Serve sitemap.xml
+  app.get("/sitemap.xml", (_req, res) => {
+    const sitemapPath = path.resolve(process.cwd(), "public", "sitemap.xml");
+    res.type("application/xml");
+    res.sendFile(sitemapPath);
+  });
+
   // Contact form submission endpoint
   app.post("/api/contact", async (req, res) => {
     try {
