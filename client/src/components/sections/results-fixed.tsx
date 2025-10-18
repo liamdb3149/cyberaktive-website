@@ -7,66 +7,52 @@ export default function Results() {
   const results = [
     { 
       icon: Clock,
-      value: "40%", 
-      label: "Time Savings", 
-      description: "Administrative time saved (16+ hours per week)", 
+      value: "Faster", 
+      label: "Shorter turnarounds on tasks", 
+      description: "Automated workflows reduce time from request to completion", 
       color: "primary" 
     },
     { 
-      icon: TrendingUp,
-      value: "50%", 
-      label: "Faster Response", 
-      description: "Reduction in maintenance response time", 
+      icon: Target,
+      value: "Fewer", 
+      label: "Fewer errors and admin hours", 
+      description: "Automation reduces human error and administrative overhead", 
       color: "accent" 
     },
     { 
       icon: DollarSign,
-      value: "5-15%", 
-      label: "Margin Increase", 
-      description: "Percentage point increase in profit margins", 
-      color: "primary" 
-    },
-    { 
-      icon: Users,
-      value: "50%", 
-      label: "More Doors", 
-      description: "More doors handled with existing team", 
-      color: "accent" 
-    },
-    { 
-      icon: Target,
-      value: "85%", 
-      label: "Better Decisions", 
-      description: "Report improved decision-making capabilities", 
+      value: "ROI", 
+      label: "Measurable savings and higher billables", 
+      description: "Clear financial impact from efficiency gains", 
       color: "primary" 
     },
     { 
       icon: Heart,
-      value: "24/7", 
-      label: "Always On", 
-      description: "Never miss another opportunity or inquiry", 
+      value: "More", 
+      label: "Less busywork, more value for clients", 
+      description: "Team focuses on high-value legal work that matters", 
       color: "accent" 
     }
   ];
 
   const testimonialHighlights = [
     {
-      quote: "Our margins went from 8% to 18% within 6 months",
-      author: "Sarah M.",
-      company: "Denver Property Solutions",
-      metric: "+125% Profit"
+      quote: "We only implement what makes business sense—no wasteful pilots",
+      author: "Law Firm Partner",
+      company: "Mid-Size Practice",
+      metric: "Smart ROI"
     },
     {
-      quote: "We handle 200 doors with the same team we used for 100",
-      author: "Mike R.", 
-      company: "Atlanta Property Management",
-      metric: "2x Capacity"
+      quote: "Our team actually uses the tools because they solve real problems",
+      author: "Managing Attorney", 
+      company: "Regional Firm",
+      metric: "Real Adoption"
     },
     {
-      quote: "No more 2 AM emergency calls disrupting my life",
-      author: "Jennifer L.",
-      company: "Phoenix Residential",
-      metric: "True Freedom"
+      quote: "Finally, a partner who tells us 'no' when something won't work",
+      author: "Senior Partner",
+      company: "Corporate Law Firm",
+      metric: "Honest Guidance"
     }
   ];
 
@@ -81,10 +67,10 @@ export default function Results() {
         <RevealOnScroll>
           <div className="max-w-5xl mx-auto text-center mb-20">
             <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
-              Here's exactly what property management firms achieve with our automations:
+              Results That Matter
             </h2>
             <p className="premium-text-lg text-muted-foreground max-w-3xl mx-auto">
-              Real results from real property management companies
+              Measurable outcomes from strategic AI implementation
             </p>
           </div>
         </RevealOnScroll>
@@ -96,7 +82,7 @@ export default function Results() {
             <RevealOnScroll delay={200}>
               <GlassCard className="h-full bg-gradient-to-br from-primary/5 to-accent/5">
                 <div className="grid grid-cols-2 gap-8 h-full">
-                  {results.slice(0, 4).map((result, index) => (
+                  {results.map((result, index) => (
                     <div key={index} className="text-center group">
                       <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                         <result.icon className="w-8 h-8 text-primary" />
@@ -117,28 +103,25 @@ export default function Results() {
             </RevealOnScroll>
           </div>
 
-          {/* Side Results - Vertical Stack */}
+          {/* Side Results - Additional Context */}
           <div className="lg:col-span-1">
-            <div className="space-y-6 h-full">
-              {results.slice(4).map((result, index) => (
-                <RevealOnScroll key={index + 4} delay={400 + index * 100}>
-                  <GlassCard className="text-center group hover:scale-105 transition-all duration-300">
-                    <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent/20 transition-colors">
-                      <result.icon className="w-6 h-6 text-accent" />
-                    </div>
-                    <div className="text-3xl font-black gradient-text mb-1" data-testid={`text-result-value-${index + 4}`}>
-                      {result.value}
-                    </div>
-                    <div className="font-bold text-foreground mb-1" data-testid={`text-result-label-${index + 4}`}>
-                      {result.label}
-                    </div>
-                    <div className="text-xs text-muted-foreground" data-testid={`text-result-description-${index + 4}`}>
-                      {result.description}
-                    </div>
-                  </GlassCard>
-                </RevealOnScroll>
-              ))}
-            </div>
+            <RevealOnScroll delay={400}>
+              <GlassCard className="h-full flex flex-col justify-center text-center group hover:scale-105 transition-all duration-300">
+                <div className="space-y-6">
+                  <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-accent/30 transition-colors">
+                    <TrendingUp className="w-8 h-8 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg text-foreground mb-2">
+                      Strategic Implementation
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      We focus on changes that deliver measurable ROI, not just "innovation theater"
+                    </p>
+                  </div>
+                </div>
+              </GlassCard>
+            </RevealOnScroll>
           </div>
         </div>
 
@@ -175,11 +158,11 @@ export default function Results() {
           <GlassCard className="text-center bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10">
             <div className="max-w-3xl mx-auto">
               <h3 className="premium-text-xl text-foreground mb-6 font-bold">
-                Ready to Join These Success Stories?
+                Ready for Real Results?
               </h3>
               <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                These aren't isolated cases – they're the predictable results of implementing 
-                AI workflow automation in your property management business.
+                These outcomes come from strategic AI implementation focused on genuine business value, 
+                not just adopting technology for its own sake.
               </p>
               <CalendarModal>
                 <Button 
@@ -188,7 +171,7 @@ export default function Results() {
                   data-testid="button-transform-business"
                 >
                   <TrendingUp className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
-                  See How We Can Transform Your Business
+                  Discover What's Possible for Your Firm
                 </Button>
               </CalendarModal>
             </div>
