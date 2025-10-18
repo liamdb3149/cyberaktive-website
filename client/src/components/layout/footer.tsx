@@ -1,5 +1,5 @@
 import fullLogo from "@/assets/cyberaktive-full-logo.jpg";
-import { Home, Building } from "lucide-react";
+import { Home } from "lucide-react";
 import { useLocation } from "wouter";
 
 export default function Footer() {
@@ -19,19 +19,6 @@ export default function Footer() {
     }
   };
 
-  const handlePropertyClick = () => {
-    if (location === '/property-management') {
-      // Already on property management page, scroll to top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      // Navigate to property management page
-      navigate('/property-management');
-      // Small delay to ensure page loads, then scroll to top
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }, 100);
-    }
-  };
 
   return (
     <footer className="bg-card border-t border-border py-12">
@@ -46,7 +33,7 @@ export default function Footer() {
                   className="h-16 w-auto"
                 />
               </div>
-              <p className="text-muted-foreground mb-2">AI Workflow and Process Automation for Property Management firms throughout the U.S., Canada, the U.K., Europe, Australia, Singapore, Hong Kong, and New Zealand.</p>
+              <p className="text-muted-foreground mb-2">AI Workflow and Process Automation for law firms throughout the U.S., Canada, the U.K., Europe, Australia, Singapore, Hong Kong, and New Zealand.</p>
               <a 
                 href="mailto:team@cyberaktive.com" 
                 className="text-primary hover:text-primary/80 transition-colors relative z-10 font-semibold"
@@ -66,15 +53,6 @@ export default function Footer() {
                 >
                   <Home className="w-4 h-4 mr-2" />
                   <span>Home</span>
-                </button>
-                <button 
-                  type="button"
-                  onClick={handlePropertyClick}
-                  className="flex items-center text-muted-foreground hover:text-primary transition-colors cursor-pointer" 
-                  data-testid="link-footer-property"
-                >
-                  <Building className="w-4 h-4 mr-2" />
-                  <span>Property Management</span>
                 </button>
               </div>
               <p className="text-sm text-muted-foreground">

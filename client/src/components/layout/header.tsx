@@ -39,14 +39,6 @@ export default function Header() {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <Link 
-              href="/property-management" 
-              className="group flex items-center px-4 py-2 rounded-lg text-white hover:text-white transition-all duration-300 font-medium drop-shadow-md hover:bg-white/10 hover:backdrop-blur-sm border border-transparent hover:border-white/20"
-              data-testid="link-property-management"
-            >
-              <span>Property Management</span>
-              <ChevronRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
             <CalendarModal>
               <Button 
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold header-button" 
@@ -73,18 +65,9 @@ export default function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-border bg-background">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link 
-                href="/property-management"
-                className="group flex items-center px-4 py-3 rounded-lg text-white hover:text-white transition-all duration-300 font-medium drop-shadow-md hover:bg-white/10 border border-transparent hover:border-white/20"
-                onClick={() => setIsMobileMenuOpen(false)}
-                data-testid="link-property-management-mobile"
-              >
-                <span>Property Management</span>
-                <ChevronRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
               <CalendarModal>
                 <Button 
-                  className="w-full justify-start bg-accent hover:bg-accent/90 text-accent-foreground font-semibold mt-2" 
+                  className="w-full justify-start bg-accent hover:bg-accent/90 text-accent-foreground font-semibold" 
                   data-testid="button-book-audit-mobile"
                 >
                   Book Free Audit
