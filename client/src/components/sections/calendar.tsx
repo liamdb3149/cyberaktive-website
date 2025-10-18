@@ -27,10 +27,10 @@ export default function Calendar() {
             </div>
             
             <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
-              Book Your Free Workflow Audit (30 Minutes)
+              Book Your 15-Minute Call
             </h2>
             <p className="premium-text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-              We'll identify exactly where you're losing time and money
+              Quick, no-obligation consult to see if we can make AI work for you. Pick a time—we'll show you what's possible.
             </p>
             
             {/* Value props */}
@@ -38,8 +38,8 @@ export default function Calendar() {
               <RevealOnScroll delay={200}>
                 <GlassCard className="text-center group hover:scale-105 transition-all duration-300">
                   <Clock className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold text-foreground mb-2">30 Minutes</h3>
-                  <p className="text-sm text-muted-foreground">Quick & focused</p>
+                  <h3 className="font-semibold text-foreground mb-2">15 Minutes</h3>
+                  <p className="text-sm text-muted-foreground">Fast & focused</p>
                 </GlassCard>
               </RevealOnScroll>
               
@@ -54,8 +54,8 @@ export default function Calendar() {
               <RevealOnScroll delay={400}>
                 <GlassCard className="text-center group hover:scale-105 transition-all duration-300">
                   <CalendarIcon className="w-8 h-8 text-secondary mx-auto mb-3" />
-                  <h3 className="font-semibold text-foreground mb-2">Instant Results</h3>
-                  <p className="text-sm text-muted-foreground">Actionable insights</p>
+                  <h3 className="font-semibold text-foreground mb-2">Clear Next Steps</h3>
+                  <p className="text-sm text-muted-foreground">Know what's possible</p>
                 </GlassCard>
               </RevealOnScroll>
             </div>
@@ -71,7 +71,7 @@ export default function Calendar() {
                 style={{ width: '100%', border: 'none', overflow: 'hidden', height: '800px', minHeight: '800px', borderRadius: '1rem' }} 
                 scrolling="auto" 
                 id="msgsndr-calendar"
-                title="Book Your Free Workflow Audit"
+                title="Book Your 15-Minute Discovery Call"
                 data-testid="calendar-booking-widget"
                 allow="payment; geolocation"
               />
@@ -85,10 +85,10 @@ export default function Calendar() {
           <div className="text-center mt-16">
             <div className="inline-block bg-accent/5 rounded-2xl px-8 py-6 backdrop-blur-sm border border-accent/10">
               <p className="premium-text-lg text-foreground mb-2 font-semibold">
-                Ready to Transform Your Operations?
+                See What AI Can Do for Your Firm
               </p>
               <p className="text-muted-foreground">
-                Join 200+ property management companies already saving 16-80 hours per week
+                Let's discuss whether AI can deliver real ROI for your law firm
               </p>
             </div>
           </div>
