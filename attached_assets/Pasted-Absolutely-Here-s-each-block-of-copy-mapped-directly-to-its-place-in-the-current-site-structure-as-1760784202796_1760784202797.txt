@@ -1,0 +1,159 @@
+Absolutely. Here’s each block of copy mapped directly to its place in the current site structure, as seen in your uploaded image. Each piece includes a descriptor for the AI web builder to align copy with its intended section.
+
+***
+
+###  HERO/BANNER SECTION (Top)[1]
+**Use for:** Page headline, subheadline, and main call-to-action above the fold.
+  
+**Headline:**  
+AI That Works, Not Just Hype
+
+**Subheadline:**  
+We help law firms use AI and automation where it adds real value.  
+No guesswork. No “buzzword” projects. Just measurable results and a partner for every step.
+
+**Primary CTA Button:**  
+Book a 15-Minute Discovery Call
+
+***
+
+###  PROBLEM/PAIN POINTS (Directly after hero)[2]
+**Use for:** Visual grid or cards explaining common challenges for your clients.
+
+**Title/Question:**  
+What Slows Down Most Law Firms?
+
+- Too much repeat admin and manual work  
+- Intake, billing, or compliance feel slow  
+- Attorneys tied up doing checks, not billables  
+- Partners expect better margins and speed  
+- Unsure if new tools or vendors will actually improve things
+
+***
+
+###  PROOF/BENEFIT SNAPSHOT (“Imagine running your property management company…” in original)[3]
+**Use for:** “Imagine if…” aspiration block with simple metrics, or an “upside” callout.
+
+**Title:**  
+Where AI Pays Off (If You Get It Right)
+
+**Copy:**  
+- Reduce routine work—make time for legal work that matters  
+- Faster responses for clients and partners  
+- Lower error and rework rates  
+- Margin growth without growing your headcount
+
+***
+
+###  HIGH-LEVEL OFFER/EXPLANATION[4]
+**Use for:** High-level intro to your offering (this replaces the “AI-powered workflow automations…” section in the image).
+
+**Header:**  
+Real AI Gains, ROI-Backed Change
+
+**Copy:**  
+We’re not here to sell tech. Our job is to help you spot where automation and AI will actually work—improving your business with clear, measurable ROI.  
+If there’s no business case, we say so.
+
+***
+
+###  SERVICE FEATURES/SUMMARY[5]
+**Use for:** Icons or quick-hit cards showing what you deliver.
+
+**Title:**  
+How We Work with You
+
+- Review your team’s real workflow—not just software screens  
+- Talk to your team and map what’s slowing them down  
+- Spot AI wins that impact the bottom line  
+- Lay out every next step in plain English  
+- You know costs and expected gains before making any decisions
+
+***
+
+###  “OUR RESULTS” OR SIMPLE OUTCOME STATS[6]
+**Use for:** Bar, card, or quick stats that show real-world gains (mirrors original page’s metric blocks).
+
+- Shorter turnarounds on tasks  
+- Fewer errors and admin hours  
+- Measurable savings and higher billables  
+- Less busywork, more value for clients
+
+***
+
+###  “OUR PROCESS” (Visual stepper graphic in mid-page)[7]
+**Use for:** Timeline or numbered step layout describing client journey.
+
+**Header:**  
+Simple Steps, Straightforward Outcomes
+
+1. Book a short call and share your key pain points  
+2. We review your main workflows and talk to your team  
+3. We outline where AI makes sense and show projected impact  
+4. You get a plain-English plan with ROI and a clear “go/no-go” decision point
+
+***
+
+###  ABOUT/YOUR TEAM[8]
+**Use for:** Two-person team bios (“Meet our Team” section).
+
+**Header:**  
+Meet Your Legal AI Partners
+
+**Copy:**  
+We’re specialists in law firm operations and AI, focused on helping teams like yours make real business improvements.  
+Our aim: only recommend what works for you—not pushy sales, just clear advice and partnership.
+
+***
+
+###  GUARANTEE/TRUST SECTION (“Risk-Free Trial with Proven Results” in image)[9]
+**Use for:** Short “why trust us / what’s different” statement.
+
+**Header:**  
+Proven Approach, No Guesswork
+
+- Practical recommendations, not just theory  
+- You stay in control at every step  
+- If we don’t find a fit, we’ll tell you
+
+***
+
+###  BOOKING/CTA (Lead capture calendar at bottom)[10]
+**Use for:** Form, or secondary booking CTA.
+
+**Header:**  
+Book Your 15-Minute Call
+
+**Copy:**  
+Quick, no-obligation consult to see if we can make AI work for you.  
+Pick a time—we’ll show you what’s possible.
+
+***
+
+###  FINAL FOOTER OR END CTA (“Ready to Transform…” in the image)[11]
+**Use for:** Final reassurance/encouragement above legal footer.
+
+**Header:**  
+AI That Moves the Needle—Not Just “Innovation Theater”
+
+**Copy:**  
+If you’re ready for ROI—not pilots that stall—let’s talk.
+
+**Button:**  
+Book Discovery Call
+
+***
+
+Let me know if you want further tweaks, even more concise language, or a different balance for each avatar. This approach makes every section immediately clear to your web builder, mapped to your current design.
+
+[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/88469060/437635d1-cc86-466c-84a8-0c92b3395c4c/CleanShot-2025-10-18-at-17.10.482x-1.jpg)
+[2](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_1d19c9c4-2cad-48e4-89d7-31dea93591b9/d5c86620-20ce-46ed-9fe6-7a5d177d90a4/Newsletter-Structure-Content_-v1-for-uploading-to-Perplexity-spaces.docx)
+[3](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_1d19c9c4-2cad-48e4-89d7-31dea93591b9/cf737313-67bb-43fc-b85e-9bfbb06ed79c/Sam-Parr-s-Copywriting-Tips.docx)
+[4](https://www.nomos-elibrary.de/index.php?doi=10.5771/9783748916871)
+[5](https://ajee-journal.com/legal-analysis-of-eu-artificial-intelligence-act-2024-insights-from-personal-data-governance-and-health-policy)
+[6](https://wseas.com/journals/fe/2024/a085115-1064.pdf)
+[7](https://ieeexplore.ieee.org/document/10836530/)
+[8](https://scholar.kyobobook.co.kr/article/detail/4010068945492)
+[9](http://efp.in.ua/en/journal-article/1500)
+[10](https://journal.literasisainsnusantara.com/index.php/tacit/article/view/140)
+[11](http://www.psae-jrnl.nau.in.ua/journal/2_95_2024_ukr/16.pdf)

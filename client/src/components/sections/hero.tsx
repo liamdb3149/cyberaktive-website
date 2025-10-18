@@ -23,18 +23,13 @@ export default function Hero() {
             />
           </div>
           <h1 className="premium-text-4xl md:text-6xl lg:text-7xl mb-8">
-            <span className="text-white drop-shadow-lg block mb-2">Take On</span>
-            <span className="text-white drop-shadow-lg block mb-2 font-black">50% More Doors</span>
-            <span className="text-white drop-shadow-lg block">With Your Existing Team</span>
+            <span className="text-white drop-shadow-lg block mb-2 font-black">AI That Works, Not Just Hype</span>
           </h1>
           <p className="premium-text-xl lg:text-2xl text-white/90 drop-shadow-md mb-4 max-w-4xl mx-auto font-medium">
-            Leverage AI workflow automations to increase profit margins from single to double digits.
-          </p>
-          <p className="text-lg text-white/80 drop-shadow-md mb-4 max-w-3xl mx-auto">
-            Solve hiring headaches and retention stresses forever.
+            We help law firms use AI and automation where it adds real value.
           </p>
           <p className="text-lg text-white/80 drop-shadow-md mb-12 max-w-3xl mx-auto">
-            On average, each automation saves 16-80 hours per week after 2.5 months.
+            No guesswork. No "buzzword" projects. Just measurable results and a partner for every step.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <CalendarModal>
@@ -43,7 +38,7 @@ export default function Hero() {
                 className="premium-button text-white font-semibold text-lg px-10 py-5 rounded-2xl"
                 data-testid="button-get-audit"
               >
-                Get Your Free Workflow Audit
+                Book a 15-Minute Discovery Call
               </Button>
             </CalendarModal>
             <Button 
@@ -53,11 +48,11 @@ export default function Hero() {
               onClick={() => scrollToSection('automations')}
               data-testid="button-see-solutions"
             >
-              See Our Automation Solutions
+              Learn More
             </Button>
           </div>
           <div className="flex items-center justify-center text-white/80 text-lg drop-shadow-md">
-            <span data-testid="text-trust-indicator" className="font-medium">Automating property management firms throughout the U.S., Canada, the U.K., Europe, Australia, Singapore, Hong Kong, and New Zealand.</span>
+            <span data-testid="text-trust-indicator" className="font-medium">Helping law firms make real AI gains with measurable ROI</span>
           </div>
         </div>
       </div>
