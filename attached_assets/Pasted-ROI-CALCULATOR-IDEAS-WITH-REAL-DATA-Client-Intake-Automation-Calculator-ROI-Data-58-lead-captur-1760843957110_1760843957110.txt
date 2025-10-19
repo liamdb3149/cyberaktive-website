@@ -1,0 +1,22 @@
+ROI CALCULATOR IDEAS WITH REAL DATA:
+
+Client Intake Automation Calculator
+
+ROI Data: 58% lead capture improvement, 60% time reduction
+AI Agent Prompt: "Create a calculator that shows law firms how much time and money they save by automating client intake. Include fields for: current intake time per client, hourly rate, monthly new clients, and current conversion rate. Show potential savings from 60% time reduction and 58% better lead capture."
+Time Tracking & Billing Automation Calculator
+
+ROI Data: 20% increase in billable hours captured, 25% reduction in billing errors
+AI Agent Prompt: "Build a calculator showing billable hour recovery for law firms. Include: current billable rate, hours worked daily, percentage of time currently tracked, and billing error rate. Calculate revenue from 20% more captured hours and reduced billing corrections."
+Document Automation ROI Calculator
+
+ROI Data: 70% reduction in document review time, 80% automation rate for routine docs
+AI Agent Prompt: "Create a calculator for document automation savings. Include: hours spent weekly on routine documents, attorney hourly rates, document error correction time, and client turnaround expectations. Show savings from 70% time reduction and error elimination."
+Legal Research Automation Calculator
+
+ROI Data: 60% reduction in research time, $85K additional annual revenue for solo practitioners
+AI Agent Prompt: "Build a research efficiency calculator showing: current research hours per case, hourly billing rate, cases handled monthly, and research accuracy improvements. Calculate revenue potential from 60% faster research and increased case capacity."
+Workflow Efficiency Calculator
+
+ROI Data: 35% workflow efficiency improvement, 25% reduction in missed deadlines
+AI Agent Prompt: "Create a comprehensive workflow calculator including: current admin hours weekly, deadline management costs, client satisfaction scores, and operational overhead. Show ROI from 35% efficiency gains and deadline compliance."

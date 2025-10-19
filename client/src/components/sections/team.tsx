@@ -53,6 +53,9 @@ export default function Team() {
               <p className="text-muted-foreground leading-relaxed" data-testid="text-liam-bio">
                 Specializes in identifying genuine AI opportunities in professional services firms. Focuses on measurable ROI and practical implementation rather than buzzwords. Works directly with legal teams to understand workflows and recommend automation only where it delivers real business value.
               </p>
+              <p className="text-primary font-semibold mt-4 text-sm" data-testid="text-liam-credibility">
+                Helped law firms achieve average ROI of 300% within 8 months
+              </p>
               
               {/* Premium accent line */}
               <div className="mt-6 w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto opacity-60 group-hover:opacity-100 transition-opacity"></div>

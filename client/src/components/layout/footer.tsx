@@ -24,6 +24,15 @@ export default function Footer() {
     <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
+          {/* Footer CTA */}
+          <div className="text-center mb-12 py-8 px-6 bg-gradient-to-r from-accent/10 to-primary/10 rounded-2xl border border-primary/20">
+            <p className="text-lg font-bold text-foreground mb-2" data-testid="text-footer-cta">
+              Every day without automation costs you 2-3 billable hours.
+            </p>
+            <p className="text-muted-foreground text-sm">
+              Calculate your losses with our ROI calculators above.
+            </p>
+          </div>
           <div className="flex flex-col md:flex-row justify-between items-start">
             <div className="text-center md:text-left mb-8 md:mb-0 md:w-1/2">
               <div className="flex items-center justify-center md:justify-start mb-4">

@@ -4,6 +4,7 @@ import Hero from "@/components/sections/hero";
 import Problem from "@/components/sections/problem-fixed";
 import Solution from "@/components/sections/solution-fixed";
 import Automations from "@/components/sections/automations-functional";
+import ROICalculators from "@/components/sections/roi-calculators";
 import Results from "@/components/sections/results-fixed";
 import Process from "@/components/sections/process-elevated";
 import Team from "@/components/sections/team";
@@ -20,6 +21,7 @@ export default function Home() {
         <Problem />
         <Solution />
         <Automations />
+        <ROICalculators />
         <Results />
         <Process />
         <Team />

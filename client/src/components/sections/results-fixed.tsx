@@ -125,6 +125,40 @@ export default function Results() {
           </div>
         </div>
 
+        {/* Client Metrics Section */}
+        <div className="max-w-4xl mx-auto text-center mb-12">
+          <RevealOnScroll>
+            <GlassCard className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10">
+              <h3 className="premium-text-xl text-foreground mb-6 font-bold">
+                Our clients typically see:
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <div className="text-4xl font-black text-primary mb-2">35%</div>
+                  <p className="text-sm text-muted-foreground">workflow efficiency improvement</p>
+                </div>
+                <div>
+                  <div className="text-4xl font-black text-accent mb-2">25%</div>
+                  <p className="text-sm text-muted-foreground">fewer missed deadlines</p>
+                </div>
+                <div>
+                  <div className="text-4xl font-black text-primary mb-2">58%</div>
+                  <p className="text-sm text-muted-foreground">better lead capture</p>
+                </div>
+              </div>
+            </GlassCard>
+          </RevealOnScroll>
+        </div>
+
+        {/* Urgency Message */}
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <RevealOnScroll>
+            <p className="text-lg text-muted-foreground italic font-medium" data-testid="text-urgency-message">
+              While you're reading this, your competitors are already automating. Don't fall behind.
+            </p>
+          </RevealOnScroll>
+        </div>
+
         {/* Testimonials Row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
           {testimonialHighlights.map((testimonial, index) => (

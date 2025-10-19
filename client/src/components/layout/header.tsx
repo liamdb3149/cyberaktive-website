@@ -22,8 +22,13 @@ export default function Header() {
   const headerClass = location === '/' ? 'header-with-mountain' : 'header-with-sky';
 
   return (
-    <header className={`sticky top-0 z-50 w-full border-b border-border/30 ${headerClass}`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      {/* Urgency Banner */}
+      <div className="bg-gradient-to-r from-accent to-primary text-white py-2 text-center text-sm font-semibold z-50 relative" data-testid="banner-urgency">
+        Limited spots: Only 3 discovery calls available this week
+      </div>
+      <header className={`sticky top-0 z-50 w-full border-b border-border/30 ${headerClass}`}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center space-x-4">
             <Link href="/" data-testid="link-logo-icon">
@@ -44,7 +49,7 @@ export default function Header() {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold header-button" 
                 data-testid="button-book-audit-header"
               >
-                Book Free Audit
+                Book Your ROI Assessment (15 min)
               </Button>
             </CalendarModal>
           </nav>
@@ -70,7 +75,7 @@ export default function Header() {
                   className="w-full justify-start bg-accent hover:bg-accent/90 text-accent-foreground font-semibold" 
                   data-testid="button-book-audit-mobile"
                 >
-                  Book Free Audit
+                  Book Your ROI Assessment (15 min)
                 </Button>
               </CalendarModal>
             </div>
@@ -78,5 +83,6 @@ export default function Header() {
         )}
       </div>
     </header>
+    </>
   );
 }

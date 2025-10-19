@@ -5,19 +5,19 @@ export default function Solution() {
   const solutions = [
     {
       icon: Zap,
-      title: "Reduce routine work—make time for legal work that matters",
+      title: "Cut document review time by 70%",
       description: "Automate repetitive tasks so your team focuses on billable legal work.",
       benefit: "More Billable Hours"
     },
     {
       icon: Moon,
-      title: "Faster responses for clients and partners",
+      title: "Capture 20% more billable hours automatically",
       description: "Improved responsiveness strengthens client relationships and trust.",
       benefit: "Better Service"
     },
     {
       icon: Target,
-      title: "Lower error and rework rates", 
+      title: "Reduce billing errors by 25%", 
       description: "Automation reduces human error and the costly time spent fixing mistakes.",
       benefit: "Higher Quality"
     }
