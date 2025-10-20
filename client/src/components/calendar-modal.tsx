@@ -15,19 +15,19 @@ export default function CalendarModal({ children }: CalendarModalProps) {
       <DialogContent className="max-w-4xl w-[95vw] max-h-[90vh] overflow-auto p-0" aria-describedby="calendar-modal-description">
         <div className="relative">
           <div id="calendar-modal-description" className="sr-only">
-            Book your free workflow audit with Cyberaktive. Select a convenient time slot for your 30-minute consultation.
+            Book your introductory call with Cyberaktive. Select a convenient time slot for your 15-minute consultation.
           </div>
           <div className="p-6 bg-white">
             <h2 className="text-2xl font-bold text-center mb-4 text-gray-900">
-              Book Your Free Workflow Audit (30 Minutes)
+              Book Your Introductory Call (15 Minutes)
             </h2>
             <p className="text-center text-gray-600 mb-6">
-              We'll identify exactly where you're losing time and money
+              We'll give you a plan to identify exactly where your firm can leverage and implement AI automation
             </p>
             <div className="bg-white rounded-lg overflow-hidden">
               <iframe 
                 src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk" 
-                style={{ width: '100%', border: 'none', overflow: 'hidden' }} 
+                style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '700px', height: '700px' }} 
                 scrolling="no" 
                 id="msgsndr-calendar"
                 title="Book Your 15-Minute Introductory Call"
