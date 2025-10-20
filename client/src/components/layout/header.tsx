@@ -25,7 +25,7 @@ export default function Header() {
     <>
       {/* Urgency Banner */}
       <div className="bg-gradient-to-r from-accent to-primary text-white py-2 text-center text-sm font-semibold z-50 relative" data-testid="banner-urgency">
-        Limited spots: Only 3 discovery calls available this week
+        Short-Term Offer: 3 x multi-department AI audits at 50% off this month
       </div>
       <header className={`sticky top-0 z-50 w-full border-b border-border/30 ${headerClass}`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -71,7 +71,7 @@ export default function Calendar() {
                 style={{ width: '100%', border: 'none', overflow: 'hidden', height: '800px', minHeight: '800px', borderRadius: '1rem' }} 
                 scrolling="auto" 
                 id="msgsndr-calendar"
-                title="Book Your 15-Minute Discovery Call"
+                title="Book Your 15-Minute Introductory Call"
                 data-testid="calendar-booking-widget"
                 allow="payment; geolocation"
               />
