@@ -103,11 +103,14 @@ Preferred communication style: Simple, everyday language.
 - **Strategic Placement**: Positioned above "Results That Matter" section to drive engagement before testimonials
 - **Data-Driven Logic**: Each calculator uses validated research data to ensure realistic, achievable projections
 
-### Navigation Updates
+### Navigation and Terminology Updates (October 20, 2025)
 - Removed "Property Management" links from header (desktop and mobile menus)
 - Removed "Property Management" link from footer Quick Links
 - Updated footer description to reference "law firms" instead of "Property Management firms"
 - Streamlined navigation to focus on primary CTA with enhanced urgency messaging
+- Changed all "Discovery Call" terminology to "Introductory Call" site-wide
+- Updated top banner to "Short-Term Offer: 3 x multi-department AI audits at 50% off this month"
+- Updated calendar iframe to new GoHighLevel booking URL (https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk) across all instances including main calendar section and modal
 
 ### UI Component Dependencies
 - **Radix UI**: Comprehensive primitive components for accessibility and functionality

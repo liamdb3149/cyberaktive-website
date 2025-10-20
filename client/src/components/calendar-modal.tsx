@@ -27,13 +27,14 @@ export default function CalendarModal({ children }: CalendarModalProps) {
             <div className="bg-white rounded-lg overflow-hidden">
               <iframe 
                 src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk" 
-                style={{ width: '100%', border: 'none', overflow: 'hidden', height: 'min(80vh, 700px)', minHeight: '400px' }} 
-                scrolling="auto" 
-                id="modal-calendar"
-                title="Book Your Free Workflow Audit Modal"
+                style={{ width: '100%', border: 'none', overflow: 'hidden' }} 
+                scrolling="no" 
+                id="msgsndr-calendar"
+                title="Book Your 15-Minute Introductory Call"
                 data-testid="calendar-booking-modal"
-                allow="payment; geolocation"
               />
+              <br />
+              <script src="https://link.msgsndr.com/js/embed.js" type="text/javascript"></script>
             </div>
           </div>
         </div>

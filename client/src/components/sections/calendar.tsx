@@ -68,13 +68,13 @@ export default function Calendar() {
             <GlassCard className="p-0 overflow-hidden border-2 border-primary/10 gradient-border">
               <iframe 
                 src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk" 
-                style={{ width: '100%', border: 'none', overflow: 'hidden', height: '800px', minHeight: '800px', borderRadius: '1rem' }} 
-                scrolling="auto" 
+                style={{ width: '100%', border: 'none', overflow: 'hidden' }} 
+                scrolling="no" 
                 id="msgsndr-calendar"
                 title="Book Your 15-Minute Introductory Call"
                 data-testid="calendar-booking-widget"
-                allow="payment; geolocation"
               />
+              <br />
               <script src="https://link.msgsndr.com/js/embed.js" type="text/javascript"></script>
             </GlassCard>
           </div>
