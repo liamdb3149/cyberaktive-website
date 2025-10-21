@@ -1,0 +1,132 @@
+Create a professional, interactive web-based ROI calculator for law firms evaluating contract review automation. The calculator should be clean, mobile-responsive, and provide instant results with visual feedback.
+
+Page Header
+Main Heading: "Contract Review Automation ROI Calculator"
+
+Subheading: "See exactly how much time, money, and realization your firm could gain by automating contract review—in under 60 seconds. Get board-ready numbers based on your actual workflow."
+
+Calculator Structure & Logic
+Section 1: Your Current State
+
+Input Fields:
+
+Number of associates performing contract reviews (number input, default: 40)
+
+Average contracts reviewed per associate per week (number input, default: 6)
+
+Average hours spent per contract review (number input with decimal, default: 4.2)
+
+Blended hourly rate (currency input with $ symbol, default: $350)
+
+Current realization rate (%) (percentage input, default: 85%)
+
+Annual AI tool licensing cost (currency input, default: $50,000)
+
+Section 2: Expected Improvement (Pre-filled Conservative Estimates)
+
+Input Fields (with helper text explaining the conservative benchmark):
+7. Expected time reduction (%) (percentage slider, range: 20-50%, default: 30%, helper text: "Industry benchmarks show 30-40% time savings for mid-sized firms")
+8. Expected realization rate improvement (%) (percentage input, range: 0-10%, default: 3%, helper text: "Faster turnaround and fewer write-downs typically lift realization 2-5%")
+
+Calculation Logic
+Step 1: Calculate Annual Baseline Metrics
+
+Total contracts reviewed annually = (Number of associates) × (Contracts per week) × 52 weeks
+
+Total hours spent annually = (Total contracts) × (Hours per contract)
+
+Total billable value = (Total hours) × (Blended hourly rate)
+
+Realized revenue (current) = (Total billable value) × (Current realization rate ÷ 100)
+
+Step 2: Calculate Post-Automation Metrics
+
+Time saved per contract = (Hours per contract) × (Time reduction % ÷ 100)
+
+New time per contract = (Hours per contract) - (Time saved per contract)
+
+Total hours saved annually = (Total contracts) × (Time saved per contract)
+
+Hours reinvested in billable work = (Total hours saved) × 0.65 (conservative assumption: 65% of saved time converts to billable)
+
+New realization rate = (Current realization rate) + (Realization improvement %)
+
+Post-automation realized revenue = (Total billable value) × (New realization rate ÷ 100)
+
+Step 3: Calculate ROI Metrics
+
+Annual time savings value = (Hours reinvested) × (Blended hourly rate)
+
+Annual realization improvement value = (Post-automation realized revenue) - (Realized revenue current)
+
+Total annual benefit = (Annual time savings value) + (Annual realization improvement value)
+
+Net annual benefit = (Total annual benefit) - (Annual AI tool cost)
+
+ROI % = ((Net annual benefit) ÷ (Annual AI tool cost)) × 100
+
+Payback period (months) = ((Annual AI tool cost) ÷ (Total annual benefit)) × 12
+
+3-year cumulative benefit = ((Total annual benefit) × 3) - (Annual AI tool cost × 3)
+
+Results Display Section
+Displayed Results (with visual emphasis):
+
+Primary Metrics (Large, Bold Display):
+
+Payback Period: [X.X months] (green if < 12 months, yellow if 12-18 months)
+
+Annual Net Benefit: $[XXX,XXX] (green text, large font)
+
+ROI: [XXX]% (green if > 100%, yellow if 50-100%)
+
+Secondary Metrics (Smaller Cards):
+4. Total Hours Saved Annually: [X,XXX hours]
+5. Contracts Processed Annually: [X,XXX contracts]
+6. Time Saved Per Contract: [X.X hours]
+7. 3-Year Cumulative Benefit: $[X,XXX,XXX]
+
+Visual Elements:
+
+Include a simple bar chart comparing "Current Annual Cost" vs. "Post-Automation Benefit"
+
+Include a progress bar showing payback timeline (e.g., "You'll break even in month 8 of 12")
+
+Additional Features
+CTA Button Below Results:
+"Download Full Report (PDF)" - generates a one-page PDF summary of inputs and outputs with your branding
+
+Email Capture (Optional):
+"Want this ROI model customized for your firm? Enter your email and we'll send you an editable version."
+
+Design Requirements
+Style:
+
+Clean, professional, law-firm appropriate (blues, grays, white background)
+
+Mobile-responsive (single column on mobile, two-column on desktop)
+
+Clear section dividers
+
+Tooltips on input fields explaining benchmarks
+
+UX:
+
+Real-time calculation (results update as user types)
+
+Input validation (prevent negative numbers, require reasonable ranges)
+
+"Reset to Defaults" button
+
+All currency formatted with commas and $ symbol
+
+Percentages displayed with % symbol
+
+Technical Stack Suggestions
+Frontend: HTML5, CSS3, JavaScript (vanilla or React)
+
+No backend required (client-side calculation only)
+
+Optional: jsPDF library for PDF export
+
+Optional: Chart.js or similar for visual charts

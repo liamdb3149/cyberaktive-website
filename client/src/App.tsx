@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import PropertyManagement from "@/pages/property-management";
+import ContractReviewCalculator from "@/pages/contract-review-calculator";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -12,6 +13,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/property-management" component={PropertyManagement} />
+      <Route path="/calc-Contract-Review-Automation" component={ContractReviewCalculator} />
       <Route component={NotFound} />
     </Switch>
   );

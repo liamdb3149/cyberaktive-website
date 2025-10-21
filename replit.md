@@ -112,6 +112,38 @@ Preferred communication style: Simple, everyday language.
 - Updated top banner to "Short-Term Offer: 3 x multi-department AI audits at 50% off this month"
 - Updated calendar iframe to new GoHighLevel booking URL (https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk) across all instances including main calendar section and modal
 
+### Contract Review Automation ROI Calculator (October 21, 2025)
+- **Standalone Calculator Page**: Built comprehensive contract review ROI calculator at /calc-Contract-Review-Automation
+- **Enterprise-Scale Inputs**: Supports large law firm scenarios with configurable:
+  - Number of associates (default: 40)
+  - Contracts reviewed per week (default: 6 per associate)
+  - Hours per contract (default: 4.2 hours)
+  - Hourly billable rate (default: $350)
+  - Current realization rate (default: 85%)
+  - Annual AI tool licensing cost (default: $50,000)
+  - Expected time reduction (30% default)
+  - Realization rate improvement (3% default)
+- **Real-Time ROI Analysis**: Calculates and displays:
+  - Payback period in months with visual progress bar
+  - Annual net benefit after AI costs
+  - ROI percentage with color-coded indicators
+  - First-year, second-year, and three-year cumulative benefits
+  - Revenue recovered from time savings and improved realization
+- **Production-Ready Edge Case Handling**:
+  - Division-by-zero prevention: Minimum values enforced for associates, contracts, and hours (0.1 minimum)
+  - AI cost validation: Minimum $1 to prevent infinite ROI calculations
+  - Realization rate capping: Automatically limited to 100% maximum
+  - Dynamic improvement constraints: Realization improvement auto-adjusts when base rate changes to prevent total > 100%
+  - Invalid payback period handling: Displays "No payback" message when benefits don't exceed costs
+  - Infinite ROI protection: Shows "Unbounded" instead of crashing when division by zero occurs
+- **Interactive Features**:
+  - Slider controls with real-time calculation updates
+  - Reset to defaults button for quick baseline restoration
+  - Email capture for customized model delivery with validation and toast notifications
+  - PDF download CTA with user feedback
+- **Professional UI**: Clean gradient cards, color-coded metrics (green for good ROI, yellow for moderate, red for poor payback), and responsive layout
+- **Data-Testid Implementation**: Full test coverage with descriptive data-testid attributes for all interactive and display elements
+
 ### UI Component Dependencies
 - **Radix UI**: Comprehensive primitive components for accessibility and functionality
 - **React Hook Form**: Form state management with validation integration
