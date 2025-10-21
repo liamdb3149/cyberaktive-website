@@ -6,7 +6,9 @@ import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/visual";
 import { useToast } from "@/hooks/use-toast";
-import { DollarSign, Clock, TrendingUp, Target, Download, RotateCcw } from "lucide-react";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
+import { DollarSign, Clock, TrendingUp, Target, Download, RotateCcw, Calendar as CalendarIcon } from "lucide-react";
 
 export default function ContractReviewCalculator() {
   const { toast } = useToast();
@@ -88,16 +90,13 @@ export default function ContractReviewCalculator() {
   const handleInputChange = (field: string, value: number) => {
     let validatedValue = value;
     
-    // Enforce minimum values to prevent division by zero
     if (['associates', 'contractsPerWeek', 'hoursPerContract'].includes(field)) {
       validatedValue = Math.max(0.1, value);
     }
     
-    // Cap realization rates at 100%
     if (field === 'realizationRate') {
       validatedValue = Math.min(100, Math.max(0, value));
       
-      // Also adjust realization improvement if needed to prevent total > 100%
       setInputs((prev) => {
         const maxImprovement = 100 - validatedValue;
         const adjustedImprovement = Math.min(prev.realizationImprovement, maxImprovement);
@@ -110,18 +109,15 @@ export default function ContractReviewCalculator() {
       return;
     }
     
-    // Cap realization improvement based on current rate
     if (field === 'realizationImprovement') {
       const maxImprovement = 100 - inputs.realizationRate;
       validatedValue = Math.min(maxImprovement, Math.max(0, value));
     }
     
-    // Ensure positive values for costs and rates
     if (field === 'hourlyRate') {
       validatedValue = Math.max(0, value);
     }
     
-    // Enforce minimum AI cost to prevent division by zero in ROI calculation
     if (field === 'aiCost') {
       validatedValue = Math.max(1, value);
     }
@@ -172,18 +168,23 @@ export default function ContractReviewCalculator() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-gray-50">
+      <Header />
+      
+      {/* Hero Section */}
+      <Section className="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-testid="heading-hero">
+            Contract Review Automation ROI Calculator
+          </h1>
+          <p className="text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto opacity-95" data-testid="text-hero-subtitle">
+            See exactly how much time, money, and realization your firm could gain by automating contract review—in under 60 seconds. Get board-ready numbers based on your actual workflow.
+          </p>
+        </div>
+      </Section>
+
+      {/* Calculator Section */}
       <Section className="py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Contract Review Automation ROI Calculator
-            </h1>
-            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
-              See exactly how much time, money, and realization your firm could gain by automating contract review—in under 60 seconds. Get board-ready numbers based on your actual workflow.
-            </p>
-          </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
             {/* Input Section */}
             <div className="space-y-6">
@@ -262,17 +263,35 @@ export default function ContractReviewCalculator() {
                     <Label htmlFor="realizationRate" data-testid="label-realization-rate">
                       Current realization rate (%)
                     </Label>
-                    <Input
-                      id="realizationRate"
-                      type="number"
-                      min="0"
-                      max="100"
-                      value={inputs.realizationRate}
-                      onChange={(e) => handleInputChange('realizationRate', Number(e.target.value))}
-                      data-testid="input-realization-rate"
-                    />
+                    <div className="flex items-center gap-4">
+                      <Slider
+                        id="realizationRate"
+                        min={50}
+                        max={100}
+                        step={1}
+                        value={[inputs.realizationRate]}
+                        onValueChange={(value) => handleInputChange('realizationRate', value[0])}
+                        className="flex-1"
+                        data-testid="slider-realization-rate"
+                      />
+                      <span className="text-sm font-semibold w-12 text-right" data-testid="text-realization-rate">
+                        {inputs.realizationRate}%
+                      </span>
+                    </div>
                   </div>
+                </CardContent>
+              </Card>
 
+              {/* Section 2: AI Implementation */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <TrendingUp className="w-5 h-5 text-green-600" />
+                    AI Implementation Parameters
+                  </CardTitle>
+                  <CardDescription>Expected improvements from automation</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
                   <div>
                     <Label htmlFor="aiCost" data-testid="label-ai-cost">
                       Annual AI tool licensing cost ($)
@@ -282,7 +301,7 @@ export default function ContractReviewCalculator() {
                       <Input
                         id="aiCost"
                         type="number"
-                        min="0"
+                        min="1"
                         value={inputs.aiCost}
                         onChange={(e) => handleInputChange('aiCost', Number(e.target.value))}
                         className="pl-10"
@@ -290,61 +309,52 @@ export default function ContractReviewCalculator() {
                       />
                     </div>
                   </div>
-                </CardContent>
-              </Card>
 
-              {/* Section 2: Expected Improvement */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-green-600" />
-                    Expected Improvement
-                  </CardTitle>
-                  <CardDescription>Conservative estimates based on industry benchmarks</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
                   <div>
-                    <div className="flex justify-between mb-2">
-                      <Label htmlFor="timeReduction" data-testid="label-time-reduction">
-                        Expected time reduction: {inputs.timeReduction}%
-                      </Label>
+                    <Label htmlFor="timeReduction" data-testid="label-time-reduction">
+                      Expected time reduction per contract (%)
+                    </Label>
+                    <div className="flex items-center gap-4">
+                      <Slider
+                        id="timeReduction"
+                        min={10}
+                        max={70}
+                        step={5}
+                        value={[inputs.timeReduction]}
+                        onValueChange={(value) => handleInputChange('timeReduction', value[0])}
+                        className="flex-1"
+                        data-testid="slider-time-reduction"
+                      />
+                      <span className="text-sm font-semibold w-12 text-right" data-testid="text-time-reduction">
+                        {inputs.timeReduction}%
+                      </span>
                     </div>
-                    <Slider
-                      id="timeReduction"
-                      min={20}
-                      max={50}
-                      step={1}
-                      value={[inputs.timeReduction]}
-                      onValueChange={([value]) => handleInputChange('timeReduction', value)}
-                      data-testid="slider-time-reduction"
-                    />
-                    <p className="text-sm text-gray-500 mt-1">
-                      Industry benchmarks show 30-40% time savings for mid-sized firms
-                    </p>
                   </div>
 
                   <div>
                     <Label htmlFor="realizationImprovement" data-testid="label-realization-improvement">
                       Expected realization rate improvement (%)
                     </Label>
-                    <Input
-                      id="realizationImprovement"
-                      type="number"
-                      min="0"
-                      max="10"
-                      step="0.5"
-                      value={inputs.realizationImprovement}
-                      onChange={(e) => handleInputChange('realizationImprovement', Number(e.target.value))}
-                      data-testid="input-realization-improvement"
-                    />
-                    <p className="text-sm text-gray-500 mt-1">
-                      Faster turnaround and fewer write-downs typically lift realization 2-5%
-                    </p>
+                    <div className="flex items-center gap-4">
+                      <Slider
+                        id="realizationImprovement"
+                        min={0}
+                        max={15}
+                        step={0.5}
+                        value={[inputs.realizationImprovement]}
+                        onValueChange={(value) => handleInputChange('realizationImprovement', value[0])}
+                        className="flex-1"
+                        data-testid="slider-realization-improvement"
+                      />
+                      <span className="text-sm font-semibold w-12 text-right" data-testid="text-realization-improvement">
+                        {inputs.realizationImprovement}%
+                      </span>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Button
+              <Button 
                 onClick={resetToDefaults}
                 variant="outline"
                 className="w-full"
@@ -357,9 +367,8 @@ export default function ContractReviewCalculator() {
 
             {/* Results Section */}
             <div className="space-y-6">
-              {/* Primary Metrics */}
-              <Card className="border-2 border-blue-600">
-                <CardHeader>
+              <Card className="border-2 border-blue-600 shadow-xl">
+                <CardHeader className="bg-gradient-to-r from-blue-50 to-purple-50">
                   <CardTitle className="text-2xl">Your ROI Results</CardTitle>
                   <CardDescription>Instant financial impact analysis</CardDescription>
                 </CardHeader>
@@ -409,143 +418,72 @@ export default function ContractReviewCalculator() {
               </Card>
 
               {/* Secondary Metrics */}
-              <div className="grid grid-cols-2 gap-4">
-                <Card>
-                  <CardContent className="pt-6">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Clock className="w-4 h-4 text-blue-600" />
-                      <div className="text-xs text-gray-600">Total Hours Saved</div>
-                    </div>
-                    <div className="text-2xl font-bold" data-testid="result-hours-saved">
-                      {formatNumber(results.totalHoursSaved)}
-                    </div>
-                    <div className="text-xs text-gray-500">hours/year</div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardContent className="pt-6">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Target className="w-4 h-4 text-green-600" />
-                      <div className="text-xs text-gray-600">Annual Contracts</div>
-                    </div>
-                    <div className="text-2xl font-bold" data-testid="result-total-contracts">
-                      {formatNumber(results.totalContracts)}
-                    </div>
-                    <div className="text-xs text-gray-500">contracts/year</div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardContent className="pt-6">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Clock className="w-4 h-4 text-purple-600" />
-                      <div className="text-xs text-gray-600">Time Saved Per Contract</div>
-                    </div>
-                    <div className="text-2xl font-bold" data-testid="result-time-per-contract">
-                      {results.timeSavedPerContract.toFixed(1)}
-                    </div>
-                    <div className="text-xs text-gray-500">hours</div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardContent className="pt-6">
-                    <div className="flex items-center gap-2 mb-2">
-                      <DollarSign className="w-4 h-4 text-green-600" />
-                      <div className="text-xs text-gray-600">3-Year Benefit</div>
-                    </div>
-                    <div className="text-2xl font-bold" data-testid="result-three-year">
-                      {formatCurrency(results.threeYearBenefit)}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Comparison Chart */}
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-lg">Annual Value Comparison</CardTitle>
+                  <CardTitle>Multi-Year Projections</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <div className="flex justify-between text-sm mb-1">
-                        <span>AI Tool Cost</span>
-                        <span className="font-semibold">{formatCurrency(inputs.aiCost)}</span>
-                      </div>
-                      <div className="w-full bg-red-100 rounded-full h-8 relative">
-                        <div className="bg-red-500 h-8 rounded-full" style={{ width: '100%' }} />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between text-sm mb-1">
-                        <span>Total Annual Benefit</span>
-                        <span className="font-semibold">{formatCurrency(results.totalAnnualBenefit)}</span>
-                      </div>
-                      <div className="w-full bg-green-100 rounded-full h-8 relative">
-                        <div 
-                          className="bg-green-500 h-8 rounded-full transition-all duration-500" 
-                          style={{ width: `${(results.totalAnnualBenefit / Math.max(inputs.aiCost, results.totalAnnualBenefit)) * 100}%` }} 
-                        />
-                      </div>
-                    </div>
+                <CardContent className="space-y-4">
+                  <div className="flex justify-between items-center p-3 bg-blue-50 rounded">
+                    <span className="text-sm font-medium text-gray-700">Year 1 Total Benefit</span>
+                    <span className="font-bold text-blue-600" data-testid="result-year1">
+                      {formatCurrency(results.netAnnualBenefit)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-green-50 rounded">
+                    <span className="text-sm font-medium text-gray-700">Year 2 Cumulative</span>
+                    <span className="font-bold text-green-600" data-testid="result-year2">
+                      {formatCurrency(results.netAnnualBenefit * 2)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-purple-50 rounded">
+                    <span className="text-sm font-medium text-gray-700">3-Year Total Benefit</span>
+                    <span className="font-bold text-purple-600" data-testid="result-year3">
+                      {formatCurrency(results.threeYearBenefit)}
+                    </span>
                   </div>
                 </CardContent>
               </Card>
-
-              {/* CTA Button */}
-              <Button 
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6" 
-                data-testid="button-download"
-                onClick={() => alert('PDF download feature coming soon! Contact us to get your custom ROI report.')}
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Download Full Report (PDF)
-              </Button>
             </div>
           </div>
-
-          {/* Email Capture */}
-          <Card className="max-w-2xl mx-auto">
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <h3 className="text-lg font-semibold mb-2">Want this ROI model customized for your firm?</h3>
-                <p className="text-gray-600 mb-4">Enter your email and we'll send you an editable version.</p>
-                <div className="flex gap-2 max-w-md mx-auto">
-                  <Input 
-                    type="email" 
-                    placeholder="your.email@lawfirm.com" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    data-testid="input-email"
-                  />
-                  <Button 
-                    onClick={() => {
-                      if (email && email.includes('@')) {
-                        toast({
-                          title: "Request Received!",
-                          description: "We'll send you the customized ROI model shortly.",
-                        });
-                        setEmail("");
-                      } else {
-                        toast({
-                          title: "Invalid Email",
-                          description: "Please enter a valid email address.",
-                          variant: "destructive",
-                        });
-                      }
-                    }}
-                    data-testid="button-send-model"
-                  >
-                    Send Model
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </Section>
+
+      {/* Problem-Revealing CTA */}
+      <Section className="py-12 bg-gradient-to-r from-orange-50 to-red-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" data-testid="heading-cta">
+            How many billable hours are slipping through the cracks during contract review right now?
+          </h2>
+          <p className="text-lg text-gray-700 mb-8" data-testid="text-cta-description">
+            Most firms lose 15-25% of potential revenue to inefficient contract review processes and poor time capture. If your numbers above show significant opportunity, it's time to take action. Book a 15-minute introductory call to discover exactly where your firm is losing money—and how to fix it.
+          </p>
+        </div>
+      </Section>
+
+      {/* Calendar Section */}
+      <Section className="py-12" id="calendar">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-testid="heading-calendar">
+              <CalendarIcon className="inline-block w-8 h-8 mr-3 text-accent" />
+              Book Your Introductory Call
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto" data-testid="text-calendar-subtitle">
+              Get a customized ROI model for your firm and discover specific automation opportunities in contract review.
+            </p>
+          </div>
+          <div className="bg-white rounded-lg shadow-xl p-4">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk"
+              style={{ width: '100%', height: '1100px', border: 'none' }}
+              title="Book Your Introductory Call"
+              data-testid="iframe-calendar"
+            />
+          </div>
+        </div>
+      </Section>
+
+      <Footer />
     </div>
   );
 }

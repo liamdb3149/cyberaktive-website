@@ -114,6 +114,13 @@ Preferred communication style: Simple, everyday language.
 
 ### Contract Review Automation ROI Calculator (October 21, 2025)
 - **Standalone Calculator Page**: Built comprehensive contract review ROI calculator at /calc-Contract-Review-Automation
+- **Page Structure**: Full landing page with conversion-optimized flow:
+  - Header with urgency banner and booking button (consistent with home page)
+  - Hero section with blue-purple gradient, compelling heading and subheading
+  - Interactive ROI calculator above the fold (two-column layout)
+  - Problem-revealing CTA section asking "How many billable hours are slipping through the cracks during contract review right now?"
+  - Embedded GoHighLevel calendar booking iframe (1100px height for complete form visibility)
+  - Footer with branding and contact information
 - **Enterprise-Scale Inputs**: Supports large law firm scenarios with configurable:
   - Number of associates (default: 40)
   - Contracts reviewed per week (default: 6 per associate)
@@ -136,12 +143,11 @@ Preferred communication style: Simple, everyday language.
   - Dynamic improvement constraints: Realization improvement auto-adjusts when base rate changes to prevent total > 100%
   - Invalid payback period handling: Displays "No payback" message when benefits don't exceed costs
   - Infinite ROI protection: Shows "Unbounded" instead of crashing when division by zero occurs
-- **Interactive Features**:
-  - Slider controls with real-time calculation updates
-  - Reset to defaults button for quick baseline restoration
-  - Email capture for customized model delivery with validation and toast notifications
-  - PDF download CTA with user feedback
-- **Professional UI**: Clean gradient cards, color-coded metrics (green for good ROI, yellow for moderate, red for poor payback), and responsive layout
+- **Conversion-Focused Design**: 
+  - Calculator positioned above the fold for immediate engagement
+  - Strategic problem-revealing question highlighting 15-25% revenue loss
+  - Direct path from ROI results to booking calendar
+  - Consistent design language matching main site for brand cohesion
 - **Data-Testid Implementation**: Full test coverage with descriptive data-testid attributes for all interactive and display elements
 
 ### UI Component Dependencies
