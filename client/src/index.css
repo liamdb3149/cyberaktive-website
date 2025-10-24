@@ -291,16 +291,18 @@
   }
 
   .header-with-mountain {
-    background: transparent;
+    background-image: url('./assets/mountain-background-optimized.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
     position: relative;
-    backdrop-filter: blur(12px);
   }
 
   .header-with-mountain::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.5);
     pointer-events: none;
   }
 
@@ -371,16 +373,18 @@
   }
 
   .header-with-sky {
-    background: transparent;
+    background-image: url('./assets/sky-background-optimized.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
     position: relative;
-    backdrop-filter: blur(12px);
   }
 
   .header-with-sky::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.5);
     pointer-events: none;
   }
 
