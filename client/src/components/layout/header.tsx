@@ -38,14 +38,9 @@ export default function Header() {
                 className="w-10 h-10"
               />
             </Link>
-            <div className="flex flex-col">
-              <Link href="/" className="text-2xl font-bold gradient-text" data-testid="link-logo">
-                Cyberaktive
-              </Link>
-              <span className="text-xs text-muted-foreground hidden lg:block" data-testid="text-tagline">
-                AI Transformation Partners and Consultants to the Legal Industry
-              </span>
-            </div>
+            <Link href="/" className="text-2xl font-bold gradient-text" data-testid="link-logo">
+              Cyberaktive
+            </Link>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">

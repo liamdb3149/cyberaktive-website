@@ -26,7 +26,7 @@ export default function Hero() {
             <span className="text-white drop-shadow-lg block mb-2 font-black">AI That Works, Not Just Hype</span>
           </h1>
           <p className="premium-text-xl lg:text-2xl text-white/90 drop-shadow-md mb-4 max-w-4xl mx-auto font-medium">
-            Reduce intake time by 60% and increase billable hours by 20% with proven AI automation
+            AI Transformation Partners & Consultants to the Legal Industry
           </p>
           <p className="text-lg text-white/80 drop-shadow-md mb-12 max-w-3xl mx-auto">
             No guesswork. No "buzzword" projects. Just measurable results and a partner for every step.
