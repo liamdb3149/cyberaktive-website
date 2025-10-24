@@ -109,8 +109,14 @@ Preferred communication style: Simple, everyday language.
 - Updated footer description to reference "law firms" instead of "Property Management firms"
 - Streamlined navigation to focus on primary CTA with enhanced urgency messaging
 - Changed all "Discovery Call" terminology to "Introductory Call" site-wide
-- Updated top banner to "Short-Term Offer: 3 x multi-department AI audits at 50% off this month"
 - Updated calendar iframe to new GoHighLevel booking URL (https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk) across all instances including main calendar section and modal
+
+### Header Updates (October 24, 2025)
+- Added "The Newsletter" link to header navigation with newspaper icon, linking to https://www.theailaw.xyz/
+- Positioned newsletter link between logo and booking button for optimal visibility
+- Updated top banner text to "Book a Free AI Transformation Introductory Code"
+- Newsletter link opens in new tab and includes proper rel="noopener noreferrer" for security
+- Mobile menu also includes newsletter link with consistent styling
 
 ### Contract Review Automation ROI Calculator (October 21, 2025)
 - **Standalone Calculator Page**: Built comprehensive contract review ROI calculator at /calc-Contract-Review-Automation

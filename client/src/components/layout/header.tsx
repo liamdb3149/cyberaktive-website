@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronRight, Newspaper } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import iconLogo from "@assets/Cyberaktive Logos t_1757653334662.png";
 import CalendarModal from "@/components/calendar-modal";
@@ -25,7 +25,7 @@ export default function Header() {
     <>
       {/* Urgency Banner */}
       <div className="bg-gradient-to-r from-accent to-primary text-white py-2 text-center text-sm font-semibold z-50 relative" data-testid="banner-urgency">
-        Short-Term Offer: 3 x multi-department AI audits at 50% off this month
+        Book a Free AI Transformation Introductory Code
       </div>
       <header className={`sticky top-0 z-50 w-full border-b border-border/30 ${headerClass}`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,6 +44,16 @@ export default function Header() {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
+            <a 
+              href="https://www.theailaw.xyz/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-foreground hover:text-primary transition-colors font-medium"
+              data-testid="link-newsletter"
+            >
+              <Newspaper className="w-5 h-5" />
+              The Newsletter
+            </a>
             <CalendarModal>
               <Button 
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold header-button" 
@@ -70,6 +80,16 @@ export default function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-border bg-background">
             <div className="px-2 pt-2 pb-3 space-y-1">
+              <a 
+                href="https://www.theailaw.xyz/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-2 text-foreground hover:text-primary hover:bg-accent/10 transition-colors font-medium rounded-md"
+                data-testid="link-newsletter-mobile"
+              >
+                <Newspaper className="w-5 h-5" />
+                The Newsletter
+              </a>
               <CalendarModal>
                 <Button 
                   className="w-full justify-start bg-accent hover:bg-accent/90 text-accent-foreground font-semibold" 
