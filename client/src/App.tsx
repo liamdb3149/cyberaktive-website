@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import PropertyManagement from "@/pages/property-management";
 import ContractReviewCalculator from "@/pages/contract-review-calculator";
+import AIPilotScorecard from "@/pages/ai-pilot-scorecard";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -14,6 +15,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/property-management" component={PropertyManagement} />
       <Route path="/calc-Contract-Review-Automation" component={ContractReviewCalculator} />
+      <Route path="/ai-pilot-scorecard-law-firm" component={AIPilotScorecard} />
       <Route component={NotFound} />
     </Switch>
   );
