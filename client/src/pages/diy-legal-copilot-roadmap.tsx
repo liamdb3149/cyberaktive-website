@@ -5,6 +5,20 @@ import { CheckCircle2, Download, Lock, Unlock, FileText, Zap, DollarSign } from 
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
+import slide1 from "@assets/1_DIY-Legal-Copilot-Roadmap_1762242688614.png";
+import slide2 from "@assets/2_What-Youre-Building-And-Why-It-Matters_1762242688615.png";
+import slide3 from "@assets/3_The-Complete-System-8-Components-Working-Together_1762242688616.png";
+import slide4 from "@assets/4_What-Each-Tool-Does-And-Why-We-Chose-It_1762242688617.png";
+import slide5 from "@assets/5_Your-8-Week-Implementation-Roadmap_1762242688617.png";
+import slide6 from "@assets/6_8-Week-Roadmap-Continued_1762242688618.png";
+import slide7 from "@assets/7_Week-8-Human-in-the-Loop-and-Launch_1762242688618.png";
+import slide8 from "@assets/8_Keep-It-Safe-and-Compliant_1762242688618.png";
+import slide9 from "@assets/9_TCO-and-ROI-The-Real-Numbers_1762242688619.png";
+import slide10 from "@assets/10_Decision-Matrix-Build-Buy-or-Hybrid_1762242688619.png";
+import slide11 from "@assets/11_Common-Issues-And-How-to-Fix-Them_1762242688620.png";
+import slide12 from "@assets/12_Important-Disclaimer_1762242688620.png";
+import slide13 from "@assets/13_Ready-to-Build-Your-Legal-Copilot_1762242688620.png";
+
 export default function DIYLegalCopilotRoadmap() {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -177,26 +191,25 @@ export default function DIYLegalCopilotRoadmap() {
                 </div>
               </div>
 
-              {/* Teaser Image - First Slide Partially Visible */}
+              {/* Teaser Image - First Slide with Blur Overlay */}
               <div className="relative mb-8">
                 <div className="overflow-hidden rounded-lg border-4 border-slate-200 dark:border-slate-700 shadow-2xl">
-                  {/* Placeholder for first slide - blurred/partial view */}
-                  <div className="relative bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900 dark:to-indigo-900 aspect-[16/10]">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <FileText className="w-24 h-24 text-slate-400 dark:text-slate-600 mx-auto mb-4" />
-                        <p className="text-2xl font-bold text-slate-600 dark:text-slate-400">
-                          Preview of Roadmap Architecture
-                        </p>
-                        <p className="text-slate-500 dark:text-slate-500 mt-2">
-                          Complete the form below to access the full roadmap
-                        </p>
-                      </div>
-                    </div>
-                    {/* Blur overlay effect */}
+                  <div className="relative">
+                    <img 
+                      src={slide1} 
+                      alt="DIY Legal Copilot Roadmap Preview" 
+                      className="w-full h-auto"
+                      data-testid="img-roadmap-preview"
+                    />
+                    {/* Blur overlay effect when not submitted */}
                     {!formSubmitted && (
-                      <div className="absolute inset-0 backdrop-blur-sm bg-white/30 dark:bg-slate-900/30 flex items-center justify-center">
-                        <Lock className="w-16 h-16 text-slate-400" />
+                      <div className="absolute inset-0 backdrop-blur-md bg-white/40 dark:bg-slate-900/40 flex items-center justify-center">
+                        <div className="text-center">
+                          <Lock className="w-20 h-20 text-slate-600 dark:text-slate-300 mx-auto mb-4" />
+                          <p className="text-xl font-bold text-slate-800 dark:text-slate-200">
+                            Complete the form below to unlock
+                          </p>
+                        </div>
                       </div>
                     )}
                   </div>
@@ -268,21 +281,29 @@ export default function DIYLegalCopilotRoadmap() {
                   Your Complete Roadmap
                 </h2>
 
-                {/* Placeholder for roadmap images */}
                 <div className="space-y-8">
-                  {[1, 2, 3, 4, 5].map((slideNum) => (
-                    <Card key={slideNum} className="overflow-hidden" data-testid={`roadmap-slide-${slideNum}`}>
-                      <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 aspect-[16/10] flex items-center justify-center">
-                        <div className="text-center p-8">
-                          <FileText className="w-16 h-16 text-slate-400 dark:text-slate-600 mx-auto mb-4" />
-                          <p className="text-xl font-semibold text-slate-600 dark:text-slate-400">
-                            Roadmap Slide {slideNum}
-                          </p>
-                          <p className="text-sm text-slate-500 dark:text-slate-500 mt-2">
-                            Image will be loaded here once PNG files are provided
-                          </p>
-                        </div>
-                      </div>
+                  {[
+                    { src: slide1, alt: "DIY Legal Copilot Roadmap - Title Slide" },
+                    { src: slide2, alt: "What You're Building (And Why It Matters)" },
+                    { src: slide3, alt: "The Complete System: 8 Components Working Together" },
+                    { src: slide4, alt: "What Each Tool Does (And Why We Chose It)" },
+                    { src: slide5, alt: "Your 8-Week Implementation Roadmap" },
+                    { src: slide6, alt: "8-Week Roadmap Continued" },
+                    { src: slide7, alt: "Week 8: Human-in-the-Loop & Launch" },
+                    { src: slide8, alt: "Keep It Safe and Compliant" },
+                    { src: slide9, alt: "TCO & ROI: The Real Numbers" },
+                    { src: slide10, alt: "Decision Matrix: Build, Buy, or Hybrid?" },
+                    { src: slide11, alt: "Common Issues (And How to Fix Them)" },
+                    { src: slide12, alt: "Important Disclaimer" },
+                    { src: slide13, alt: "Ready to Build Your Legal Copilot?" }
+                  ].map((slide, index) => (
+                    <Card key={index} className="overflow-hidden border-2 border-slate-200 dark:border-slate-700" data-testid={`roadmap-slide-${index + 1}`}>
+                      <img 
+                        src={slide.src} 
+                        alt={slide.alt}
+                        className="w-full h-auto"
+                        loading="lazy"
+                      />
                     </Card>
                   ))}
                 </div>
