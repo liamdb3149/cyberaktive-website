@@ -17,9 +17,8 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   };
 
-  // Remove the old handleBookAudit function since we're using the modal now
-
-  const headerClass = location === '/' ? 'header-with-mountain' : 'header-with-sky';
+  // Use sky background with clouds for all pages
+  const headerClass = 'header-with-sky';
 
   return (
     <>
