@@ -34,6 +34,7 @@ Preferred communication style: Simple, everyday language.
 - **Conversion Optimization**: Strategic CTAs, urgency messaging, tailored service benefits, client metrics, ROI calculators.
 - **Interactive ROI Calculators**: Five calculators (Client Intake, Time Tracking, Document Automation, Legal Research, Workflow Efficiency) and a dedicated Contract Review Automation calculator, providing real-time ROI projections.
 - **AI Pilot Scorecard**: Comprehensive application for tracking 8-week AI implementation pilots, including project setup, weekly tracking, automated ROI calculation, partner presentation generation, and a benchmark database.
+- **DIY Legal Copilot Roadmap (Lead Magnet)**: Gated content landing page at /diy-legal-copilot-roadmap offering free technical blueprint to build Harvey-class legal AI for $15K vs $300K. Features GoHighLevel form integration, content gating with preview teaser, localStorage-based unlock state, SEO-optimized for "DIY legal copilot" keywords. Includes value proposition cards, feature checklist, disclaimer section, and post-submission CTA to book consultation.
 
 ## External Dependencies
 
