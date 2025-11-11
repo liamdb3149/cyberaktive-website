@@ -34,7 +34,9 @@ Preferred communication style: Simple, everyday language.
 - **Conversion Optimization**: Strategic CTAs, urgency messaging, tailored service benefits, client metrics, ROI calculators.
 - **Interactive ROI Calculators**: Five calculators (Client Intake, Time Tracking, Document Automation, Legal Research, Workflow Efficiency) and a dedicated Contract Review Automation calculator, providing real-time ROI projections.
 - **AI Pilot Scorecard**: Comprehensive application for tracking 8-week AI implementation pilots, including project setup, weekly tracking, automated ROI calculation, partner presentation generation, and a benchmark database.
+- **AI Strategy Assessment (Lead Magnet)**: Gated decision matrix tool at /ai-strategy-assessment with 12-question assessment across 6 steps. Provides personalized recommendation (LLM-First vs Specialist vs Hybrid) with weighted scoring logic, rationale, privacy checklist, and 30-day action plan. Features backdrop-blur gating with GoHighLevel form integration, localStorage persistence, SEO optimization for "AI strategy assessment for law firms" keywords.
 - **DIY Legal Copilot Roadmap (Lead Magnet)**: Gated content landing page at /diy-legal-copilot-roadmap offering free technical blueprint to build Harvey-class legal AI for $15K vs $300K. Features GoHighLevel form integration, content gating with preview teaser, localStorage-based unlock state, SEO-optimized for "DIY legal copilot" keywords. Includes value proposition cards, feature checklist, disclaimer section, and post-submission CTA to book consultation.
+- **Free Tools Section**: Footer navigation linking all lead magnets (AI Strategy Assessment, DIY Legal Copilot Roadmap, AI Pilot Scorecard, ROI Calculators) for easy access across site.
 
 ## External Dependencies
 
