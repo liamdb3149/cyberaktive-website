@@ -205,22 +205,57 @@ export default function AIStrategyAssessment() {
     };
   }, []);
 
-  // Listen for form submission
+  // Listen for form submission from GoHighLevel iframe
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
-      if (event.data?.type === 'form-submitted' || event.data?.formSubmitted) {
-        console.log('[AI Assessment] Form submitted via postMessage');
+      // Log all postMessage events for debugging
+      console.log('[AI Assessment] postMessage received:', {
+        origin: event.origin,
+        dataType: Object.prototype.toString.call(event.data),
+        data: event.data
+      });
+      
+      // GoHighLevel sends data as an Array with form data in event.data[2] as JSON string
+      if (Object.prototype.toString.call(event.data) === '[object Array]') {
+        const inputJSON = event.data[2];
+        
+        // Check if this is a GoHighLevel form submission (contains typical form fields)
+        if (inputJSON && typeof inputJSON === 'string') {
+          try {
+            // Try to parse the JSON data
+            const parsedData = JSON.parse(inputJSON);
+            
+            // If it contains email or customer_id, it's a form submission
+            if (parsedData.email || parsedData.customer_id || parsedData.full_name) {
+              console.log('[AI Assessment] ✅ GoHighLevel form submission detected!', parsedData);
+              setFormSubmitted(true);
+              localStorage.setItem('ai-assessment-unlocked', 'true');
+            }
+          } catch (e) {
+            // Not valid JSON, ignore
+            console.log('[AI Assessment] Could not parse JSON from postMessage');
+          }
+        }
+      }
+      
+      // Also check for other possible submission formats (fallback)
+      if (
+        event.data?.type === 'form-submitted' || 
+        event.data?.type === 'form_submitted' ||
+        event.data?.formSubmitted === true ||
+        event.data?.event === 'form-submitted'
+      ) {
+        console.log('[AI Assessment] ✅ Form submission detected (alternative format)!');
         setFormSubmitted(true);
         localStorage.setItem('ai-assessment-unlocked', 'true');
       }
     };
 
+    // Check if already unlocked from previous session
     const alreadySubmitted = localStorage.getItem('ai-assessment-unlocked');
-    console.log('[AI Assessment] localStorage check:', alreadySubmitted);
-    console.log('[AI Assessment] formSubmitted state:', formSubmitted);
     
     if (alreadySubmitted === 'true') {
-      console.log('[AI Assessment] Unlocking based on localStorage');
+      console.log('[AI Assessment] Already unlocked via localStorage');
       setFormSubmitted(true);
     }
 
@@ -397,6 +432,173 @@ export default function AIStrategyAssessment() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleDownloadPDF = () => {
+    if (!result) return;
+    
+    // Create a printable version of the results
+    const printWindow = window.open('', '_blank');
+    if (!printWindow) return;
+    
+    const htmlContent = `
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>AI Strategy Assessment Results - ${result.recommendation}</title>
+          <style>
+            @media print {
+              body { margin: 0; padding: 20px; }
+              .no-print { display: none; }
+            }
+            body {
+              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+              line-height: 1.6;
+              color: #1e293b;
+              max-width: 800px;
+              margin: 0 auto;
+              padding: 40px 20px;
+            }
+            h1 { 
+              color: #0f172a; 
+              font-size: 32px; 
+              margin-bottom: 8px;
+              border-bottom: 3px solid #2563eb;
+              padding-bottom: 16px;
+            }
+            h2 { 
+              color: #2563eb; 
+              font-size: 24px; 
+              margin-top: 32px;
+              margin-bottom: 16px;
+            }
+            h3 { 
+              color: #475569; 
+              font-size: 18px; 
+              margin-top: 24px;
+              margin-bottom: 12px;
+            }
+            .header {
+              text-align: center;
+              margin-bottom: 40px;
+              padding-bottom: 24px;
+              border-bottom: 2px solid #e2e8f0;
+            }
+            .logo {
+              font-size: 24px;
+              font-weight: bold;
+              color: #2563eb;
+              margin-bottom: 8px;
+            }
+            .date {
+              color: #64748b;
+              font-size: 14px;
+            }
+            .recommendation {
+              background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+              padding: 24px;
+              border-radius: 8px;
+              margin-bottom: 32px;
+              border-left: 4px solid #2563eb;
+            }
+            .confidence {
+              color: #059669;
+              font-weight: 600;
+              font-size: 18px;
+            }
+            .summary {
+              font-size: 16px;
+              color: #475569;
+              margin-top: 12px;
+            }
+            ul, ol {
+              margin: 16px 0;
+              padding-left: 24px;
+            }
+            li {
+              margin-bottom: 12px;
+              color: #334155;
+            }
+            .section {
+              margin-bottom: 32px;
+              page-break-inside: avoid;
+            }
+            .footer {
+              margin-top: 48px;
+              padding-top: 24px;
+              border-top: 2px solid #e2e8f0;
+              text-align: center;
+              color: #64748b;
+              font-size: 14px;
+            }
+            @media print {
+              body { padding: 0; }
+              .no-print { display: none !important; }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="header">
+            <div class="logo">Cyberaktive AI</div>
+            <div class="date">Assessment Date: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+          </div>
+
+          <h1>AI Strategy Assessment Results</h1>
+
+          <div class="recommendation">
+            <h2 style="margin-top: 0;">Recommended Strategy: ${result.recommendation}</h2>
+            <div class="confidence">Confidence: ${result.scores.confidence}%</div>
+            <div class="summary">${result.summary}</div>
+          </div>
+
+          <div class="section">
+            <h2>Why This Recommendation</h2>
+            <ul>
+              ${result.rationale.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          </div>
+
+          <div class="section">
+            <h2>Privacy & Governance Checklist</h2>
+            <ul>
+              ${result.privacyChecklist.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          </div>
+
+          <div class="section">
+            <h2>Your 30-Day Action Plan</h2>
+            <ol>
+              ${result.actionPlan.map(item => `<li>${item}</li>`).join('')}
+            </ol>
+          </div>
+
+          <div class="footer no-print">
+            <p><strong>Ready to get started?</strong></p>
+            <p>Visit cyberaktiveai.com to book your free consultation</p>
+            <p style="margin-top: 16px; font-size: 12px;">© ${new Date().getFullYear()} Cyberaktive AI. All rights reserved.</p>
+          </div>
+
+          <script>
+            // Auto-print when page loads, then close after printing
+            window.onload = function() {
+              setTimeout(() => {
+                window.print();
+              }, 250);
+            };
+            
+            // Close window after print dialog is closed
+            window.onafterprint = function() {
+              setTimeout(() => {
+                window.close();
+              }, 100);
+            };
+          </script>
+        </body>
+      </html>
+    `;
+    
+    printWindow.document.write(htmlContent);
+    printWindow.document.close();
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-blue-950 dark:to-indigo-950">
       <Header />
@@ -405,7 +607,7 @@ export default function AIStrategyAssessment() {
         {/* Hero Section - Always Visible */}
         <section className="container mx-auto px-4 py-12 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block mb-4">
+            <div className="inline-block mb-8">
               <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                 Free Privacy-First Assessment
               </span>
@@ -531,12 +733,12 @@ export default function AIStrategyAssessment() {
                   </CardContent>
                 </Card>
 
-                <div className="flex gap-4 justify-center">
+                <div className="flex gap-4 justify-center flex-wrap">
                   <Button onClick={handleReset} variant="outline" data-testid="button-start-over">
                     <Zap className="w-4 h-4 mr-2" />
                     Start Over
                   </Button>
-                  <Button data-testid="button-download-results">
+                  <Button onClick={handleDownloadPDF} data-testid="button-download-results">
                     <Download className="w-4 h-4 mr-2" />
                     Download Full Report (PDF)
                   </Button>
@@ -664,7 +866,7 @@ export default function AIStrategyAssessment() {
                         </div>
 
                         <p className="text-xs text-slate-500 dark:text-slate-400 mt-4 text-center">
-                          Already unlocked? <button onClick={handleUnlock} className="text-blue-600 underline" data-testid="button-manual-unlock">Click here</button>
+                          Submit the form above to unlock instant access to your personalized AI strategy assessment.
                         </p>
                       </CardContent>
                     </Card>
