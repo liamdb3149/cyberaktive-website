@@ -1,6 +1,6 @@
 import fullLogo from "@/assets/cyberaktive-full-logo.jpg";
-import { Home } from "lucide-react";
-import { useLocation } from "wouter";
+import { Home, Calculator, FileText, Brain, Map } from "lucide-react";
+import { useLocation, Link } from "wouter";
 
 export default function Footer() {
   const [location, navigate] = useLocation();
@@ -33,8 +33,8 @@ export default function Footer() {
               Calculate your losses with our ROI calculators above.
             </p>
           </div>
-          <div className="flex flex-col md:flex-row justify-between items-start">
-            <div className="text-center md:text-left mb-8 md:mb-0 md:w-1/2">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div className="text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start mb-4">
                 <img 
                   src={fullLogo} 
@@ -51,7 +51,52 @@ export default function Footer() {
                 team@cyberaktive.com
               </a>
             </div>
-            <div className="text-center md:text-right md:w-1/2">
+
+            <div className="text-center md:text-left">
+              <h3 className="text-lg font-semibold mb-4 text-foreground">Free Tools</h3>
+              <div className="space-y-3 flex flex-col items-center md:items-start">
+                <Link 
+                  href="/ai-strategy-assessment"
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors" 
+                  data-testid="link-footer-ai-assessment"
+                >
+                  <Brain className="w-4 h-4 mr-2" />
+                  <span>AI Strategy Assessment</span>
+                </Link>
+                <Link 
+                  href="/diy-legal-copilot-roadmap"
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors" 
+                  data-testid="link-footer-roadmap"
+                >
+                  <Map className="w-4 h-4 mr-2" />
+                  <span>DIY Legal Copilot Roadmap</span>
+                </Link>
+                <Link 
+                  href="/ai-pilot-scorecard-law-firm"
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors" 
+                  data-testid="link-footer-scorecard"
+                >
+                  <FileText className="w-4 h-4 mr-2" />
+                  <span>AI Pilot Scorecard</span>
+                </Link>
+                <a 
+                  href="/#roi-calculators"
+                  onClick={(e) => {
+                    if (location === '/') {
+                      e.preventDefault();
+                      document.getElementById('roi-calculators')?.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors" 
+                  data-testid="link-footer-roi-calculators"
+                >
+                  <Calculator className="w-4 h-4 mr-2" />
+                  <span>ROI Calculators</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="text-center md:text-right">
               <h3 className="text-lg font-semibold mb-4 text-foreground">Quick Links</h3>
               <div className="space-y-3 mb-6 flex flex-col items-center md:items-end">
                 <button 
