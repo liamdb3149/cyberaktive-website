@@ -1,0 +1,75 @@
+Here is a ready-to-copy Replit engineering brief that will generate a web app for a deeper, customized “LLM‑First vs Specialist” decision matrix tailored to legal teams, with privacy‑first logic and non‑technical UX.[1][2]
+
+### One‑sentence goal
+Build a browser‑based assessment that asks detailed questions about a law firm or in‑house team, scores multiple dimensions (adoption, privacy, compliance, workflows, cost), and outputs a customized recommendation: LLM‑First, Specialist, or Hybrid—with a printable one‑pager and a privacy checklist.[2][1]
+
+### Tech stack
+- Frontend: React + TypeScript + Tailwind; Single‑page app with responsive forms and results panels.[3]
+- Backend: Node/Express API routes inside Replit for scoring, PDF generation, and optional email capture; no external LLM calls by default.[3]
+- Storage: In‑memory for prototype; optional JSON file persistence or lightweight SQLite; add .env for API keys if enabling email or analytics.[3]
+
+### Privacy and security constraints
+- Do not transmit any entered matter data, names, or PII to third‑party services; all scoring runs locally on the server tier within the Replit project.[2]
+- Make “Privacy‑first mode” the default: treat all inputs as sensitive, disable telemetry, and provide a one‑click “wipe session” button to clear data.[2]
+
+### Questionnaire design
+Implement a multi‑step, non‑technical wizard with micro‑copy and examples tailored to Sarah (Legal Ops) and Tom (Managing Partner), avoiding jargon and using plain analogies.[4][1]
+Ask 18–24 questions across these dimensions, with branching where noted:[1]
+
+- Team profile: firm type (in‑house vs law firm), size bands, practice mix, IT support model, and current AI usage.[1]
+- Data sensitivity and residency: PHI/PII prevalence, client confidentiality posture, cross‑border data handling, and redaction/tokenization readiness.[1][2]
+- Workflow landscape: number of target workflows, system sprawl (DMS, CRM, CLM, eDiscovery, email), and integration tolerance.[1]
+- Volume and variability: doc counts per month, peaks, and latency targets for turnarounds.[1]
+- Compliance and governance: audit trail needs, approval gates, retention policies, and evidence requirements for defensibility.[1]
+- Budget and timing: budget window, payback expectations, vendor appetite, and desire to avoid long platform rollouts.[1]
+- Change management: training capacity, champion availability, and appetite for phased quick wins.[1]
+- Preferred interfaces: “meet lawyers in chat” vs new platform logins; appetite for ChatGPT/Claude/Gemini usage with guardrails.[5][1]
+- Primary use cases: research/summarization, doc review/eDiscovery, contract Q&A, intake automation, drafting, and client comms.[6][1]
+
+### Scoring and weights
+Create a transparent scoring engine that yields three scores (LLM‑First, Specialist, Hybrid) plus a confidence percentage and rationale bullets.[3]
+- Favor LLM‑First for variable volumes, multi‑system workflows, and “chat where we work” preferences. Weight +2 each.[5][1]
+- Favor Specialist for certified outputs, vertical benchmarks, prescriptive guardrails, and strict defensibility requirements. Weight +2 each.[1]
+- Hybrid when sensitivity is high but adoption needs speed; pair LLM‑First orchestration with privacy‑first code execution and strict governance. Weight +1 across both sides when mixed.[2][1]
+- Add modifiers for budget, IT capacity, and timeline: short timelines and limited IT nudge toward LLM‑First; formal procurement and regulated outputs nudge Specialist.[1]
+
+### Output and artifacts
+- Recommendation card: “LLM‑First,” “Specialist,” or “Hybrid,” with 3–5 rationale bullets and a plain‑English summary.[4]
+- Decision matrix view: highlights which answers pushed the outcome; export as PDF.[3]
+- Privacy checklist: sandboxed execution, masking/tokenization, resource limits, audit trails, approval gates, and data residency confirmation.[2]
+- Action plan: first 30 days step‑list with “low‑lift wins” and owner roles, using Sarah/Tom language.[1]
+- Download bundle: one‑pager PDF + checklist + JSON of answers; optional email capture before download.[3]
+
+### UX flow
+- Stepper with progress indicator; each step has help text and a “Why this matters” tooltip in non‑technical language.[4]
+- Results page with three tabs: Summary, Privacy & Governance, Next Steps; include “Print” and “Email me the pack.”[3]
+- “Try again” button to re‑weight assumptions and see how the recommendation changes.[3]
+
+### Admin and customization
+- Admin .json for weights, thresholds, and question text so non‑developers can tune scoring per audience.[3]
+- Feature flag to enable an optional “explain my result” generator using Claude locally hosted prompts, but keep off by default to preserve privacy promises.[2]
+
+### Analytics and engagement
+- Optional local analytics: count completions, downloads, and top selected pain points; no user identifiers by default.[3]
+- Micro‑CTAs: “Email the pack,” “Get the Privacy‑First Kit,” and “Request a setup checklist.” Use varied phrasing to avoid salesy tone.[4]
+
+### Copy tone and constraints
+- Write micro‑copy in first‑person operator voice, short paragraphs, and simple analogies, adhering to house style and “tangible value every time.”[4]
+- Avoid technical jargon; explain “code execution” as “a safe side‑room that cleans and masks data before AI sees anything.”[4][2]
+
+### Build tasks for Replit
+- Scaffold React/TS + Tailwind frontend with a multi‑step form and validation; include a results page with tabs and PDF export (jsPDF).[3]
+- Implement Node/Express routes for scoring, PDF generation, and optional email; no outbound calls unless explicitly toggled.[3]
+- Add configuration files for questions, weights, and copy; include sample presets for in‑house vs firm.[3]
+- Ship with unit tests for scoring and integration tests for the form flow; provide a README and a privacy note.[3]
+
+### Acceptance criteria
+- Users complete the wizard in under 5 minutes and receive a clear recommendation with rationale, a privacy checklist, and an action plan.[3]
+- All processing is local; “Privacy‑first mode” enabled by default; a “Wipe session” control is visible on every page.[2]
+- Exports work: one‑pager PDF and answers JSON; optional email capture gates the download without breaking the flow.[3]
+- Copy matches avatar needs and house style; no legal claims, no invented case studies, and conservative language on ROI.[4][1]
+
+### Notes for differentiation
+- This goes deeper than the newsletter matrix via more questions, adjustable weights, explicit privacy controls, and branched recommendations with a Hybrid path and admin‑tunable thresholds.[1][3]
+- It also includes a privacy checklist grounded in code‑execution patterns so hesitant firms can move forward without exposing raw client data.[2]
+
