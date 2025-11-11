@@ -230,6 +230,14 @@ export default function AIStrategyAssessment() {
               console.log('[AI Assessment] ✅ GoHighLevel form submission detected!', parsedData);
               setFormSubmitted(true);
               localStorage.setItem('ai-assessment-unlocked', 'true');
+              
+              // Auto-scroll to assessment after unlock
+              setTimeout(() => {
+                const assessmentElement = document.querySelector('[data-testid="section-assessment"]');
+                if (assessmentElement) {
+                  assessmentElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }, 300);
             }
           } catch (e) {
             // Not valid JSON, ignore
@@ -248,6 +256,14 @@ export default function AIStrategyAssessment() {
         console.log('[AI Assessment] ✅ Form submission detected (alternative format)!');
         setFormSubmitted(true);
         localStorage.setItem('ai-assessment-unlocked', 'true');
+        
+        // Auto-scroll to assessment after unlock
+        setTimeout(() => {
+          const assessmentElement = document.querySelector('[data-testid="section-assessment"]');
+          if (assessmentElement) {
+            assessmentElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 300);
       }
     };
 
@@ -433,170 +449,184 @@ export default function AIStrategyAssessment() {
   };
 
   const handleDownloadPDF = () => {
-    if (!result) return;
+    if (!result) {
+      alert('No results available to download.');
+      return;
+    }
     
-    // Create a printable version of the results
-    const printWindow = window.open('', '_blank');
-    if (!printWindow) return;
-    
-    const htmlContent = `
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>AI Strategy Assessment Results - ${result.recommendation}</title>
-          <style>
-            @media print {
-              body { margin: 0; padding: 20px; }
-              .no-print { display: none; }
-            }
-            body {
-              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-              line-height: 1.6;
-              color: #1e293b;
-              max-width: 800px;
-              margin: 0 auto;
-              padding: 40px 20px;
-            }
-            h1 { 
-              color: #0f172a; 
-              font-size: 32px; 
-              margin-bottom: 8px;
-              border-bottom: 3px solid #2563eb;
-              padding-bottom: 16px;
-            }
-            h2 { 
-              color: #2563eb; 
-              font-size: 24px; 
-              margin-top: 32px;
-              margin-bottom: 16px;
-            }
-            h3 { 
-              color: #475569; 
-              font-size: 18px; 
-              margin-top: 24px;
-              margin-bottom: 12px;
-            }
-            .header {
-              text-align: center;
-              margin-bottom: 40px;
-              padding-bottom: 24px;
-              border-bottom: 2px solid #e2e8f0;
-            }
-            .logo {
-              font-size: 24px;
-              font-weight: bold;
-              color: #2563eb;
-              margin-bottom: 8px;
-            }
-            .date {
-              color: #64748b;
-              font-size: 14px;
-            }
-            .recommendation {
-              background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
-              padding: 24px;
-              border-radius: 8px;
-              margin-bottom: 32px;
-              border-left: 4px solid #2563eb;
-            }
-            .confidence {
-              color: #059669;
-              font-weight: 600;
-              font-size: 18px;
-            }
-            .summary {
-              font-size: 16px;
-              color: #475569;
-              margin-top: 12px;
-            }
-            ul, ol {
-              margin: 16px 0;
-              padding-left: 24px;
-            }
-            li {
-              margin-bottom: 12px;
-              color: #334155;
-            }
-            .section {
-              margin-bottom: 32px;
-              page-break-inside: avoid;
-            }
-            .footer {
-              margin-top: 48px;
-              padding-top: 24px;
-              border-top: 2px solid #e2e8f0;
-              text-align: center;
-              color: #64748b;
-              font-size: 14px;
-            }
-            @media print {
-              body { padding: 0; }
-              .no-print { display: none !important; }
-            }
-          </style>
-        </head>
-        <body>
-          <div class="header">
-            <div class="logo">Cyberaktive AI</div>
-            <div class="date">Assessment Date: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
-          </div>
+    try {
+      // Create a printable version of the results
+      const printWindow = window.open('', '_blank');
+      
+      if (!printWindow) {
+        // Popup blocked - alert user
+        alert('Please allow popups for this site to download the PDF report. You can print this page directly using your browser\'s print function (Ctrl+P or Cmd+P).');
+        return;
+      }
+      
+      const htmlContent = `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>AI Strategy Assessment Results - ${result.recommendation}</title>
+            <meta charset="UTF-8">
+            <style>
+              @media print {
+                body { margin: 0; padding: 20px; }
+                .no-print { display: none; }
+              }
+              body {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                line-height: 1.6;
+                color: #1e293b;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 40px 20px;
+              }
+              h1 { 
+                color: #0f172a; 
+                font-size: 32px; 
+                margin-bottom: 8px;
+                border-bottom: 3px solid #2563eb;
+                padding-bottom: 16px;
+              }
+              h2 { 
+                color: #2563eb; 
+                font-size: 24px; 
+                margin-top: 32px;
+                margin-bottom: 16px;
+              }
+              h3 { 
+                color: #475569; 
+                font-size: 18px; 
+                margin-top: 24px;
+                margin-bottom: 12px;
+              }
+              .header {
+                text-align: center;
+                margin-bottom: 40px;
+                padding-bottom: 24px;
+                border-bottom: 2px solid #e2e8f0;
+              }
+              .logo {
+                font-size: 24px;
+                font-weight: bold;
+                color: #2563eb;
+                margin-bottom: 8px;
+              }
+              .date {
+                color: #64748b;
+                font-size: 14px;
+              }
+              .recommendation {
+                background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+                padding: 24px;
+                border-radius: 8px;
+                margin-bottom: 32px;
+                border-left: 4px solid #2563eb;
+              }
+              .confidence {
+                color: #059669;
+                font-weight: 600;
+                font-size: 18px;
+              }
+              .summary {
+                font-size: 16px;
+                color: #475569;
+                margin-top: 12px;
+              }
+              ul, ol {
+                margin: 16px 0;
+                padding-left: 24px;
+              }
+              li {
+                margin-bottom: 12px;
+                color: #334155;
+              }
+              .section {
+                margin-bottom: 32px;
+                page-break-inside: avoid;
+              }
+              .footer {
+                margin-top: 48px;
+                padding-top: 24px;
+                border-top: 2px solid #e2e8f0;
+                text-align: center;
+                color: #64748b;
+                font-size: 14px;
+              }
+              @media print {
+                body { padding: 0; }
+                .no-print { display: none !important; }
+              }
+            </style>
+          </head>
+          <body>
+            <div class="header">
+              <div class="logo">Cyberaktive AI</div>
+              <div class="date">Assessment Date: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+            </div>
 
-          <h1>AI Strategy Assessment Results</h1>
+            <h1>AI Strategy Assessment Results</h1>
 
-          <div class="recommendation">
-            <h2 style="margin-top: 0;">Recommended Strategy: ${result.recommendation}</h2>
-            <div class="confidence">Confidence: ${result.scores.confidence}%</div>
-            <div class="summary">${result.summary}</div>
-          </div>
+            <div class="recommendation">
+              <h2 style="margin-top: 0;">Recommended Strategy: ${result.recommendation}</h2>
+              <div class="confidence">Confidence: ${result.scores.confidence}%</div>
+              <div class="summary">${result.summary}</div>
+            </div>
 
-          <div class="section">
-            <h2>Why This Recommendation</h2>
-            <ul>
-              ${result.rationale.map(item => `<li>${item}</li>`).join('')}
-            </ul>
-          </div>
+            <div class="section">
+              <h2>Why This Recommendation</h2>
+              <ul>
+                ${result.rationale.map(item => `<li>${item}</li>`).join('')}
+              </ul>
+            </div>
 
-          <div class="section">
-            <h2>Privacy & Governance Checklist</h2>
-            <ul>
-              ${result.privacyChecklist.map(item => `<li>${item}</li>`).join('')}
-            </ul>
-          </div>
+            <div class="section">
+              <h2>Privacy & Governance Checklist</h2>
+              <ul>
+                ${result.privacyChecklist.map(item => `<li>${item}</li>`).join('')}
+              </ul>
+            </div>
 
-          <div class="section">
-            <h2>Your 30-Day Action Plan</h2>
-            <ol>
-              ${result.actionPlan.map(item => `<li>${item}</li>`).join('')}
-            </ol>
-          </div>
+            <div class="section">
+              <h2>Your 30-Day Action Plan</h2>
+              <ol>
+                ${result.actionPlan.map(item => `<li>${item}</li>`).join('')}
+              </ol>
+            </div>
 
-          <div class="footer no-print">
-            <p><strong>Ready to get started?</strong></p>
-            <p>Visit cyberaktiveai.com to book your free consultation</p>
-            <p style="margin-top: 16px; font-size: 12px;">© ${new Date().getFullYear()} Cyberaktive AI. All rights reserved.</p>
-          </div>
+            <div class="footer no-print">
+              <p><strong>Ready to get started?</strong></p>
+              <p>Visit cyberaktiveai.com to book your free consultation</p>
+              <p style="margin-top: 16px; font-size: 12px;">© ${new Date().getFullYear()} Cyberaktive AI. All rights reserved.</p>
+            </div>
 
-          <script>
-            // Auto-print when page loads, then close after printing
-            window.onload = function() {
-              setTimeout(() => {
-                window.print();
-              }, 250);
-            };
-            
-            // Close window after print dialog is closed
-            window.onafterprint = function() {
-              setTimeout(() => {
-                window.close();
-              }, 100);
-            };
-          </script>
-        </body>
-      </html>
-    `;
-    
-    printWindow.document.write(htmlContent);
-    printWindow.document.close();
+            <script>
+              // Auto-print when page loads
+              window.onload = function() {
+                setTimeout(function() {
+                  window.print();
+                }, 250);
+              };
+              
+              // Close window after print dialog is closed
+              window.onafterprint = function() {
+                setTimeout(function() {
+                  window.close();
+                }, 100);
+              };
+            </script>
+          </body>
+        </html>
+      `;
+      
+      printWindow.document.write(htmlContent);
+      printWindow.document.close();
+    } catch (error) {
+      console.error('PDF download error:', error);
+      alert('Unable to open PDF window. Please check your popup blocker settings.');
+    }
   };
 
   return (
@@ -614,12 +644,11 @@ export default function AIStrategyAssessment() {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-slate-100 mb-6 leading-tight" data-testid="heading-main">
-              LLM-First vs Specialist:<br />
-              <span className="text-blue-600 dark:text-blue-400">Which AI Strategy Fits Your Firm?</span>
+              <span className="text-blue-600 dark:text-blue-400">ChatGPT or Harvey?</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-700 dark:text-slate-300 mb-8 leading-relaxed" data-testid="text-subheading">
-              Get a personalized recommendation in under 5 minutes. Should you use ChatGPT/Claude (LLM-First), specialized legal AI platforms (Specialist), or a strategic mix of both (Hybrid)?
+              Get a personalized recommendation in under 5 minutes. Should you use ChatGPT/Claude (LLM-First), specialized legal AI platforms e.g. Harvey, Legora (Specialist), or a strategic mix of both (Hybrid)?
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
