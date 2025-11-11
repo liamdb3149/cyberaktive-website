@@ -209,13 +209,18 @@ export default function AIStrategyAssessment() {
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
       if (event.data?.type === 'form-submitted' || event.data?.formSubmitted) {
+        console.log('[AI Assessment] Form submitted via postMessage');
         setFormSubmitted(true);
         localStorage.setItem('ai-assessment-unlocked', 'true');
       }
     };
 
     const alreadySubmitted = localStorage.getItem('ai-assessment-unlocked');
+    console.log('[AI Assessment] localStorage check:', alreadySubmitted);
+    console.log('[AI Assessment] formSubmitted state:', formSubmitted);
+    
     if (alreadySubmitted === 'true') {
+      console.log('[AI Assessment] Unlocking based on localStorage');
       setFormSubmitted(true);
     }
 
@@ -452,81 +457,10 @@ export default function AIStrategyAssessment() {
         {/* Assessment Tool - Blurred Until Unlocked */}
         <section className="container mx-auto px-4 pb-16 relative">
           <div className="max-w-4xl mx-auto">
-            {!formSubmitted ? (
-              <>
-                {/* Preview of Tool (Blurred) */}
-                <div className="relative">
-                  <div className="filter blur-md pointer-events-none select-none" data-testid="section-blurred-preview">
-                    <Card className="border-2 border-slate-200 dark:border-slate-700">
-                      <CardContent className="p-8">
-                        <div className="mb-6">
-                          <div className="flex justify-between items-center mb-2">
-                            <span className="text-sm font-medium text-slate-600">Question 1 of {totalSteps}</span>
-                            <span className="text-sm text-slate-500">Step 1: Team Profile</span>
-                          </div>
-                          <Progress value={15} className="h-2" />
-                        </div>
-
-                        <h2 className="text-2xl font-bold mb-4">What type of legal organization are you?</h2>
-                        
-                        <RadioGroup className="space-y-3">
-                          <div className="flex items-center space-x-2 p-3 border rounded-lg">
-                            <RadioGroupItem value="law_firm" id="preview-1" />
-                            <Label htmlFor="preview-1">Law Firm</Label>
-                          </div>
-                          <div className="flex items-center space-x-2 p-3 border rounded-lg">
-                            <RadioGroupItem value="in_house" id="preview-2" />
-                            <Label htmlFor="preview-2">In-House Legal Team</Label>
-                          </div>
-                        </RadioGroup>
-
-                        <div className="mt-8 flex justify-between">
-                          <Button variant="outline" disabled>Back</Button>
-                          <Button>Next</Button>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-
-                  {/* Form Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-50/95 to-indigo-50/95 dark:from-slate-900/95 dark:to-blue-950/95" data-testid="section-form-overlay">
-                    <div className="max-w-lg w-full mx-4">
-                      <Card className="border-2 border-blue-300 dark:border-blue-700 shadow-2xl">
-                        <CardContent className="p-8">
-                          <div className="text-center mb-6">
-                            <Lock className="w-16 h-16 text-blue-600 mx-auto mb-4" />
-                            <h2 className="text-2xl font-bold mb-3 text-slate-900 dark:text-slate-100">
-                              Unlock Your Free AI Strategy Assessment
-                            </h2>
-                            <p className="text-slate-600 dark:text-slate-400 mb-4">
-                              Get instant access to the complete assessment tool plus a personalized recommendation report with privacy checklist and 30-day action plan.
-                            </p>
-                          </div>
-
-                          <div className="min-h-[450px]">
-                            <iframe
-                              src="https://api.leadconnectorhq.com/widget/form/Cj9UhspkV2U5S7OBr13E"
-                              style={{ width: '100%', height: '500px', border: 'none', borderRadius: '3px' }}
-                              id="assessment-form-Cj9UhspkV2U5S7OBr13E"
-                              data-layout="{'id':'INLINE'}"
-                              data-form-name="Cyberaktive AI Lead Magnet"
-                              data-height="500"
-                              data-form-id="Cj9UhspkV2U5S7OBr13E"
-                              title="Cyberaktive AI Lead Magnet"
-                              data-testid="iframe-assessment-form"
-                            />
-                          </div>
-
-                          <p className="text-xs text-slate-500 dark:text-slate-400 mt-4 text-center">
-                            Already unlocked? <button onClick={handleUnlock} className="text-blue-600 underline" data-testid="button-manual-unlock">Click here</button>
-                          </p>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
-                </div>
-              </>
-            ) : result ? (
+            <div className="relative">
+              {/* Full Assessment Tool - Always Rendered */}
+              <div className={!formSubmitted ? "pointer-events-none select-none" : ""} data-testid="section-assessment">
+                {result ? (
               /* Results View */
               <div className="space-y-8" data-testid="section-results">
                 <Card className="border-2 border-green-300 dark:border-green-700">
@@ -697,6 +631,47 @@ export default function AIStrategyAssessment() {
                 </CardContent>
               </Card>
             )}
+              </div>
+              
+              {/* Form Overlay with Backdrop Blur - Shows When Locked */}
+              {!formSubmitted && (
+                <div className="absolute inset-0 flex items-center justify-center backdrop-blur-md bg-gradient-to-br from-blue-50/90 to-indigo-50/90 dark:from-slate-900/90 dark:to-blue-950/90" data-testid="section-form-overlay">
+                  <div className="max-w-lg w-full mx-4">
+                    <Card className="border-2 border-blue-300 dark:border-blue-700 shadow-2xl">
+                      <CardContent className="p-8">
+                        <div className="text-center mb-6">
+                          <Lock className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+                          <h2 className="text-2xl font-bold mb-3 text-slate-900 dark:text-slate-100">
+                            Unlock Your Free AI Strategy Assessment
+                          </h2>
+                          <p className="text-slate-600 dark:text-slate-400 mb-4">
+                            Get instant access to the complete assessment tool plus a personalized recommendation report with privacy checklist and 30-day action plan.
+                          </p>
+                        </div>
+
+                        <div className="min-h-[450px]">
+                          <iframe
+                            src="https://api.leadconnectorhq.com/widget/form/Cj9UhspkV2U5S7OBr13E"
+                            style={{ width: '100%', height: '500px', border: 'none', borderRadius: '3px' }}
+                            id="assessment-form-Cj9UhspkV2U5S7OBr13E"
+                            data-layout="{'id':'INLINE'}"
+                            data-form-name="Cyberaktive AI Lead Magnet"
+                            data-height="500"
+                            data-form-id="Cj9UhspkV2U5S7OBr13E"
+                            title="Cyberaktive AI Lead Magnet"
+                            data-testid="iframe-assessment-form"
+                          />
+                        </div>
+
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-4 text-center">
+                          Already unlocked? <button onClick={handleUnlock} className="text-blue-600 underline" data-testid="button-manual-unlock">Click here</button>
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </section>
       </main>
