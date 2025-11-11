@@ -136,3 +136,73 @@ export interface BenchmarkData {
   commonRedFlags: string[];
   solutions: string[];
 }
+
+// LLM vs Specialist Decision Matrix Types (Local Storage Only)
+
+export type QuestionType = "single" | "multiple" | "scale" | "text";
+
+export interface QuestionOption {
+  value: string;
+  label: string;
+  llmWeight?: number;
+  specialistWeight?: number;
+  hybridWeight?: number;
+}
+
+export interface DecisionQuestion {
+  id: string;
+  step: number;
+  category: string;
+  question: string;
+  helpText?: string;
+  type: QuestionType;
+  options?: QuestionOption[];
+  required: boolean;
+}
+
+export const decisionMatrixAnswerSchema = z.object({
+  questionId: z.string(),
+  value: z.union([z.string(), z.array(z.string()), z.number()]),
+});
+
+export type DecisionMatrixAnswer = z.infer<typeof decisionMatrixAnswerSchema>;
+
+export interface DecisionMatrixScores {
+  llmFirst: number;
+  specialist: number;
+  hybrid: number;
+  confidence: number;
+}
+
+export type RecommendationType = "LLM-First" | "Specialist" | "Hybrid";
+
+export interface DecisionMatrixResult {
+  recommendation: RecommendationType;
+  scores: DecisionMatrixScores;
+  rationale: string[];
+  privacyChecklist: string[];
+  actionPlan: string[];
+  summary: string;
+}
+
+export const decisionMatrixSessionSchema = z.object({
+  id: z.string(),
+  answers: z.array(decisionMatrixAnswerSchema),
+  result: z.object({
+    recommendation: z.enum(["LLM-First", "Specialist", "Hybrid"]),
+    scores: z.object({
+      llmFirst: z.number(),
+      specialist: z.number(),
+      hybrid: z.number(),
+      confidence: z.number(),
+    }),
+    rationale: z.array(z.string()),
+    privacyChecklist: z.array(z.string()),
+    actionPlan: z.array(z.string()),
+    summary: z.string(),
+  }).optional(),
+  createdAt: z.string(),
+  completedAt: z.string().optional(),
+});
+
+export type DecisionMatrixSession = z.infer<typeof decisionMatrixSessionSchema>;
