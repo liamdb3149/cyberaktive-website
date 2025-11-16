@@ -26,7 +26,7 @@ export default function ROICalculators() {
   const [activeTab, setActiveTab] = useState<CalculatorType>("intake");
 
   return (
-    <Section className="section-mesh relative bg-gradient-to-br from-indigo-50/30 via-purple-50/20 to-blue-50/30">
+    <Section id="roi-calculators" className="section-mesh relative bg-gradient-to-br from-indigo-50/30 via-purple-50/20 to-blue-50/30">
       <FloatingOrb size="large" style={{ top: "15%", right: "8%" }} />
       <FloatingOrb size="medium" style={{ bottom: "20%", left: "10%" }} />
       <GeometricBlob style={{ top: "50%", right: "15%", width: "140px", height: "140px" }} />
