@@ -116,7 +116,7 @@ export default function Process() {
                   Ready to Get Started?
                 </h3>
                 <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Book a quick call to see if AI can deliver real value for your law firm
+                  Book a quick call to see if AI can deliver real value for your legal team
                 </p>
                 <Button 
                   size="lg" 

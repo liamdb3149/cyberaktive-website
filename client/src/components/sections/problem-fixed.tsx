@@ -52,7 +52,7 @@ export default function Problem() {
         <RevealOnScroll>
           <div className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
-              What Slows Down Most Law Firms?
+              What Slows Down Most Legal Teams?
             </h2>
             <p className="premium-text-lg text-muted-foreground max-w-2xl mx-auto">
               Common challenges that prevent you from scaling efficiently
@@ -69,10 +69,10 @@ export default function Problem() {
                 <div className="space-y-8">
                   <div className="text-6xl font-black text-destructive/30">01</div>
                   <h3 className="premium-text-xl text-foreground">
-                    The Law Firm Challenge
+                    The Legal Team Challenge
                   </h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    You built your law firm to provide exceptional legal services and grow profitably. 
+                    You built your legal team to provide exceptional legal services and grow profitably. 
                     Instead, you're caught in a cycle of manual administrative tasks, 
                     inefficient processes, and uncertainty about which technology investments will actually deliver results.
                   </p>
@@ -118,7 +118,7 @@ export default function Problem() {
                 Sound familiar?
               </p>
               <p className="text-muted-foreground">
-                These aren't just inconveniences – they're barriers that prevent your firm from scaling efficiently and profitably.
+                These aren't just inconveniences – they're barriers that prevent your team from scaling efficiently and profitably.
               </p>
             </div>
           </div>

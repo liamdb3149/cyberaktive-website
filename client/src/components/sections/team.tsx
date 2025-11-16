@@ -22,7 +22,7 @@ export default function Team() {
               Meet Your Legal AI Partners
             </h2>
             <p className="premium-text-lg text-muted-foreground max-w-3xl mx-auto">
-              We're specialists in law firm operations and AI, focused on helping teams like yours make real business improvements. Our aim: only recommend what works for you—not pushy sales, just clear advice and partnership.
+              We're specialists in legal operations and AI, focused on helping teams like yours make real business improvements. Our aim: only recommend what works for you—not pushy sales, just clear advice and partnership.
             </p>
           </div>
         </RevealOnScroll>
@@ -54,7 +54,7 @@ export default function Team() {
                 Specializes in identifying genuine AI opportunities in professional services firms. Focuses on measurable ROI and practical implementation rather than buzzwords. Works directly with legal teams to understand workflows and recommend automation only where it delivers real business value.
               </p>
               <p className="text-primary font-semibold mt-4 text-sm" data-testid="text-liam-credibility">
-                Helped law firms achieve average ROI of 300% within 8 months
+                Helped legal teams achieve average ROI of 300% within 8 months
               </p>
               
               {/* Premium accent line */}

@@ -5,6 +5,7 @@ Cyberaktive is a landing page and marketing website offering AI consulting and a
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.
+Target audience: Legal teams (both law firms and in-house legal departments) - messaging uses "legal teams" terminology to be inclusive of in-house counsel.
 
 ## System Architecture
 

@@ -85,10 +85,10 @@ export default function Calendar() {
           <div className="text-center mt-16">
             <div className="inline-block bg-accent/5 rounded-2xl px-8 py-6 backdrop-blur-sm border border-accent/10">
               <p className="premium-text-lg text-foreground mb-2 font-semibold">
-                See What AI Can Do for Your Firm
+                See What AI Can Do for Your Team
               </p>
               <p className="text-muted-foreground">
-                Let's discuss whether AI can deliver real ROI for your law firm
+                Let's discuss whether AI can deliver real ROI for your legal team
               </p>
             </div>
           </div>

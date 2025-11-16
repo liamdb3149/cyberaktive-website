@@ -38,20 +38,20 @@ export default function Results() {
   const testimonialHighlights = [
     {
       quote: "We only implement what makes business sense—no wasteful pilots",
-      author: "Law Firm Partner",
+      author: "Legal Team Leader",
       company: "Mid-Size Practice",
       metric: "Smart ROI"
     },
     {
       quote: "Our team actually uses the tools because they solve real problems",
       author: "Managing Attorney", 
-      company: "Regional Firm",
+      company: "Regional Legal Team",
       metric: "Real Adoption"
     },
     {
       quote: "Finally, a partner who tells us 'no' when something won't work",
-      author: "Senior Partner",
-      company: "Corporate Law Firm",
+      author: "General Counsel",
+      company: "Corporate Legal Department",
       metric: "Honest Guidance"
     }
   ];

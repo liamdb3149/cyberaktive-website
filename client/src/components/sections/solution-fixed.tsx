@@ -78,7 +78,7 @@ export default function Solution() {
                       </h3>
                     </div>
                     <p className="text-lg text-muted-foreground leading-relaxed">
-                      Your law firm operates more efficiently with AI handling routine work. 
+                      Your legal team operates more efficiently with AI handling routine work. 
                       Your team focuses on high-value legal services, 
                       and you achieve the profitability and growth you envisioned.
                     </p>

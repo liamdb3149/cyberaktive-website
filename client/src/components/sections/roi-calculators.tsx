@@ -38,7 +38,7 @@ export default function ROICalculators() {
               Calculate Your ROI
             </h2>
             <p className="premium-text-lg text-muted-foreground max-w-3xl mx-auto">
-              See the real impact AI automation can have on your law firm's bottom line
+              See the real impact AI automation can have on your legal team's bottom line
             </p>
           </div>
         </RevealOnScroll>

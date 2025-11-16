@@ -63,7 +63,7 @@ export default function Automations() {
 
   const currentAutomations = activeTab === 'revenue' ? revenueAutomations : operationsAutomations;
   const currentTitle = 'How We Work with You';
-  const currentSubtitle = 'A transparent, practical approach to finding real AI opportunities in your law firm';
+  const currentSubtitle = 'A transparent, practical approach to finding real AI opportunities in your legal team';
   const CurrentIcon = CheckCircle;
 
   return (
