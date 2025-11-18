@@ -21,7 +21,8 @@ import {
   Check,
   Copy,
   ChevronDown,
-  Sparkles
+  Sparkles,
+  X
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -41,6 +42,11 @@ export default function LegalAIPromptLibrary() {
   const [selectedPrompt, setSelectedPrompt] = useState<Prompt | null>(null);
   const [copiedId, setCopiedId] = useState<number | null>(null);
   const { toast } = useToast();
+
+  // Handle manual close of form
+  const handleCloseForm = () => {
+    setShowForm(false);
+  };
 
   // Set meta tags and check localStorage on mount
   useEffect(() => {
@@ -109,11 +115,17 @@ export default function LegalAIPromptLibrary() {
     }
     twitterCard.setAttribute('content', 'summary_large_image');
     
-    // Check unlock status
+    // Check unlock status from localStorage or URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const directAccess = urlParams.get('direct') === 'true';
     const unlocked = localStorage.getItem("promptLibraryUnlocked");
-    if (unlocked === "true") {
+    
+    if (unlocked === "true" || directAccess) {
       setIsUnlocked(true);
       setShowForm(false);
+      if (directAccess) {
+        localStorage.setItem("promptLibraryUnlocked", "true");
+      }
     }
     
     // Cleanup function to restore all original meta tags when component unmounts
@@ -184,15 +196,41 @@ export default function LegalAIPromptLibrary() {
   // Listen for GHL form submission
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
-      // GHL sends data as Array with JSON string at index 2
+      // Debug: Log all messages to understand GHL's format
+      console.log('PostMessage received:', {
+        origin: event.origin,
+        data: event.data,
+        dataType: typeof event.data,
+        isArray: Array.isArray(event.data),
+      });
+
+      // Try multiple message formats
+      // Format 1: Array with JSON string at index 2
       if (Array.isArray(event.data) && event.data.length > 2) {
         try {
           const messageData = JSON.parse(event.data[2]);
+          console.log('Parsed message data (Format 1):', messageData);
           if (messageData.type === "hsFormCallback" && messageData.eventName === "onFormSubmitted") {
             handleFormSubmit();
           }
         } catch (e) {
-          // Not a GHL message, ignore
+          // Not a JSON parseable message
+        }
+      }
+      
+      // Format 2: Direct object
+      if (typeof event.data === 'object' && event.data !== null) {
+        if (event.data.type === "hsFormCallback" && event.data.eventName === "onFormSubmitted") {
+          console.log('Form submitted (Format 2)');
+          handleFormSubmit();
+        }
+      }
+
+      // Format 3: String message
+      if (typeof event.data === 'string') {
+        if (event.data.includes('submitted') || event.data.includes('onFormSubmitted')) {
+          console.log('Form submitted (Format 3)');
+          handleFormSubmit();
         }
       }
     };
@@ -342,11 +380,22 @@ export default function LegalAIPromptLibrary() {
           <div
             className="fixed inset-0 bg-black/70 z-40 transition-opacity duration-300"
             data-testid="form-backdrop"
+            onClick={handleCloseForm}
           />
           <div
             className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-8 md:p-12 w-[90%] max-w-2xl transition-all duration-300"
             data-testid="form-overlay"
           >
+            {/* X Close Button */}
+            <button
+              onClick={handleCloseForm}
+              className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              data-testid="button-close-form"
+              aria-label="Close form"
+            >
+              <X className="w-6 h-6 text-gray-600 dark:text-gray-400" />
+            </button>
+
             <div className="text-center mb-6">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3" data-testid="form-title">
                 Unlock 18 AI Prompts for Legal Teams
@@ -381,6 +430,26 @@ export default function LegalAIPromptLibrary() {
             />
           </div>
         </>
+      )}
+
+      {/* Unlock CTA - Shows when form is closed but content still locked */}
+      {!showForm && !isUnlocked && (
+        <div className="fixed inset-0 z-30 flex items-center justify-center bg-black/50">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-8 max-w-md text-center">
+            <h3 className="text-2xl font-bold mb-4">Content Locked</h3>
+            <p className="text-muted-foreground mb-6">
+              Submit the form to unlock 18 AI prompts for legal teams.
+            </p>
+            <Button
+              onClick={() => setShowForm(true)}
+              size="lg"
+              className="w-full"
+              data-testid="button-reopen-form"
+            >
+              Submit Form to Unlock
+            </Button>
+          </div>
+        </div>
       )}
 
       {/* Prompt Library - With Blur Effect When Locked */}
