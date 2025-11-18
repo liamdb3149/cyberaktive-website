@@ -8,6 +8,8 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogOverlay,
+  DialogPortal,
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { prompts, categories, Prompt } from "@/data/prompts-library";
@@ -22,7 +24,8 @@ import {
   Copy,
   ChevronDown,
   Sparkles,
-  X
+  X,
+  Bookmark
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -196,41 +199,49 @@ export default function LegalAIPromptLibrary() {
   // Listen for GHL form submission
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
-      // Debug: Log all messages to understand GHL's format
-      console.log('PostMessage received:', {
-        origin: event.origin,
-        data: event.data,
-        dataType: typeof event.data,
-        isArray: Array.isArray(event.data),
-      });
+      // Only accept messages from GoHighLevel
+      if (event.origin !== "https://api.leadconnectorhq.com") {
+        return;
+      }
 
-      // Try multiple message formats
-      // Format 1: Array with JSON string at index 2
+      console.log('GHL PostMessage received:', event.data);
+
+      // Method 1: Check for "set-sticky-contacts" array (contact data saved)
+      if (Array.isArray(event.data) && event.data[0] === "set-sticky-contacts" && event.data[1] === "_ud") {
+        console.log('✅ Form submitted (set-sticky-contacts)');
+        handleFormSubmit();
+        return;
+      }
+
+      // Method 2: Check for hsFormCallback object
+      if (typeof event.data === 'object' && event.data !== null) {
+        if (event.data.type === "hsFormCallback" && event.data.eventName === "onFormSubmitted") {
+          console.log('✅ Form submitted (hsFormCallback)');
+          handleFormSubmit();
+          return;
+        }
+      }
+
+      // Method 3: Check array with JSON at index 2
       if (Array.isArray(event.data) && event.data.length > 2) {
         try {
           const messageData = JSON.parse(event.data[2]);
-          console.log('Parsed message data (Format 1):', messageData);
           if (messageData.type === "hsFormCallback" && messageData.eventName === "onFormSubmitted") {
+            console.log('✅ Form submitted (parsed JSON)');
             handleFormSubmit();
+            return;
           }
         } catch (e) {
-          // Not a JSON parseable message
-        }
-      }
-      
-      // Format 2: Direct object
-      if (typeof event.data === 'object' && event.data !== null) {
-        if (event.data.type === "hsFormCallback" && event.data.eventName === "onFormSubmitted") {
-          console.log('Form submitted (Format 2)');
-          handleFormSubmit();
+          // Not JSON parseable
         }
       }
 
-      // Format 3: String message
+      // Method 4: String contains check
       if (typeof event.data === 'string') {
         if (event.data.includes('submitted') || event.data.includes('onFormSubmitted')) {
-          console.log('Form submitted (Format 3)');
+          console.log('✅ Form submitted (string match)');
           handleFormSubmit();
+          return;
         }
       }
     };
@@ -435,7 +446,15 @@ export default function LegalAIPromptLibrary() {
       {/* Unlock CTA - Shows when form is closed but content still locked */}
       {!showForm && !isUnlocked && (
         <div className="fixed inset-0 z-30 flex items-center justify-center bg-black/50">
-          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-8 max-w-md text-center">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-8 max-w-md text-center relative">
+            <button
+              onClick={() => window.location.href = '/'}
+              className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              data-testid="button-close-locked-modal"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            
             <h3 className="text-2xl font-bold mb-4">Content Locked</h3>
             <p className="text-muted-foreground mb-6">
               Submit the form to unlock 18 AI prompts for legal teams.
@@ -460,6 +479,36 @@ export default function LegalAIPromptLibrary() {
         id="prompt-library-container"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Bookmark Button - Only show when unlocked */}
+          {isUnlocked && (
+            <div className="flex justify-center mb-6">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => {
+                  if (navigator.userAgent.includes('Mac')) {
+                    toast({
+                      title: "Bookmark this page",
+                      description: "Press ⌘ + D to bookmark this page for quick access",
+                      duration: 5000,
+                    });
+                  } else {
+                    toast({
+                      title: "Bookmark this page",
+                      description: "Press Ctrl + D to bookmark this page for quick access",
+                      duration: 5000,
+                    });
+                  }
+                }}
+                className="gap-2"
+                data-testid="button-bookmark"
+              >
+                <Bookmark className="w-5 h-5" />
+                Bookmark this page for quick access
+              </Button>
+            </div>
+          )}
+
           {/* Search and Filter Bar */}
           <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-6 mb-8 sticky top-20 z-30 border border-gray-200 dark:border-gray-700">
             <div className="flex flex-col md:flex-row gap-4 items-center">
@@ -589,7 +638,9 @@ export default function LegalAIPromptLibrary() {
 
       {/* Modal for Expanded Prompt View */}
       <Dialog open={!!selectedPrompt} onOpenChange={() => setSelectedPrompt(null)}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto" data-testid="modal-prompt-details">
+        <DialogPortal>
+          <DialogOverlay className="bg-black/90" />
+          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto" data-testid="modal-prompt-details">
           {selectedPrompt && (
             <>
               <DialogHeader>
@@ -676,7 +727,8 @@ export default function LegalAIPromptLibrary() {
               </div>
             </>
           )}
-        </DialogContent>
+          </DialogContent>
+        </DialogPortal>
       </Dialog>
 
       <Footer />
