@@ -1,5 +1,5 @@
 import fullLogo from "@/assets/cyberaktive-full-logo.jpg";
-import { Home, Calculator, FileText, Brain, Map } from "lucide-react";
+import { Home, Calculator, FileText, Brain, Map, Sparkles } from "lucide-react";
 import { useLocation, Link } from "wouter";
 
 export default function Footer() {
@@ -70,6 +70,14 @@ export default function Footer() {
                 >
                   <Map className="w-4 h-4 mr-2" />
                   <span>DIY Legal Copilot Roadmap</span>
+                </Link>
+                <Link 
+                  href="/legal-ai-prompt-library"
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors" 
+                  data-testid="link-footer-prompt-library"
+                >
+                  <Sparkles className="w-4 h-4 mr-2" />
+                  <span>Legal AI Prompt Library</span>
                 </Link>
                 <Link 
                   href="/ai-pilot-scorecard-law-firm"
