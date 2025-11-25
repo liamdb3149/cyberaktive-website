@@ -37,7 +37,7 @@ export default function Header() {
                 className="w-10 h-10"
               />
             </Link>
-            <Link href="/" className="text-2xl font-black text-gray-900" data-testid="link-logo">
+            <Link href="/" className="text-2xl font-bold gradient-text" data-testid="link-logo">
               Cyberaktive
             </Link>
           </div>
@@ -47,7 +47,7 @@ export default function Header() {
               href="https://www.theailaw.xyz/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-900 hover:text-primary transition-colors font-bold"
+              className="flex items-center gap-2 text-foreground hover:text-primary transition-colors font-medium"
               data-testid="link-newsletter"
             >
               <Newspaper className="w-5 h-5" />
@@ -83,7 +83,7 @@ export default function Header() {
                 href="https://www.theailaw.xyz/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-2 text-gray-900 hover:text-primary hover:bg-accent/10 transition-colors font-bold rounded-md"
+                className="flex items-center gap-2 px-3 py-2 text-foreground hover:text-primary hover:bg-accent/10 transition-colors font-medium rounded-md"
                 data-testid="link-newsletter-mobile"
               >
                 <Newspaper className="w-5 h-5" />
