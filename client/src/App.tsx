@@ -10,6 +10,7 @@ import AIPilotScorecard from "@/pages/ai-pilot-scorecard";
 import DIYLegalCopilotRoadmap from "@/pages/diy-legal-copilot-roadmap";
 import AIStrategyAssessment from "@/pages/ai-strategy-assessment";
 import LegalAIPromptLibrary from "@/pages/legal-ai-prompt-library";
+import AIMalpracticeCalculator from "@/pages/ai-malpractice-calculator";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/diy-legal-copilot-roadmap" component={DIYLegalCopilotRoadmap} />
       <Route path="/ai-strategy-assessment" component={AIStrategyAssessment} />
       <Route path="/legal-ai-prompt-library" component={LegalAIPromptLibrary} />
+      <Route path="/ai-malpractice-risk-calculator" component={AIMalpracticeCalculator} />
       <Route component={NotFound} />
     </Switch>
   );

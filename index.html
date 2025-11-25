@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Malpractice Risk Calculator for Lawyers | Free Assessment</title>
+    <meta name="description" content="Calculate your law firm's AI hallucination exposure in 2 minutes." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Merriweather', 'serif'],
+            },
+            colors: {
+              navy: { 800: '#1e3a8a', 900: '#0f172a' },
+              legal: { gold: '#d97706', blue: '#2563eb' },
+              brand: {
+                purple: '#8b5cf6', // Cyberaktive Purple
+                dark: '#1e1b4b',   // Cyberaktive Dark Background
+                blue: '#3b82f6',   // Cyberaktive Blue
+                light: '#f3f4f6'
+              }
+            },
+            animation: { blob: "blob 7s infinite" },
+            keyframes: {
+              blob: {
+                "0%": { transform: "translate(0px, 0px) scale(1)" },
+                "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                "100%": { transform: "translate(0px, 0px) scale(1)" }
+              },
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      .blur-content { filter: blur(8px); pointer-events: none; user-select: none; transition: filter 0.5s ease; }
+      .no-blur { filter: blur(0); pointer-events: auto; user-select: auto; transition: filter 0.5s ease; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

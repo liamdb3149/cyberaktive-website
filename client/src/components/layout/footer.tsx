@@ -1,5 +1,5 @@
 import fullLogo from "@/assets/cyberaktive-full-logo.jpg";
-import { Home, Calculator, FileText, Brain, Map, Sparkles } from "lucide-react";
+import { Home, Calculator, FileText, Brain, Map, Sparkles, AlertTriangle } from "lucide-react";
 import { useLocation, Link } from "wouter";
 
 export default function Footer() {
@@ -78,6 +78,14 @@ export default function Footer() {
                 >
                   <Sparkles className="w-4 h-4 mr-2" />
                   <span>Legal AI Prompt Library</span>
+                </Link>
+                <Link 
+                  href="/ai-malpractice-risk-calculator"
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors" 
+                  data-testid="link-footer-malpractice-calculator"
+                >
+                  <AlertTriangle className="w-4 h-4 mr-2" />
+                  <span>AI Malpractice Risk Calculator</span>
                 </Link>
                 <Link 
                   href="/ai-pilot-scorecard-law-firm"
