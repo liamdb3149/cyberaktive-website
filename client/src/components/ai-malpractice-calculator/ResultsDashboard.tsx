@@ -112,28 +112,28 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
   };
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800">
       <div className="container mx-auto px-4 py-12">
-        <div ref={dashboardRef} className="max-w-4xl mx-auto space-y-6">
+        <div ref={dashboardRef} className="max-w-4xl mx-auto space-y-6 bg-white p-8 rounded-lg">
           {/* Header with Logo */}
           <div className="text-center mb-8">
             <div className="flex justify-end mb-6">
-              <img src={aiLawLogo} alt="The AI Law" className="h-16" />
+              <img src={aiLawLogo} alt="The AI Law" className="h-20" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-black text-white mb-4">
+            <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-4">
               Your AI Malpractice Risk Assessment
             </h1>
           </div>
 
           {/* Risk Score Card */}
-          <Card className={`border-2 ${riskLevel.borderColor} bg-slate-900`}>
+          <Card className={`border-2 ${riskLevel.borderColor} bg-white`}>
             <CardContent className="pt-8">
               <div className="text-center">
-                <div className="text-7xl font-black text-white mb-2">{riskScore}%</div>
+                <div className="text-7xl font-black text-gray-900 mb-2">{riskScore}%</div>
                 <div className={`text-4xl font-black ${riskLevel.color} mb-4`}>
                   {riskLevel.level}
                 </div>
-                <p className="text-white text-xl font-bold">
+                <p className="text-gray-900 text-xl font-bold">
                   {riskScore < 25 && "Your firm has strong AI governance practices. Continue monitoring and updating policies."}
                   {riskScore >= 25 && riskScore < 50 && "Moderate exposure. Take action on key recommendations to reduce malpractice risk."}
                   {riskScore >= 50 && riskScore < 75 && "Significant risk. Urgent action required to protect your firm from AI-related malpractice."}
@@ -144,40 +144,40 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
           </Card>
 
           {/* Category Breakdown */}
-          <Card className="bg-slate-900 border-2 border-cyan-500">
+          <Card className="bg-white border-2 border-gray-300">
             <CardHeader>
-              <CardTitle className="text-white font-black text-3xl">Risk by Category</CardTitle>
+              <CardTitle className="text-gray-900 font-black text-3xl">Risk by Category</CardTitle>
             </CardHeader>
             <CardContent>
               <ResponsiveContainer width="100%" height={300}>
                 <BarChart data={categoryData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#333" />
-                  <XAxis dataKey="name" stroke="#fff" />
-                  <YAxis stroke="#fff" />
-                  <Tooltip contentStyle={{ backgroundColor: "#1e293b", border: "2px solid #00ff00" }} />
-                  <Bar dataKey="score" fill="#00ff00" radius={[8, 8, 0, 0]} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#ccc" />
+                  <XAxis dataKey="name" stroke="#000" />
+                  <YAxis stroke="#000" />
+                  <Tooltip contentStyle={{ backgroundColor: "#fff", border: "1px solid #ccc" }} />
+                  <Bar dataKey="score" fill="#8b5cf6" radius={[8, 8, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </CardContent>
           </Card>
 
           {/* Recommendations */}
-          <Card className="bg-slate-900 border-2 border-cyan-500">
+          <Card className="bg-white border-2 border-gray-300">
             <CardHeader>
-              <CardTitle className="text-white font-black text-3xl flex items-center gap-2">
-                <AlertCircle className="w-8 h-8 text-lime-300" />
+              <CardTitle className="text-gray-900 font-black text-3xl flex items-center gap-2">
+                <AlertCircle className="w-8 h-8 text-blue-600" />
                 Priority Recommendations
               </CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-3">
                 {recommendations.map((rec, idx) => (
-                  <li key={idx} className="flex gap-3 text-white font-black text-lg">
+                  <li key={idx} className="flex gap-3 text-gray-900 font-bold text-lg">
                     <div className="flex-shrink-0">
                       {rec.includes("CRITICAL") || rec.includes("URGENT") ? (
-                        <AlertTriangle className="w-6 h-6 text-red-500 mt-0.5" />
+                        <AlertTriangle className="w-6 h-6 text-red-600 mt-0.5" />
                       ) : (
-                        <CheckCircle className="w-6 h-6 text-lime-300 mt-0.5" />
+                        <CheckCircle className="w-6 h-6 text-green-600 mt-0.5" />
                       )}
                     </div>
                     <span>{rec}</span>
@@ -188,21 +188,21 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
           </Card>
 
           {/* Key Insights */}
-          <Card className="bg-slate-900 border-2 border-cyan-500">
+          <Card className="bg-white border-2 border-gray-300">
             <CardHeader>
-              <CardTitle className="text-white font-black text-3xl">Key Insights</CardTitle>
+              <CardTitle className="text-gray-900 font-black text-3xl">Key Insights</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-slate-800 border-2 border-cyan-400 rounded-lg p-4">
-                  <h4 className="font-black text-white mb-2 text-lg">Highest Risk Area</h4>
-                  <p className="text-lime-300 font-black text-2xl">
+                <div className="bg-purple-100 border-2 border-purple-400 rounded-lg p-4">
+                  <h4 className="font-black text-gray-900 mb-2 text-lg">Highest Risk Area</h4>
+                  <p className="text-purple-900 font-black text-2xl">
                     {categoryData.reduce((max, curr) => curr.score > max.score ? curr : max).name}
                   </p>
                 </div>
-                <div className="bg-slate-800 border-2 border-cyan-400 rounded-lg p-4">
-                  <h4 className="font-black text-white mb-2 text-lg">Next Steps</h4>
-                  <p className="text-lime-300 font-black text-2xl">
+                <div className="bg-blue-100 border-2 border-blue-400 rounded-lg p-4">
+                  <h4 className="font-black text-gray-900 mb-2 text-lg">Next Steps</h4>
+                  <p className="text-blue-900 font-black text-2xl">
                     {riskScore < 50 ? "Review AI verification protocols" : "Schedule risk meeting"}
                   </p>
                 </div>
@@ -212,7 +212,7 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
         </div>
 
         {/* CTA Section with Beehiiv Form */}
-        <div className="max-w-4xl mx-auto mt-8 bg-slate-900 rounded-lg border-2 border-cyan-500 p-8">
+        <div className="max-w-4xl mx-auto mt-8 bg-slate-800 rounded-lg border-2 border-cyan-500 p-8">
           <h3 className="text-3xl font-black text-white mb-2 text-center">Stay Updated on AI Risk Management</h3>
           <p className="text-white text-center mb-6 font-bold text-lg">
             Subscribe to get the latest insights on protecting your firm from AI-related malpractice
@@ -230,11 +230,11 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
       </div>
 
         {/* Action Buttons */}
-        <div className="flex justify-center gap-4 mt-8">
+        <div className="flex justify-center gap-4 mt-8 max-w-4xl mx-auto">
           <Button
             onClick={generatePDF}
             disabled={isGenerating}
-            className="bg-lime-300 hover:bg-lime-400 text-black font-black gap-2 text-lg px-8 py-3"
+            className="bg-cyan-500 hover:bg-cyan-600 text-white font-black gap-2 text-lg px-8 py-3"
             size="lg"
           >
             <Download className="w-6 h-6" />
@@ -242,7 +242,7 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
           </Button>
           <Button
             onClick={onReset}
-            className="bg-cyan-400 hover:bg-cyan-500 text-black font-black gap-2 text-lg px-8 py-3"
+            className="bg-white hover:bg-gray-100 text-gray-900 font-black gap-2 text-lg px-8 py-3"
             size="lg"
           >
             <RotateCcw className="w-6 h-6" />

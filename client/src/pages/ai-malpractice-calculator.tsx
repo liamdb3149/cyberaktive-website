@@ -112,7 +112,7 @@ export default function AIMalpracticeCalculator() {
   const riskScore = calculateRiskScore();
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800">
       <Header />
       
       <main className="container mx-auto px-4 py-12">
@@ -134,13 +134,13 @@ export default function AIMalpracticeCalculator() {
 
         {/* Calculator Card */}
         <div className="max-w-2xl mx-auto">
-          <Card className="bg-slate-900 border-2 border-cyan-500 shadow-2xl">
-            <CardHeader className="border-b border-cyan-500/50 bg-slate-800">
+          <Card className="bg-slate-800 border-2 border-cyan-500 shadow-2xl">
+            <CardHeader className="border-b border-cyan-500/50 bg-slate-700">
               <div className="flex justify-between items-center mb-4">
                 <span className="text-base font-bold text-white">Question {currentQuestion + 1} of {questions.length}</span>
-                <span className="text-base font-bold text-lime-300">Current Risk: {riskScore}%</span>
+                <span className="text-base font-bold text-cyan-300">Current Risk: {riskScore}%</span>
               </div>
-              <Progress value={progress} className="bg-slate-700" />
+              <Progress value={progress} className="bg-slate-600" />
             </CardHeader>
 
             <CardContent className="pt-8">
@@ -153,16 +153,16 @@ export default function AIMalpracticeCalculator() {
                   <Button
                     key={idx}
                     onClick={() => handleAnswer(option.weight)}
-                    className="w-full justify-start text-left h-auto py-4 px-6 border-2 border-cyan-400 bg-slate-800 hover:bg-slate-700 text-white hover:text-lime-300 font-black text-base transition-all"
+                    className="w-full justify-start text-left h-auto py-4 px-6 border-2 border-cyan-400 bg-slate-700 hover:bg-slate-600 text-white hover:text-cyan-200 font-black text-base transition-all"
                   >
                     <span className="text-lg font-black">{option.label}</span>
                   </Button>
                 ))}
               </div>
 
-              <div className="bg-slate-800 border-2 border-cyan-500 rounded-lg p-4">
+              <div className="bg-slate-700 border-2 border-cyan-500 rounded-lg p-4">
                 <div className="flex gap-3">
-                  <AlertCircle className="w-5 h-5 text-lime-300 flex-shrink-0 mt-0.5" />
+                  <AlertCircle className="w-5 h-5 text-cyan-300 flex-shrink-0 mt-0.5" />
                   <p className="text-base text-white font-bold">
                     {question.category}: Each answer reveals your firm's exposure in this critical area.
                   </p>
