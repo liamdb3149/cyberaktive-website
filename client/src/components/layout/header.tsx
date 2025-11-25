@@ -51,7 +51,7 @@ export default function Header() {
               data-testid="link-newsletter"
             >
               <Newspaper className="w-5 h-5" />
-              The Newsletter
+              The AI Law newsletter
             </a>
             <CalendarModal>
               <Button 
@@ -87,7 +87,7 @@ export default function Header() {
                 data-testid="link-newsletter-mobile"
               >
                 <Newspaper className="w-5 h-5" />
-                The Newsletter
+                The AI Law newsletter
               </a>
               <CalendarModal>
                 <Button 
