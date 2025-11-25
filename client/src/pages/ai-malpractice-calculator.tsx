@@ -121,13 +121,13 @@ export default function AIMalpracticeCalculator() {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             AI Malpractice Risk Calculator
           </h1>
-          <p className="text-xl text-gray-300 mb-6">
+          <p className="text-xl text-white mb-6 font-medium">
             Find out your law firm's exposure to AI hallucinations in 2 minutes
           </p>
           <div className="flex gap-2 justify-center">
-            <div className="flex items-center gap-2 px-4 py-2 bg-red-500/20 text-red-300 rounded-lg border border-red-500/30">
+            <div className="flex items-center gap-2 px-4 py-2 bg-red-500/30 text-white rounded-lg border border-red-400">
               <AlertTriangle className="w-4 h-4" />
-              <span className="text-sm">86% of law firms risk malpractice with unverified AI</span>
+              <span className="text-sm font-medium">86% of law firms risk malpractice with unverified AI</span>
             </div>
           </div>
         </div>
@@ -154,17 +154,17 @@ export default function AIMalpracticeCalculator() {
                     key={idx}
                     onClick={() => handleAnswer(option.weight)}
                     variant="outline"
-                    className="w-full justify-start text-left h-auto py-4 px-6 border-brand-purple/30 hover:border-brand-blue hover:bg-brand-blue/10 text-gray-200 hover:text-white transition-all"
+                    className="w-full justify-start text-left h-auto py-4 px-6 border-brand-purple/50 hover:border-brand-blue hover:bg-brand-blue/10 text-white hover:text-white font-medium transition-all"
                   >
                     <span className="text-lg">{option.label}</span>
                   </Button>
                 ))}
               </div>
 
-              <div className="bg-brand-purple/10 border border-brand-purple/30 rounded-lg p-4">
+              <div className="bg-brand-purple/20 border border-brand-purple/40 rounded-lg p-4">
                 <div className="flex gap-3">
                   <AlertCircle className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" />
-                  <p className="text-sm text-gray-300">
+                  <p className="text-sm text-white font-medium">
                     {question.category}: Each answer reveals your firm's exposure in this critical area.
                   </p>
                 </div>
