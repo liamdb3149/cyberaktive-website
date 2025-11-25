@@ -112,110 +112,111 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
   };
 
   return (
-    <main className="container mx-auto px-4 py-12">
-      <div ref={dashboardRef} className="max-w-4xl mx-auto space-y-6 bg-white p-8">
-        {/* Header with Logo */}
-        <div className="text-center mb-8">
-          <div className="flex justify-end mb-6">
-            <img src={aiLawLogo} alt="The AI Law" className="h-16" />
+    <main className="min-h-screen bg-gradient-to-br from-brand-dark via-brand-dark to-brand-purple/20">
+      <div className="container mx-auto px-4 py-12">
+        <div ref={dashboardRef} className="max-w-4xl mx-auto space-y-6">
+          {/* Header with Logo */}
+          <div className="text-center mb-8">
+            <div className="flex justify-end mb-6">
+              <img src={aiLawLogo} alt="The AI Law" className="h-16" />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-black text-white mb-4">
+              Your AI Malpractice Risk Assessment
+            </h1>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Your AI Malpractice Risk Assessment
-          </h1>
+
+          {/* Risk Score Card */}
+          <Card className={`border-2 ${riskLevel.borderColor} ${riskLevel.bgColor} bg-brand-dark/50`}>
+            <CardContent className="pt-8">
+              <div className="text-center">
+                <div className="text-6xl font-black text-white mb-2">{riskScore}%</div>
+                <div className={`text-3xl font-black ${riskLevel.color} mb-4`}>
+                  {riskLevel.level}
+                </div>
+                <p className="text-white text-lg font-bold">
+                  {riskScore < 25 && "Your firm has strong AI governance practices. Continue monitoring and updating policies."}
+                  {riskScore >= 25 && riskScore < 50 && "Moderate exposure. Take action on key recommendations to reduce malpractice risk."}
+                  {riskScore >= 50 && riskScore < 75 && "Significant risk. Urgent action required to protect your firm from AI-related malpractice."}
+                  {riskScore >= 75 && "Critical risk. Immediate intervention needed to avoid potential malpractice liability."}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Category Breakdown */}
+          <Card className="bg-brand-dark/50 border border-brand-purple/40">
+            <CardHeader>
+              <CardTitle className="text-white font-black text-2xl">Risk by Category</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={categoryData}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#444" />
+                  <XAxis dataKey="name" stroke="#aaa" />
+                  <YAxis stroke="#aaa" />
+                  <Tooltip contentStyle={{ backgroundColor: "#1e1b4b", border: "1px solid #8b5cf6" }} />
+                  <Bar dataKey="score" fill="#fbbf24" radius={[8, 8, 0, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            </CardContent>
+          </Card>
+
+          {/* Recommendations */}
+          <Card className="bg-brand-dark/50 border border-brand-purple/40">
+            <CardHeader>
+              <CardTitle className="text-white font-black text-2xl flex items-center gap-2">
+                <AlertCircle className="w-6 h-6 text-yellow-300" />
+                Priority Recommendations
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-3">
+                {recommendations.map((rec, idx) => (
+                  <li key={idx} className="flex gap-3 text-white font-bold text-base">
+                    <div className="flex-shrink-0">
+                      {rec.includes("CRITICAL") || rec.includes("URGENT") ? (
+                        <AlertTriangle className="w-5 h-5 text-red-400 mt-0.5" />
+                      ) : (
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5" />
+                      )}
+                    </div>
+                    <span>{rec}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+
+          {/* Key Insights */}
+          <Card className="bg-brand-dark/50 border border-brand-purple/40">
+            <CardHeader>
+              <CardTitle className="text-white font-black text-2xl">Key Insights</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-purple-500/20 border border-purple-400/60 rounded-lg p-4">
+                  <h4 className="font-black text-white mb-2">Highest Risk Area</h4>
+                  <p className="text-yellow-300 font-bold text-lg">
+                    {categoryData.reduce((max, curr) => curr.score > max.score ? curr : max).name}
+                  </p>
+                </div>
+                <div className="bg-blue-500/20 border border-blue-400/60 rounded-lg p-4">
+                  <h4 className="font-black text-white mb-2">Next Steps</h4>
+                  <p className="text-yellow-300 font-bold text-lg">
+                    {riskScore < 50 ? "Review current AI verification protocols" : "Schedule immediate risk assessment meeting"}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
-        {/* Risk Score Card */}
-        <Card className={`border-2 ${riskLevel.borderColor} ${riskLevel.bgColor}`}>
-          <CardContent className="pt-8">
-            <div className="text-center">
-              <div className="text-6xl font-bold text-gray-900 mb-2">{riskScore}%</div>
-              <div className={`text-3xl font-bold ${riskLevel.color} mb-4`}>
-                {riskLevel.level}
-              </div>
-              <p className="text-gray-800 text-lg font-medium">
-                {riskScore < 25 && "Your firm has strong AI governance practices. Continue monitoring and updating policies."}
-                {riskScore >= 25 && riskScore < 50 && "Moderate exposure. Take action on key recommendations to reduce malpractice risk."}
-                {riskScore >= 50 && riskScore < 75 && "Significant risk. Urgent action required to protect your firm from AI-related malpractice."}
-                {riskScore >= 75 && "Critical risk. Immediate intervention needed to avoid potential malpractice liability."}
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Category Breakdown */}
-        <Card className="bg-white border border-gray-300">
-          <CardHeader>
-            <CardTitle className="text-gray-900">Risk by Category</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={categoryData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#ccc" />
-                <XAxis dataKey="name" stroke="#666" />
-                <YAxis stroke="#666" />
-                <Tooltip contentStyle={{ backgroundColor: "#fff", border: "1px solid #ccc" }} />
-                <Bar dataKey="score" fill="#8b5cf6" radius={[8, 8, 0, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-
-        {/* Recommendations */}
-        <Card className="bg-white border border-gray-300">
-          <CardHeader>
-            <CardTitle className="text-gray-900 flex items-center gap-2">
-              <AlertCircle className="w-6 h-6 text-blue-600" />
-              Priority Recommendations
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-3">
-              {recommendations.map((rec, idx) => (
-                <li key={idx} className="flex gap-3 text-gray-800 font-medium">
-                  <div className="flex-shrink-0">
-                    {rec.includes("CRITICAL") || rec.includes("URGENT") ? (
-                      <AlertTriangle className="w-5 h-5 text-red-600 mt-0.5" />
-                    ) : (
-                      <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
-                    )}
-                  </div>
-                  <span>{rec}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-
-        {/* Key Insights */}
-        <Card className="bg-white border border-gray-300">
-          <CardHeader>
-            <CardTitle className="text-gray-900">Key Insights</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-purple-100 border border-purple-400 rounded-lg p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Highest Risk Area</h4>
-                <p className="text-gray-800 font-medium">
-                  {categoryData.reduce((max, curr) => curr.score > max.score ? curr : max).name}
-                </p>
-              </div>
-              <div className="bg-blue-100 border border-blue-400 rounded-lg p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Next Steps</h4>
-                <p className="text-gray-800 font-medium">
-                  {riskScore < 50 ? "Review current AI verification protocols" : "Schedule immediate risk assessment meeting"}
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* CTA Section with Beehiiv Form */}
-      <div className="max-w-4xl mx-auto mt-8 bg-white rounded-lg border border-gray-300 p-8">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center">Stay Updated on AI Risk Management</h3>
-        <p className="text-gray-800 text-center mb-6 font-medium">
-          Subscribe to get the latest insights on protecting your firm from AI-related malpractice
-        </p>
+        {/* CTA Section with Beehiiv Form */}
+        <div className="max-w-4xl mx-auto mt-8 bg-brand-dark/50 rounded-lg border border-brand-purple/40 p-8">
+          <h3 className="text-2xl font-black text-white mb-2 text-center">Stay Updated on AI Risk Management</h3>
+          <p className="text-white text-center mb-6 font-bold text-base">
+            Subscribe to get the latest insights on protecting your firm from AI-related malpractice
+          </p>
         
         <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
         <iframe 
@@ -228,26 +229,26 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
         </iframe>
       </div>
 
-      {/* Action Buttons */}
-      <div className="flex justify-center gap-4 mt-8 max-w-4xl mx-auto">
-        <Button
-          onClick={generatePDF}
-          disabled={isGenerating}
-          className="bg-blue-600 hover:bg-blue-700 text-white gap-2"
-          size="lg"
-        >
-          <Download className="w-5 h-5" />
-          {isGenerating ? "Generating..." : "Download Report"}
-        </Button>
-        <Button
-          onClick={onReset}
-          variant="outline"
-          className="border-gray-400 text-gray-800 hover:bg-gray-100 gap-2"
-          size="lg"
-        >
-          <RotateCcw className="w-5 h-5" />
-          Retake Assessment
-        </Button>
+        {/* Action Buttons */}
+        <div className="flex justify-center gap-4 mt-8">
+          <Button
+            onClick={generatePDF}
+            disabled={isGenerating}
+            className="bg-yellow-500 hover:bg-yellow-600 text-black font-black gap-2"
+            size="lg"
+          >
+            <Download className="w-5 h-5" />
+            {isGenerating ? "Generating..." : "Download Report"}
+          </Button>
+          <Button
+            onClick={onReset}
+            className="bg-white hover:bg-gray-100 text-black font-black gap-2"
+            size="lg"
+          >
+            <RotateCcw className="w-5 h-5" />
+            Retake Assessment
+          </Button>
+        </div>
       </div>
     </main>
   );

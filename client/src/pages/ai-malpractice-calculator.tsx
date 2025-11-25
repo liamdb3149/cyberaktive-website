@@ -137,14 +137,14 @@ export default function AIMalpracticeCalculator() {
           <Card className="bg-brand-dark border-brand-purple/30 shadow-2xl">
             <CardHeader className="border-b border-brand-purple/20">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-sm text-gray-400">Question {currentQuestion + 1} of {questions.length}</span>
-                <span className="text-sm font-semibold text-brand-blue">Current Risk: {riskScore}%</span>
+                <span className="text-sm font-bold text-white">Question {currentQuestion + 1} of {questions.length}</span>
+                <span className="text-sm font-bold text-yellow-300">Current Risk: {riskScore}%</span>
               </div>
               <Progress value={progress} className="bg-brand-purple/20" />
             </CardHeader>
 
             <CardContent className="pt-8">
-              <h2 className="text-2xl font-bold text-white mb-8">
+              <h2 className="text-3xl font-black text-white mb-8">
                 {question.question}
               </h2>
 
@@ -154,17 +154,17 @@ export default function AIMalpracticeCalculator() {
                     key={idx}
                     onClick={() => handleAnswer(option.weight)}
                     variant="outline"
-                    className="w-full justify-start text-left h-auto py-4 px-6 border-brand-purple/50 hover:border-brand-blue hover:bg-brand-blue/10 text-white hover:text-white font-medium transition-all"
+                    className="w-full justify-start text-left h-auto py-4 px-6 border-white/40 hover:border-white hover:bg-white/10 text-white hover:text-white font-bold text-base transition-all"
                   >
-                    <span className="text-lg">{option.label}</span>
+                    <span className="text-lg font-bold">{option.label}</span>
                   </Button>
                 ))}
               </div>
 
-              <div className="bg-brand-purple/20 border border-brand-purple/40 rounded-lg p-4">
+              <div className="bg-brand-blue/20 border border-brand-blue/60 rounded-lg p-4">
                 <div className="flex gap-3">
-                  <AlertCircle className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" />
-                  <p className="text-sm text-white font-medium">
+                  <AlertCircle className="w-5 h-5 text-yellow-300 flex-shrink-0 mt-0.5" />
+                  <p className="text-base text-white font-bold">
                     {question.category}: Each answer reveals your firm's exposure in this critical area.
                   </p>
                 </div>
