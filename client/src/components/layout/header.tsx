@@ -42,16 +42,17 @@ export default function Header() {
             </Link>
           </div>
           
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8 group">
             <a 
               href="https://www.theailaw.xyz/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-foreground hover:text-primary transition-colors font-medium"
+              className="flex items-center gap-2 text-foreground hover:text-primary transition-all font-medium border-b-2 border-transparent hover:border-primary pb-1 cursor-pointer"
               data-testid="link-newsletter"
             >
               <Newspaper className="w-5 h-5" />
               The AI Law newsletter
+              <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
             <CalendarModal>
               <Button 
@@ -83,11 +84,12 @@ export default function Header() {
                 href="https://www.theailaw.xyz/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-2 text-foreground hover:text-primary hover:bg-accent/10 transition-colors font-medium rounded-md"
+                className="flex items-center gap-2 px-3 py-2 text-foreground hover:text-primary hover:bg-accent/10 transition-colors font-medium rounded-md border-l-4 border-transparent hover:border-primary"
                 data-testid="link-newsletter-mobile"
               >
                 <Newspaper className="w-5 h-5" />
                 The AI Law newsletter
+                <ChevronRight className="w-4 h-4" />
               </a>
               <CalendarModal>
                 <Button 
