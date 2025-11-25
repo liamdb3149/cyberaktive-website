@@ -76,7 +76,9 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
       const canvas = await html2canvas(element, {
         backgroundColor: "#ffffff",
         scale: 2,
-        logging: false
+        logging: false,
+        allowTaint: true,
+        useCORS: true
       });
 
       const pdf = new jsPDF({
@@ -85,22 +87,49 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
         format: "a4"
       });
 
-      const imgWidth = 210;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      let heightLeft = imgHeight;
-      let position = 0;
-
+      const pageWidth = pdf.internal.pageSize.getWidth();
       const pageHeight = pdf.internal.pageSize.getHeight();
-      const imgData = canvas.toDataURL("image/png");
+      const margin = 0;
+      const contentWidth = pageWidth - (margin * 2);
+      const contentHeight = (canvas.height * contentWidth) / canvas.width;
 
-      pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
-      heightLeft -= pageHeight;
+      let yPosition = 0;
+      let remainingHeight = contentHeight;
+      let sourceY = 0;
 
-      while (heightLeft >= 0) {
-        position = heightLeft - imgHeight;
-        pdf.addPage();
-        pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
-        heightLeft -= pageHeight;
+      while (remainingHeight > 0) {
+        const canvasHeight = Math.min(remainingHeight, pageHeight - (margin * 2));
+        const sourceCanvasHeight = (canvasHeight * canvas.width) / contentWidth;
+
+        const pageCanvas = document.createElement("canvas");
+        pageCanvas.width = canvas.width;
+        pageCanvas.height = Math.ceil(sourceCanvasHeight);
+
+        const ctx = pageCanvas.getContext("2d");
+        if (ctx) {
+          ctx.drawImage(
+            canvas,
+            0,
+            sourceY,
+            canvas.width,
+            Math.ceil(sourceCanvasHeight),
+            0,
+            0,
+            canvas.width,
+            Math.ceil(sourceCanvasHeight)
+          );
+        }
+
+        const imgData = pageCanvas.toDataURL("image/png");
+        pdf.addImage(imgData, "PNG", margin, margin, contentWidth, canvasHeight);
+
+        yPosition += canvasHeight;
+        sourceY += Math.ceil(sourceCanvasHeight);
+        remainingHeight -= canvasHeight;
+
+        if (remainingHeight > 0) {
+          pdf.addPage();
+        }
       }
 
       pdf.save("AI_Malpractice_Risk_Assessment.pdf");
@@ -114,9 +143,9 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800">
       <div className="container mx-auto px-4 py-12">
-        <div ref={dashboardRef} className="max-w-4xl mx-auto space-y-6 bg-white p-8 rounded-lg">
+        <div ref={dashboardRef} className="max-w-4xl mx-auto space-y-6 bg-white p-8 rounded-lg" style={{ lineHeight: '1.6' }}>
           {/* Header with Logo */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-8" style={{ pageBreakAfter: 'avoid' }}>
             <div className="flex justify-end mb-6">
               <img src={aiLawLogo} alt="The AI Law" className="h-20" />
             </div>
@@ -126,7 +155,7 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
           </div>
 
           {/* Risk Score Card */}
-          <Card className={`border-2 ${riskLevel.borderColor} bg-white`}>
+          <Card className={`border-2 ${riskLevel.borderColor} bg-white`} style={{ pageBreakInside: 'avoid' }}>
             <CardContent className="pt-8">
               <div className="text-center">
                 <div className="text-7xl font-black text-gray-900 mb-2">{riskScore}%</div>
@@ -144,7 +173,7 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
           </Card>
 
           {/* Category Breakdown */}
-          <Card className="bg-white border-2 border-gray-300">
+          <Card className="bg-white border-2 border-gray-300" style={{ pageBreakInside: 'avoid' }}>
             <CardHeader>
               <CardTitle className="text-gray-900 font-black text-3xl">Risk by Category</CardTitle>
             </CardHeader>
@@ -162,7 +191,7 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
           </Card>
 
           {/* Recommendations */}
-          <Card className="bg-white border-2 border-gray-300">
+          <Card className="bg-white border-2 border-gray-300" style={{ pageBreakInside: 'avoid' }}>
             <CardHeader>
               <CardTitle className="text-gray-900 font-black text-3xl flex items-center gap-2">
                 <AlertCircle className="w-8 h-8 text-blue-600" />
@@ -188,7 +217,7 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
           </Card>
 
           {/* Key Insights */}
-          <Card className="bg-white border-2 border-gray-300">
+          <Card className="bg-white border-2 border-gray-300" style={{ pageBreakInside: 'avoid' }}>
             <CardHeader>
               <CardTitle className="text-gray-900 font-black text-3xl">Key Insights</CardTitle>
             </CardHeader>
