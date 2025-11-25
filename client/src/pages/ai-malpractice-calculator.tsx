@@ -112,39 +112,39 @@ export default function AIMalpracticeCalculator() {
   const riskScore = calculateRiskScore();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-brand-dark via-brand-dark to-brand-purple/20">
+    <div className="min-h-screen bg-black">
       <Header />
       
       <main className="container mx-auto px-4 py-12">
         {/* Header Section */}
         <div className="max-w-2xl mx-auto mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-4">
             AI Malpractice Risk Calculator
           </h1>
-          <p className="text-xl text-white mb-6 font-medium">
+          <p className="text-2xl text-white mb-6 font-bold">
             Find out your law firm's exposure to AI hallucinations in 2 minutes
           </p>
           <div className="flex gap-2 justify-center">
-            <div className="flex items-center gap-2 px-4 py-2 bg-red-500/30 text-white rounded-lg border border-red-400">
-              <AlertTriangle className="w-4 h-4" />
-              <span className="text-sm font-medium">86% of law firms risk malpractice with unverified AI</span>
+            <div className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg border border-red-500">
+              <AlertTriangle className="w-5 h-5" />
+              <span className="text-base font-bold">86% of law firms risk malpractice with unverified AI</span>
             </div>
           </div>
         </div>
 
         {/* Calculator Card */}
         <div className="max-w-2xl mx-auto">
-          <Card className="bg-brand-dark border-brand-purple/30 shadow-2xl">
-            <CardHeader className="border-b border-brand-purple/20">
+          <Card className="bg-slate-900 border-2 border-cyan-500 shadow-2xl">
+            <CardHeader className="border-b border-cyan-500/50 bg-slate-800">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-sm font-bold text-white">Question {currentQuestion + 1} of {questions.length}</span>
-                <span className="text-sm font-bold text-yellow-300">Current Risk: {riskScore}%</span>
+                <span className="text-base font-bold text-white">Question {currentQuestion + 1} of {questions.length}</span>
+                <span className="text-base font-bold text-lime-300">Current Risk: {riskScore}%</span>
               </div>
-              <Progress value={progress} className="bg-brand-purple/20" />
+              <Progress value={progress} className="bg-slate-700" />
             </CardHeader>
 
             <CardContent className="pt-8">
-              <h2 className="text-3xl font-black text-white mb-8">
+              <h2 className="text-4xl font-black text-white mb-8">
                 {question.question}
               </h2>
 
@@ -153,17 +153,16 @@ export default function AIMalpracticeCalculator() {
                   <Button
                     key={idx}
                     onClick={() => handleAnswer(option.weight)}
-                    variant="outline"
-                    className="w-full justify-start text-left h-auto py-4 px-6 border-white/40 hover:border-white hover:bg-white/10 text-white hover:text-white font-bold text-base transition-all"
+                    className="w-full justify-start text-left h-auto py-4 px-6 border-2 border-cyan-400 bg-slate-800 hover:bg-slate-700 text-white hover:text-lime-300 font-black text-base transition-all"
                   >
-                    <span className="text-lg font-bold">{option.label}</span>
+                    <span className="text-lg font-black">{option.label}</span>
                   </Button>
                 ))}
               </div>
 
-              <div className="bg-brand-blue/20 border border-brand-blue/60 rounded-lg p-4">
+              <div className="bg-slate-800 border-2 border-cyan-500 rounded-lg p-4">
                 <div className="flex gap-3">
-                  <AlertCircle className="w-5 h-5 text-yellow-300 flex-shrink-0 mt-0.5" />
+                  <AlertCircle className="w-5 h-5 text-lime-300 flex-shrink-0 mt-0.5" />
                   <p className="text-base text-white font-bold">
                     {question.category}: Each answer reveals your firm's exposure in this critical area.
                   </p>
