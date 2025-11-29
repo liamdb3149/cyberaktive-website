@@ -34,12 +34,6 @@ export default function Problem() {
       impact: "Work-Life Balance"
     },
     {
-      icon: Wrench,
-      title: "Unsure if new tools or vendors will actually improve things",
-      description: "Uncertainty about whether technology investments will deliver real ROI.",
-      impact: "Decision Paralysis"
-    },
-    {
       icon: Mail,
       title: "Predictable client acquisition feels out of reach",
       description: "You lack a scalable, automated system to consistently identify, engage, and book qualified sales calls for your services.",
