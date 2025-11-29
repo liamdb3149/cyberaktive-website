@@ -64,14 +64,14 @@ export default function Hero() {
           {/* Main Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 lg:mb-8" data-testid="heading-hero">
             <span className="text-white drop-shadow-lg block font-black leading-tight">
-              Turn Your Legal Team's Busywork Into Billable Hours—
+              Turn Legal Busywork and Lead Qualification Into Consistent Billable Hours—
               <span className="block mt-2">Guaranteed in 90 Days</span>
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl lg:text-2xl text-white/95 drop-shadow-md mb-8 max-w-5xl mx-auto font-medium leading-relaxed" data-testid="text-subheadline">
-            We implement AI automations that save mid-sized legal teams <span className="font-bold text-white">$150K+ annually</span> on document-intensive workflows—with measurable ROI in one quarter, <span className="font-bold text-white">75%+ team adoption</span>, and <span className="font-bold text-white">zero ethics risk</span>. If we don't hit our targets, you don't pay.
+            We implement AI Growth Solutions that accelerate client acquisition and automate client intake processes for mid-sized legal teams, saving them <span className="font-bold text-white">$150K+ annually</span> and maximizing billable time—with measurable ROI in one quarter, <span className="font-bold text-white">75%+ team adoption</span>, and <span className="font-bold text-white">zero ethics risk</span>. If we don't hit our targets, you don't pay.
           </p>
 
           {/* CTAs */}
