@@ -78,75 +78,71 @@ export default function Problem() {
           </div>
         </RevealOnScroll>
 
-        {/* Responsive Layout - No BentoGrid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-7xl mx-auto">
-          {/* Left Column - Large Problem Narrative */}
-          <div className="lg:col-span-5">
+        {/* Responsive Grid Layout */}
+        <div className="max-w-7xl mx-auto">
+          {/* First Row - Narrative + 2 Problem Tiles */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            {/* The Legal Team Challenge - Narrative Card */}
             <RevealOnScroll delay={200}>
-              <GlassCard className="h-[420px] flex flex-col justify-center gradient-border">
-                <div className="space-y-8">
-                  <div className="text-6xl font-black text-destructive/30">01</div>
-                  <h3 className="premium-text-xl text-foreground">
+              <GlassCard className="h-full flex flex-col justify-center gradient-border">
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-foreground">
                     The Legal Team Challenge
                   </h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     You built your legal team to provide exceptional legal services and grow profitably. 
                     Instead, you're caught in a cycle of manual administrative tasks, 
                     inefficient processes, and uncertainty about which technology investments will actually deliver results.
                   </p>
-                  <div className="flex items-center space-x-4 text-destructive font-semibold">
-                    <TrendingDown className="w-6 h-6" />
+                  <div className="flex items-center space-x-3 text-destructive font-semibold text-sm">
+                    <TrendingDown className="w-5 h-5" />
                     <span>Growth Barriers</span>
                   </div>
                 </div>
               </GlassCard>
             </RevealOnScroll>
+
+            {/* First 2 Problem Tiles */}
+            {problems.slice(0, 2).map((problem, index) => (
+              <RevealOnScroll key={index} delay={300 + index * 100}>
+                <GlassCard className="text-center group hover:scale-105 transition-all duration-300 h-full">
+                  <div className="w-14 h-14 bg-destructive/10 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:bg-destructive/20 transition-colors">
+                    <problem.icon className="w-7 h-7 text-destructive" />
+                  </div>
+                  <h4 className="font-bold text-base mb-2 text-foreground" data-testid={`text-problem-title-${index}`}>
+                    {problem.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground mb-3" data-testid={`text-problem-description-${index}`}>
+                    {problem.description}
+                  </p>
+                  <div className="inline-block px-3 py-1 bg-destructive/10 rounded-full text-xs font-semibold text-destructive">
+                    {problem.impact}
+                  </div>
+                </GlassCard>
+              </RevealOnScroll>
+            ))}
           </div>
 
-          {/* Right Column - Problem Grid */}
-          <div className="lg:col-span-7">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {problems.slice(0, 6).map((problem, index) => (
-                <RevealOnScroll key={index} delay={300 + index * 100}>
-                  <GlassCard className="text-center group hover:scale-105 transition-all duration-300">
-                    <div className="w-16 h-16 bg-destructive/10 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-destructive/20 transition-colors">
-                      <problem.icon className="w-8 h-8 text-destructive" />
-                    </div>
-                    <h4 className="font-bold text-lg mb-3 text-foreground" data-testid={`text-problem-title-${index}`}>
-                      {problem.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground mb-4" data-testid={`text-problem-description-${index}`}>
-                      {problem.description}
-                    </p>
-                    <div className="inline-block px-3 py-1 bg-destructive/10 rounded-full text-xs font-semibold text-destructive">
-                      {problem.impact}
-                    </div>
-                  </GlassCard>
-                </RevealOnScroll>
-              ))}
-            </div>
-
-            {/* New Bottom Row - Three Additional Tiles */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
-              {problems.slice(6, 9).map((problem, index) => (
-                <RevealOnScroll key={index + 6} delay={600 + index * 100}>
-                  <GlassCard className="text-center group hover:scale-105 transition-all duration-300">
-                    <div className="w-16 h-16 bg-destructive/10 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-destructive/20 transition-colors">
-                      <problem.icon className="w-8 h-8 text-destructive" />
-                    </div>
-                    <h4 className="font-bold text-lg mb-3 text-foreground" data-testid={`text-problem-title-${index + 6}`}>
-                      {problem.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground mb-4" data-testid={`text-problem-description-${index + 6}`}>
-                      {problem.description}
-                    </p>
-                    <div className="inline-block px-3 py-1 bg-destructive/10 rounded-full text-xs font-semibold text-destructive">
-                      {problem.impact}
-                    </div>
-                  </GlassCard>
-                </RevealOnScroll>
-              ))}
-            </div>
+          {/* Remaining Rows - 3 Columns Each */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {problems.slice(2, 9).map((problem, index) => (
+              <RevealOnScroll key={index + 2} delay={400 + index * 100}>
+                <GlassCard className="text-center group hover:scale-105 transition-all duration-300">
+                  <div className="w-14 h-14 bg-destructive/10 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:bg-destructive/20 transition-colors">
+                    <problem.icon className="w-7 h-7 text-destructive" />
+                  </div>
+                  <h4 className="font-bold text-base mb-2 text-foreground" data-testid={`text-problem-title-${index + 2}`}>
+                    {problem.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground mb-3" data-testid={`text-problem-description-${index + 2}`}>
+                    {problem.description}
+                  </p>
+                  <div className="inline-block px-3 py-1 bg-destructive/10 rounded-full text-xs font-semibold text-destructive">
+                    {problem.impact}
+                  </div>
+                </GlassCard>
+              </RevealOnScroll>
+            ))}
           </div>
         </div>
 
