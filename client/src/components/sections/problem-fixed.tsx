@@ -1,4 +1,4 @@
-import { Phone, FileText, Users, TrendingDown, Wrench, Moon } from "lucide-react";
+import { Phone, FileText, Users, TrendingDown, Wrench, Moon, Mail, Mic } from "lucide-react";
 import { Section, GlassCard, FloatingOrb, RevealOnScroll, GeometricBlob } from "@/components/ui/visual";
 
 export default function Problem() {
@@ -38,6 +38,24 @@ export default function Problem() {
       title: "Unsure if new tools or vendors will actually improve things",
       description: "Uncertainty about whether technology investments will deliver real ROI.",
       impact: "Decision Paralysis"
+    },
+    {
+      icon: Mail,
+      title: "Predictable client acquisition feels out of reach",
+      description: "You lack a scalable, automated system to consistently identify, engage, and book qualified sales calls for your services.",
+      impact: "System Scaling Gap"
+    },
+    {
+      icon: Mic,
+      title: "Struggling to build visibility and thought leadership",
+      description: "Expert knowledge remains trapped in unstructured formats because producing content for multiple channels is too time-consuming.",
+      impact: "Expertise Bottleneck"
+    },
+    {
+      icon: Phone,
+      title: "High-value leads are slipping through the cracks",
+      description: "Speed-to-lead is too slow, resulting in missed opportunities and a low conversion rate from inbound paid traffic campaigns.",
+      impact: "Lead Conversion Loss"
     }
   ];
 
@@ -65,7 +83,7 @@ export default function Problem() {
           {/* Left Column - Large Problem Narrative */}
           <div className="lg:col-span-5">
             <RevealOnScroll delay={200}>
-              <GlassCard className="h-full flex flex-col justify-center gradient-border">
+              <GlassCard className="h-[420px] flex flex-col justify-center gradient-border">
                 <div className="space-y-8">
                   <div className="text-6xl font-black text-destructive/30">01</div>
                   <h3 className="premium-text-xl text-foreground">
@@ -88,7 +106,7 @@ export default function Problem() {
           {/* Right Column - Problem Grid */}
           <div className="lg:col-span-7">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {problems.map((problem, index) => (
+              {problems.slice(0, 6).map((problem, index) => (
                 <RevealOnScroll key={index} delay={300 + index * 100}>
                   <GlassCard className="text-center group hover:scale-105 transition-all duration-300">
                     <div className="w-16 h-16 bg-destructive/10 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-destructive/20 transition-colors">
@@ -98,6 +116,28 @@ export default function Problem() {
                       {problem.title}
                     </h4>
                     <p className="text-sm text-muted-foreground mb-4" data-testid={`text-problem-description-${index}`}>
+                      {problem.description}
+                    </p>
+                    <div className="inline-block px-3 py-1 bg-destructive/10 rounded-full text-xs font-semibold text-destructive">
+                      {problem.impact}
+                    </div>
+                  </GlassCard>
+                </RevealOnScroll>
+              ))}
+            </div>
+
+            {/* New Bottom Row - Three Additional Tiles */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
+              {problems.slice(6, 9).map((problem, index) => (
+                <RevealOnScroll key={index + 6} delay={600 + index * 100}>
+                  <GlassCard className="text-center group hover:scale-105 transition-all duration-300">
+                    <div className="w-16 h-16 bg-destructive/10 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-destructive/20 transition-colors">
+                      <problem.icon className="w-8 h-8 text-destructive" />
+                    </div>
+                    <h4 className="font-bold text-lg mb-3 text-foreground" data-testid={`text-problem-title-${index + 6}`}>
+                      {problem.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground mb-4" data-testid={`text-problem-description-${index + 6}`}>
                       {problem.description}
                     </p>
                     <div className="inline-block px-3 py-1 bg-destructive/10 rounded-full text-xs font-semibold text-destructive">
