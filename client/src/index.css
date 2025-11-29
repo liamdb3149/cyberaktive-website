@@ -210,10 +210,10 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, 
-      hsla(220, 80%, 55%, 0.2) 0%, 
-      hsla(270, 75%, 60%, 0.3) 30%, 
-      hsla(330, 70%, 65%, 0.2) 60%, 
-      hsla(220, 80%, 55%, 0.1) 100%);
+      hsla(325, 100%, 50%, 0.2) 0%, 
+      hsla(280, 100%, 60%, 0.3) 30%, 
+      hsla(330, 100%, 50%, 0.2) 60%, 
+      hsla(325, 100%, 50%, 0.1) 100%);
     pointer-events: none;
   }
 
@@ -245,10 +245,10 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, 
-      hsla(220, 80%, 55%, 0.4) 0%, 
-      hsla(270, 75%, 60%, 0.5) 30%, 
-      hsla(330, 70%, 65%, 0.4) 60%, 
-      hsla(220, 80%, 55%, 0.25) 100%);
+      hsla(325, 100%, 50%, 0.4) 0%, 
+      hsla(280, 100%, 60%, 0.5) 30%, 
+      hsla(330, 100%, 50%, 0.4) 60%, 
+      hsla(325, 100%, 50%, 0.25) 100%);
     backdrop-filter: blur(0.5px);
     pointer-events: none;
   }
@@ -267,10 +267,10 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, 
-      hsla(220, 80%, 55%, 0.4) 0%, 
-      hsla(270, 75%, 60%, 0.5) 30%, 
-      hsla(330, 70%, 65%, 0.4) 60%, 
-      hsla(220, 80%, 55%, 0.25) 100%);
+      hsla(325, 100%, 50%, 0.4) 0%, 
+      hsla(280, 100%, 60%, 0.5) 30%, 
+      hsla(330, 100%, 50%, 0.4) 60%, 
+      hsla(325, 100%, 50%, 0.25) 100%);
     backdrop-filter: blur(0.5px);
     pointer-events: none;
   }
