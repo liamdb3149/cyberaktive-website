@@ -475,7 +475,7 @@ export default function ContractReviewCalculator() {
           <div className="bg-white rounded-lg shadow-xl p-4">
             <iframe
               src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk"
-              style={{ width: '100%', border: 'none', overflow: 'hidden' }}
+              style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '800px', height: '800px' }}
               scrolling="no"
               id="msgsndr-calendar"
               title="Book Your Introductory Call"
