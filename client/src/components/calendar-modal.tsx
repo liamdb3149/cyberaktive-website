@@ -27,7 +27,7 @@ export default function CalendarModal({ children }: CalendarModalProps) {
             <div className="bg-white rounded-lg overflow-hidden">
               <iframe 
                 src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk" 
-                style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '1000px', height: '1000px' }} 
+                style={{ width: '100%', border: 'none', overflow: 'hidden' }} 
                 scrolling="no" 
                 id="msgsndr-calendar"
                 title="Book Your 15-Minute Introductory Call"

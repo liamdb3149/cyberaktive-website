@@ -475,10 +475,14 @@ export default function ContractReviewCalculator() {
           <div className="bg-white rounded-lg shadow-xl p-4">
             <iframe
               src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk"
-              style={{ width: '100%', height: '1100px', border: 'none' }}
+              style={{ width: '100%', border: 'none', overflow: 'hidden' }}
+              scrolling="no"
+              id="msgsndr-calendar"
               title="Book Your Introductory Call"
               data-testid="iframe-calendar"
             />
+            <br />
+            <script src="https://link.msgsndr.com/js/embed.js" type="text/javascript"></script>
           </div>
         </div>
       </Section>
