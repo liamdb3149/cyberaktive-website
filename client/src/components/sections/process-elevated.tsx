@@ -57,19 +57,19 @@ export default function Process() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealOnScroll>
-          <div className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="premium-text-2xl lg:text-4xl mb-4 text-foreground text-glow">
               Simple Steps, Straightforward Outcomes
             </h2>
-            <p className="premium-text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="premium-text-lg text-muted-foreground max-w-2xl mx-auto">
               A clear, practical path from discovery to implementation
             </p>
           </div>
         </RevealOnScroll>
         
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Process Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {steps.map((step, index) => (
               <RevealOnScroll key={index} delay={200 + index * 100}>
                 <GlassCard 
@@ -110,12 +110,12 @@ export default function Process() {
           
           {/* Enhanced CTA Section */}
           <RevealOnScroll delay={800}>
-            <GlassCard className="text-center bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10">
-              <div className="max-w-3xl mx-auto">
-                <h3 className="premium-text-xl text-foreground mb-6 font-bold">
+            <GlassCard className="text-center bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 max-w-3xl mx-auto">
+              <div className="max-w-2xl mx-auto">
+                <h3 className="text-lg text-foreground mb-4 font-bold">
                   Ready to Get Started?
                 </h3>
-                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+                <p className="text-sm text-muted-foreground mb-6 max-w-xl mx-auto">
                   Book a quick call to see if AI can deliver real value for your legal team
                 </p>
                 <Button 

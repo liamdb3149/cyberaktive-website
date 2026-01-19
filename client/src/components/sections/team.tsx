@@ -17,17 +17,17 @@ export default function Team() {
       
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <RevealOnScroll>
-          <div className="max-w-5xl mx-auto text-center mb-20">
-            <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="premium-text-2xl lg:text-4xl mb-4 text-foreground text-glow">
               Meet Your Legal AI Partners
             </h2>
-            <p className="premium-text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="premium-text-lg text-muted-foreground max-w-2xl mx-auto">
               We're specialists in legal operations and AI, focused on helping teams like yours make real business improvements. Our aim: only recommend what works for you—not pushy sales, just clear advice and partnership.
             </p>
           </div>
         </RevealOnScroll>
         
-        <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-10 max-w-4xl mx-auto">
           {/* Liam - Founder */}
           <RevealOnScroll delay={200}>
             <GlassCard className="p-10 group hover:scale-105 transition-all duration-300 gradient-border" data-testid="card-team-liam">

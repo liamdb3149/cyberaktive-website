@@ -28,14 +28,14 @@ export default function FinalCTA() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealOnScroll>
-          <GlassCard className="max-w-5xl mx-auto text-center bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 gradient-border">
-            <div className="space-y-8">
+          <GlassCard className="max-w-3xl mx-auto text-center bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 gradient-border">
+            <div className="space-y-6">
               {/* Hero Content */}
               <div>
-                <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
+                <h2 className="premium-text-2xl lg:text-4xl mb-4 text-foreground text-glow">
                   AI That Moves the Needle
                 </h2>
-                <p className="premium-text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+                <p className="premium-text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
                   You didn't get into law to waste hours on admin. Let's figure out where AI can help—and where it can't. Book a quick call and we'll show you what's realistic, what's profitable, and what to skip.
                 </p>
               </div>

@@ -21,9 +21,9 @@ export default function Footer() {
 
 
   return (
-    <footer className="bg-card border-t border-border py-12">
+    <footer className="bg-card border-t border-border py-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Footer CTA */}
           <div className="text-center mb-12 py-8 px-6 bg-gradient-to-r from-accent/10 to-primary/10 rounded-2xl border border-primary/20">
             <p className="text-lg font-bold text-foreground mb-2" data-testid="text-footer-cta">

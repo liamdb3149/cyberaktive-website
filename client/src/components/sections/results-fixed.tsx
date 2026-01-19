@@ -65,18 +65,18 @@ export default function Results() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealOnScroll>
-          <div className="max-w-5xl mx-auto text-center mb-20">
-            <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="premium-text-2xl lg:text-4xl mb-4 text-foreground text-glow">
               Results That Matter
             </h2>
-            <p className="premium-text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="premium-text-lg text-muted-foreground max-w-2xl mx-auto">
               Measurable outcomes from strategic AI implementation
             </p>
           </div>
         </RevealOnScroll>
 
         {/* Responsive Layout - No BentoGrid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
           {/* Hero Results - Large Panel */}
           <div className="lg:col-span-2">
             <RevealOnScroll delay={200}>
@@ -126,24 +126,24 @@ export default function Results() {
         </div>
 
         {/* Client Metrics Section */}
-        <div className="max-w-4xl mx-auto text-center mb-12">
+        <div className="max-w-3xl mx-auto text-center mb-10">
           <RevealOnScroll>
             <GlassCard className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10">
-              <h3 className="premium-text-xl text-foreground mb-6 font-bold">
+              <h3 className="text-lg text-foreground mb-4 font-bold">
                 Our clients typically see:
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <div className="text-4xl font-black text-primary mb-2">35%</div>
-                  <p className="text-sm text-muted-foreground">workflow efficiency improvement</p>
+                  <div className="text-3xl font-black text-primary mb-1">35%</div>
+                  <p className="text-xs text-muted-foreground">workflow efficiency improvement</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-black text-accent mb-2">25%</div>
-                  <p className="text-sm text-muted-foreground">fewer missed deadlines</p>
+                  <div className="text-3xl font-black text-accent mb-1">25%</div>
+                  <p className="text-xs text-muted-foreground">fewer missed deadlines</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-black text-primary mb-2">58%</div>
-                  <p className="text-sm text-muted-foreground">better lead capture</p>
+                  <div className="text-3xl font-black text-primary mb-1">58%</div>
+                  <p className="text-xs text-muted-foreground">better lead capture</p>
                 </div>
               </div>
             </GlassCard>
@@ -151,16 +151,16 @@ export default function Results() {
         </div>
 
         {/* Urgency Message */}
-        <div className="max-w-3xl mx-auto text-center mb-12">
+        <div className="max-w-2xl mx-auto text-center mb-10">
           <RevealOnScroll>
-            <p className="text-lg text-muted-foreground italic font-medium" data-testid="text-urgency-message">
+            <p className="text-base text-muted-foreground italic font-medium" data-testid="text-urgency-message">
               While you're reading this, your competitors are already automating. Don't fall behind.
             </p>
           </RevealOnScroll>
         </div>
 
         {/* Testimonials Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
           {testimonialHighlights.map((testimonial, index) => (
             <RevealOnScroll key={index} delay={600 + index * 100}>
               <GlassCard className="h-full text-center group hover:scale-105 transition-all duration-300">
@@ -189,12 +189,12 @@ export default function Results() {
 
         {/* CTA Section */}
         <RevealOnScroll delay={900}>
-          <GlassCard className="text-center bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10">
-            <div className="max-w-3xl mx-auto">
-              <h3 className="premium-text-xl text-foreground mb-6 font-bold">
+          <GlassCard className="text-center bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 max-w-3xl mx-auto">
+            <div className="max-w-2xl mx-auto">
+              <h3 className="text-lg text-foreground mb-4 font-bold">
                 Ready for Real Results?
               </h3>
-              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+              <p className="text-sm text-muted-foreground mb-6 max-w-xl mx-auto">
                 These outcomes come from strategic AI implementation focused on genuine business value, 
                 not just adopting technology for its own sake.
               </p>

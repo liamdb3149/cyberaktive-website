@@ -53,18 +53,18 @@ export default function Solution() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealOnScroll>
-          <div className="max-w-5xl mx-auto text-center mb-20">
-            <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="premium-text-2xl lg:text-4xl mb-4 text-foreground text-glow">
               Where AI Pays Off (If You Get It Right)
             </h2>
-            <p className="premium-text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="premium-text-lg text-muted-foreground max-w-2xl mx-auto">
               Real benefits when AI is implemented strategically
             </p>
           </div>
         </RevealOnScroll>
 
         {/* Responsive Layout - No BentoGrid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
           {/* Hero Card - Large */}
           <div className="lg:col-span-2">
             <RevealOnScroll delay={200}>
@@ -134,7 +134,7 @@ export default function Solution() {
         </div>
 
         {/* Big Benefits Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {bigBenefits.map((benefit, index) => (
             <RevealOnScroll key={index} delay={600 + index * 100}>
               <GlassCard className="text-center group hover:scale-105 transition-all duration-300">

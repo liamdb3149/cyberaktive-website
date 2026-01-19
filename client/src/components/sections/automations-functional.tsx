@@ -75,11 +75,11 @@ export default function Automations() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealOnScroll>
-          <div className="max-w-6xl mx-auto text-center mb-20">
-            <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="premium-text-2xl lg:text-4xl mb-4 text-foreground text-glow">
               Real AI Gains, ROI-Backed Change
             </h2>
-            <p className="premium-text-lg text-muted-foreground max-w-4xl mx-auto">
+            <p className="premium-text-lg text-muted-foreground max-w-2xl mx-auto">
               We're not here to sell tech. Our job is to help you spot where automation and AI will actually work—improving your business with clear, measurable ROI. If there's no business case, we say so.
             </p>
           </div>
@@ -87,18 +87,18 @@ export default function Automations() {
 
 
         {/* Dynamic Content - Wide Hero Card */}
-        <div className="mb-16">
+        <div className="max-w-4xl mx-auto">
           <RevealOnScroll delay={200}>
-            <GlassCard className="w-full mb-12 group hover:scale-[1.02] transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-20 h-20 rounded-3xl mr-8 flex items-center justify-center group-hover:scale-110 transition-transform bg-primary/20">
-                  <CurrentIcon className="w-10 h-10 text-primary" />
+            <GlassCard className="w-full group hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-14 h-14 rounded-2xl mr-5 flex items-center justify-center group-hover:scale-110 transition-transform bg-primary/20">
+                  <CurrentIcon className="w-7 h-7 text-primary" />
                 </div>
                 <div>
-                  <h3 className="premium-text-2xl font-bold mb-2 text-primary">
+                  <h3 className="text-xl font-bold mb-1 text-primary">
                     {currentTitle}
                   </h3>
-                  <p className="text-lg text-muted-foreground">
+                  <p className="text-sm text-muted-foreground">
                     {currentSubtitle}
                   </p>
                 </div>

@@ -35,8 +35,8 @@ export default function RiskReversal() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealOnScroll>
-          <div className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="premium-text-2xl lg:text-4xl mb-4 text-foreground text-glow">
               Proven Approach, No Guesswork
             </h2>
             <p className="premium-text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -45,7 +45,7 @@ export default function RiskReversal() {
           </div>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {guarantees.map((guarantee, index) => (
             <RevealOnScroll key={index} delay={200 + index * 100}>
               <GlassCard 
@@ -71,12 +71,12 @@ export default function RiskReversal() {
 
         {/* Bottom highlight */}
         <RevealOnScroll delay={800}>
-          <div className="text-center mt-16">
-            <div className="inline-block bg-primary/5 rounded-2xl px-8 py-6 backdrop-blur-sm border border-primary/10">
-              <p className="premium-text-lg text-foreground mb-2 font-semibold">
+          <div className="text-center mt-10">
+            <div className="inline-block bg-primary/5 rounded-xl px-6 py-4 backdrop-blur-sm border border-primary/10">
+              <p className="text-base text-foreground mb-1 font-semibold">
                 ROI-Focused Partnership
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-sm text-muted-foreground">
                 We only succeed when you see measurable business value from our recommendations
               </p>
             </div>

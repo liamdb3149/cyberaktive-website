@@ -49,8 +49,8 @@ export default function Hero() {
   return (
     <section id="hero" className="pt-16 lg:pt-20 pb-0 homepage-hero">
       {/* Main Hero - Above the Fold */}
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10 pb-12 lg:pb-16">
-        <div className="max-w-5xl mx-auto text-center">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10 pb-10 lg:pb-14">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Logo */}
           <div className="flex justify-center mb-5">
             <img 
@@ -70,7 +70,7 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base md:text-lg lg:text-xl text-white/95 drop-shadow-md mb-6 max-w-4xl mx-auto font-medium leading-relaxed" data-testid="text-subheadline">
+          <p className="text-base md:text-lg lg:text-xl text-white/95 drop-shadow-md mb-6 max-w-3xl mx-auto font-medium leading-relaxed" data-testid="text-subheadline">
             We implement AI Growth Solutions that accelerate client acquisition and automate client intake processes for mid-sized legal teams, saving them <span className="font-bold text-white">$150K+ annually</span> and maximizing billable time—with measurable ROI in one quarter, <span className="font-bold text-white">75%+ team adoption</span>, and <span className="font-bold text-white">zero ethics risk</span>. If we don't hit our targets, you don't pay.
           </p>
 
@@ -105,9 +105,9 @@ export default function Hero() {
       </div>
 
       {/* Problem Awareness Strip */}
-      <div className="bg-slate-900/80 backdrop-blur-sm border-y border-white/10 py-5">
+      <div className="bg-slate-900/80 backdrop-blur-sm border-y border-white/10 py-4">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left">
               {painPoints.map((point, index) => (
                 <div key={index} className="flex items-center justify-center md:justify-start gap-2 text-white/80" data-testid={`pain-point-${index}`}>
@@ -121,10 +121,10 @@ export default function Hero() {
       </div>
 
       {/* Differentiator Cards */}
-      <div className="bg-gradient-to-b from-slate-900/60 to-transparent py-12 lg:py-14">
+      <div className="bg-gradient-to-b from-slate-900/60 to-transparent py-10 lg:py-12">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {differentiators.map((item, index) => (
                 <Card key={index} className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-md border border-blue-200 dark:border-blue-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-testid={`card-differentiator-${index}`}>
                   <CardContent className="pt-5 pb-5">
@@ -151,10 +151,10 @@ export default function Hero() {
       </div>
 
       {/* Social Proof Metrics */}
-      <div className="bg-slate-900/40 backdrop-blur-sm py-8 lg:py-10 border-t border-white/10">
+      <div className="bg-slate-900/40 backdrop-blur-sm py-6 lg:py-8 border-t border-white/10">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="max-w-3xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               {metrics.map((metric, index) => (
                 <div key={index} className="space-y-1" data-testid={`metric-${index}`}>
                   <div className="text-2xl lg:text-3xl font-black text-white drop-shadow-lg" data-testid={`text-metric-value-${index}`}>

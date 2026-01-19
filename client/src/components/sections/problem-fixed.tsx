@@ -73,7 +73,7 @@ export default function Problem() {
         </RevealOnScroll>
 
         {/* Responsive Grid Layout */}
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* First Row - Narrative + 2 Problem Tiles */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
             {/* The Legal Team Challenge - Narrative Card */}
