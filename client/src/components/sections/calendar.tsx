@@ -16,46 +16,46 @@ export default function Calendar() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealOnScroll>
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block mb-6">
-              <GlassCard className="px-8 py-4 bg-gradient-to-r from-accent/20 to-primary/10">
-                <div className="flex items-center space-x-3">
-                  <CalendarIcon className="w-6 h-6 text-accent" />
-                  <span className="text-sm font-bold text-accent uppercase tracking-wider">Free Consultation</span>
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <div className="inline-block mb-4">
+              <GlassCard className="px-5 py-2.5 bg-gradient-to-r from-accent/20 to-primary/10">
+                <div className="flex items-center space-x-2">
+                  <CalendarIcon className="w-4 h-4 text-accent" />
+                  <span className="text-xs font-bold text-accent uppercase tracking-wider">Free Consultation</span>
                 </div>
               </GlassCard>
             </div>
             
-            <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
+            <h2 className="premium-text-2xl lg:text-4xl mb-4 text-foreground text-glow">
               Book Your 15-Minute Call
             </h2>
-            <p className="premium-text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="premium-text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
               Quick, no-obligation consult to see if we can make AI work for you. Pick a time—we'll show you what's possible.
             </p>
             
             {/* Value props */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 max-w-2xl mx-auto">
               <RevealOnScroll delay={200}>
-                <GlassCard className="text-center group hover:scale-105 transition-all duration-300">
-                  <Clock className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold text-foreground mb-2">15 Minutes</h3>
-                  <p className="text-sm text-muted-foreground">Fast & focused</p>
+                <GlassCard className="text-center group hover:scale-105 transition-all duration-300 py-4">
+                  <Clock className="w-6 h-6 text-primary mx-auto mb-2" />
+                  <h3 className="font-semibold text-sm text-foreground mb-1">15 Minutes</h3>
+                  <p className="text-xs text-muted-foreground">Fast & focused</p>
                 </GlassCard>
               </RevealOnScroll>
               
               <RevealOnScroll delay={300}>
-                <GlassCard className="text-center group hover:scale-105 transition-all duration-300">
-                  <CheckCircle className="w-8 h-8 text-accent mx-auto mb-3" />
-                  <h3 className="font-semibold text-foreground mb-2">100% Free</h3>
-                  <p className="text-sm text-muted-foreground">No strings attached</p>
+                <GlassCard className="text-center group hover:scale-105 transition-all duration-300 py-4">
+                  <CheckCircle className="w-6 h-6 text-accent mx-auto mb-2" />
+                  <h3 className="font-semibold text-sm text-foreground mb-1">100% Free</h3>
+                  <p className="text-xs text-muted-foreground">No strings attached</p>
                 </GlassCard>
               </RevealOnScroll>
               
               <RevealOnScroll delay={400}>
-                <GlassCard className="text-center group hover:scale-105 transition-all duration-300">
-                  <CalendarIcon className="w-8 h-8 text-secondary mx-auto mb-3" />
-                  <h3 className="font-semibold text-foreground mb-2">Clear Next Steps</h3>
-                  <p className="text-sm text-muted-foreground">Know what's possible</p>
+                <GlassCard className="text-center group hover:scale-105 transition-all duration-300 py-4">
+                  <CalendarIcon className="w-6 h-6 text-secondary mx-auto mb-2" />
+                  <h3 className="font-semibold text-sm text-foreground mb-1">Clear Next Steps</h3>
+                  <p className="text-xs text-muted-foreground">Know what's possible</p>
                 </GlassCard>
               </RevealOnScroll>
             </div>
@@ -63,12 +63,12 @@ export default function Calendar() {
         </RevealOnScroll>
         
         <RevealOnScroll delay={600}>
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             {/* GoHighLevel Calendar Integration */}
-            <GlassCard className="p-0 overflow-hidden border-2 border-primary/10 gradient-border">
+            <GlassCard className="p-0 overflow-hidden border border-primary/10 gradient-border">
               <iframe 
                 src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk" 
-                style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '800px', height: '800px' }} 
+                style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '700px', height: '700px' }} 
                 scrolling="no" 
                 id="msgsndr-calendar"
                 title="Book Your 15-Minute Introductory Call"
@@ -82,12 +82,12 @@ export default function Calendar() {
         
         {/* Bottom highlight */}
         <RevealOnScroll delay={800}>
-          <div className="text-center mt-16">
-            <div className="inline-block bg-accent/5 rounded-2xl px-8 py-6 backdrop-blur-sm border border-accent/10">
-              <p className="premium-text-lg text-foreground mb-2 font-semibold">
+          <div className="text-center mt-10">
+            <div className="inline-block bg-accent/5 rounded-xl px-6 py-4 backdrop-blur-sm border border-accent/10">
+              <p className="text-base text-foreground mb-1 font-semibold">
                 See What AI Can Do for Your Team
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-sm text-muted-foreground">
                 Let's discuss whether AI can deliver real ROI for your legal team
               </p>
             </div>

@@ -62,8 +62,8 @@ export default function Problem() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <RevealOnScroll>
-          <div className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="premium-text-2xl lg:text-5xl mb-8 text-foreground text-glow">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="premium-text-2xl lg:text-4xl mb-4 text-foreground text-glow">
               What Slows Down Most Legal Teams?
             </h2>
             <p className="premium-text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -73,14 +73,14 @@ export default function Problem() {
         </RevealOnScroll>
 
         {/* Responsive Grid Layout */}
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* First Row - Narrative + 2 Problem Tiles */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
             {/* The Legal Team Challenge - Narrative Card */}
             <RevealOnScroll delay={200}>
               <GlassCard className="h-full flex flex-col justify-center gradient-border">
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-foreground">
+                <div className="space-y-3">
+                  <h3 className="text-lg font-bold text-foreground">
                     The Legal Team Challenge
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
@@ -88,8 +88,8 @@ export default function Problem() {
                     Instead, you're caught in a cycle of manual administrative tasks, 
                     inefficient processes, and uncertainty about which technology investments will actually deliver results.
                   </p>
-                  <div className="flex items-center space-x-3 text-destructive font-semibold text-sm">
-                    <TrendingDown className="w-5 h-5" />
+                  <div className="flex items-center space-x-2 text-destructive font-semibold text-sm">
+                    <TrendingDown className="w-4 h-4" />
                     <span>Growth Barriers</span>
                   </div>
                 </div>
@@ -100,16 +100,16 @@ export default function Problem() {
             {problems.slice(0, 2).map((problem, index) => (
               <RevealOnScroll key={index} delay={300 + index * 100}>
                 <GlassCard className="text-center group hover:scale-105 transition-all duration-300 h-full">
-                  <div className="w-14 h-14 bg-destructive/10 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:bg-destructive/20 transition-colors">
-                    <problem.icon className="w-7 h-7 text-destructive" />
+                  <div className="w-11 h-11 bg-destructive/10 rounded-xl flex items-center justify-center mb-3 mx-auto group-hover:bg-destructive/20 transition-colors">
+                    <problem.icon className="w-5 h-5 text-destructive" />
                   </div>
-                  <h4 className="font-bold text-base mb-2 text-foreground" data-testid={`text-problem-title-${index}`}>
+                  <h4 className="font-bold text-sm mb-1.5 text-foreground" data-testid={`text-problem-title-${index}`}>
                     {problem.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground mb-3" data-testid={`text-problem-description-${index}`}>
+                  <p className="text-xs text-muted-foreground mb-2" data-testid={`text-problem-description-${index}`}>
                     {problem.description}
                   </p>
-                  <div className="inline-block px-3 py-1 bg-destructive/10 rounded-full text-xs font-semibold text-destructive">
+                  <div className="inline-block px-2 py-0.5 bg-destructive/10 rounded-full text-xs font-semibold text-destructive">
                     {problem.impact}
                   </div>
                 </GlassCard>
@@ -118,20 +118,20 @@ export default function Problem() {
           </div>
 
           {/* Remaining Rows - 3 Columns Each */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {problems.slice(2, 9).map((problem, index) => (
               <RevealOnScroll key={index + 2} delay={400 + index * 100}>
                 <GlassCard className="text-center group hover:scale-105 transition-all duration-300">
-                  <div className="w-14 h-14 bg-destructive/10 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:bg-destructive/20 transition-colors">
-                    <problem.icon className="w-7 h-7 text-destructive" />
+                  <div className="w-11 h-11 bg-destructive/10 rounded-xl flex items-center justify-center mb-3 mx-auto group-hover:bg-destructive/20 transition-colors">
+                    <problem.icon className="w-5 h-5 text-destructive" />
                   </div>
-                  <h4 className="font-bold text-base mb-2 text-foreground" data-testid={`text-problem-title-${index + 2}`}>
+                  <h4 className="font-bold text-sm mb-1.5 text-foreground" data-testid={`text-problem-title-${index + 2}`}>
                     {problem.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground mb-3" data-testid={`text-problem-description-${index + 2}`}>
+                  <p className="text-xs text-muted-foreground mb-2" data-testid={`text-problem-description-${index + 2}`}>
                     {problem.description}
                   </p>
-                  <div className="inline-block px-3 py-1 bg-destructive/10 rounded-full text-xs font-semibold text-destructive">
+                  <div className="inline-block px-2 py-0.5 bg-destructive/10 rounded-full text-xs font-semibold text-destructive">
                     {problem.impact}
                   </div>
                 </GlassCard>
@@ -142,12 +142,12 @@ export default function Problem() {
 
         {/* Bottom - Call to Action */}
         <RevealOnScroll delay={800}>
-          <div className="text-center mt-16">
-            <div className="inline-block bg-destructive/5 rounded-2xl px-8 py-6 backdrop-blur-sm">
-              <p className="premium-text-lg text-foreground mb-2 font-semibold">
+          <div className="text-center mt-10">
+            <div className="inline-block bg-destructive/5 rounded-xl px-6 py-4 backdrop-blur-sm">
+              <p className="text-base text-foreground mb-1 font-semibold">
                 Sound familiar?
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-sm text-muted-foreground">
                 These aren't just inconveniences – they're barriers that prevent your team from scaling efficiently and profitably.
               </p>
             </div>

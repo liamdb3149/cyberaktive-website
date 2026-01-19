@@ -9,7 +9,7 @@ interface SectionProps {
 
 export function Section({ id, className, children }: SectionProps) {
   return (
-    <section id={id} className={cn("py-20 lg:py-32", className)}>
+    <section id={id} className={cn("py-12 lg:py-20", className)}>
       {children}
     </section>
   );
@@ -22,7 +22,7 @@ interface GlassCardProps {
 
 export function GlassCard({ className, children }: GlassCardProps) {
   return (
-    <div className={cn("glass-card rounded-2xl p-8", className)}>
+    <div className={cn("glass-card rounded-xl p-5", className)}>
       {children}
     </div>
   );

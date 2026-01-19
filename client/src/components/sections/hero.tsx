@@ -47,39 +47,39 @@ export default function Hero() {
   ];
 
   return (
-    <section id="hero" className="pt-20 lg:pt-24 pb-0 homepage-hero">
+    <section id="hero" className="pt-16 lg:pt-20 pb-0 homepage-hero">
       {/* Main Hero - Above the Fold */}
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10 pb-16 lg:pb-24">
-        <div className="max-w-6xl mx-auto text-center">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10 pb-12 lg:pb-16">
+        <div className="max-w-5xl mx-auto text-center">
           {/* Logo */}
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-5">
             <img 
               src={iconLogo} 
               alt="Cyberaktive" 
-              className="w-16 h-16 md:w-20 md:h-20"
+              className="w-14 h-14 md:w-16 md:h-16"
               data-testid="img-logo"
             />
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 lg:mb-8" data-testid="heading-hero">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl mb-5 lg:mb-6" data-testid="heading-hero">
             <span className="text-white drop-shadow-lg block font-black leading-tight">
               Turn Legal Busywork and Lead Qualification Into Consistent Billable Hours—
-              <span className="block mt-2">Guaranteed in 90 Days</span>
+              <span className="block mt-1">Guaranteed in 90 Days</span>
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl lg:text-2xl text-white/95 drop-shadow-md mb-8 max-w-5xl mx-auto font-medium leading-relaxed" data-testid="text-subheadline">
+          <p className="text-base md:text-lg lg:text-xl text-white/95 drop-shadow-md mb-6 max-w-4xl mx-auto font-medium leading-relaxed" data-testid="text-subheadline">
             We implement AI Growth Solutions that accelerate client acquisition and automate client intake processes for mid-sized legal teams, saving them <span className="font-bold text-white">$150K+ annually</span> and maximizing billable time—with measurable ROI in one quarter, <span className="font-bold text-white">75%+ team adoption</span>, and <span className="font-bold text-white">zero ethics risk</span>. If we don't hit our targets, you don't pay.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center items-center mb-6">
             <CalendarModal>
               <Button 
                 size="lg" 
-                className="premium-button text-white font-semibold text-lg px-10 py-6 rounded-2xl shadow-2xl"
+                className="premium-button text-white font-semibold text-base px-8 py-5 rounded-xl shadow-xl"
                 data-testid="button-book-call"
               >
                 Book Your Free AI Readiness Call
@@ -88,7 +88,7 @@ export default function Hero() {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-2 border-white/80 text-white hover:bg-white hover:text-slate-900 font-semibold text-lg px-10 py-6 rounded-2xl backdrop-blur-sm bg-white/10"
+              className="border-2 border-white/80 text-white hover:bg-white hover:text-slate-900 font-semibold text-base px-8 py-5 rounded-xl backdrop-blur-sm bg-white/10"
               onClick={() => scrollToSection('roi-calculators')}
               data-testid="button-roi-calculators"
             >
@@ -105,14 +105,14 @@ export default function Hero() {
       </div>
 
       {/* Problem Awareness Strip */}
-      <div className="bg-slate-900/80 backdrop-blur-sm border-y border-white/10 py-8">
+      <div className="bg-slate-900/80 backdrop-blur-sm border-y border-white/10 py-5">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left">
               {painPoints.map((point, index) => (
-                <div key={index} className="flex items-center justify-center md:justify-start gap-3 text-white/80" data-testid={`pain-point-${index}`}>
-                  <point.icon className="w-5 h-5 text-amber-400 flex-shrink-0" />
-                  <span className="text-sm lg:text-base font-medium">{point.text}</span>
+                <div key={index} className="flex items-center justify-center md:justify-start gap-2 text-white/80" data-testid={`pain-point-${index}`}>
+                  <point.icon className="w-4 h-4 text-amber-400 flex-shrink-0" />
+                  <span className="text-sm font-medium">{point.text}</span>
                 </div>
               ))}
             </div>
@@ -121,24 +121,24 @@ export default function Hero() {
       </div>
 
       {/* Differentiator Cards */}
-      <div className="bg-gradient-to-b from-slate-900/60 to-transparent py-16 lg:py-20">
+      <div className="bg-gradient-to-b from-slate-900/60 to-transparent py-12 lg:py-14">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {differentiators.map((item, index) => (
-                <Card key={index} className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-md border-2 border-blue-200 dark:border-blue-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-testid={`card-differentiator-${index}`}>
-                  <CardContent className="pt-6 pb-6">
-                    <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mb-5 mx-auto">
-                      <item.icon className="w-7 h-7 text-blue-600 dark:text-blue-400" />
+                <Card key={index} className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-md border border-blue-200 dark:border-blue-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-testid={`card-differentiator-${index}`}>
+                  <CardContent className="pt-5 pb-5">
+                    <div className="w-11 h-11 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                      <item.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3 text-center" data-testid={`text-differentiator-title-${index}`}>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2 text-center" data-testid={`text-differentiator-title-${index}`}>
                       {item.title}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-300 mb-4 text-center leading-relaxed" data-testid={`text-differentiator-description-${index}`}>
+                    <p className="text-sm text-slate-600 dark:text-slate-300 mb-3 text-center leading-relaxed" data-testid={`text-differentiator-description-${index}`}>
                       {item.description}
                     </p>
                     <div className="text-center">
-                      <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+                      <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2.5 py-0.5 rounded-full text-xs font-semibold">
                         {item.badge}
                       </span>
                     </div>
@@ -151,16 +151,16 @@ export default function Hero() {
       </div>
 
       {/* Social Proof Metrics */}
-      <div className="bg-slate-900/40 backdrop-blur-sm py-12 lg:py-16 border-t border-white/10">
+      <div className="bg-slate-900/40 backdrop-blur-sm py-8 lg:py-10 border-t border-white/10">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {metrics.map((metric, index) => (
-                <div key={index} className="space-y-2" data-testid={`metric-${index}`}>
-                  <div className="text-3xl lg:text-4xl font-black text-white drop-shadow-lg" data-testid={`text-metric-value-${index}`}>
+                <div key={index} className="space-y-1" data-testid={`metric-${index}`}>
+                  <div className="text-2xl lg:text-3xl font-black text-white drop-shadow-lg" data-testid={`text-metric-value-${index}`}>
                     {metric.value}
                   </div>
-                  <div className="text-sm lg:text-base text-white/70 font-medium" data-testid={`text-metric-label-${index}`}>
+                  <div className="text-xs lg:text-sm text-white/70 font-medium" data-testid={`text-metric-label-${index}`}>
                     {metric.label}
                   </div>
                 </div>
