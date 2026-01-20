@@ -43,6 +43,13 @@ export default function Header() {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8 group">
+            <Link 
+              href="/legal-ai-workshops"
+              className="text-foreground hover:text-primary transition-all font-medium border-b-2 border-transparent hover:border-primary pb-1 cursor-pointer"
+              data-testid="link-workshops"
+            >
+              AI Workshops
+            </Link>
             <a 
               href="https://www.theailaw.xyz/" 
               target="_blank" 
@@ -80,6 +87,14 @@ export default function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-border bg-background">
             <div className="px-2 pt-2 pb-3 space-y-1">
+              <Link 
+                href="/legal-ai-workshops"
+                className="block px-3 py-2 text-foreground hover:text-primary hover:bg-accent/10 transition-colors font-medium rounded-md border-l-4 border-transparent hover:border-primary"
+                data-testid="link-workshops-mobile"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                AI Workshops
+              </Link>
               <a 
                 href="https://www.theailaw.xyz/" 
                 target="_blank" 
