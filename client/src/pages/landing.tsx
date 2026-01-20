@@ -46,7 +46,7 @@ export default function Landing() {
   const industryCards = [
     {
       icon: Scale,
-      title: "AI for Law Firms",
+      title: "AI for Law Firms & In-House Counsel",
       description: "Turn legal busywork into billable hours. We automate client intake, document processing, and research workflows for mid-sized legal teams—saving $150K+ annually while maintaining zero ethics risk. Plus, we build marketing and sales automations including lead generation, lead follow-up, speed-to-lead optimization, content creation, and CRM hygiene to help legal teams grow their practice efficiently.",
       outcomes: [
         "More billable hours, less admin",
