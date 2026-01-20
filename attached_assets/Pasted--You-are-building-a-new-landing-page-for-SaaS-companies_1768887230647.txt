@@ -1,0 +1,53 @@
+"You are building a new landing page for SaaS companies (10-500 employees) using the EXACT same template/structure as the existing Cyberaktive legal page at https://cyberaktiveai.com/
+
+REFERENCE PAGES:
+- Template source: https://cyberaktiveai.com/ (legal firms page)
+- Copy source: [This Google Doc - SaaS AI Automation Page - Conversion Copy]
+
+INSTRUCTIONS:
+
+1. MAINTAIN EXACT STRUCTURE
+   - Use the same 17-section layout as the legal page
+   - Keep identical visual hierarchy and spacing
+   - Preserve all section types (hero, pain points grid, value prop cards, testimonials, etc.)
+   - Maintain same color scheme and design elements
+
+2. REPLACE COPY FROM SECTIONS 1-17
+   - Section 1 (Top Banner): Use "Book a Free AI Transformation Strategy Call"
+   - Section 2 (Header): Update navigation to "SaaS Automation Insights" newsletter
+   - Section 3 (Hero): Replace headline with "Turn Developer Burnout and Feature Delays Into Competitive Velocity—Guaranteed in 90 Days"
+   - Continue through all 17 sections using copy from this document
+   
+3. SKIP CALCULATOR SECTION
+   - Section 9 (ROI CALCULATOR) should be OMITTED entirely from the SaaS page
+   - Do NOT build the interactive calculator
+   - Remove second CTA button that references calculators
+   - This will be built separately with proper logic
+
+4. UPDATE SPECIFIC ELEMENTS:
+   - Change all "Legal Teams" references to "SaaS Companies"
+   - Update social proof numbers: $200K+, 80%+, 90 Days, 15+ Companies
+   - Replace pain point cards with 8 SaaS-specific pain points from document
+   - Update testimonial attributions to VP Engineering, CTO, Head of Product roles
+   - Change value prop cards to emphasize technical expertise and speed
+
+5. PRESERVE FUNCTIONALITY:
+   - Keep all CTAs functional ("Book Your Free AI Readiness Call")
+   - Maintain form integrations
+   - Preserve newsletter signup functionality
+   - Keep booking widget/calendar embed in Section 15
+
+6. FREE TOOLS FOOTER:
+   - Update links to SaaS-focused tools:
+     * SaaS AI Readiness Assessment
+     * Developer Productivity Calculator (separate build)
+     * CI/CD Automation ROI Tool
+     * AI Integration Risk Calculator
+     * Automation Pilot Scorecard
+
+OUTPUT: A pixel-perfect replica of the legal page structure with all SaaS-specific copy from this document, minus the calculator section.
+"
+
+---
+
+══
