@@ -1,11 +1,22 @@
-# Cyberaktive - Legal AI Consulting & Automation Services
+# Cyberaktive - AI Consultants & Developers for Legal Teams and SaaS Companies
 
 ## Overview
-Cyberaktive is a landing page and marketing website offering AI consulting and automation services specifically for law firms. The platform aims to help legal practices strategically implement AI to achieve measurable ROI, reduce routine work, increase billable hours, and enhance client value. Key features include conversion-optimized messaging, interactive ROI calculators, and an AI pilot scorecard application for tracking AI implementation.
+Cyberaktive is a marketing website offering AI consulting and automation services for both law firms and SaaS companies. The platform helps mid-sized teams (10-500 employees) implement AI automation that delivers measurable ROI in 90 days. Key features include conversion-optimized messaging, interactive ROI calculators, and industry-specific landing pages for legal and SaaS verticals.
+
+## Site Structure
+- **Homepage** (/) - General landing page with dual CTAs directing to Legal or SaaS verticals
+- **Legal Landing Page** (/ai-consulting-development-legal) - Dedicated page for law firms
+- **SaaS Landing Page** (/ai-consulting-and-development-saas-software) - Dedicated page for SaaS companies
+- **Legal AI Workshops** (/legal-ai-workshops) - Workshop service page for legal teams
+
+## Navigation Structure
+- **SaaS Dropdown**: Consult & Dev → /ai-consulting-and-development-saas-software
+- **Legal Dropdown**: Consult & Dev → /ai-consulting-development-legal, AI Workshops for Team → /legal-ai-workshops
+- **Newsletter**: External link to theailaw.xyz
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.
-Target audience: Legal teams (both law firms and in-house legal departments) - messaging uses "legal teams" terminology to be inclusive of in-house counsel.
+Target audience: Legal teams and SaaS companies (10-500 employees).
 
 ## System Architecture
 
