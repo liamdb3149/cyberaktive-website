@@ -66,16 +66,23 @@ export default function Calendar() {
           <div className="max-w-3xl mx-auto">
             {/* GoHighLevel Calendar Integration */}
             <GlassCard className="p-0 overflow-hidden border border-primary/10 gradient-border">
-              <iframe 
-                src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk" 
-                style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '700px', height: '700px' }} 
-                scrolling="no" 
-                id="msgsndr-calendar"
-                title="Book Your 15-Minute Introductory Call"
-                data-testid="calendar-booking-widget"
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/PSidgPqZ08dp5TT8IYvX"
+                style={{ width: '100%', height: '853px', border: 'none', borderRadius: '3px' }}
+                id="inline-PSidgPqZ08dp5TT8IYvX"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Cyberaktive AI Auto - Main"
+                data-height="853"
+                data-layout-iframe-id="inline-PSidgPqZ08dp5TT8IYvX"
+                data-form-id="PSidgPqZ08dp5TT8IYvX"
+                title="Cyberaktive AI Auto - Main"
               />
-              <br />
-              <script src="https://link.msgsndr.com/js/embed.js" type="text/javascript"></script>
             </GlassCard>
           </div>
         </RevealOnScroll>

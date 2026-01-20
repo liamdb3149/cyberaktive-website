@@ -569,14 +569,21 @@ export default function LegalAIWorkshops() {
                     <div className="md:col-span-3">
                       <div className="min-h-[400px]">
                         <iframe
-                          src="https://api.leadconnectorhq.com/widget/form/Cj9UhspkV2U5S7OBr13E"
-                          style={{ width: '100%', height: '450px', border: 'none', borderRadius: '8px' }}
-                          id="workshop-form-Cj9UhspkV2U5S7OBr13E"
+                          src="https://api.leadconnectorhq.com/widget/form/PSidgPqZ08dp5TT8IYvX"
+                          style={{ width: '100%', height: '853px', border: 'none', borderRadius: '8px' }}
+                          id="inline-PSidgPqZ08dp5TT8IYvX-workshop"
                           data-layout="{'id':'INLINE'}"
-                          data-form-name="Workshop Discovery Form"
-                          data-height="450"
-                          data-form-id="Cj9UhspkV2U5S7OBr13E"
-                          title="Workshop Discovery Form"
+                          data-trigger-type="alwaysShow"
+                          data-trigger-value=""
+                          data-activation-type="alwaysActivated"
+                          data-activation-value=""
+                          data-deactivation-type="neverDeactivate"
+                          data-deactivation-value=""
+                          data-form-name="Cyberaktive AI Auto - Main"
+                          data-height="853"
+                          data-layout-iframe-id="inline-PSidgPqZ08dp5TT8IYvX-workshop"
+                          data-form-id="PSidgPqZ08dp5TT8IYvX"
+                          title="Cyberaktive AI Auto - Main"
                           data-testid="iframe-workshop-form"
                         />
                       </div>

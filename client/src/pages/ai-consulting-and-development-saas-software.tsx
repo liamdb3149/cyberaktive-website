@@ -1024,13 +1024,22 @@ export default function SaaSLandingPage() {
               <div className="max-w-3xl mx-auto">
                 <GlassCard className="p-0 overflow-hidden border border-teal-500/10 saas-gradient-border">
                   <iframe
-                    src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk"
-                    style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '700px', height: '700px' }}
-                    scrolling="no"
-                    id="msgsndr-calendar-saas"
-                    title="Book Your 15-Minute Introductory Call"
+                    src="https://api.leadconnectorhq.com/widget/form/PSidgPqZ08dp5TT8IYvX"
+                    style={{ width: '100%', height: '853px', border: 'none', borderRadius: '3px' }}
+                    id="inline-PSidgPqZ08dp5TT8IYvX-saas"
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Cyberaktive AI Auto - Main"
+                    data-height="853"
+                    data-layout-iframe-id="inline-PSidgPqZ08dp5TT8IYvX-saas"
+                    data-form-id="PSidgPqZ08dp5TT8IYvX"
+                    title="Cyberaktive AI Auto - Main"
                   />
-                  <br />
                 </GlassCard>
               </div>
             </RevealOnScroll>
