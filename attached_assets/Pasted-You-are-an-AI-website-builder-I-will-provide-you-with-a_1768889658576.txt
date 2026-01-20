@@ -1,0 +1,67 @@
+You are an AI website builder. I will provide you with a Markdown document containing the complete copy for a SaaS company landing page. Your job is to update the EXISTING landing page at https://cyberaktiveai.com/ to create a NEW SaaS landing page using the copy from the attached document.
+
+CRITICAL CONTEXT:
+- The attached document contains HOLISTIC, company-wide copy
+- This SaaS landing page speaks to ALL departments: Engineering, Product, Marketing, Sales, Design, and HR
+- The copy emphasizes identifying bottlenecks and repetitive tasks across the ENTIRE organization, not just developers
+- Do NOT revert to developer-only or product-only language
+
+REFERENCE TEMPLATE:
+- Use the legal page structure at https://cyberaktiveai.com/ as your template
+- The legal page has 17 sections with a specific layout, visual hierarchy, and design
+- Maintain the EXACT SAME structure, section types, and layout
+
+YOUR INSTRUCTIONS:
+
+1. MAINTAIN EXACT STRUCTURE:
+   - Copy the 17-section layout from the legal page exactly
+   - Keep identical visual hierarchy and spacing
+   - Preserve all section types (hero, pain points grid, value prop cards, testimonials, etc.)
+   - Maintain same color scheme and design elements
+   - Keep the same responsive behavior and mobile optimization
+
+2. REPLACE ALL COPY:
+   - Section 1 (Top Banner): Use copy from attached document
+   - Section 2 (Header): Update navigation to "SaaS Automation Insights" newsletter
+   - Section 3 (Hero): Use the holistic, company-wide headline and subheadline from document
+   - Sections 4-17: Continue through all sections using copy from the attached document
+   - The attached document has clearly labeled sections ("3. HERO SECTION", "4. VALUE PROPOSITION CARDS", etc.)
+
+3. SKIP CALCULATOR SECTION:
+   - Section 9 (ROI CALCULATOR) should be OMITTED entirely from the SaaS page
+   - Do NOT build the interactive calculator
+   - Remove the second CTA button that references calculators
+   - This will be built separately with proper logic
+
+4. UPDATE SPECIFIC ELEMENTS:
+   - Change ALL "Legal Teams" or "Law Firms" references to "SaaS Companies" throughout
+   - Update social proof numbers to: $200K+, 80%+, 90 Days, 15+ Companies
+   - Use the 8 SaaS-specific pain point cards provided in the document
+   - Update testimonial attributions to VP Engineering, CTO, Head of Product roles
+   - Emphasize cross-department automation (not just engineering)
+
+5. PRESERVE FUNCTIONALITY:
+   - Keep all CTAs functional ("Book Your Free AI Readiness Call")
+   - Maintain form integrations
+   - Preserve newsletter signup functionality  
+   - Keep booking widget/calendar embed in Section 15
+
+6. FREE TOOLS FOOTER:
+   - Update footer links to SaaS-focused tools:
+     * SaaS AI Readiness Assessment
+     * Developer Productivity Calculator (separate build)
+     * CI/CD Automation ROI Tool
+     * AI Integration Risk Calculator
+     * Automation Pilot Scorecard
+
+KEY COPY HIGHLIGHTS TO PRESERVE:
+- Main headline emphasizes "Team Bottlenecks" and "Company-Wide Competitive Velocity"
+- Subheadline mentions "Engineering and Product to Marketing, Sales, Design, and HR"
+- Value Prop Card 1 titled "We Understand Your Entire Business" with "Cross-Functional Automation Expertise"
+- Pain points cover Marketing content tasks, Sales CRM workflows, Design/HR repetitive work
+- Intro card mentions "teams across every department—Engineering, Marketing, Sales, Design, HR"
+
+OUTPUT:
+A pixel-perfect replica of the legal page structure with all SaaS-specific, holistic, company-wide copy from the attached document, minus the calculator section.
+
+Do you understand these instructions? Confirm and proceed with building the SaaS landing page.
