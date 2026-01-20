@@ -569,21 +569,11 @@ export default function LegalAIWorkshops() {
                     <div className="md:col-span-3">
                       <div className="min-h-[400px]">
                         <iframe
-                          src="https://api.leadconnectorhq.com/widget/form/PSidgPqZ08dp5TT8IYvX"
-                          style={{ width: '100%', height: '853px', border: 'none', borderRadius: '8px' }}
-                          id="inline-PSidgPqZ08dp5TT8IYvX-workshop"
-                          data-layout="{'id':'INLINE'}"
-                          data-trigger-type="alwaysShow"
-                          data-trigger-value=""
-                          data-activation-type="alwaysActivated"
-                          data-activation-value=""
-                          data-deactivation-type="neverDeactivate"
-                          data-deactivation-value=""
-                          data-form-name="Cyberaktive AI Auto - Main"
-                          data-height="853"
-                          data-layout-iframe-id="inline-PSidgPqZ08dp5TT8IYvX-workshop"
-                          data-form-id="PSidgPqZ08dp5TT8IYvX"
-                          title="Cyberaktive AI Auto - Main"
+                          src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk"
+                          style={{ width: '100%', height: '700px', border: 'none', borderRadius: '8px' }}
+                          scrolling="no"
+                          id="msgsndr-calendar-workshop"
+                          title="Book Your 15-Minute Introductory Call"
                           data-testid="iframe-workshop-form"
                         />
                       </div>

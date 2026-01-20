@@ -12,21 +12,21 @@ import alanPhoto from "@assets/2_1757653847958.png";
 
 export default function SaaSLandingPage() {
   useEffect(() => {
-    document.title = "AI Automation for SaaS Companies - Ship 40% Faster in 90 Days | Cyberaktive";
+    document.title = "AI Automation for SaaS Companies - Company-Wide Productivity in 90 Days | Cyberaktive";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Turn developer burnout into competitive velocity with AI automation for SaaS teams. Recover $200K+ in productivity annually, ship 40% faster, and achieve 80%+ team adoption. Measurable ROI in 90 days.');
+      metaDescription.setAttribute('content', 'Turn team bottlenecks into company-wide competitive velocity with AI automation for SaaS teams. We automate workflows across Engineering, Marketing, Sales, Design, and HR—recovering $200K+ annually with measurable ROI in 90 days.');
     }
 
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
-      ogTitle.setAttribute('content', 'AI Automation for SaaS Companies - Ship 40% Faster in 90 Days');
+      ogTitle.setAttribute('content', 'AI Automation for SaaS Companies - Company-Wide Productivity in 90 Days');
     }
 
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
-      ogDescription.setAttribute('content', 'Turn developer burnout into competitive velocity with AI automation for SaaS teams. Recover $200K+ in productivity annually, ship 40% faster, and achieve 80%+ team adoption.');
+      ogDescription.setAttribute('content', 'Turn team bottlenecks into company-wide competitive velocity with AI automation. We automate workflows across Engineering, Marketing, Sales, Design, and HR—recovering $200K+ annually.');
     }
 
     return () => {
@@ -43,14 +43,14 @@ export default function SaaSLandingPage() {
   const differentiators = [
     {
       icon: Code2,
-      title: "We're Engineers Who Get SaaS",
-      description: "Our developers ARE the consultants. We understand SaaS architectures, CI/CD pipelines, and what's actually possible—because we're the ones building it. No handoffs to junior teams who've never shipped production code.",
-      badge: "Technical + Product Expertise"
+      title: "We Understand Your Entire Business",
+      description: "We don't just automate Engineering—we optimize workflows across your entire organization. From your Product team's roadmap planning to your Marketing team's content generation, Sales CRM workflows, Design asset management, and HR onboarding processes, we identify bottlenecks in every department and build automations that matter.",
+      badge: "Cross-Functional Automation Expertise"
     },
     {
       icon: Clock,
       title: "90 Days to Shipping Faster, Not 90-Page Decks",
-      description: "Big consulting firms spend months delivering strategy PowerPoints. We deliver working automations your team uses daily—in weeks, not quarters. Measurable productivity gains in 90 days.",
+      description: "Big consulting firms spend months delivering strategy PowerPoints. We deliver working automations your team uses daily—in weeks, not quarters. Measurable productivity gains in 90 days with implementation speeds 3-5x faster than traditional consulting.",
       badge: "Results Guaranteed"
     },
     {
@@ -62,9 +62,9 @@ export default function SaaSLandingPage() {
   ];
 
   const painPoints = [
-    { icon: TrendingDown, text: "AI-native competitors shipping features faster?" },
-    { icon: Users, text: "Developers spending 30% of time on manual tasks?" },
-    { icon: FileSearch, text: "Every investor deck asks: What's your AI moat?" }
+    { icon: TrendingDown, text: "Marketing teams spending hours on manual content and campaign tasks?" },
+    { icon: Users, text: "Sales reps buried in CRM data entry instead of selling?" },
+    { icon: FileSearch, text: "Design and HR teams drowning in repetitive workflows?" }
   ];
 
   const metrics = [
@@ -278,13 +278,13 @@ export default function SaaSLandingPage() {
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl mb-5 lg:mb-6">
                 <span className="text-white drop-shadow-lg block font-black leading-tight">
-                  Turn Developer Burnout and Feature Delays Into Competitive Velocity—
+                  Turn Team Bottlenecks and Manual Work Into Company-Wide Competitive Velocity—
                   <span className="block mt-1">Guaranteed in 90 Days</span>
                 </span>
               </h1>
 
               <p className="text-base md:text-lg lg:text-xl text-white/95 drop-shadow-md mb-6 max-w-3xl mx-auto font-medium leading-relaxed">
-                We implement AI Automation Solutions that accelerate product development and eliminate repetitive workflows for mid-sized SaaS teams, recovering <span className="font-bold text-white">$200K+ in productivity annually</span> and shipping <span className="font-bold text-white">40% faster</span>—with measurable ROI in one quarter, <span className="font-bold text-white">80%+ team adoption</span>, and <span className="font-bold text-white">zero disruption risk</span>.
+                We implement AI Automation Solutions across your entire organization—from Engineering and Product to Marketing, Sales, Design, and HR. We identify the biggest productivity bottlenecks and repetitive tasks in each department, then build custom automations that recover <span className="font-bold text-white">$200K+ annually</span> and deliver <span className="font-bold text-white">40% faster execution</span>—with measurable ROI in one quarter, <span className="font-bold text-white">60-80%+ team adoption</span>, and <span className="font-bold text-white">zero disruption risk</span>.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center items-center mb-6">
@@ -400,7 +400,7 @@ export default function SaaSLandingPage() {
                       </h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
                         You built your SaaS company to solve real problems and grow profitably.
-                        Instead, your developers are drowning in manual tasks, your competitors are shipping AI features faster,
+                        Instead, your teams across every department—Engineering, Marketing, Sales, Design, HR—are drowning in manual tasks, your competitors are moving faster,
                         and you're uncertain which automation investments will actually deliver ROI.
                       </p>
                       <div className="flex items-center space-x-2 text-orange-600 font-semibold text-sm">
@@ -1024,21 +1024,11 @@ export default function SaaSLandingPage() {
               <div className="max-w-3xl mx-auto">
                 <GlassCard className="p-0 overflow-hidden border border-teal-500/10 saas-gradient-border">
                   <iframe
-                    src="https://api.leadconnectorhq.com/widget/form/PSidgPqZ08dp5TT8IYvX"
-                    style={{ width: '100%', height: '853px', border: 'none', borderRadius: '3px' }}
-                    id="inline-PSidgPqZ08dp5TT8IYvX-saas"
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="Cyberaktive AI Auto - Main"
-                    data-height="853"
-                    data-layout-iframe-id="inline-PSidgPqZ08dp5TT8IYvX-saas"
-                    data-form-id="PSidgPqZ08dp5TT8IYvX"
-                    title="Cyberaktive AI Auto - Main"
+                    src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk"
+                    style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '700px', height: '700px' }}
+                    scrolling="no"
+                    id="msgsndr-calendar-saas"
+                    title="Book Your 15-Minute Introductory Call"
                   />
                 </GlassCard>
               </div>
