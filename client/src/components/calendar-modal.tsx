@@ -26,15 +26,15 @@ export default function CalendarModal({ children }: CalendarModalProps) {
             </p>
             <div className="bg-white rounded-lg overflow-hidden">
               <iframe 
-                src="https://api.leadconnectorhq.com/widget/booking/ojEwUMPVyYMguIiF8ROp" 
+                src="https://api.leadconnectorhq.com/widget/booking/tlZAXVaHxTw9fvistaTr" 
                 style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '700px', height: '700px' }} 
                 scrolling="no" 
-                id="msgsndr-calendar"
+                id="6paoXxyP7IK2sAlPFkv3_1768891746867"
                 title="Book Your 15-Minute Introductory Call"
                 data-testid="calendar-booking-modal"
               />
               <br />
-              <script src="https://link.msgsndr.com/js/embed.js" type="text/javascript"></script>
+              <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
             </div>
           </div>
         </div>
