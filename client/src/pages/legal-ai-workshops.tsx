@@ -142,7 +142,7 @@ export default function LegalAIWorkshops() {
     },
     {
       number: "2",
-      title: "Live Workshop with 'Shock Demo'",
+      title: "Live Workshops: We Come With Pre-Built Automations Your Team Needs",
       subtitle: "This isn't theory",
       description: "We show up with a pre-built automation of one of your actual processes—optimized and ready to use. Your team watches their own work get done 10x faster, live on screen. Then we train them hands-on with the specific AI platforms you choose: Claude for complex legal analysis, ChatGPT Enterprise for drafting, or specialized legal AI tools.",
       bullets: [
@@ -210,15 +210,15 @@ export default function LegalAIWorkshops() {
         {/* Hero Section */}
         <Section className="section-mesh relative bg-gradient-to-br from-pink-50/40 via-purple-50/30 to-blue-50/40 pt-24 lg:pt-32">
           <FloatingOrb size="large" style={{ top: "15%", left: "5%" }} />
-          <FloatingOrb size="medium" style={{ bottom: "20%", right: "10%" }} />
-          <FloatingOrb size="small" style={{ top: "50%", right: "20%" }} />
-          <GeometricBlob style={{ top: "30%", right: "8%", width: "200px", height: "200px" }} />
+          <FloatingOrb size="medium" style={{ bottom: "20%", right: "15%" }} />
+          <FloatingOrb size="small" style={{ top: "50%", right: "25%" }} />
+          <GeometricBlob style={{ top: "30%", right: "12%", width: "200px", height: "200px" }} />
           
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <RevealOnScroll>
               <div className="max-w-3xl mx-auto text-center">
                 <div className="inline-block mb-6">
-                  <span className="bg-gradient-to-r from-primary to-accent text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  <span className="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-full text-base md:text-lg font-semibold shadow-lg">
                     Live AI Training for Legal Teams
                   </span>
                 </div>
