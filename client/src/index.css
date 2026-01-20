@@ -627,4 +627,103 @@
       transition: none !important;
     }
   }
+
+  /* SaaS Page - Inverted Teal/Cyan Color Scheme */
+  .saas-homepage-hero {
+    background-image: url('./assets/mountain-background-optimized.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .saas-homepage-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+      rgba(13, 148, 136, 0.7) 0%, 
+      rgba(6, 182, 212, 0.6) 50%, 
+      rgba(16, 185, 129, 0.5) 100%);
+    backdrop-filter: blur(0.5px);
+    pointer-events: none;
+  }
+
+  .saas-homepage-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, 
+      transparent 0%, 
+      hsla(180, 50%, 95%, 0.3) 40%, 
+      hsla(180, 50%, 95%, 0.8) 80%, 
+      hsl(180, 50%, 95%) 100%);
+    pointer-events: none;
+  }
+
+  .saas-premium-button {
+    background: linear-gradient(135deg, #0d9488 0%, #06b6d4 100%);
+    box-shadow: 0px 8px 25px rgba(13, 148, 136, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0px);
+  }
+
+  .saas-premium-button:hover {
+    box-shadow: 0px 12px 35px rgba(13, 148, 136, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .section-mesh-saas {
+    background: radial-gradient(at 40% 20%, hsla(180, 70%, 74%, 0.4) 0px, transparent 50%), 
+                radial-gradient(at 80% 0%, hsla(170, 70%, 56%, 0.3) 0px, transparent 50%), 
+                radial-gradient(at 40% 50%, hsla(160, 70%, 93%, 0.5) 0px, transparent 50%), 
+                radial-gradient(at 0% 100%, hsla(185, 70%, 76%, 0.3) 0px, transparent 50%), 
+                radial-gradient(at 80% 100%, hsla(175, 70%, 77%, 0.3) 0px, transparent 50%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-mesh-saas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--grid-pattern);
+    background-size: var(--grid-size) var(--grid-size);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .saas-gradient-text {
+    background: linear-gradient(135deg, #0d9488 0%, #06b6d4 50%, #10b981 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .saas-text-glow {
+    text-shadow: 0 0 20px rgba(13, 148, 136, 0.3);
+  }
+
+  .saas-gradient-border {
+    position: relative;
+  }
+
+  .saas-gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: linear-gradient(135deg, #0d9488 0%, #06b6d4 100%);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: subtract;
+  }
 }

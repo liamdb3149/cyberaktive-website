@@ -12,6 +12,7 @@ import AIStrategyAssessment from "@/pages/ai-strategy-assessment";
 import LegalAIPromptLibrary from "@/pages/legal-ai-prompt-library";
 import AIMalpracticeCalculator from "@/pages/ai-malpractice-calculator";
 import LegalAIWorkshops from "@/pages/legal-ai-workshops";
+import SaaSLandingPage from "@/pages/ai-consulting-and-development-saas-software";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/legal-ai-prompt-library" component={LegalAIPromptLibrary} />
       <Route path="/ai-malpractice-risk-calculator" component={AIMalpracticeCalculator} />
       <Route path="/legal-ai-workshops" component={LegalAIWorkshops} />
+      <Route path="/ai-consulting-and-development-saas-software" component={SaaSLandingPage} />
       <Route component={NotFound} />
     </Switch>
   );
