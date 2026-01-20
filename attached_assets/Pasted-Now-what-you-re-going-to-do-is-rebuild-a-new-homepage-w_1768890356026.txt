@@ -1,0 +1,87 @@
+Now what you're going to do is rebuild a new homepage which will sit at our root domain. The legal page and the SAS page that you have previously built are now going to be inside pages that are linked to from the home page through buttons and also from the top nav menu. I'm going to attach a picture for the layout of the top nav menu, what I want it to look like. Obviously this is just a non-designed version but I want you to lay things out in this order. Then I want you to proceed with building the home page based on the copy document that is attached. Be conscious of links needing to work to each of the inner pages and I want to see your plan for making it dynamic, making elements move, making it interactive and beautiful 
+
+You are a website builder AI agent. Use the copy in the attached markdow file to build the Cyberaktive homepage following these exact specifications:
+
+**PAGE STRUCTURE (7 SECTIONS):**
+
+1. **HERO SECTION**
+   - Full-width hero with gradient background
+   - H1: Main headline (as written above)
+   - H2: Supporting subheadline
+   - Dual prominent CTAs side-by-side: "AI for Legal Teams" (primary button) + "AI for SaaS Companies" (primary button)
+   - Alternative CTA below: "Book 15-Minute Strategy Call" (secondary/ghost button)
+
+2. **URGENCY TICKER BAR**
+   - Full-width colored band below hero
+   - Scrolling text or static display
+   - Copy: "Every week without automation costs your team 20-30 hours of productivity."
+
+3. **WHO WE SERVE SECTION**
+   - H2: "Who We Serve"
+   - Two side-by-side cards/columns:
+     • Left card: "AI for Legal Teams" with icon, description, CTA button → links to /legal page
+     • Right card: "AI for SaaS Companies" with icon, description, CTA button → links to /saas page
+
+4. **HOW WE HELP SECTION**
+   - H2: "How We Help"
+   - Three service cards in row layout:
+     • Card 1: AI Consulting & Strategy Workshops
+     • Card 2: Custom AI Development & Automation
+     • Card 3: Implementation & Team Training
+   - Each card: Icon, H3, bullet points, brief description
+
+5. **SOCIAL PROOF / RESULTS SECTION**
+   - H2: "Proven Results"
+   - Stats/metrics display (3-4 key numbers with labels)
+   - Example format: Large number + description below
+   - Use impressive stats from copy above
+
+6. **WHY CYBERAKTIVE SECTION**
+   - H2: "Why Cyberaktive?"
+   - 4 differentiator cards/blocks:
+     • Industry-Specific Expertise
+     • Rapid Deployment
+     • Measurable ROI
+     • No Long-Term Lock-In
+   - Each with icon, title, short description
+
+7. **FINAL CTA SECTION**
+   - Full-width contrasting background
+   - H2: Final call-to-action headline
+   - Dual CTAs repeated: "AI for Legal Teams" + "AI for SaaS Companies"
+   - Alternative CTA: "Book 15-Minute Strategy Call"
+   - Contact email: team@cyberaktive.com
+   - Reassurance points (3 bullets)
+
+**DESIGN GUIDELINES:**
+- Clean, modern, professional aesthetic
+- Generous white space between sections
+- Consistent button styling (primary vs secondary)
+- Mobile-responsive layout
+- Fast-loading, performance-optimized
+- Clear visual hierarchy with typography
+
+**CTA BUTTON LINKS:**
+- "AI for Legal Teams" → /legal (or appropriate legal landing page URL)
+- "AI for SaaS Companies" → /saas (or appropriate SaaS landing page URL)
+- "Book 15-Minute Strategy Call" → Calendar booking link (Calendly/similar)
+- Contact email → team@cyberaktive.com
+
+**KEY COPYWRITING NOTES:**
+- Homepage is intentionally shorter/more generic than vertical pages
+- Focus is on directing visitors to specific vertical pages via CTAs
+- Emphasize competitive advantage, productivity, and measurable ROI
+- Maintain conversion-focused, benefit-driven language throughout
+- Use the exact copy provided above for each section
+
+**IMPLEMENTATION ORDER:**
+1. Build hero section first (most critical for conversions)
+2. Add urgency ticker
+3. Create "Who We Serve" cards with proper linking
+4. Build "How We Help" service section
+5. Add social proof/stats
+6. Create differentiator section
+7. Finish with final CTA section
+8. Test all CTA links and mobile responsiveness
+9. Optimize page load speed
+10. Review copy accuracy against this document
