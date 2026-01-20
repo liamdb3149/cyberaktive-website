@@ -569,7 +569,7 @@ export default function LegalAIWorkshops() {
                     <div className="md:col-span-3">
                       <div className="min-h-[400px]">
                         <iframe
-                          src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk"
+                          src="https://api.leadconnectorhq.com/widget/booking/ojEwUMPVyYMguIiF8ROp"
                           style={{ width: '100%', height: '700px', border: 'none', borderRadius: '8px' }}
                           scrolling="no"
                           id="msgsndr-calendar-workshop"

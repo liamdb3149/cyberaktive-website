@@ -26,7 +26,7 @@ export default function CalendarModal({ children }: CalendarModalProps) {
             </p>
             <div className="bg-white rounded-lg overflow-hidden">
               <iframe 
-                src="https://api.leadconnectorhq.com/widget/booking/EDeYrzypdFYfanS9vQQk" 
+                src="https://api.leadconnectorhq.com/widget/booking/ojEwUMPVyYMguIiF8ROp" 
                 style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '700px', height: '700px' }} 
                 scrolling="no" 
                 id="msgsndr-calendar"
