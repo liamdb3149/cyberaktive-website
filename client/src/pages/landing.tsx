@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Scale, Rocket, Lightbulb, Compass, Code2, Users, Clock, TrendingUp, Shield, ArrowRight, Mail, Calendar, Unlock } from "lucide-react";
+import { CheckCircle, Scale, Rocket, Lightbulb, Compass, Code2, Users, Clock, TrendingUp, Shield, ArrowRight, Mail, Calendar, Unlock, Play } from "lucide-react";
 import iconLogo from "@assets/Cyberaktive Logos t_1757653334662.png";
 import CalendarModal from "@/components/calendar-modal";
 import Header from "@/components/layout/header";
@@ -8,9 +8,58 @@ import Footer from "@/components/layout/footer";
 import { Section, GlassCard, FloatingOrb, RevealOnScroll, GeometricBlob } from "@/components/ui/visual";
 import { Link } from "wouter";
 import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+
+function YouTubeEmbed({ videoId, title }: { videoId: string; title: string }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  if (isPlaying) {
+    return (
+      <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+        <iframe
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="absolute inset-0 w-full h-full"
+        />
+      </div>
+    );
+  }
+
+  return (
+    <button
+      onClick={() => setIsPlaying(true)}
+      className="relative w-full aspect-video rounded-lg overflow-hidden group cursor-pointer block"
+      aria-label={`Play video: ${title}`}
+    >
+      <img
+        src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+        alt={title}
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        loading="lazy"
+        onError={(e) => {
+          const target = e.target as HTMLImageElement;
+          target.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+        }}
+      />
+      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+        <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+          <Play className="w-7 h-7 text-pink-600 ml-1" fill="currentColor" />
+        </div>
+      </div>
+    </button>
+  );
+}
 
 export default function Landing() {
   const [tickerIndex, setTickerIndex] = useState(0);
+
+  const { data: videos = [] } = useQuery<{ videoId: string; title: string }[]>({
+    queryKey: ["/api/youtube-videos"],
+    staleTime: 1000 * 60 * 60,
+  });
 
   const tickerStatements = [
     "Your competitors are automating while you're still doing manual work",
@@ -313,6 +362,50 @@ export default function Landing() {
             </div>
           </div>
         </Section>
+
+        {/* YouTube Video Showcase */}
+        {videos.length > 0 && (
+          <Section className="section-mesh relative bg-gradient-to-br from-indigo-50/40 via-purple-50/30 to-pink-50/40">
+            <FloatingOrb size="medium" style={{ top: "15%", right: "8%" }} />
+            <GeometricBlob style={{ bottom: "20%", left: "5%", width: "130px", height: "130px" }} />
+
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+              {/* Desktop: 3-column grid */}
+              <div className="hidden md:grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                {videos.map((video, index) => (
+                  <RevealOnScroll key={video.videoId} delay={index * 150}>
+                    <GlassCard className="p-3 group hover:scale-[1.02] transition-all duration-300 gradient-border">
+                      <YouTubeEmbed videoId={video.videoId} title={video.title} />
+                      <p className="text-sm font-semibold text-foreground mt-3 text-center">
+                        {video.title}
+                      </p>
+                    </GlassCard>
+                  </RevealOnScroll>
+                ))}
+              </div>
+
+              {/* Mobile: Carousel */}
+              <div className="md:hidden max-w-sm mx-auto">
+                <Carousel opts={{ loop: true }}>
+                  <CarouselContent>
+                    {videos.map((video) => (
+                      <CarouselItem key={video.videoId}>
+                        <GlassCard className="p-3 gradient-border">
+                          <YouTubeEmbed videoId={video.videoId} title={video.title} />
+                          <p className="text-sm font-semibold text-foreground mt-3 text-center">
+                            {video.title}
+                          </p>
+                        </GlassCard>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="-left-4" />
+                  <CarouselNext className="-right-4" />
+                </Carousel>
+              </div>
+            </div>
+          </Section>
+        )}
 
         {/* How We Help Section */}
         <Section className="section-mesh relative bg-gradient-to-br from-blue-50/40 via-indigo-50/30 to-purple-50/40">
