@@ -4,3 +4,12 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# Environment and secrets
+.env
+.env.*
+
+# Claude Code
+.claude/
+# Internal reference docs
+Reference/

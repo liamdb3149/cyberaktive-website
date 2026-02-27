@@ -15,6 +15,11 @@ import LegalAIPromptLibrary from "@/pages/legal-ai-prompt-library";
 import AIMalpracticeCalculator from "@/pages/ai-malpractice-calculator";
 import LegalAIWorkshops from "@/pages/legal-ai-workshops";
 import SaaSLandingPage from "@/pages/ai-consulting-and-development-saas-software";
+import DesignPreview from "@/pages/design-preview";
+import DesignPreviewA from "@/pages/design-preview-a";
+import DesignPreviewB from "@/pages/design-preview-b";
+import DesignPreviewC from "@/pages/design-preview-c";
+import DesignPreviewD from "@/pages/design-preview-d";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -41,6 +46,11 @@ function Router() {
       <Route path="/ai-malpractice-risk-calculator" component={AIMalpracticeCalculator} />
       <Route path="/legal-ai-workshops" component={LegalAIWorkshops} />
       <Route path="/ai-consulting-and-development-saas-software" component={SaaSLandingPage} />
+      <Route path="/design-preview" component={DesignPreview} />
+      <Route path="/design-preview-a" component={DesignPreviewA} />
+      <Route path="/design-preview-b" component={DesignPreviewB} />
+      <Route path="/design-preview-c" component={DesignPreviewC} />
+      <Route path="/design-preview-d" component={DesignPreviewD} />
       <Route component={NotFound} />
     </Switch>
   );

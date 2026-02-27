@@ -45,7 +45,7 @@ export default function Solution() {
   ];
 
   return (
-    <Section className="section-mesh relative bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-pink-50/30">
+    <Section className="section-mesh relative bg-gradient-to-br from-blue-50/30 via-sky-50/20 to-indigo-50/30">
       {/* Floating Elements */}
       <FloatingOrb size="large" style={{ top: "15%", right: "10%" }} />
       <FloatingOrb size="medium" style={{ bottom: "20%", left: "8%" }} />
@@ -99,7 +99,7 @@ export default function Solution() {
                         <div className="text-blue-400">→ AI responds within 2 minutes</div>
                         <div className="text-yellow-400">→ Scheduling property tour</div>
                         <div className="text-green-400">✓ Lead converted to application</div>
-                        <div className="text-purple-400">→ Processing background check</div>
+                        <div className="text-blue-400">→ Processing background check</div>
                         <div className="text-green-400">✓ New lease generated</div>
                       </div>
                     </CodeFrame>

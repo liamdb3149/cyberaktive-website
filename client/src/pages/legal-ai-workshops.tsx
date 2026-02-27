@@ -208,7 +208,7 @@ export default function LegalAIWorkshops() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <Section className="section-mesh relative bg-gradient-to-br from-pink-50/40 via-purple-50/30 to-blue-50/40 pt-24 lg:pt-32">
+        <Section className="section-mesh relative bg-gradient-to-br from-indigo-50/40 via-sky-50/30 to-blue-50/40 pt-24 lg:pt-32">
           <FloatingOrb size="large" style={{ top: "15%", left: "5%" }} />
           <FloatingOrb size="medium" style={{ bottom: "20%", right: "15%" }} />
           <FloatingOrb size="small" style={{ top: "50%", right: "25%" }} />
@@ -245,7 +245,7 @@ export default function LegalAIWorkshops() {
         </Section>
 
         {/* What Your Team Gets - Tabbed Section */}
-        <Section className="section-mesh relative bg-gradient-to-br from-blue-50/40 via-white to-purple-50/40">
+        <Section className="section-mesh relative bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/40">
           <FloatingOrb size="medium" style={{ top: "30%", left: "8%" }} />
           <GeometricBlob style={{ bottom: "20%", right: "5%", width: "150px", height: "150px" }} />
           
@@ -315,7 +315,7 @@ export default function LegalAIWorkshops() {
         </Section>
 
         {/* Results You'll See */}
-        <Section className="section-mesh relative bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-blue-50/40">
+        <Section className="section-mesh relative bg-gradient-to-br from-indigo-50/40 via-sky-50/30 to-blue-50/40">
           <FloatingOrb size="large" style={{ top: "20%", right: "10%" }} />
           <FloatingOrb size="small" style={{ bottom: "30%", left: "15%" }} />
           <GeometricBlob style={{ top: "40%", left: "5%", width: "120px", height: "120px" }} />
@@ -355,7 +355,7 @@ export default function LegalAIWorkshops() {
         </Section>
 
         {/* Workshop Process */}
-        <Section className="section-mesh relative bg-gradient-to-br from-blue-50/40 via-white to-pink-50/40">
+        <Section className="section-mesh relative bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/40">
           <FloatingOrb size="medium" style={{ top: "25%", left: "5%" }} />
           <FloatingOrb size="large" style={{ bottom: "15%", right: "8%" }} />
           <GeometricBlob style={{ top: "60%", right: "15%", width: "180px", height: "180px" }} />
@@ -453,7 +453,7 @@ export default function LegalAIWorkshops() {
         </Section>
 
         {/* Who This Is For */}
-        <Section className="section-mesh relative bg-gradient-to-br from-pink-50/40 via-purple-50/30 to-blue-50/40">
+        <Section className="section-mesh relative bg-gradient-to-br from-indigo-50/40 via-sky-50/30 to-blue-50/40">
           <FloatingOrb size="small" style={{ top: "20%", right: "15%" }} />
           <GeometricBlob style={{ bottom: "25%", left: "8%", width: "140px", height: "140px" }} />
           
@@ -521,7 +521,7 @@ export default function LegalAIWorkshops() {
         </Section>
 
         {/* Form Section */}
-        <Section id="workshop-form" className="section-mesh relative bg-gradient-to-br from-blue-50/40 via-white to-purple-50/40">
+        <Section id="workshop-form" className="section-mesh relative bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/40">
           <FloatingOrb size="medium" style={{ top: "30%", right: "10%" }} />
           <GeometricBlob style={{ bottom: "20%", left: "5%", width: "160px", height: "160px" }} />
           
@@ -586,7 +586,7 @@ export default function LegalAIWorkshops() {
         </Section>
 
         {/* FAQ Section */}
-        <Section className="section-mesh relative bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-blue-50/40">
+        <Section className="section-mesh relative bg-gradient-to-br from-indigo-50/40 via-sky-50/30 to-blue-50/40">
           <FloatingOrb size="small" style={{ top: "25%", left: "10%" }} />
           <GeometricBlob style={{ bottom: "30%", right: "8%", width: "120px", height: "120px" }} />
           

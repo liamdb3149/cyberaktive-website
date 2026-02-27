@@ -244,8 +244,8 @@ export default function PresentationGenerator({ project, onNext }: PresentationG
               </div>
               <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">ROI</div>
             </div>
-            <div className="text-center p-4 bg-purple-50 dark:bg-purple-950 rounded-lg">
-              <div className="text-3xl font-bold text-purple-600 dark:text-purple-400" data-testid="summary-payback">
+            <div className="text-center p-4 bg-indigo-50 dark:bg-indigo-950 rounded-lg">
+              <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400" data-testid="summary-payback">
                 {roi.paybackPeriodWeeks}
               </div>
               <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">Weeks to Payback</div>

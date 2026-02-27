@@ -5,7 +5,7 @@ export default function Calendar() {
   return (
     <Section 
       id="calendar" 
-      className="section-mesh relative bg-gradient-to-br from-green-50/40 via-blue-50/30 to-purple-50/40"
+      className="section-mesh relative bg-gradient-to-br from-sky-50/40 via-blue-50/30 to-indigo-50/40"
     >
       {/* Floating Elements */}
       <FloatingOrb size="large" style={{ top: "15%", right: "10%" }} />

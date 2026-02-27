@@ -119,7 +119,7 @@ export default function DIYLegalCopilotRoadmap() {
 
               <Card className="border-2 border-blue-200 dark:border-blue-800">
                 <CardContent className="pt-6">
-                  <FileText className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                  <FileText className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
                   <h3 className="font-bold text-lg mb-2">Contractor-Ready</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-400">
                     Hand this to your IT team or contractor as a ready-to-execute brief with all technical specs

@@ -169,6 +169,9 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Glow Bar - transition from hero to content */}
+      <div className="glow-bar" />
     </section>
   );
 }

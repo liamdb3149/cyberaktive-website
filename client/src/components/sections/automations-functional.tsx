@@ -67,7 +67,7 @@ export default function Automations() {
   const CurrentIcon = CheckCircle;
 
   return (
-    <Section id="automations" className="section-mesh relative bg-gradient-to-br from-purple-50/40 via-blue-50/30 to-indigo-50/40">
+    <Section id="automations" className="relative bg-white">
       {/* Floating Elements */}
       <FloatingOrb size="large" style={{ top: "20%", left: "8%" }} />
       <FloatingOrb size="medium" style={{ bottom: "30%", right: "12%" }} />

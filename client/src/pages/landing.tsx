@@ -46,7 +46,7 @@ function YouTubeEmbed({ videoId, title }: { videoId: string; title: string }) {
       />
       <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
         <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-          <Play className="w-7 h-7 text-pink-600 ml-1" fill="currentColor" />
+          <Play className="w-7 h-7 text-blue-600 ml-1" fill="currentColor" />
         </div>
       </div>
     </button>
@@ -104,7 +104,7 @@ export default function Landing() {
       ],
       cta: "Explore AI for Legal",
       link: "/ai-consulting-development-legal",
-      color: "pink"
+      color: "blue"
     },
     {
       icon: Rocket,
@@ -314,7 +314,7 @@ export default function Landing() {
         </div>
 
         {/* Who We Serve Section */}
-        <Section className="section-mesh relative bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-blue-50/40">
+        <Section className="section-mesh relative bg-gradient-to-br from-indigo-50/40 via-sky-50/30 to-blue-50/40">
           <FloatingOrb size="large" style={{ top: "10%", left: "5%" }} />
           <FloatingOrb size="medium" style={{ bottom: "15%", right: "10%" }} />
           <GeometricBlob style={{ top: "30%", right: "15%", width: "150px", height: "150px" }} />
@@ -334,9 +334,9 @@ export default function Landing() {
             <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {industryCards.map((card, index) => (
                 <RevealOnScroll key={index} delay={index * 200}>
-                  <GlassCard className={`h-full p-8 group hover:scale-[1.02] transition-all duration-300 ${card.color === 'pink' ? 'gradient-border' : 'border-2 border-teal-200 hover:border-teal-400'}`}>
-                    <div className={`w-14 h-14 ${card.color === 'pink' ? 'bg-pink-100' : 'bg-teal-100'} rounded-xl flex items-center justify-center mb-6`}>
-                      <card.icon className={`w-7 h-7 ${card.color === 'pink' ? 'text-pink-600' : 'text-teal-600'}`} />
+                  <GlassCard className={`h-full p-8 group hover:scale-[1.02] transition-all duration-300 ${card.color === 'blue' ? 'gradient-border' : 'border-2 border-teal-200 hover:border-teal-400'}`}>
+                    <div className={`w-14 h-14 ${card.color === 'blue' ? 'bg-blue-100' : 'bg-teal-100'} rounded-xl flex items-center justify-center mb-6`}>
+                      <card.icon className={`w-7 h-7 ${card.color === 'blue' ? 'text-blue-600' : 'text-teal-600'}`} />
                     </div>
                     <h3 className="text-xl font-bold text-foreground mb-4">{card.title}</h3>
                     <p className="text-muted-foreground mb-6 leading-relaxed text-sm">{card.description}</p>
@@ -344,14 +344,14 @@ export default function Landing() {
                     <div className="space-y-2 mb-6">
                       {card.outcomes.map((outcome, i) => (
                         <div key={i} className="flex items-center gap-2 text-sm">
-                          <CheckCircle className={`w-4 h-4 flex-shrink-0 ${card.color === 'pink' ? 'text-pink-500' : 'text-teal-500'}`} />
+                          <CheckCircle className={`w-4 h-4 flex-shrink-0 ${card.color === 'blue' ? 'text-blue-500' : 'text-teal-500'}`} />
                           <span className="text-foreground font-medium">{outcome}</span>
                         </div>
                       ))}
                     </div>
 
                     <Link href={card.link}>
-                      <Button className={`w-full ${card.color === 'pink' ? 'premium-button' : 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600'} text-white font-semibold`}>
+                      <Button className={`w-full ${card.color === 'blue' ? 'premium-button' : 'bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600'} text-white font-semibold`}>
                         {card.cta}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
@@ -365,7 +365,7 @@ export default function Landing() {
 
         {/* YouTube Video Showcase */}
         {videos.length > 0 && (
-          <Section className="section-mesh relative bg-gradient-to-br from-indigo-50/40 via-purple-50/30 to-pink-50/40">
+          <Section className="section-mesh relative bg-gradient-to-br from-indigo-50/40 via-sky-50/30 to-blue-50/40">
             <FloatingOrb size="medium" style={{ top: "15%", right: "8%" }} />
             <GeometricBlob style={{ bottom: "20%", left: "5%", width: "130px", height: "130px" }} />
 
@@ -408,7 +408,7 @@ export default function Landing() {
         )}
 
         {/* How We Help Section */}
-        <Section className="section-mesh relative bg-gradient-to-br from-blue-50/40 via-indigo-50/30 to-purple-50/40">
+        <Section className="section-mesh relative bg-gradient-to-br from-blue-50/40 via-indigo-50/30 to-sky-50/40">
           <FloatingOrb size="small" style={{ top: "20%", right: "8%" }} />
           <GeometricBlob style={{ bottom: "20%", left: "10%", width: "120px", height: "120px" }} />
 
@@ -515,7 +515,7 @@ export default function Landing() {
         </Section>
 
         {/* Why Cyberaktive Section */}
-        <Section className="section-mesh relative bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-rose-50/40">
+        <Section className="section-mesh relative bg-gradient-to-br from-indigo-50/40 via-sky-50/30 to-blue-50/40">
           <FloatingOrb size="medium" style={{ top: "20%", left: "5%" }} />
           <GeometricBlob style={{ bottom: "15%", right: "10%", width: "140px", height: "140px" }} />
 
@@ -559,7 +559,7 @@ export default function Landing() {
         {/* Final CTA Section */}
         <Section
           id="final-cta"
-          className="section-mesh relative bg-gradient-to-br from-pink-50/50 via-purple-50/40 to-indigo-50/30"
+          className="section-mesh relative bg-gradient-to-br from-indigo-50/50 via-sky-50/40 to-blue-50/30"
         >
           <FloatingOrb size="large" style={{ top: "10%", left: "15%" }} />
           <FloatingOrb size="medium" style={{ bottom: "10%", right: "20%" }} />

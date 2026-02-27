@@ -64,7 +64,7 @@ export default function Automations() {
   const currentAutomations = activeTab === "revenue" ? revenueAutomations : operationsAutomations;
 
   return (
-    <Section className="section-mesh relative bg-gradient-to-br from-purple-50/30 via-blue-50/20 to-indigo-50/30">
+    <Section className="section-mesh relative bg-gradient-to-br from-sky-50/30 via-blue-50/20 to-indigo-50/30">
       {/* Floating Elements */}
       <FloatingOrb size="large" style={{ top: "20%", left: "5%" }} />
       <FloatingOrb size="medium" style={{ bottom: "15%", right: "10%" }} />

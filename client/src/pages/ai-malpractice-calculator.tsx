@@ -94,7 +94,7 @@ export default function AIMalpracticeCalculator() {
 
   if (showResults) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-brand-dark via-brand-dark to-brand-purple/20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-900/20">
         <Header />
         <ResultsDashboard 
           riskScore={calculateRiskScore()} 

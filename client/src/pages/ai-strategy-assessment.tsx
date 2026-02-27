@@ -662,9 +662,9 @@ export default function AIStrategyAssessment() {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-purple-200 dark:border-purple-800">
+              <Card className="border-2 border-indigo-200 dark:border-indigo-800">
                 <CardContent className="pt-6">
-                  <Shield className="w-10 h-10 text-purple-600 mx-auto mb-3" />
+                  <Shield className="w-10 h-10 text-indigo-600 mx-auto mb-3" />
                   <h3 className="font-bold mb-2">Specialist</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-400">
                     Purpose-built legal AI platforms (Harvey, CoCounsel, etc.)
@@ -728,13 +728,13 @@ export default function AIStrategyAssessment() {
                   <Card>
                     <CardContent className="p-6">
                       <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
-                        <Shield className="w-5 h-5 text-purple-600" />
+                        <Shield className="w-5 h-5 text-indigo-600" />
                         Privacy & Governance Checklist
                       </h3>
                       <ul className="space-y-2">
                         {result.privacyChecklist.slice(0, 4).map((item, i) => (
                           <li key={i} className="flex items-start gap-2">
-                            <AlertCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                            <AlertCircle className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
                             <span className="text-sm">{item}</span>
                           </li>
                         ))}

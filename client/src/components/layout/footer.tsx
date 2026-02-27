@@ -21,7 +21,7 @@ export default function Footer() {
 
 
   return (
-    <footer className="bg-card border-t border-border py-10">
+    <footer className="border-t border-border py-10" style={{ background: '#ffffff', isolation: 'isolate' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Footer CTA */}

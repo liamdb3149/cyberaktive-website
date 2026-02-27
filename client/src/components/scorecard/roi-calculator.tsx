@@ -200,11 +200,11 @@ export default function ROICalculator({ project, onNext }: ROICalculatorProps) {
               <div className="text-sm font-medium text-blue-900 dark:text-blue-300">ROI Percentage</div>
             </div>
 
-            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950 dark:to-purple-900 rounded-xl">
-              <div className="text-4xl font-bold text-purple-700 dark:text-purple-400 mb-2" data-testid="text-payback-period">
+            <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 dark:from-indigo-950 dark:to-indigo-900 rounded-xl">
+              <div className="text-4xl font-bold text-indigo-700 dark:text-indigo-400 mb-2" data-testid="text-payback-period">
                 {roi.paybackPeriodWeeks}
               </div>
-              <div className="text-sm font-medium text-purple-900 dark:text-purple-300">Weeks to Payback</div>
+              <div className="text-sm font-medium text-indigo-900 dark:text-indigo-300">Weeks to Payback</div>
             </div>
           </div>
         </CardContent>
@@ -250,7 +250,7 @@ export default function ROICalculator({ project, onNext }: ROICalculatorProps) {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-lg">
-              <Target className="w-5 h-5 text-purple-600" />
+              <Target className="w-5 h-5 text-indigo-600" />
               Capacity & Quality
             </CardTitle>
           </CardHeader>

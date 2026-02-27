@@ -6,7 +6,7 @@ export default function Team() {
   return (
     <Section 
       id="team" 
-      className="section-mesh relative bg-gradient-to-br from-blue-50/40 via-purple-50/30 to-pink-50/40"
+      className="section-mesh relative bg-gradient-to-br from-blue-50/40 via-sky-50/30 to-indigo-50/40"
     >
       {/* Floating Elements */}
       <FloatingOrb size="large" style={{ top: "20%", left: "8%" }} />

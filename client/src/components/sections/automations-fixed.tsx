@@ -26,7 +26,7 @@ export default function Automations() {
   ];
 
   return (
-    <Section className="section-mesh relative bg-gradient-to-br from-purple-50/40 via-blue-50/30 to-indigo-50/40">
+    <Section className="section-mesh relative bg-gradient-to-br from-sky-50/40 via-blue-50/30 to-indigo-50/40">
       {/* Floating Elements */}
       <FloatingOrb size="large" style={{ top: "20%", left: "8%" }} />
       <FloatingOrb size="medium" style={{ bottom: "30%", right: "12%" }} />

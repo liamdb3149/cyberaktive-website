@@ -223,9 +223,9 @@ export default function ResultsDashboard({ riskScore, answers, questions, onRese
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-purple-100 border-2 border-purple-400 rounded-lg p-4">
+                <div className="bg-indigo-100 border-2 border-indigo-400 rounded-lg p-4">
                   <h4 className="font-black text-gray-900 mb-2 text-lg">Highest Risk Area</h4>
-                  <p className="text-purple-900 font-black text-2xl">
+                  <p className="text-indigo-900 font-black text-2xl">
                     {categoryData.reduce((max, curr) => curr.score > max.score ? curr : max).name}
                   </p>
                 </div>

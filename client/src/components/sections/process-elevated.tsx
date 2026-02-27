@@ -46,9 +46,9 @@ export default function Process() {
   ];
 
   return (
-    <Section 
-      id="process" 
-      className="section-mesh relative bg-gradient-to-br from-indigo-50/40 via-cyan-50/30 to-purple-50/40"
+    <Section
+      id="process"
+      className="relative bg-white"
     >
       {/* Floating Elements */}
       <FloatingOrb size="large" style={{ top: "20%", right: "8%" }} />

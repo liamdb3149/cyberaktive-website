@@ -24,9 +24,9 @@ export default function RiskReversal() {
   ];
 
   return (
-    <Section 
-      id="risk-reversal" 
-      className="section-mesh relative bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-blue-50/40"
+    <Section
+      id="risk-reversal"
+      className="relative bg-white"
     >
       {/* Floating Elements */}
       <FloatingOrb size="large" style={{ top: "15%", left: "10%" }} />

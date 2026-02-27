@@ -171,7 +171,7 @@ export default function ContractReviewCalculator() {
       <Header />
       
       {/* Hero Section */}
-      <Section className="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+      <Section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-testid="heading-hero">
             Contract Review Automation ROI Calculator
@@ -368,7 +368,7 @@ export default function ContractReviewCalculator() {
             {/* Results Section */}
             <div className="space-y-6">
               <Card className="border-2 border-blue-600 shadow-xl">
-                <CardHeader className="bg-gradient-to-r from-blue-50 to-purple-50">
+                <CardHeader className="bg-gradient-to-r from-blue-50 to-indigo-50">
                   <CardTitle className="text-2xl">Your ROI Results</CardTitle>
                   <CardDescription>Instant financial impact analysis</CardDescription>
                 </CardHeader>
@@ -392,7 +392,7 @@ export default function ContractReviewCalculator() {
                   </div>
 
                   {/* ROI Percentage */}
-                  <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg">
+                  <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
                     <div className="text-sm text-gray-600 mb-2">Return on Investment</div>
                     <div className={`text-5xl font-bold ${getROIColor(results.roi)}`} data-testid="result-roi">
                       {!isFinite(results.roi) ? 'Unbounded' : `${results.roi.toFixed(0)}%`}
@@ -435,9 +435,9 @@ export default function ContractReviewCalculator() {
                       {formatCurrency(results.netAnnualBenefit * 2)}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center p-3 bg-purple-50 rounded">
+                  <div className="flex justify-between items-center p-3 bg-indigo-50 rounded">
                     <span className="text-sm font-medium text-gray-700">3-Year Total Benefit</span>
-                    <span className="font-bold text-purple-600" data-testid="result-year3">
+                    <span className="font-bold text-indigo-600" data-testid="result-year3">
                       {formatCurrency(results.threeYearBenefit)}
                     </span>
                   </div>

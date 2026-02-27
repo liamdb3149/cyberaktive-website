@@ -45,10 +45,10 @@ export default function Solution() {
   ];
 
   return (
-    <Section className="section-mesh relative bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-pink-50/30">
+    <Section className="section-mesh relative bg-gradient-to-br from-blue-50/30 via-sky-50/20 to-indigo-50/30 overflow-hidden">
       {/* Floating Elements */}
       <FloatingOrb size="large" style={{ top: "15%", right: "10%" }} />
-      <FloatingOrb size="medium" style={{ bottom: "20%", left: "8%" }} />
+      <FloatingOrb size="medium" className="pink" style={{ bottom: "20%", left: "8%" }} />
       <GeometricBlob style={{ top: "40%", left: "5%", width: "120px", height: "120px" }} />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -100,7 +100,7 @@ export default function Solution() {
                         <div className="text-blue-400">→ AI categorizes & routes</div>
                         <div className="text-yellow-400">→ Automated intake started</div>
                         <div className="text-green-400">✓ Document prep initiated</div>
-                        <div className="text-purple-400">→ Compliance check running</div>
+                        <div className="text-blue-400">→ Compliance check running</div>
                         <div className="text-green-400">✓ Attorney review ready</div>
                       </div>
                     </CodeFrame>

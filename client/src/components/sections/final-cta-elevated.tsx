@@ -17,10 +17,12 @@ export default function FinalCTA() {
   ];
 
   return (
-    <Section 
-      id="final-cta" 
-      className="section-mesh relative bg-gradient-to-br from-violet-50/50 via-rose-50/40 to-amber-50/30"
+    <Section
+      id="final-cta"
+      className="section-mesh relative bg-gradient-to-br from-indigo-50/50 via-sky-50/40 to-blue-50/30"
     >
+      {/* Glow bar at top of section */}
+      <div className="glow-bar-top absolute top-0 left-0 right-0 z-20" />
       {/* Floating Elements */}
       <FloatingOrb size="large" style={{ top: "10%", left: "15%" }} />
       <FloatingOrb size="medium" style={{ bottom: "10%", right: "20%" }} />
