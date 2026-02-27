@@ -13,3 +13,5 @@ vite.config.ts.*
 .claude/
 # Internal reference docs
 Reference/
+.vercel
+.env*.local
