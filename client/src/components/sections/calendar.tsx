@@ -67,7 +67,7 @@ export default function Calendar() {
             {/* GoHighLevel Calendar Integration */}
             <GlassCard className="p-0 overflow-hidden border border-primary/10 gradient-border">
               <iframe 
-                src="https://api.leadconnectorhq.com/widget/booking/ojEwUMPVyYMguIiF8ROp" 
+                src="https://api.leadconnectorhq.com/widget/booking/tlZAXVaHxTw9fvistaTr" 
                 style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '700px', height: '700px' }} 
                 scrolling="no" 
                 id="msgsndr-calendar"
