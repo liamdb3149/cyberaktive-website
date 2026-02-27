@@ -11,7 +11,9 @@ import {
   Search,
   MessageSquare,
   Zap,
-  ArrowRight
+  ArrowRight,
+  Calendar,
+  Mail
 } from "lucide-react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
@@ -565,17 +567,24 @@ export default function LegalAIWorkshops() {
                       </p>
                     </div>
 
-                    {/* Right side - Form */}
-                    <div className="md:col-span-3">
-                      <div className="min-h-[400px]">
-                        <iframe
-                          src="https://api.leadconnectorhq.com/widget/booking/ojEwUMPVyYMguIiF8ROp"
-                          style={{ width: '100%', height: '700px', border: 'none', borderRadius: '8px' }}
-                          scrolling="no"
-                          id="msgsndr-calendar-workshop"
-                          title="Book Your 15-Minute Introductory Call"
-                          data-testid="iframe-workshop-form"
-                        />
+                    {/* Right side - CTA */}
+                    <div className="md:col-span-3 flex flex-col items-center justify-center py-12 space-y-6">
+                      <a href="https://api.leadconnectorhq.com/widget/booking/tlZAXVaHxTw9fvistaTr" target="_blank" rel="noopener noreferrer" className="group">
+                        <Button
+                          size="lg"
+                          className="booking-cta-button premium-button text-white font-bold px-12 py-7 rounded-2xl text-lg shadow-lg shadow-primary/25 group-hover:shadow-xl group-hover:shadow-primary/30 transition-all duration-300"
+                          data-testid="button-workshop-book"
+                        >
+                          <Calendar className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
+                          Book 15-Minute Discovery Call
+                        </Button>
+                      </a>
+                      <p className="text-sm text-muted-foreground">No obligation. Quick and focused.</p>
+                      <div className="flex items-center gap-3 bg-white/50 backdrop-blur-sm px-5 py-2.5 rounded-xl border border-border/30">
+                        <Mail className="w-4 h-4 text-primary" />
+                        <a href="mailto:team@cyberaktive.com" className="text-sm text-foreground hover:text-primary font-semibold transition-colors">
+                          team@cyberaktive.com
+                        </a>
                       </div>
                     </div>
                   </div>

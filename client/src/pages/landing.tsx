@@ -577,11 +577,26 @@ export default function Landing() {
                     </p>
                   </div>
 
+                  {/* Hero booking button */}
+                  <div className="flex justify-center">
+                    <CalendarModal>
+                      <Button
+                        size="lg"
+                        className="booking-cta-button premium-button text-white font-bold px-14 py-7 rounded-2xl text-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
+                      >
+                        <Calendar className="w-6 h-6 mr-3" />
+                        Book 15-Minute Strategy Call
+                      </Button>
+                    </CalendarModal>
+                  </div>
+
+                  {/* Industry buttons - secondary */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <Link href="/ai-consulting-development-legal">
                       <Button
                         size="lg"
-                        className="premium-button text-white font-semibold px-8 py-5 rounded-xl"
+                        variant="outline"
+                        className="border-2 border-primary/20 text-foreground hover:bg-primary/10 font-semibold px-8 py-5 rounded-xl"
                       >
                         <Scale className="w-5 h-5 mr-2" />
                         AI for Legal Teams
@@ -590,24 +605,14 @@ export default function Landing() {
                     <Link href="/ai-consulting-and-development-saas-software">
                       <Button
                         size="lg"
-                        className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-semibold px-8 py-5 rounded-xl"
+                        variant="outline"
+                        className="border-2 border-teal-500/20 text-foreground hover:bg-teal-500/10 font-semibold px-8 py-5 rounded-xl"
                       >
                         <Rocket className="w-5 h-5 mr-2" />
                         AI for SaaS Companies
                       </Button>
                     </Link>
                   </div>
-
-                  <CalendarModal>
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="border-2 border-primary/30 text-foreground hover:bg-primary/10 font-semibold px-6 py-4 rounded-xl"
-                    >
-                      <Calendar className="w-5 h-5 mr-2" />
-                      Book 15-Minute Strategy Call
-                    </Button>
-                  </CalendarModal>
 
                   <div className="flex items-center justify-center gap-4 bg-white/50 backdrop-blur-sm px-6 py-3 rounded-2xl border border-border/30 mx-auto w-fit">
                     <Mail className="w-5 h-5 text-primary" />

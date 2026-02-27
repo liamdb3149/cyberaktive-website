@@ -460,30 +460,25 @@ export default function ContractReviewCalculator() {
         </div>
       </Section>
 
-      {/* Calendar Section */}
+      {/* CTA Section */}
       <Section className="py-12" id="calendar">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-testid="heading-calendar">
-              <CalendarIcon className="inline-block w-8 h-8 mr-3 text-accent" />
-              Book Your Introductory Call
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto" data-testid="text-calendar-subtitle">
-              Get a customized ROI model for your firm and discover specific automation opportunities in contract review.
-            </p>
-          </div>
-          <div className="bg-white rounded-lg shadow-xl p-4">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/booking/ojEwUMPVyYMguIiF8ROp"
-              style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '800px', height: '800px' }}
-              scrolling="no"
-              id="msgsndr-calendar"
-              title="Book Your Introductory Call"
-              data-testid="iframe-calendar"
-            />
-            <br />
-            <script src="https://link.msgsndr.com/js/embed.js" type="text/javascript"></script>
-          </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-testid="heading-calendar">
+            Book Your Introductory Call
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8" data-testid="text-calendar-subtitle">
+            Get a customized ROI model for your firm and discover specific automation opportunities in contract review.
+          </p>
+          <a href="https://api.leadconnectorhq.com/widget/booking/tlZAXVaHxTw9fvistaTr" target="_blank" rel="noopener noreferrer" className="group inline-block">
+            <Button
+              size="lg"
+              className="booking-cta-button premium-button text-white font-bold px-14 py-7 rounded-2xl text-lg shadow-lg shadow-primary/25 group-hover:shadow-xl group-hover:shadow-primary/30 transition-all duration-300"
+            >
+              <CalendarIcon className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
+              Book 15-Minute Strategy Call
+            </Button>
+          </a>
+          <p className="text-sm text-muted-foreground mt-6">No obligation. 15 minutes. Clear next steps.</p>
         </div>
       </Section>
 

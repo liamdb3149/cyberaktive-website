@@ -9,7 +9,6 @@ import Results from "@/components/sections/results-fixed";
 import Process from "@/components/sections/process-elevated";
 import Team from "@/components/sections/team";
 import RiskReversal from "@/components/sections/risk-reversal-elevated";
-import Calendar from "@/components/sections/calendar";
 import FinalCTA from "@/components/sections/final-cta-elevated";
 
 export default function Home() {
@@ -26,7 +25,6 @@ export default function Home() {
         <Process />
         <Team />
         <RiskReversal />
-        <Calendar />
         <FinalCTA />
       </main>
       <Footer />

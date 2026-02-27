@@ -962,93 +962,6 @@ export default function SaaSLandingPage() {
           </div>
         </Section>
 
-        {/* Calendar/Booking Section */}
-        <Section
-          id="calendar"
-          className="section-mesh-saas relative bg-gradient-to-br from-emerald-50/40 via-teal-50/30 to-cyan-50/40"
-        >
-          <FloatingOrb size="large" style={{ top: "15%", right: "10%" }} />
-          <FloatingOrb size="medium" style={{ bottom: "20%", left: "15%" }} />
-          <FloatingOrb size="small" style={{ top: "50%", left: "5%" }} />
-          <GeometricBlob style={{ top: "25%", left: "20%", width: "160px", height: "160px" }} />
-          <GeometricBlob style={{ bottom: "15%", right: "10%", width: "120px", height: "120px" }} />
-
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <RevealOnScroll>
-              <div className="max-w-3xl mx-auto text-center mb-10">
-                <div className="inline-block mb-4">
-                  <GlassCard className="px-5 py-2.5 bg-gradient-to-r from-cyan-500/20 to-teal-500/10">
-                    <div className="flex items-center space-x-2">
-                      <Calendar className="w-4 h-4 text-cyan-600" />
-                      <span className="text-xs font-bold text-cyan-600 uppercase tracking-wider">Free Consultation</span>
-                    </div>
-                  </GlassCard>
-                </div>
-
-                <h2 className="premium-text-2xl lg:text-4xl mb-4 text-foreground saas-text-glow">
-                  Book Your 15-Minute Call
-                </h2>
-                <p className="premium-text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  Quick, no-obligation consultation to see if we can accelerate your development velocity. Pick a time—we'll show you what's possible.
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 max-w-2xl mx-auto">
-                  <RevealOnScroll delay={200}>
-                    <GlassCard className="text-center group hover:scale-105 transition-all duration-300 py-4">
-                      <Clock className="w-6 h-6 text-teal-600 mx-auto mb-2" />
-                      <h3 className="font-semibold text-sm text-foreground mb-1">15 Minutes</h3>
-                      <p className="text-xs text-muted-foreground">Fast & focused</p>
-                    </GlassCard>
-                  </RevealOnScroll>
-
-                  <RevealOnScroll delay={300}>
-                    <GlassCard className="text-center group hover:scale-105 transition-all duration-300 py-4">
-                      <CheckCircle className="w-6 h-6 text-cyan-600 mx-auto mb-2" />
-                      <h3 className="font-semibold text-sm text-foreground mb-1">100% Free</h3>
-                      <p className="text-xs text-muted-foreground">No strings attached</p>
-                    </GlassCard>
-                  </RevealOnScroll>
-
-                  <RevealOnScroll delay={400}>
-                    <GlassCard className="text-center group hover:scale-105 transition-all duration-300 py-4">
-                      <Calendar className="w-6 h-6 text-teal-600 mx-auto mb-2" />
-                      <h3 className="font-semibold text-sm text-foreground mb-1">Clear Next Steps</h3>
-                      <p className="text-xs text-muted-foreground">Know what's possible</p>
-                    </GlassCard>
-                  </RevealOnScroll>
-                </div>
-              </div>
-            </RevealOnScroll>
-
-            <RevealOnScroll delay={600}>
-              <div className="max-w-3xl mx-auto">
-                <GlassCard className="p-0 overflow-hidden border border-teal-500/10 saas-gradient-border">
-                  <iframe
-                    src="https://api.leadconnectorhq.com/widget/booking/ojEwUMPVyYMguIiF8ROp"
-                    style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '700px', height: '700px' }}
-                    scrolling="no"
-                    id="msgsndr-calendar-saas"
-                    title="Book Your 15-Minute Introductory Call"
-                  />
-                </GlassCard>
-              </div>
-            </RevealOnScroll>
-
-            <RevealOnScroll delay={800}>
-              <div className="text-center mt-10">
-                <div className="inline-block bg-cyan-500/5 rounded-xl px-6 py-4 backdrop-blur-sm border border-cyan-500/10">
-                  <p className="text-base text-foreground mb-1 font-semibold">
-                    See What AI Automation Can Do for Your Team
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    Let's discuss whether automation can deliver real velocity gains for your SaaS team
-                  </p>
-                </div>
-              </div>
-            </RevealOnScroll>
-          </div>
-        </Section>
-
         {/* Final CTA Section */}
         <Section
           id="final-cta"
@@ -1061,35 +974,36 @@ export default function SaaSLandingPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <RevealOnScroll>
               <GlassCard className="max-w-3xl mx-auto text-center bg-gradient-to-br from-teal-500/10 via-cyan-500/5 to-teal-500/10 saas-gradient-border">
-                <div className="space-y-6">
+                <div className="space-y-8">
                   <div>
                     <h2 className="premium-text-2xl lg:text-4xl mb-4 text-foreground saas-text-glow">
                       Automation That Moves the Needle
                     </h2>
-                    <p className="premium-text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-                      You didn't build a SaaS company to have your engineers waste time on toil. Let's figure out where automation can help—and where it can't. Book a quick call and we'll show you what's realistic, what's profitable, and what to skip.
+                    <p className="premium-text-lg text-muted-foreground max-w-2xl mx-auto">
+                      You didn't build a SaaS company to have your engineers waste time on toil. Let's figure out where automation can help - and where it can't. Book a quick call and we'll show you what's realistic, what's profitable, and what to skip.
                     </p>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <Button
-                      size="lg"
-                      className="saas-premium-button text-white font-semibold px-12 py-6 rounded-2xl group"
-                      onClick={() => scrollToSection('calendar')}
-                    >
-                      <Calendar className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
-                      Book Your Call Now
-                    </Button>
-
-                    <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-2xl border border-white/20">
-                      <Mail className="w-5 h-5 text-teal-600" />
-                      <a
-                        href="mailto:team@cyberaktive.com"
-                        className="text-foreground hover:text-teal-600 font-semibold transition-colors"
+                  <div className="flex justify-center">
+                    <a href="https://api.leadconnectorhq.com/widget/booking/tlZAXVaHxTw9fvistaTr" target="_blank" rel="noopener noreferrer" className="group">
+                      <Button
+                        size="lg"
+                        className="booking-cta-button saas-premium-button text-white font-bold px-14 py-7 rounded-2xl text-lg shadow-lg shadow-teal-500/25 group-hover:shadow-xl group-hover:shadow-teal-500/30 transition-all duration-300"
                       >
-                        team@cyberaktive.com
-                      </a>
-                    </div>
+                        <Calendar className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
+                        Book 15-Minute Strategy Call
+                      </Button>
+                    </a>
+                  </div>
+
+                  <div className="flex items-center justify-center gap-3 bg-white/50 backdrop-blur-sm px-6 py-3 rounded-2xl border border-border/30 mx-auto w-fit">
+                    <Mail className="w-5 h-5 text-teal-600" />
+                    <a
+                      href="mailto:team@cyberaktive.com"
+                      className="text-foreground hover:text-teal-600 font-semibold transition-colors"
+                    >
+                      team@cyberaktive.com
+                    </a>
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -1098,16 +1012,14 @@ export default function SaaSLandingPage() {
                         <div className="w-8 h-8 bg-teal-500/20 rounded-full flex items-center justify-center">
                           <benefit.icon className="w-4 h-4 text-teal-600" />
                         </div>
-                        <span className="font-medium">
-                          {benefit.text}
-                        </span>
+                        <span className="text-sm font-medium">{benefit.text}</span>
                       </div>
                     ))}
                   </div>
 
-                  <div className="text-sm text-muted-foreground italic">
+                  <p className="text-sm text-amber-600 font-semibold italic">
                     Every sprint cycle without automation costs you 20-30 developer hours.
-                  </div>
+                  </p>
 
                   <div className="flex justify-center">
                     <div className="w-24 h-1 bg-gradient-to-r from-teal-500 via-cyan-500 to-teal-500 rounded-full opacity-60"></div>
