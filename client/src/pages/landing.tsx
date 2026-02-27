@@ -58,6 +58,11 @@ export default function Landing() {
 
   const { data: videos = [] } = useQuery<{ videoId: string; title: string }[]>({
     queryKey: ["/api/youtube-videos"],
+    queryFn: async () => {
+      const res = await fetch("/api/youtube-videos");
+      if (!res.ok) return [];
+      return res.json();
+    },
     staleTime: 1000 * 60 * 60,
   });
 
