@@ -1,7 +1,31 @@
+import { useEffect, useRef } from "react";
 import { GlassCard, FloatingOrb, RevealOnScroll, GeometricBlob, Section } from "@/components/ui/visual";
 import { Calendar as CalendarIcon, Clock, CheckCircle } from "lucide-react";
 
 export default function Calendar() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    // Build iframe via DOM API (safe - no user input, hardcoded GoHighLevel URL)
+    const iframe = document.createElement("iframe");
+    iframe.src = "https://api.leadconnectorhq.com/widget/booking/tlZAXVaHxTw9fvistaTr";
+    iframe.style.cssText = "width:100%;border:none;overflow:hidden;min-height:700px;height:700px";
+    iframe.scrolling = "no";
+    iframe.id = "msgsndr-calendar";
+    iframe.title = "Book Your 15-Minute Introductory Call";
+    containerRef.current.appendChild(iframe);
+    // Load GoHighLevel embed script after iframe is in DOM
+    const script = document.createElement("script");
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.type = "text/javascript";
+    containerRef.current.appendChild(script);
+    return () => {
+      if (containerRef.current) {
+        containerRef.current.replaceChildren();
+      }
+    };
+  }, []);
   return (
     <Section 
       id="calendar" 
@@ -66,14 +90,7 @@ export default function Calendar() {
           <div className="max-w-3xl mx-auto">
             {/* GoHighLevel Calendar Integration */}
             <GlassCard className="p-0 overflow-hidden border border-primary/10 gradient-border">
-              <iframe 
-                src="https://api.leadconnectorhq.com/widget/booking/tlZAXVaHxTw9fvistaTr" 
-                style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '700px', height: '700px' }} 
-                scrolling="no" 
-                id="msgsndr-calendar"
-                title="Book Your 15-Minute Introductory Call"
-                data-testid="calendar-booking-widget"
-              />
+              <div ref={containerRef} />
             </GlassCard>
           </div>
         </RevealOnScroll>
