@@ -7,23 +7,23 @@ export default function Calendar() {
 
   useEffect(() => {
     if (!containerRef.current) return;
-    // Build iframe via DOM API (safe - no user input, hardcoded GoHighLevel URL)
+    const container = containerRef.current;
+    // Create iframe with exact attributes from GoHighLevel embed code
     const iframe = document.createElement("iframe");
     iframe.src = "https://api.leadconnectorhq.com/widget/booking/tlZAXVaHxTw9fvistaTr";
     iframe.style.cssText = "width:100%;border:none;overflow:hidden;min-height:700px;height:700px";
     iframe.scrolling = "no";
-    iframe.id = "msgsndr-calendar";
+    iframe.id = "6paoXxyP7IK2sAlPFkv3_1772167275045";
     iframe.title = "Book Your 15-Minute Introductory Call";
-    containerRef.current.appendChild(iframe);
-    // Load GoHighLevel embed script after iframe is in DOM
+    container.appendChild(iframe);
+    // Load form_embed.js on document.body with cache-bust to force fresh execution
     const script = document.createElement("script");
-    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.src = "https://link.msgsndr.com/js/form_embed.js?t=" + Date.now();
     script.type = "text/javascript";
-    containerRef.current.appendChild(script);
+    document.body.appendChild(script);
     return () => {
-      if (containerRef.current) {
-        containerRef.current.replaceChildren();
-      }
+      container.replaceChildren();
+      script.remove();
     };
   }, []);
   return (
