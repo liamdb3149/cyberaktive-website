@@ -50,6 +50,7 @@ function Router() {
       <Route path="/design-preview-a" component={DesignPreviewA} />
       <Route path="/design-preview-b" component={DesignPreviewB} />
       <Route path="/design-preview-c" component={DesignPreviewC} />
+      <Route path="/brand-guide" component={DesignPreviewC} />
       <Route path="/design-preview-d" component={DesignPreviewD} />
       <Route component={NotFound} />
     </Switch>

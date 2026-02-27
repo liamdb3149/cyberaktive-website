@@ -7,9 +7,10 @@ import {
 } from "lucide-react";
 
 /* ───────────────────────────────────────────
-   OPTION C: BLUE-DOMINANT, PINK USED VERY SPARINGLY
-   Logo colors preserved but blue leads everywhere.
-   Pink only in: thin gradient lines, hover glows, tiny highlights
+   CYBERAKTIVE BRAND GUIDE
+   Blue-dominant palette with pink used sparingly.
+   Logo colors preserved - blue leads everywhere.
+   Pink only in: gradient borders, hover glows, tiny highlights
    ─────────────────────────────────────────── */
 
 const C = {
@@ -108,7 +109,7 @@ export default function DesignPreviewC() {
   return (
     <div style={{ background: C.bg, color: C.text, fontFamily: "'Inter', system-ui, sans-serif" }}>
       <div className="text-center py-3 text-xs font-bold tracking-wider text-white" style={{ background: G.brand }}>
-        OPTION C: BLUE-DOMINANT, PINK USED SPARINGLY (ONLY IN GLOW LINES & MICRO-DETAILS)
+        CYBERAKTIVE BRAND GUIDE
       </div>
 
       {/* Nav */}
@@ -174,8 +175,8 @@ export default function DesignPreviewC() {
       <section className="py-24 px-6" style={{ background: C.bg }}>
         <div className="max-w-6xl mx-auto">
           <Label>Color Palette</Label>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: C.navy }}>Option C: Blue-Dominant, Pink Sparingly</h2>
-          <p className="text-lg mb-12" style={{ color: C.textSec }}>Blue leads everywhere. Pink only appears in glow lines, hover states, and the logo itself.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: C.navy }}>Blue-Dominant, Pink Sparingly</h2>
+          <p className="text-lg mb-12" style={{ color: C.textSec }}>Blue leads everywhere. Pink appears in gradient borders, glow lines, hover states, and the logo gradient.</p>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-12">
             {[
               { name: "Blue Light", hex: "#2DA8FF" }, { name: "Blue Deep", hex: "#0057D8" },
@@ -197,6 +198,136 @@ export default function DesignPreviewC() {
                 <div className="h-20" style={{ background: g.bg }} /><div className="p-3 bg-white"><div className="text-xs font-bold" style={{ color: C.navy }}>{g.name}</div></div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Typography */}
+      <section className="py-24 px-6" style={{ background: C.white }}>
+        <div className="max-w-6xl mx-auto">
+          <Label>Typography</Label>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: C.navy }}>Font System</h2>
+          <p className="text-lg mb-12" style={{ color: C.textSec }}>Inter is the primary typeface across all weights. Clean, geometric, and highly legible at every size.</p>
+
+          {/* Font Family */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <Card elevation="md" hover={false} className="p-8">
+              <div className="text-xs font-bold tracking-[0.2em] uppercase mb-4" style={{ color: C.blueDeep }}>Primary Font</div>
+              <div className="text-5xl font-bold mb-2" style={{ color: C.navy, fontFamily: "'Inter', system-ui, sans-serif" }}>Inter</div>
+              <p className="text-sm mb-4" style={{ color: C.textSec }}>Google Fonts - Used for all headings and body text</p>
+              <div className="text-sm font-mono px-3 py-2 rounded-lg" style={{ background: `${C.blueLight}10`, color: C.blueDeep }}>
+                font-family: 'Inter', system-ui, -apple-system, sans-serif
+              </div>
+            </Card>
+            <Card elevation="md" hover={false} className="p-8">
+              <div className="text-xs font-bold tracking-[0.2em] uppercase mb-4" style={{ color: C.blueDeep }}>Code Font</div>
+              <div className="text-4xl font-bold mb-2" style={{ color: C.navy, fontFamily: "'JetBrains Mono', 'Fira Code', monospace" }}>JetBrains Mono</div>
+              <p className="text-sm mb-4" style={{ color: C.textSec }}>Fallback: Fira Code, monospace - Used in code blocks</p>
+              <div className="text-sm font-mono px-3 py-2 rounded-lg" style={{ background: `${C.blueLight}10`, color: C.blueDeep }}>
+                font-family: 'JetBrains Mono', 'Fira Code', monospace
+              </div>
+            </Card>
+          </div>
+
+          {/* Weight Scale */}
+          <h3 className="text-xl font-bold mb-6" style={{ color: C.navy }}>Weight Scale</h3>
+          <div className="space-y-1 mb-16">
+            {[
+              { weight: 300, name: "Light", use: "Not actively used - available for special cases", sample: "The quick brown fox jumps over the lazy dog" },
+              { weight: 400, name: "Regular", use: "Body text, paragraphs, descriptions", sample: "The quick brown fox jumps over the lazy dog" },
+              { weight: 500, name: "Medium", use: "premium-text-lg, navigation links, subtle emphasis", sample: "The quick brown fox jumps over the lazy dog" },
+              { weight: 600, name: "Semibold", use: "premium-text-xl, button labels, card subheadings", sample: "The quick brown fox jumps over the lazy dog" },
+              { weight: 700, name: "Bold", use: "premium-text-2xl, section headings, card titles", sample: "The quick brown fox jumps over the lazy dog" },
+              { weight: 800, name: "Extra Bold", use: "premium-text-4xl, hero headlines, key statistics", sample: "The quick brown fox jumps over the lazy dog" },
+              { weight: 900, name: "Black", use: "Available for maximum impact display text", sample: "The quick brown fox" },
+            ].map((f) => (
+              <motion.div key={f.weight} className="flex items-center gap-6 py-4 px-6 rounded-xl border" style={{ borderColor: C.border, background: "rgba(255,255,255,0.6)" }}
+                whileHover={{ background: "rgba(255,255,255,1)", boxShadow: S.sm }}>
+                <div className="w-16 text-right flex-shrink-0">
+                  <div className="text-2xl font-bold" style={{ color: C.blueDeep }}>{f.weight}</div>
+                </div>
+                <div className="w-28 flex-shrink-0">
+                  <div className="text-sm font-semibold" style={{ color: C.navy }}>{f.name}</div>
+                  <div className="text-xs" style={{ color: C.textSec }}>{f.use}</div>
+                </div>
+                <div className="flex-1 text-xl truncate" style={{ fontWeight: f.weight, color: C.navy }}>
+                  {f.sample}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Size Scale */}
+          <h3 className="text-xl font-bold mb-6" style={{ color: C.navy }}>Size Scale (Premium Text Classes)</h3>
+          <div className="space-y-8 mb-16">
+            {[
+              { cls: "premium-text-4xl", size: "2.75rem / 44px", weight: "800 Extra Bold", tracking: "-0.03em", leading: "1.15", sample: "Hero Headlines" },
+              { cls: "premium-text-2xl", size: "1.875rem / 30px", weight: "700 Bold", tracking: "-0.03em", leading: "1.25", sample: "Section Headings" },
+              { cls: "premium-text-xl", size: "1.375rem / 22px", weight: "600 Semibold", tracking: "-0.02em", leading: "1.4", sample: "Card Titles & Subheadings" },
+              { cls: "premium-text-lg", size: "1.125rem / 18px", weight: "500 Medium", tracking: "-0.01em", leading: "1.5", sample: "Body text and descriptions for paragraphs" },
+            ].map((t) => (
+              <Card key={t.cls} elevation="sm" hover={false} className="p-6">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <span className="text-xs font-mono px-2 py-1 rounded" style={{ background: `${C.blueLight}15`, color: C.blueDeep }}>.{t.cls}</span>
+                  </div>
+                  <div className="flex gap-4 text-right">
+                    <div><div className="text-[10px] uppercase tracking-wider" style={{ color: C.textSec }}>Size</div><div className="text-xs font-semibold" style={{ color: C.navy }}>{t.size}</div></div>
+                    <div><div className="text-[10px] uppercase tracking-wider" style={{ color: C.textSec }}>Weight</div><div className="text-xs font-semibold" style={{ color: C.navy }}>{t.weight}</div></div>
+                    <div><div className="text-[10px] uppercase tracking-wider" style={{ color: C.textSec }}>Tracking</div><div className="text-xs font-semibold" style={{ color: C.navy }}>{t.tracking}</div></div>
+                    <div><div className="text-[10px] uppercase tracking-wider" style={{ color: C.textSec }}>Leading</div><div className="text-xs font-semibold" style={{ color: C.navy }}>{t.leading}</div></div>
+                  </div>
+                </div>
+                <div style={{
+                  fontSize: t.cls === "premium-text-4xl" ? "2.75rem" : t.cls === "premium-text-2xl" ? "1.875rem" : t.cls === "premium-text-xl" ? "1.375rem" : "1.125rem",
+                  fontWeight: t.cls === "premium-text-4xl" ? 800 : t.cls === "premium-text-2xl" ? 700 : t.cls === "premium-text-xl" ? 600 : 500,
+                  letterSpacing: t.tracking,
+                  lineHeight: t.leading,
+                  color: C.navy,
+                }}>
+                  {t.sample}
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          {/* Usage Guidelines */}
+          <h3 className="text-xl font-bold mb-6" style={{ color: C.navy }}>Usage Guidelines</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card elevation="sm" hover={false} className="p-6">
+              <h4 className="text-base font-bold mb-3" style={{ color: C.navy }}>Headings (Bold / Extra Bold)</h4>
+              <ul className="space-y-2">
+                {[
+                  "Hero headlines: Extra Bold (800), tight tracking (-0.03em)",
+                  "Section titles: Bold (700), tight tracking (-0.03em)",
+                  "Card headings: Semibold (600), moderate tracking (-0.02em)",
+                  "Always use navy (#0E2E72) on light backgrounds",
+                  "Use gradient-text class for emphasis headings",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm" style={{ color: C.textSec }}>
+                    <CheckCircle2 size={14} className="mt-0.5 flex-shrink-0" style={{ color: C.blueDeep }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Card>
+            <Card elevation="sm" hover={false} className="p-6">
+              <h4 className="text-base font-bold mb-3" style={{ color: C.navy }}>Body Text (Regular / Medium)</h4>
+              <ul className="space-y-2">
+                {[
+                  "Paragraphs: Regular (400) or Medium (500)",
+                  "Navigation: Medium (500) at 14px",
+                  "Labels/tags: Bold (700) at 12px, wide tracking (0.2em)",
+                  "Use textSec (#4A5568) for secondary/muted text",
+                  "Button text: Semibold (600) for clear CTAs",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm" style={{ color: C.textSec }}>
+                    <CheckCircle2 size={14} className="mt-0.5 flex-shrink-0" style={{ color: C.blueDeep }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Card>
           </div>
         </div>
       </section>
@@ -360,7 +491,7 @@ export default function DesignPreviewC() {
       </footer>
 
       <div className="py-6 px-6 text-center" style={{ background: C.bg }}><p className="text-xs" style={{ color: C.textSec }}>
-        Option C Preview | <a href="/design-preview-a" className="underline" style={{ color: C.blueDeep }}>Option A</a> | <a href="/design-preview-b" className="underline" style={{ color: C.blueDeep }}>Option B</a> | <a href="/design-preview" className="underline" style={{ color: C.blueDeep }}>Original</a> | <a href="/design-preview-d" className="underline" style={{ color: C.blueDeep }}>Option D</a>
+        Cyberaktive Brand Guide | <a href="/" className="underline" style={{ color: C.blueDeep }}>Back to Home</a>
       </p></div>
     </div>
   );
