@@ -21,15 +21,42 @@ import DesignPreviewB from "@/pages/design-preview-b";
 import DesignPreviewC from "@/pages/design-preview-c";
 import DesignPreviewD from "@/pages/design-preview-d";
 import NotFound from "@/pages/not-found";
+import LegalHub from "@/pages/legal/index";
+import LegalServicePage from "@/pages/legal/service-page";
+import LegalCityPage from "@/pages/legal/city-page";
+import ResourcePage from "@/pages/resources/resource-page";
+import ResourcesHub from "@/pages/resources/index";
+import SaasHub from "@/pages/saas/index";
+import SaasWorkflowPage from "@/pages/saas/workflow-page";
+import SaasSegmentPage from "@/pages/saas/segment-page";
+import SaasCityPage from "@/pages/saas/city-page";
+import CompareHub from "@/pages/compare/index";
+import ComparisonPage from "@/pages/compare/comparison-page";
+import { legalCitySlug } from "@/data/legalCityPages";
+import { saasWorkflowSlug } from "@/data/saasWorkflowPages";
+import { saasSegmentSlug } from "@/data/saasSegmentPages";
+import { saasCitySlug } from "@/data/saasCityPages";
 
 function ScrollToTop() {
   const [location] = useLocation();
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
-  
+
   return null;
+}
+
+function LegalSlugRouter({ slug }: { slug: string }) {
+  if (legalCitySlug.has(slug)) return <LegalCityPage />;
+  return <NotFound />;
+}
+
+function SaasSlugRouter({ slug }: { slug: string }) {
+  if (saasWorkflowSlug.has(slug)) return <SaasWorkflowPage />;
+  if (saasSegmentSlug.has(slug)) return <SaasSegmentPage />;
+  if (saasCitySlug.has(slug)) return <SaasCityPage />;
+  return <NotFound />;
 }
 
 function Router() {
@@ -52,6 +79,23 @@ function Router() {
       <Route path="/design-preview-c" component={DesignPreviewC} />
       <Route path="/brand-guide" component={DesignPreviewC} />
       <Route path="/design-preview-d" component={DesignPreviewD} />
+      {/* Programmatic SEO - legal */}
+      <Route path="/legal/:practiceArea/:service" component={LegalServicePage} />
+      <Route path="/legal/:slug">
+        {(params) => <LegalSlugRouter slug={params.slug} />}
+      </Route>
+      <Route path="/legal" component={LegalHub} />
+      {/* Programmatic SEO - resources */}
+      <Route path="/resources/:term" component={ResourcePage} />
+      <Route path="/resources" component={ResourcesHub} />
+      {/* Programmatic SEO - saas */}
+      <Route path="/saas/:slug">
+        {(params) => <SaasSlugRouter slug={params.slug} />}
+      </Route>
+      <Route path="/saas" component={SaasHub} />
+      {/* Programmatic SEO - compare */}
+      <Route path="/compare/:comparison" component={ComparisonPage} />
+      <Route path="/compare" component={CompareHub} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -4,14 +4,14 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://cyberaktiveai.com/sitemap.xml
+Sitemap: https://cyberaktive.com/sitemap.xml
 
 # Block common bot paths
 Disallow: /api/
 Disallow: /admin/
 Disallow: /_next/
 
-# Allow search engines to crawl all public pages
+# Allow search engines and AI crawlers to crawl all public pages
 Allow: /*.css
 Allow: /*.js
 Allow: /*.png
@@ -20,5 +20,30 @@ Allow: /*.jpeg
 Allow: /*.gif
 Allow: /*.svg
 
-# Crawl delay (optional)
+# GEO / AI crawler explicit permissions
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay
 Crawl-delay: 1
