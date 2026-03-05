@@ -26,7 +26,8 @@ function toParas(text: string, sentencesPerPara = 3): string[] {
 }
 
 export default function SaasSegmentPage() {
-  const { segment } = useParams<{ segment: string }>();
+  const params = useParams<{ segment?: string; slug?: string }>();
+  const segment = params.segment ?? params.slug;
   const page = getSaasSegmentPage(segment);
 
   useEffect(() => {

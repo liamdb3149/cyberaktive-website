@@ -26,7 +26,8 @@ function toParas(text: string, sentencesPerPara = 3): string[] {
 }
 
 export default function SaasCityPage() {
-  const { city } = useParams<{ city: string }>();
+  const params = useParams<{ city?: string; slug?: string }>();
+  const city = params.city ?? params.slug;
   const page = getSaasCityPage(city);
 
   useEffect(() => {

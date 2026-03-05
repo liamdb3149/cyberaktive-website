@@ -26,7 +26,8 @@ function toParas(text: string, sentencesPerPara = 3): string[] {
 }
 
 export default function SaasWorkflowPage() {
-  const { workflow } = useParams<{ workflow: string }>();
+  const params = useParams<{ workflow?: string; slug?: string }>();
+  const workflow = params.workflow ?? params.slug;
   const page = getSaasWorkflowPage(workflow);
 
   useEffect(() => {
