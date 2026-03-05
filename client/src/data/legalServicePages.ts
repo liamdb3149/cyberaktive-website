@@ -12948,3 +12948,18 @@ export function getLegalServicePage(
 }
 
 export default legalServicePages;
+
+export const legalPracticeAreaSlug = new Set([
+  "personal-injury",
+  "corporate-law",
+  "family-law",
+  "immigration",
+  "employment-law",
+  "criminal-defense",
+  "estate-planning",
+  "real-estate-law",
+  "intellectual-property",
+  "workers-comp",
+  "medical-malpractice",
+  "bankruptcy",
+]);

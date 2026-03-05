@@ -24,15 +24,19 @@ import NotFound from "@/pages/not-found";
 import LegalHub from "@/pages/legal/index";
 import LegalServicePage from "@/pages/legal/service-page";
 import LegalCityPage from "@/pages/legal/city-page";
+import LegalPracticeAreaPage from "@/pages/legal/practice-area-page";
 import ResourcePage from "@/pages/resources/resource-page";
 import ResourcesHub from "@/pages/resources/index";
 import SaasHub from "@/pages/saas/index";
 import SaasWorkflowPage from "@/pages/saas/workflow-page";
 import SaasSegmentPage from "@/pages/saas/segment-page";
 import SaasCityPage from "@/pages/saas/city-page";
+import SaasWorkflowsHub from "@/pages/saas/workflows-hub";
+import SaasTeamsHub from "@/pages/saas/teams-hub";
 import CompareHub from "@/pages/compare/index";
 import ComparisonPage from "@/pages/compare/comparison-page";
 import { legalCitySlug } from "@/data/legalCityPages";
+import { legalPracticeAreaSlug } from "@/data/legalServicePages";
 import { saasWorkflowSlug } from "@/data/saasWorkflowPages";
 import { saasSegmentSlug } from "@/data/saasSegmentPages";
 import { saasCitySlug } from "@/data/saasCityPages";
@@ -49,6 +53,7 @@ function ScrollToTop() {
 
 function LegalSlugRouter({ slug }: { slug: string }) {
   if (legalCitySlug.has(slug)) return <LegalCityPage />;
+  if (legalPracticeAreaSlug.has(slug)) return <LegalPracticeAreaPage />;
   return <NotFound />;
 }
 
@@ -89,6 +94,8 @@ function Router() {
       <Route path="/resources/:term" component={ResourcePage} />
       <Route path="/resources" component={ResourcesHub} />
       {/* Programmatic SEO - saas */}
+      <Route path="/saas/workflows" component={SaasWorkflowsHub} />
+      <Route path="/saas/ai-by-team" component={SaasTeamsHub} />
       <Route path="/saas/:slug">
         {(params) => <SaasSlugRouter slug={params.slug} />}
       </Route>
