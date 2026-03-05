@@ -29,6 +29,8 @@ export default function LegalPracticeAreaPage() {
   const params = useParams<{ practiceArea?: string; slug?: string }>();
   const practiceArea = params.practiceArea ?? params.slug;
   const meta = practiceArea ? practiceAreaMeta[practiceArea] : undefined;
+  // Strip trailing " Law" before appending "Law Firms" to avoid "Corporate Law Law Firms"
+  const firmName = meta ? meta.name.replace(/ Law$/, '') : '';
   const services = practiceArea
     ? legalServicePages.filter((p) => p.practiceArea === practiceArea)
     : [];
@@ -36,13 +38,13 @@ export default function LegalPracticeAreaPage() {
   useEffect(() => {
     if (!meta) return;
 
-    document.title = `AI Automation for ${meta.name} Law Firms | Cyberaktive`;
+    document.title = `AI Automation for ${firmName} Law Firms | Cyberaktive`;
 
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute("content", `AI workflow automation for ${meta.name} law firms. ${meta.description} Book a free strategy call.`);
+    if (metaDesc) metaDesc.setAttribute("content", `AI workflow automation for ${firmName.toLowerCase()} law firms. ${meta.description} Book a free strategy call.`);
 
     const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute("content", `AI Automation for ${meta.name} Law Firms | Cyberaktive`);
+    if (ogTitle) ogTitle.setAttribute("content", `AI Automation for ${firmName} Law Firms | Cyberaktive`);
 
     const canonicalHref = `https://cyberaktive.com/legal/${practiceArea}/`;
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -109,7 +111,7 @@ export default function LegalPracticeAreaPage() {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
-                  AI Automation for {meta.name} Law Firms
+                  AI Automation for {firmName} Law Firms
                 </h1>
 
                 <p className="text-lg text-gray-400 mb-8 leading-relaxed max-w-2xl">
