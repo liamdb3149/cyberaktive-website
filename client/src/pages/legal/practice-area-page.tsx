@@ -26,7 +26,8 @@ const practiceAreaMeta: Record<string, { name: string; description: string; icon
 };
 
 export default function LegalPracticeAreaPage() {
-  const { practiceArea } = useParams<{ practiceArea: string }>();
+  const params = useParams<{ practiceArea?: string; slug?: string }>();
+  const practiceArea = params.practiceArea ?? params.slug;
   const meta = practiceArea ? practiceAreaMeta[practiceArea] : undefined;
   const services = practiceArea
     ? legalServicePages.filter((p) => p.practiceArea === practiceArea)
