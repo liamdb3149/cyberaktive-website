@@ -14,6 +14,7 @@
 | `/legal-ai-prompt-library` | `legal-ai-prompt-library.tsx` | Legal AI prompt library |
 | `/ai-malpractice-risk-calculator` | `ai-malpractice-calculator.tsx` | AI malpractice risk calculator |
 | `/legal-ai-workshops` | `legal-ai-workshops.tsx` | Legal AI workshops page |
+| `/legal-skill-creator` | `legal-skill-creator.tsx` | Legal Skill Creator download page (GHL gated, tag: Skill Creator V1) |
 | `/ai-consulting-and-development-saas-software` | SaaS landing page |
 
 ## Layout Components
